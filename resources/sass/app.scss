@@ -1,0 +1,68 @@
+@import 'bootstrap/scss/bootstrap';
+
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+
+/* Открытие меню при наведении */
+// .nav-item.dropdown:hover .dropdown-menu {
+// display: block;
+// margin-top: 0;
+// }
+
+/* Это нужно для плавного открытия меню */
+// .dropdown-menu {
+// display: none;
+// opacity: 0;
+// // transition: opacity 2s ease;
+// }
+
+// .nav-item.dropdown:hover .dropdown-menu {
+// display: block;
+// opacity: 1;
+// }
+
+.dropdown-menu {
+    --bs-dropdown-min-width: 2rem !important;
+}
+
+.nav-link:hover {
+color: #377dff !important;
+}
+
+.nav-link.active {
+color: #377dff !important;
+}
+
+.dropdown-item.active {
+    color: #000000;
+    text-decoration: none;
+    background-color: #d8d8d836 !important;
+}
+
+
+#btn-back-to-top {
+position: fixed;
+bottom: 20px;
+right: 20px;
+display: none;
+}
+
+.services-hover-effect:hover {
+border-radius: 9px;
+background-color: #74747412;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: -9px;
+}
+
+.circle-icon {
+background: #cde0f7;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+text-align: center;
+line-height: 60px;
+vertical-align: middle;
+color: #335eeab5
+}
