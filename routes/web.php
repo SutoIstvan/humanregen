@@ -16,19 +16,26 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-})->name('home');
+})->name('welcome');
+
+Route::get('/effects', function () {
+    return view('effects');
+})->name('effects');
+
+Route::get('/price', function () {
+    return view('price');
+})->name('price');
 
 Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
 
-Route::get('/references', function () {
-    return view('references');
-})->name('references');
+Route::get('/appointments', function () {
+    return view('appointments');
+})->name('appointments');
+
+
 
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
@@ -65,3 +72,13 @@ Route::get('change-language/{locale}', function ($locale) {
     }
     return redirect()->back();
 })->name('changeLanguage');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+
+});

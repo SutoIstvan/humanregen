@@ -1,54 +1,71 @@
-<div class="container" data-aos="fade-up">
-    <footer class="pt-5">
-      <div class="row">
-        <div class="col-6 col-md-3 mb-3">
-          <h5>{{__('menu.our_services')}}</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">{{__('menu.access_control_systems')}}</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">{{__('menu.surveillance_systems')}}</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">{{__('menu.computer_services')}}</a>
-            </li>
+<footer id="footer" class="footer dark-background">
 
-          </ul>
+  <div class="container footer-top mt-5">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6 footer-about">
+        <a href="index.html" class="d-flex align-items-center">
+          <img src="{{ asset('assets/img/logo_footer.png') }}" height="80px" alt="">
+        </a>
+        <div class="footer-contact pt-3">
+          <p><strong>Cím:</strong> 7030 Paks, Vasút utca 10.</p>
+          <!-- <p>New York, NY 535022</p> -->
+          <p class="mt-3"><strong>Telefon:</strong> <span>+36 00 0000 00</span></p>
+          <p class="mt-3"><strong>Email:</strong> <span>info@humanregen.hu</span></p>
         </div>
-
-        <div class="col-6 col-md-3 mb-3">
-          <h5 style="color: #ffffff00;">_</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">{{__('menu.server_maintenance')}}</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">{{__('menu.network_infrastructure')}}</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">{{__('menu.web_development')}}</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-5 offset-md-1 mb-3">
-          <form>
-            <h5>{{__('menu.request_callback')}}</h5>
-            <p>
-              {{__('menu.request_callback_description')}}
-            </p>
-            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-              <label for="newsletter1" class="visually-hidden">Telefon</label>
-              <input id="newsletter1" type="text" class="form-control" placeholder="{{__('menu.request_callback_phone')}}">
-              <button class="btn btn-primary" type="button">{{__('menu.request_callback_btn')}}</button>
-            </div>
-          </form>
-        </div>
+        <!-- <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div> -->
       </div>
 
-      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
-        <p>
-          <img class="mb-1" src="favicon.ico" height="22" alt="">
-          © 2024 Paksi Informatika. {{__('menu.all_rights_reserved')}}
-        </p>
-        <ul class="list-unstyled d-flex">
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><i style="color: #006aff;"
-                class="fa-brands fa-twitter"></i></a></li>
-          <li class="ms-3"><a class="link-body-emphasis" href="#"><i style="color: #006aff;"
-                class="fa-brands fa-instagram"></i></use></svg></a></li>
-          <li class="ms-3 me-3"><a class="link-body-emphasis" href="#"><i style="color: #006aff;"
-                class="fa-brands fa-facebook"></i></use></svg></a></li>
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Hasznos linkek</h4>
+        <ul>
+          <li><a href="#">Főoldal</a></li>
+          <li><a href="#">Szolgáltatássunk</a></li>
+          <li><a href="#">Árak</a></li>
+          <li><a href="#">Galéria</a></li>
+          <li><a href="#">Kapcsolat</a></li>
         </ul>
       </div>
-    </footer>
+
+      <div class="col-lg-2 col-md-3 footer-links">
+        <h4>Nyitvatartás</h4>
+
+        <ul>
+          <i class="fa-regular fa-clock ms-5" style="font-size: 24px;"></i>
+          <li><a href="" class="text-decoration-none">Hétfőtől – péntekig:</a></li>
+          <li><a href="" class="text-decoration-none">8:00 - 18:00</a></li>
+          <!-- <li><a href="">Product Management</a></li> -->
+          <li><a href="" class="text-decoration-none">Szombat:</a></li>
+          <li><a href="" class="text-decoration-none">9:00 - 12:00</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-12 footer-newsletter">
+        <h4>Hírlevelünk</h4>
+        <p>Iratkozzon fel hírlevelünkre, és értesüljön legfrissebb híreinkről szolgáltatásainkkal kapcsolatban!
+        </p>
+        <form action="forms/newsletter.php" method="post" class="php-email-form">
+          <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Feliratkozás">
+          </div>
+          <!-- <div class="loading">Loading</div> -->
+          <div class="error-message"></div>
+          <div class="sent-message">Adja meg az email címét!</div>
+        </form>
+      </div>
+
+    </div>
   </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright 2024</span> <span>All Rights Reserved</span></p>
+    <div class="credits">
+
+      Designed by <a href="https://pikft.hu/" style="color: #fff;">Paksi informatika</a>
+    </div>
+  </div>
+
+</footer>
