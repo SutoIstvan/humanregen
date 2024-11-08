@@ -38,7 +38,7 @@ return [
     'low_voltage_technology_systems' => 'oldalán!',
     'hero_description' => 'Több mint 20 év tapasztalattal a Paksi Informatika megbízható partner a vállalati IT rendszerek tervezésében, üzemeltetésében és karbantartásában. Szakterületünk a',
 
-    'title' => 'Paksi Informatika - Kezdőlap',
+    'title' => 'Humán Regenerátor Sport Szalon',
     'title_contact' => 'Kapcsolat - Paksi Informatika',
     'title_about' => 'Rólunk - Paksi Informatika',
     'title_references' => 'Referenciák - Paksi Informatika',

@@ -99,7 +99,7 @@
         <div class="container col-8">
           <div class="row g-5">
             <div class="col-md-5 col-lg-4 order-md-last">
-              <h4 class="d-flex justify-content-between align-items-center mb-3 mt-4">
+              <h4 class="d-flex justify-content-between align-items-center mb-4 mt-4">
                 {{-- <span class="text-primary">Your cart</span> --}}
                 {{-- <span class="badge bg-primary rounded-pill">3</span> --}}
               </h4>
@@ -144,6 +144,12 @@
                   <button type="submit" class="btn btn-secondary">Redeem</button>
                 </div>
               </form> --}}
+              <div class="input-group mt-5 w-100">
+                <form action="{{ url()->previous() }}" method="get" class="w-100">
+                    <button type="submit" class="btn btn-secondary btn-lg w-100 ">Vissza</button>
+                </form>
+              </div>
+
             </div>
             <div class="col-md-7 col-lg-7">
               {{-- <h4 class="mb-3">Billing address</h4> --}}
@@ -165,9 +171,9 @@
                     </div>
                   </div>
       
-                  <div class="col-12">
+                  <div class="col-12 mb-1">
                     {{-- <label for="phone" class="form-label">Telefonszám</label> --}}
-                    <input type="text" class="form-control" id="phone" placeholder="Telefonszám" required="">
+                    <input type="text" class="form-control" id="phone" placeholder="Telefonszám" value="{{ old('phone', $user->phone ?? '') }}" required="">
                     <div class="invalid-feedback">
                       Please enter your shipping address.
                     </div>

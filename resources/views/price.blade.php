@@ -161,14 +161,19 @@
         }
         
         .pricing-palden .pricing-feature-list {
-            margin: 0;
+            /* margin: 0;
             padding: 0.25em 0 2.5em;
             list-style: none;
+            text-align: center; */
+            margin: -79px 0px -53px 0px;
+            padding: 0.25em 0 0.5em;
+            list-style: none;
             text-align: center;
+            z-index: 1;
         }
         
         .pricing-palden .pricing-feature {
-            padding: 1em 0;
+            padding: 5px 0;
         }
         
         .pricing-palden .pricing-action {
@@ -299,7 +304,7 @@
 
         <section>
             <div class="pricing pricing-palden">
-                <div class="pricing-item features-item ja-animate" data-animation="move-from-bottom" data-delay="item-0" style="min-height: 497px;">
+                <div class="pricing-item features-item ja-animate" data-animation="move-from-bottom" data-delay="item-0" style="min-height: 397px;">
                     <div class="pricing-deco">
                         <svg class="pricing-deco-img" enable-background="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xml:space="preserve" y="0px">
                             <path class="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
@@ -338,7 +343,7 @@
                     </ul>
                     <button class="pricing-action">Időpontot foglalok</button>
                 </div> --}}
-                <div class="pricing-item features-item ja-animate" data-animation="move-from-bottom" data-delay="item-2" style="min-height: 497px;">
+                <div class="pricing-item features-item ja-animate" data-animation="move-from-bottom" data-delay="item-2" style="min-height: 397px;">
                     <div class="pricing-deco">
                         <svg class="pricing-deco-img" enable-background="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xml:space="preserve" y="0px">
                             <path class="deco-layer deco-layer--1" d="M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z" fill="#FFFFFF" opacity="0.6"></path>
