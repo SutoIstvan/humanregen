@@ -4,20 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home screen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
     use AuthenticatesUsers;
 
     /**
@@ -27,15 +17,31 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/home';
 
-    // public function redirectTo()
-    // {
-    //     // Проверка роли пользователя
-    //     if (auth()->user()->role === 'admin') {
-    //         return '/admin/dashboard'; // Для администратора
-    //     }
+    /**
+     * Show the application's login form.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function showLoginForm()
+    {
+        // Сохраняем предыдущий URL, если он отличается от текущего (страницы логина)
+        if (url()->previous() != url()->current()) {
+            session(['url.intended' => url()->previous()]);
+        }
 
-    //     return '/home'; // Для обычного пользователя
-    // }
+        return view('auth.login');
+    }
+
+    /**
+     * Get the post login redirect path.
+     *
+     * @return string
+     */
+    protected function redirectTo()
+    {
+        // Возвращаем сохраненный URL или стандартный путь
+        return session('url.intended', $this->redirectTo);
+    }
 
     /**
      * Create a new controller instance.
@@ -45,6 +51,5 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
-        $this->middleware('auth')->only('logout');
     }
 }

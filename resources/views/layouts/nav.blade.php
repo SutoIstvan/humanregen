@@ -22,7 +22,9 @@
               </div>
           </div> -->
       <a href="{{ route('contacts') }}" class="nav-item nav-link {{ request()->routeIs('contacts') ? 'active' : '' }}">Kapcsolat</a>
-      <a href="{{ route('dashboard') }}" class="nav-item nav-link {{ request()->routeIs('login') ? 'active' : '' }}">Belépés</a>
+      <a href="{{ route('dashboard') }}" class="nav-item nav-link {{ request()->routeIs('login') ? 'active' : '' }}">
+        {{ Auth::check() ? 'Fiok' : 'Belépés' }}
+      </a>
 
       
 

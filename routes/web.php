@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,38 +41,18 @@ Route::get('/appointments', function () {
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 
 
-Route::prefix('services')->group(function () {
-    Route::get('/access-control-systems', function () {
-        return view('services.access_control_systems');
-    })->name('services.access_control_systems');
+// Route::prefix('services')->group(function () {
+//     Route::get('/access-control-systems', function () {
+//         return view('services.access_control_systems');
+//     })->name('services.access_control_systems');
+// });
 
-    Route::get('/surveillance-systems', function () {
-        return view('services.surveillance_systems');
-    })->name('services.surveillance_systems');
-
-    Route::get('/server-maintenance', function () {
-        return view('services.server_maintenance');
-    })->name('services.server_maintenance');
-
-    Route::get('/network-infrastructure', function () {
-        return view('services.network_infrastructure');
-    })->name('services.network_infrastructure');
-
-    Route::get('/computer-services', function () {
-        return view('services.computer_services');
-    })->name('services.computer_services');
-
-    Route::get('/web-development', function () {
-        return view('services.web_development');
-    })->name('services.web_development');    
-});
-
-Route::get('change-language/{locale}', function ($locale) {
-    if (in_array($locale, ['hu', 'ru'])) {
-        session(['locale' => $locale]);
-    }
-    return redirect()->back();
-})->name('changeLanguage');
+// Route::get('change-language/{locale}', function ($locale) {
+//     if (in_array($locale, ['hu', 'ru'])) {
+//         session(['locale' => $locale]);
+//     }
+//     return redirect()->back();
+// })->name('changeLanguage');
 
 Auth::routes();
 
@@ -80,5 +61,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
-
 });
+
+
+Route::get('/bookings/disabled-times', [BookingController::class, 'getDisabledTimes']);
+
+// Route::get('/saveappointments', [BookingController::class, 'saveappointments']);
+Route::get('/saveappointments', [BookingController::class, 'saveappointments']);
+
+Route::post('/bookings', [BookingController::class, 'store']);
+
