@@ -316,23 +316,33 @@ return [
         //     'type' => 'sidebar-menu-search',
         //     'text' => 'search',
         // ],
+        // [
+        //     'text' => 'blog',
+        //     'url' => 'admin/blog',
+        //     'can' => 'manage-blog',
+        // ],
         [
-            'text' => 'blog',
-            'url' => 'admin/blog',
-            'can' => 'manage-blog',
-        ],
-        [
-            'text' => 'pages',
+            'text' => 'Naptár',
             'url' => '/dashboard',
-            'icon' => 'far fa-fw fa-file',
+            'icon' => 'far fa-fw fa-calendar',
             // 'label' => 4,
-            'label_color' => 'success',
+            // 'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+        // ['header' => 'account_settings'],
         [
-            'text' => 'profile',
+            'text' => 'Árak szerkesztése',
+            'url' => '/',
+            'icon' => 'fas fa-fw fa-coins',
+        ],
+        [
+            'text' => 'Felhasználók',
             'url' => '/',
             'icon' => 'fas fa-fw fa-user',
+        ],
+        [
+            'text' => 'Admin hozzáadása',
+            'url' => '/',
+            'icon' => 'fas fa-fw fa-user-plus',
         ],
         [
             'text' => 'change_password',

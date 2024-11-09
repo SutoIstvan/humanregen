@@ -32,10 +32,29 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function dashboard()
-    {
-        $bookings = Booking::all();
+    // public function dashboard()
+    // {
+    //     $bookings = Booking::all();
 
-        return view('dashboard.index', compact('bookings'));
-    }
+    //     return view('dashboard.index', compact('bookings'));
+    // }
+
+    public function dashboard()
+{
+    $bookings = Booking::all()->map(function ($booking) {
+        return [
+            'title' => 'Foglalás', // или что-то, что вы хотите показывать
+            'start' => $booking->date . 'T' . $booking->time_slot, // Формат даты и времени: YYYY-MM-DDTHH:MM
+            'end' => date('Y-m-d\TH:i', strtotime($booking->date . ' ' . $booking->time_slot . ' + ' . $booking->duration . ' minutes')), // вычисляем end
+            'extendedProps' => [
+                'client_name' => $booking->client_name,
+                'client_email' => $booking->client_email,
+                'client_phone' => $booking->client_phone,
+                'id' => $booking->id,
+            ]
+        ];
+    });
+
+    return view('dashboard.index', ['bookings' => $bookings]);
+}
 }

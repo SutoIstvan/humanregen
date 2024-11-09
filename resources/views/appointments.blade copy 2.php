@@ -309,7 +309,6 @@
 
     @include('layouts.nav')
 
-
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
         <img src="assets/img/hero-bg-8.jpg" alt="" class="hero-bg">
@@ -320,8 +319,6 @@
 
                 <div class="col-lg-12  d-flex flex-column justify-content-center" data-aos="fade-in">
                     <h1><span>Időpontfoglalás</span></h1>
-
-
                 </div>
 
             </div>
@@ -363,11 +360,9 @@
             <ul>
                 @foreach ($errors->all() as $error)
                     <div class="text-center" style="color: red;">Hiba történt: {{ $error }}</div>
-                    {{-- <li style="color: red;">{{ $error }}</li> --}}
                 @endforeach
             </ul>
         @endif
-
 
 
         <div class="">
@@ -428,7 +423,7 @@
 
         <input type="hidden" id="selected-date-input" name="selected_date">
         <input type="hidden" id="selected-time-input" name="selected_time">
-        <button type="submit" style="background-color: #c2a74e; border-color: #c2a74e; width: 250px;"
+        <button type="submit" style="background-color: #c2a74e; border-color: #c2a74e;"
             class="btn btn-primary btn-lg px-4 me-md-2 mt-4">Tovább</button>
     </form>
 
@@ -440,21 +435,53 @@
 
 
     <script>
+        // Обработчик для изменения длительности
+        document.querySelectorAll('input[name="duration"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                document.getElementById('durationinput').value = this.value;
+
+                // Обновляем список времени после изменения длительности
+                const duration = parseInt(this.value, 10);
+                const selectedDate = document.getElementById('selected-date-input').value;
+
+                fetch(`/bookings/disabled-times?date=${selectedDate}`)
+                    .then(response => response.json())
+                    .then(disabledTimes => {
+                        createTimeList('time-list', duration, 8, 18, disabledTimes);
+                    })
+                    .catch(error => console.error('Ошибка при загрузке заблокированных времен:', error));
+            });
+        });
 
 
-// Инициализация календаря
-document.addEventListener('DOMContentLoaded', () => {
-    // Получаем сегодняшнюю дату
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                $('.sticky-top').addClass('sticky-nav').css('top', '0px');
+            } else {
+                $('.sticky-top').removeClass('sticky-nav').css('top', '-100px');
+            }
+        });
+
+        // Функция для установки сегодняшней даты в формате YYYY-MM-DD
+        window.onload = function() {
+            const today = new Date();
+            const formattedDate = today.toISOString().split('T')[0]; // Получаем дату в формате YYYY-MM-DD
+            document.getElementById('selected-date-input').value = formattedDate;
+        };
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+    // Получаем сегодняшнюю дату в формате YYYY-MM-DD
     const today = new Date();
-    const formattedDate = today.toISOString().split('T')[0];
+    const formattedDate = today.toISOString().split('T')[0]; // Форматируем как 'YYYY-MM-DD'
 
-    // Конфигурация календаря
     const options = {
         settings: {
             lang: 'hu',
             range: {
                 min: 'today',
-                disableWeekday: [0], // Отключаем воскресенье
+                disableWeekday: [0], // Отключаем воскресенье (0)
             }
         },
         popups: {
@@ -466,20 +493,31 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         actions: {
             clickDay(event, self) {
-                const lastDateString = self.selectedDates[self.selectedDates.length - 1];
-                const selectedDate = new Date(lastDateString);
+                const lastDateString = self.selectedDates[self.selectedDates.length - 1]; // Получаем последнюю выбранную дату как строку
+                const selectedDate = new Date(lastDateString); // Преобразуем строку в объект Date
 
                 if (!isNaN(selectedDate)) {
-                    const formattedSelectedDate = selectedDate.toISOString().split('T')[0];
+                    const formattedSelectedDate = selectedDate.toISOString().split('T')[0]; // Форматируем выбранную дату как 'YYYY-MM-DD'
 
-                    document.getElementById('date-display').textContent = 
-                        selectedDate.toLocaleDateString('hu-HU');
+                    // Показываем выбранную дату на странице
+                    document.getElementById('date-display').textContent = selectedDate.toLocaleDateString('hu-HU');
+
+                    // Вставляем значение в скрытое поле формы
                     document.getElementById('selected-date-input').value = formattedSelectedDate;
 
-                    const duration = document.querySelector('input[name="duration"]:checked').value;
-                    document.getElementById('durationinput').value = duration;
+                    // Запрос на получение заблокированных времен для выбранной даты
+                    fetch(`/bookings/disabled-times?date=${formattedSelectedDate}`)
+                        .then(response => response.json())
+                        .then(disabledTimes => {
+                            // Получаем день недели для выбранной даты
+                            const dayOfWeek = selectedDate.getDay(); // 0 (воскресенье) до 6 (суббота)
+                            const isSaturday = dayOfWeek === 6;
+                            const maxEndTime = isSaturday ? 12 : 18; // Если суббота, то ограничиваем до 12, для других дней до 18
 
-                    fetchAndUpdateTimeSlots(formattedSelectedDate);
+                            // Обновляем timepicker с полученными заблокированными слотами
+                            createTimeList('time-list', 35, 8, maxEndTime, disabledTimes); // Передаем заблокированные времена
+                        })
+                        .catch(error => console.error('Ошибка при загрузке заблокированных времен:', error));
                 } else {
                     console.error("Неверная дата:", lastDateString);
                 }
@@ -487,184 +525,23 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     };
 
-    // Инициализируем календарь
     const calendar = new VanillaCalendar('#calendar', options);
     calendar.init();
 
-    // Загружаем доступное время для текущей даты
-    document.getElementById('selected-date-input').value = formattedDate;
-    fetchAndUpdateTimeSlots(formattedDate);
+    // После инициализации календаря сразу вызываем запрос для сегодняшней даты
+    fetch(`/bookings/disabled-times?date=${formattedDate}`)
+        .then(response => response.json())
+        .then(disabledTimes => {
+            // Получаем день недели для сегодняшней даты
+            const dayOfWeek = today.getDay(); // 0 (воскресенье) до 6 (суббота)
+            const isSaturday = dayOfWeek === 6;
+            const maxEndTime = isSaturday ? 12 : 18; // Если суббота, то ограничиваем до 12, для других дней до 18
+
+            // Обновляем timepicker с полученными заблокированными слотами
+            createTimeList('time-list', 35, 8, maxEndTime, disabledTimes); // Передаем заблокированные времена
+        })
+        .catch(error => console.error('Ошибка при загрузке заблокированных времен:', error));
 });
-
-// Форматирование времени
-const formatTimeSlot = (hours, minutes) => {
-    const hourStr = hours < 10 ? `0${hours}` : hours;
-    const minuteStr = minutes < 10 ? `0${minutes}` : minutes;
-    return `${hourStr}:${minuteStr}`;
-};
-
-// Генерация временных слотов
-const generateTimeSlots = (startTime, endTime, interval) => {
-    const slots = [];
-    let currentHour = startTime;
-    let currentMinute = 0;
-    
-    // Устанавливаем максимальное время как 17:20
-    const maxHour = 17;
-    const maxMinute = 20;
-    
-    while (
-        currentHour < maxHour || 
-        (currentHour === maxHour && currentMinute <= maxMinute)
-    ) {
-        slots.push(formatTimeSlot(currentHour, currentMinute));
-        
-        currentMinute += interval;
-        if (currentMinute >= 60) {
-            currentMinute -= 60;
-            currentHour += 1;
-        }
-    }
-    
-    return slots;
-};
-
-// Создание списка времени
-const isSaturday = (date) => {
-    return new Date(date).getDay() === 6;
-};
-
-// Модифицированная функция создания списка времени
-const createTimeList = (containerId, duration, startTime, endTime, disabledTimes = [], selectedDate) => {
-    const container = document.getElementById(containerId);
-    if (!container) {
-        console.error(`Container with id "${containerId}" not found`);
-        return;
-    }
-    
-    container.innerHTML = '';
-    let activeTimeDiv = null;
-    
-    // Если суббота, устанавливаем конечное время на 12:00
-    if (isSaturday(selectedDate)) {
-        endTime = 12;
-    }
-    
-    const timeSlots = generateTimeSlots(startTime, endTime, 35);
-    
-    timeSlots.forEach(time => {
-        const timeDiv = document.createElement('div');
-        timeDiv.textContent = time;
-        timeDiv.dataset.time = time;
-        
-        // Проверяем, не выходит ли время за пределы 12:00 для субботы
-        const [hours] = time.split(':').map(Number);
-        if (isSaturday(selectedDate) && hours >= 12) {
-            timeDiv.classList.add('disabled-time');
-        } else if (disabledTimes.includes(time)) {
-            timeDiv.classList.add('disabled-time');
-        } else {
-            timeDiv.addEventListener('click', () => {
-                if (activeTimeDiv) {
-                    activeTimeDiv.classList.remove('active-time');
-                }
-                timeDiv.classList.add('active-time');
-                activeTimeDiv = timeDiv;
-                
-                document.getElementById('selected-time-input').value = time;
-                // document.getElementById('selected-time').textContent = `Выбрано время: ${time}`;
-                document.getElementById('selected-time').style.display = 'hidden';
-            });
-        }
-        
-        container.appendChild(timeDiv);
-    });
-    
-    // Добавляем сообщение для субботы
-    if (isSaturday(selectedDate)) {
-        // const noteDiv = document.createElement('div');
-        // noteDiv.className = 'saturday-note';
-        // noteDiv.textContent = 'По субботам доступно время только до 12:00';
-        // noteDiv.style.gridColumn = '1 / -1';
-        // noteDiv.style.textAlign = 'center';
-        // noteDiv.style.color = '#c2a74e';
-        // noteDiv.style.marginTop = '10px';
-        // container.appendChild(noteDiv);
-    }
-};
-
-// Получение заблокированных временных слотов
-const fetchAndUpdateTimeSlots = async (date) => {
-    const container = document.getElementById('time-list');
-    try {
-        container.innerHTML = '<div class="loading">Betöltés...</div>';
-        
-        const response = await fetch(`/bookings/disabled-times?date=${date}`);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const disabledTimes = await response.json();
-        const duration = getDuration();
-        createTimeList('time-list', duration, 8, 18, disabledTimes, date); // Передаем выбранную дату
-    } catch (error) {
-        console.error('Ошибка при получении заблокированных времён:', error);
-        container.innerHTML = '<div class="error">Ошибка при загрузке доступного времени</div>';
-    }
-};
-
-// Получение выбранной длительности
-const getDuration = () => {
-    const selectedDuration = document.querySelector('input[name="duration"]:checked');
-    return selectedDuration ? parseInt(selectedDuration.value, 10) : 35;
-};
-
-// Обработчики для радио-кнопок длительности
-document.querySelectorAll('input[name="duration"]').forEach(radio => {
-    radio.addEventListener('change', () => {
-        const duration = parseInt(radio.value, 10);
-        document.getElementById('durationinput').value = duration;
-        
-        const selectedDate = document.getElementById('selected-date-input').value;
-        if (selectedDate) {
-            fetchAndUpdateTimeSlots(selectedDate);
-        }
-    });
-});
-
-        // // Обработчик для изменения длительности
-        // document.querySelectorAll('input[name="duration"]').forEach(function(radio) {
-        //     radio.addEventListener('change', function() {
-        //         document.getElementById('durationinput').value = this.value;
-
-        //         // Обновляем список времени после изменения длительности
-        //         const duration = parseInt(this.value, 10);
-        //         const selectedDate = document.getElementById('selected-date-input').value;
-
-        //         fetch(`/bookings/disabled-times?date=${selectedDate}`)
-        //             .then(response => response.json())
-        //             .then(disabledTimes => {
-        //                 createTimeList('time-list', duration, 8, 18, disabledTimes);
-        //             })
-        //             .catch(error => console.error('Ошибка при загрузке заблокированных времен:', error));
-        //     });
-        // });
-
-
-
-        // $(window).scroll(function() {
-        //     if ($(this).scrollTop() > 250) {
-        //         $('.sticky-top').addClass('sticky-nav').css('top', '0px');
-        //     } else {
-        //         $('.sticky-top').removeClass('sticky-nav').css('top', '-100px');
-        //     }
-        // });
-
-        // // Функция для установки сегодняшней даты в формате YYYY-MM-DD
-        // window.onload = function() {
-        //     const today = new Date();
-        //     const formattedDate = today.toISOString().split('T')[0]; // Получаем дату в формате YYYY-MM-DD
-        //     document.getElementById('selected-date-input').value = formattedDate;
-        // };
 
 
         // document.addEventListener('DOMContentLoaded', () => {
@@ -742,83 +619,94 @@ document.querySelectorAll('input[name="duration"]').forEach(radio => {
 
 
 
-        // function createTimeList(containerId, duration, startTime, endTime, disabledTimes = []) {
-        //     const container = document.getElementById(containerId);
-        //     container.innerHTML = ''; // Очищаем контейнер перед добавлением элементов
-        //     let activeTimeDiv = null; // Переменная для хранения активного элемента времени
+        function createTimeList(containerId, duration, startTime, endTime, disabledTimes = []) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = ''; // Очищаем контейнер перед добавлением элементов
+            let activeTimeDiv = null; // Переменная для хранения активного элемента времени
 
-        //     let currentHour = startTime;
-        //     let currentMinute = 0;
+            let currentHour = startTime;
+            let currentMinute = 0;
 
-        //     // Заполняем список времени с шагом 35 минут и проверкой на заблокированные слоты
-        //     while (currentHour < endTime || (currentHour === endTime && currentMinute === 0)) {
-        //         const hourStr = currentHour < 10 ? '0' + currentHour : currentHour;
-        //         const minuteStr = currentMinute < 10 ? '0' + currentMinute : currentMinute;
-        //         const time = `${hourStr}:${minuteStr}`;
+            // Заполняем список времени с шагом 35 минут и проверкой на заблокированные слоты
+            while (currentHour < endTime || (currentHour === endTime && currentMinute === 0)) {
+                const hourStr = currentHour < 10 ? '0' + currentHour : currentHour;
+                const minuteStr = currentMinute < 10 ? '0' + currentMinute : currentMinute;
+                const time = `${hourStr}:${minuteStr}`;
 
-        //         // Проверяем, если время заблокировано
-        //         const timeDiv = document.createElement('div');
-        //         timeDiv.textContent = time;
-        //         timeDiv.dataset.time = time;
+                // Проверяем, если время заблокировано
+                const timeDiv = document.createElement('div');
+                timeDiv.textContent = time;
+                timeDiv.dataset.time = time;
 
-        //         if (disabledTimes.includes(time)) {
-        //             timeDiv.classList.add('disabled-time'); // Добавляем класс для заблокированных времён
-        //         } else {
-        //             // Добавляем обработчик клика для выбора времени, если оно не заблокировано
-        //             timeDiv.addEventListener('click', function() {
-        //                 // Убираем активный класс с предыдущего выбранного времени
-        //                 if (activeTimeDiv) {
-        //                     activeTimeDiv.classList.remove('active-time');
-        //                 }
+                if (disabledTimes.includes(time)) {
+                    timeDiv.classList.add('disabled-time'); // Добавляем класс для заблокированных времён
+                } else {
+                    // Добавляем обработчик клика для выбора времени, если оно не заблокировано
+                    timeDiv.addEventListener('click', function() {
+                        // Убираем активный класс с предыдущего выбранного времени
+                        if (activeTimeDiv) {
+                            activeTimeDiv.classList.remove('active-time');
+                        }
 
-        //                 // Добавляем активный класс к текущему времени
-        //                 this.classList.add('active-time');
-        //                 activeTimeDiv = this;
+                        // Добавляем активный класс к текущему времени
+                        this.classList.add('active-time');
+                        activeTimeDiv = this;
 
-        //                 // Обновляем выбранное время
-        //                 document.getElementById('selected-time').textContent = 'Выбрано время: ' + this.dataset
-        //                     .time;
+                        // Обновляем выбранное время
+                        document.getElementById('selected-time').textContent = 'Выбрано время: ' + this.dataset
+                            .time;
 
-        //                 const selectedTime = this.dataset.time; // Получаем выбранное время из атрибута data-time
+                        const selectedTime = this.dataset.time; // Получаем выбранное время из атрибута data-time
 
-        //                 document.getElementById('selected-time-input').value = selectedTime;
-        //             });
-        //         }
+                        document.getElementById('selected-time-input').value = selectedTime;
+                    });
+                }
 
-        //         // Добавляем div в контейнер
-        //         container.appendChild(timeDiv);
+                // Добавляем div в контейнер
+                container.appendChild(timeDiv);
 
-        //         // Увеличиваем текущее время на 35 минут
-        //         currentMinute += 35;
-        //         if (currentMinute >= 60) {
-        //             currentMinute -= 60; // Обнуляем минуты, если они превышают 60
-        //             currentHour += 1; // Увеличиваем час
-        //         }
-        //     }
-        // }
+                // Увеличиваем текущее время на 35 минут
+                currentMinute += 35;
+                if (currentMinute >= 60) {
+                    currentMinute -= 60; // Обнуляем минуты, если они превышают 60
+                    currentHour += 1; // Увеличиваем час
+                }
+            }
+        }
 
+        // Функция для создания списка времени с интервалом 35 минут и заблокированными слотами
+        document.getElementById('duration').addEventListener('change', function() {
+            const duration = parseInt(this.value, 10);
+            const selectedDate = document.getElementById('selected-date-input').value;
 
+            fetch(`/bookings/disabled-times?date=${selectedDate}`)
+                .then(response => response.json())
+                .then(disabledTimes => {
+                    createTimeList('time-list', duration, 8, 18, disabledTimes);
+                })
+                .catch(error => console.error('Ошибка при загрузке заблокированных времен:', error));
+        });
 
-        // // Функция для блокировки времени с учетом длительности
-        // function getDisabledTimes(bookings) {
-        //     let disabledTimes = [];
+        // Функция для блокировки времени с учетом длительности
+        function getDisabledTimes(bookings) {
+            let disabledTimes = [];
 
-        //     bookings.forEach(booking => {
-        //         const startTime = new Date(`${booking.date}T${booking.time_slot}`);
-        //         const endTime = new Date(startTime.getTime() + (booking.duration *
-        //             60000)); // Используем длительность из данных
+            bookings.forEach(booking => {
+                const startTime = new Date(`${booking.date}T${booking.time_slot}`);
+                const endTime = new Date(startTime.getTime() + (booking.duration *
+                    60000)); // Используем длительность из данных
 
-        //         let currentTime = new Date(startTime);
-        //         while (currentTime < endTime) {
-        //             const hour = currentTime.getHours().toString().padStart(2, '0');
-        //             const minute = currentTime.getMinutes().toString().padStart(2, '0');
-        //             disabledTimes.push(`${hour}:${minute}`);
-        //             currentTime.setMinutes(currentTime.getMinutes() + 35); // Интервал блокировки
-        //         }
-        //     });
+                let currentTime = new Date(startTime);
+                while (currentTime < endTime) {
+                    const hour = currentTime.getHours().toString().padStart(2, '0');
+                    const minute = currentTime.getMinutes().toString().padStart(2, '0');
+                    disabledTimes.push(`${hour}:${minute}`);
+                    currentTime.setMinutes(currentTime.getMinutes() + 35); // Интервал блокировки
+                }
+            });
 
-        //     return disabledTimes;
-        // }
+            return disabledTimes;
+        }
     </script>
 
 </body>

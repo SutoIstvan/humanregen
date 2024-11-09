@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Booking;
 use App\Models\Price;
+use Carbon\Carbon;
 
 class BookingController extends Controller
 {
@@ -78,7 +79,6 @@ public function saveappointments(Request $request)
 
 public function store(Request $request)
 {
-
     $validatedData = $request->validate([
         'date' => 'required|date',
         'time_slot' => 'required|date_format:H:i',
@@ -88,23 +88,69 @@ public function store(Request $request)
         'client_phone' => 'required|string|max:20',
     ]);
 
-    // Проверка, есть ли уже бронирование с такой же датой и временем
+    // Преобразуем выбранную дату и время в объект Carbon
+    $startTime = Carbon::parse($validatedData['date'] . ' ' . $validatedData['time_slot']);
+    $endTime = $startTime->copy()->addMinutes($validatedData['duration']); // Время окончания (добавляем длительность)
+
+    // Проверка 1: Проверка на занятость времени
     $existingBooking = Booking::where('date', $validatedData['date'])
-    ->where('time_slot', $validatedData['time_slot'])
-    ->first();
+        ->where('time_slot', $validatedData['time_slot'])
+        ->first();
 
     if ($existingBooking) {
-        // Если бронирование уже существует, отправляем ошибку или уведомление
+        // Если время занято, выводим ошибку
         return redirect()->route('appointments')
-        ->withErrors(['time_slot' => 'Ez az idő már foglalt. Kérem válasszon másik időpontot.']);
+            ->withErrors(['time_slot' => 'Ez az időpont már foglalt. Kérem válasszon másik időpontot.']);
     }
 
+    // Проверка 2: Проверка на слишком длинное время
+    $latestPossibleTime = Carbon::parse($validatedData['date'] . ' 18:00'); // Максимальное время для бронирования - 18:00
+    if ($endTime->gt($latestPossibleTime)) {
+        // Если время окончания больше 18:00, то это недопустимо
+        return redirect()->route('appointments')
+            ->withErrors(['time_slot' => 'A választott időpont túl későn van. Kérem válasszon egy másik időpontot.']);
+    }
+
+    // Проверка 3: Проверка на пересечение с другим бронированием
+    // Мы будем отнимать 1 минуту от длительности, чтобы избежать возможных погрешностей
+    $endTimeAdjusted = $endTime->subMinute();  // Отнимаем 1 минуту от времени окончания
+
+    $overlappingBooking = Booking::where('date', $validatedData['date'])
+        ->where(function($query) use ($startTime, $endTimeAdjusted) {
+            // Проверяем, есть ли записи, которые начинаются до конца нового интервала и заканчиваются после его начала
+            $query->whereBetween('time_slot', [$startTime, $endTimeAdjusted])
+                ->orWhere(function($query) use ($startTime, $endTimeAdjusted) {
+                    // Или если бронирование начинается до вашего интервала, но заканчивается после
+                    $query->where('time_slot', '<', $startTime)
+                        ->whereRaw('DATE_ADD(time_slot, INTERVAL duration MINUTE) > ?', [$endTimeAdjusted]);
+                });
+        })
+        ->exists();
+
+    if ($overlappingBooking) {
+        // Если существует пересечение с другим бронированием, выводим ошибку
+        return redirect()->route('appointments')
+            ->withErrors(['time_slot' => 'Ez az időpont átfedésben van egy másik foglalással. Kérem válasszon egy másik időpontot.']);
+    }
+
+    // Создаем новое бронирование, если все проверки прошли успешно
     Booking::create($validatedData);
 
-    // return view('complete');
-    return redirect()->back();
+    return redirect()->route('appointments');
 }
 
+
+public function destroy($id)
+{
+    $booking = Booking::find($id);
+    
+    if ($booking) {
+        $booking->delete();
+        return response()->json(['success' => true]);
+    }
+
+    return response()->json(['success' => false], 400);
+}
 
 
 }

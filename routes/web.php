@@ -71,3 +71,6 @@ Route::get('/saveappointments', [BookingController::class, 'saveappointments'])-
 
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookstore');
 
+Route::delete('/bookings/{id}', [BookingController::class, 'destroy']);
+
+
