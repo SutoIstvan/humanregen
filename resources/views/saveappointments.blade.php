@@ -130,11 +130,17 @@
                     <h6 class="my-0">Időtartam</h6>
                     {{-- <small>Időtartam</small> --}}
                   </div>
-                  <span class="text-success">35 perc</span>
+                  <span class="text-success">{{ $duration }} perc</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
                   <span>Ár (Ft)</span>
-                  <strong>$20 000</strong>
+
+                  @if ($duration == 35)
+                      <strong>{{ $price->amount }}</strong>
+                  @elseif ($duration == 70)
+                      <strong>{{ $price2->amount }}</strong>
+                  @endif
+
                 </li>
               </ul>
       
@@ -145,7 +151,7 @@
                 </div>
               </form> --}}
               <div class="input-group mt-5 w-100">
-                <form action="{{ url()->previous() }}" method="get" class="w-100">
+                <form action="{{ route('appointments') }}" method="get" class="w-100">
                     <button type="submit" class="btn btn-secondary btn-lg w-100 ">Vissza</button>
                 </form>
               </div>
@@ -153,11 +159,17 @@
             </div>
             <div class="col-md-7 col-lg-7">
               {{-- <h4 class="mb-3">Billing address</h4> --}}
-              <form class="needs-validation mt-5" novalidate="">
+              <form action="{{ route('bookstore')}}" method="POST" class="needs-validation mt-5" novalidate="">
+                @csrf
+
+                <input type="hidden" name="date" value="{{ $selectedDate }}">
+                <input type="hidden" name="time_slot" value="{{ $selectedTime }}">
+                <input type="hidden" name="duration" value="{{ $duration }}">
+
                 <div class="row g-3">
                   <div class="col-sm-12">
                     {{-- <label for="name" class="form-label">Név</label> --}}
-                    <input type="text" class="form-control" id="name" placeholder="Név" value="{{ old('name', $user->name ?? '') }}" required="">
+                    <input name="client_name" type="text" class="form-control" id="name" placeholder="Név" value="{{ old('name', $user->name ?? '') }}" required="">
                     <div class="invalid-feedback">
                       Valid first name is required.
                     </div>
@@ -165,7 +177,7 @@
 
                   <div class="col-12">
                     {{-- <label for="email" class="form-label">Email cím <span class="text-body-secondary">(Optional)</span></label> --}}
-                    <input type="email" class="form-control" id="email" placeholder="Email cím" value="{{ old('email', $user->email ?? '') }}" required="">
+                    <input name="client_email" type="email" class="form-control" id="email" placeholder="Email cím" value="{{ old('email', $user->email ?? '') }}" required="">
                     <div class="invalid-feedback">
                       Please enter a valid email address for shipping updates.
                     </div>
@@ -173,7 +185,7 @@
       
                   <div class="col-12 mb-1">
                     {{-- <label for="phone" class="form-label">Telefonszám</label> --}}
-                    <input type="text" class="form-control" id="phone" placeholder="Telefonszám" value="{{ old('phone', $user->phone ?? '') }}" required="">
+                    <input name="client_phone" type="text" class="form-control" id="phone" placeholder="Telefonszám" value="{{ old('phone', $user->phone ?? '') }}" required="">
                     <div class="invalid-feedback">
                       Please enter your shipping address.
                     </div>

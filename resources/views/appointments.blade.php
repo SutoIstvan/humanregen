@@ -174,6 +174,14 @@
             </ul>
         @endif
         
+        <div class="form-group">
+            <label for="duration">Выберите длительность:</label>
+            <select id="duration" name="duration" class="form-control">
+                <option value="35">35 минут</option>
+                <option value="70">70 минут</option>
+            </select>
+        </div>
+        
 
     </div><!-- End Section Title -->
 
@@ -193,6 +201,9 @@
 
 
     <form action="/saveappointments" method="GET" class="selected-time">
+
+        <input type="hidden" id="durationinput" name="durationinput" value="35">
+
         <input type="hidden" id="selected-date-input" name="selected_date">
         <input type="hidden" id="selected-time-input" name="selected_time">
         <button type="submit" style="background-color: #c2a74e; border-color: #c2a74e;"
@@ -230,6 +241,16 @@
 
 
     <script>
+
+        // Обработчик для изменения длительности
+        document.getElementById('duration').addEventListener('change', function() {
+            // Получаем выбранное значение
+            var duration = this.value;
+            
+            // Записываем выбранное значение в скрытое поле
+            document.getElementById('durationinput').value = duration;
+        });
+
         $(window).scroll(function() {
             if ($(this).scrollTop() > 250) {
                 $('.sticky-top').addClass('sticky-nav').css('top', '0px');
@@ -271,33 +292,33 @@
                 },
                 actions: {
                     clickDay(event, self) {
-                        const lastDateString = self.selectedDates[self.selectedDates.length -
-                        1]; // Получаем последнюю выбранную дату как строку
-                        const selectedDate = new Date(lastDateString); // Преобразуем строку в объект Date
+                        const lastDateString = self.selectedDates[self.selectedDates.length - 1]; // Получаем последнюю выбранную дату как строку
+                const selectedDate = new Date(lastDateString); // Преобразуем строку в объект Date
 
-                        if (!isNaN(selectedDate)) {
-                            const formattedSelectedDate = selectedDate.toISOString().split('T')[
-                            0]; // Форматируем выбранную дату как 'YYYY-MM-DD'
+                if (!isNaN(selectedDate)) {
+                    const formattedSelectedDate = selectedDate.toISOString().split('T')[0]; // Форматируем выбранную дату как 'YYYY-MM-DD'
 
-                            // Показываем выбранную дату на странице
-                            document.getElementById('date-display').textContent = selectedDate
-                                .toLocaleDateString('hu-HU');
+                    // Показываем выбранную дату на странице
+                    document.getElementById('date-display').textContent = selectedDate.toLocaleDateString('hu-HU');
 
-                            // Вставляем значение в скрытое поле формы
-                            document.getElementById('selected-date-input').value = formattedSelectedDate;
+                    // Вставляем значение в скрытое поле формы
+                    document.getElementById('selected-date-input').value = formattedSelectedDate;
 
-                            // Запрос на получение заблокированных времен для выбранной даты
-                            fetch(`/bookings/disabled-times?date=${formattedSelectedDate}`)
-                                .then(response => response.json())
-                                .then(disabledTimes => {
-                                    // Обновляем timepicker с полученными заблокированными слотами
-                                    createTimeList('time-list', 35, 8, 18, disabledTimes);
-                                })
-                                .catch(error => console.error('Ошибка при загрузке заблокированных времен:',
-                                    error));
-                        } else {
-                            console.error("Неверная дата:", lastDateString);
-                        }
+                    // Перезаписываем длительность в скрытое поле "durationinput" значением текущего выбранного времени из select
+                    const duration = document.getElementById('duration').value;  // Получаем выбранное значение длительности
+                    document.getElementById('durationinput').value = duration;  // Обновляем значение в скрытом поле
+
+                    // Запрос на получение заблокированных времен для выбранной даты
+                    fetch(`/bookings/disabled-times?date=${formattedSelectedDate}`)
+                        .then(response => response.json())
+                        .then(disabledTimes => {
+                            // Обновляем timepicker с полученными заблокированными слотами
+                            createTimeList('time-list', parseInt(duration), 8, 18, disabledTimes);
+                        })
+                        .catch(error => console.error('Ошибка при загрузке заблокированных времен:', error));
+                } else {
+                    console.error("Неверная дата:", lastDateString);
+                }
                     },
                 },
             };
@@ -319,6 +340,19 @@
 
 
         // Функция для создания списка времени с интервалом 35 минут и заблокированными слотами
+        document.getElementById('duration').addEventListener('change', () => {
+            const duration = parseInt(document.getElementById('duration').value, 10);
+            const selectedDate = document.getElementById('selected-date-input').value;
+
+            // Обновите список времени с новой длительностью
+            fetch(`/bookings/disabled-times?date=${selectedDate}`)
+                .then(response => response.json())
+                .then(disabledTimes => {
+                    createTimeList('time-list', duration, 8, 18, disabledTimes);
+                })
+                .catch(error => console.error('Ошибка при загрузке заблокированных времен:', error));
+        });
+
         function createTimeList(containerId, interval, startTime, endTime, disabledTimes = [], dayOfWeek) {
             const container = document.getElementById(containerId);
             container.innerHTML = ''; // Очищаем контейнер перед добавлением элементов
@@ -364,7 +398,6 @@
                         const selectedTime = this.dataset.time; // Получаем выбранное время из атрибута data-time
 
                         document.getElementById('selected-time-input').value = selectedTime;
-
                     });
                 }
 
@@ -374,11 +407,12 @@
                 // Увеличиваем текущее время на интервал (35 минут)
                 currentMinute += interval;
                 if (currentMinute >= 60) {
-                    currentHour += 1;
-                    currentMinute %= 60; // Обнуляем минуты, если они превышают 60
+                    currentMinute -= 60; // Обнуляем минуты, если они превышают 60
+                    currentHour += 1; // Увеличиваем час
                 }
             }
         }
+
 
         // Функция для блокировки времени с учетом длительности
         function getDisabledTimes(bookings) {
@@ -386,21 +420,20 @@
 
             bookings.forEach(booking => {
                 const startTime = new Date(`${booking.date}T${booking.time_slot}`);
-                const endTime = new Date(startTime.getTime() + (booking.duration *
-                60000)); // добавляем продолжительность
+                const endTime = new Date(startTime.getTime() + (booking.duration * 60000)); // Используем длительность из данных
 
-                // Перебираем все время, которое блокируется для записи
                 let currentTime = new Date(startTime);
                 while (currentTime < endTime) {
                     const hour = currentTime.getHours().toString().padStart(2, '0');
                     const minute = currentTime.getMinutes().toString().padStart(2, '0');
                     disabledTimes.push(`${hour}:${minute}`);
-                    currentTime.setMinutes(currentTime.getMinutes() + 35); // Увеличиваем на 35 минут
+                    currentTime.setMinutes(currentTime.getMinutes() + 35); // Интервал блокировки
                 }
             });
 
             return disabledTimes;
         }
+
 
         // Пример использования
         // document.addEventListener('DOMContentLoaded', function() {

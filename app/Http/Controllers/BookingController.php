@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Booking;
+use App\Models\Price;
 
 class BookingController extends Controller
 {
@@ -50,9 +51,12 @@ public function saveappointments(Request $request)
     // Получаем данные времени из запроса
     $selectedTime = $request->input('selected_time');
     $selectedDate = $request->input('selected_date');
+    $duration = $request->input('durationinput');
     $user = auth()->user();
+    $price = Price::find(1);
+    $price2 = Price::find(2);
 
-    return view('saveappointments', compact('selectedDate', 'selectedTime', 'user'));
+    return view('saveappointments', compact('selectedDate', 'selectedTime', 'user', 'price', 'price2', 'duration'));
 
     // Сохраняем только время в базу данных
     // Booking::create([
@@ -74,15 +78,33 @@ public function saveappointments(Request $request)
 
 public function store(Request $request)
 {
-    $validated = $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|email',
-        'appointment_time' => 'required|date|after:now',
+
+    $validatedData = $request->validate([
+        'date' => 'required|date',
+        'time_slot' => 'required|date_format:H:i',
+        'duration' => 'required|integer|in:35,70',
+        'client_name' => 'required|string|max:255',
+        'client_email' => 'required|email|max:255',
+        'client_phone' => 'required|string|max:20',
     ]);
 
-    Booking::create($validated);
+    // Проверка, есть ли уже бронирование с такой же датой и временем
+    $existingBooking = Booking::where('date', $validatedData['date'])
+    ->where('time_slot', $validatedData['time_slot'])
+    ->first();
 
-    return response()->json(['message' => 'Бронирование успешно создано']);
+    if ($existingBooking) {
+        // Если бронирование уже существует, отправляем ошибку или уведомление
+        return redirect()->route('appointments')
+        ->withErrors(['time_slot' => 'Ez az idő már foglalt. Kérem válasszon másik időpontot.']);
+    }
+
+    Booking::create($validatedData);
+
+    // return view('complete');
+    return redirect()->back();
 }
+
+
 
 }

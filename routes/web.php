@@ -67,7 +67,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 Route::get('/bookings/disabled-times', [BookingController::class, 'getDisabledTimes']);
 
 // Route::get('/saveappointments', [BookingController::class, 'saveappointments']);
-Route::get('/saveappointments', [BookingController::class, 'saveappointments']);
+Route::get('/saveappointments', [BookingController::class, 'saveappointments'])->name('saveappointments');
 
-Route::post('/bookings', [BookingController::class, 'store']);
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookstore');
 
