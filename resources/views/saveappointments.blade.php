@@ -75,7 +75,7 @@
 
           <div class="row d-flex justify-content-center">
             <div class="col-md-10 col-xl-8 text-center">
-              <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Foglalás véglegesítése</h2>
+              <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Foglalás véglegesítése</h2>
     
               @if (!Auth::check())
                 <p class="lead">
