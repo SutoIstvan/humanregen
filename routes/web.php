@@ -37,22 +37,7 @@ Route::get('/appointments', function () {
 })->name('appointments');
 
 
-
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
-
-
-// Route::prefix('services')->group(function () {
-//     Route::get('/access-control-systems', function () {
-//         return view('services.access_control_systems');
-//     })->name('services.access_control_systems');
-// });
-
-// Route::get('change-language/{locale}', function ($locale) {
-//     if (in_array($locale, ['hu', 'ru'])) {
-//         session(['locale' => $locale]);
-//     }
-//     return redirect()->back();
-// })->name('changeLanguage');
 
 Auth::routes();
 
@@ -66,11 +51,14 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
 Route::get('/bookings/disabled-times', [BookingController::class, 'getDisabledTimes']);
 
-// Route::get('/saveappointments', [BookingController::class, 'saveappointments']);
 Route::get('/saveappointments', [BookingController::class, 'saveappointments'])->name('saveappointments');
 
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookstore');
 
 Route::delete('/bookings/{id}', [BookingController::class, 'destroy']);
+
+Route::post('/bookings/update-status/{id}', [BookingController::class, 'updateStatus'])->name('bookings.update-status');
+
+Route::get('/get-client-bookings/{email}', [BookingController::class, 'getClientBookings']);
 
 

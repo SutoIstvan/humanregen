@@ -533,6 +533,9 @@ const generateTimeSlots = (startTime, endTime, interval) => {
 const isSaturday = (date) => {
     return new Date(date).getDay() === 6;
 };
+const isSunday = (date) => {
+    return new Date(date).getDay() === 0;
+};
 
 // Модифицированная функция создания списка времени
 const createTimeList = (containerId, duration, startTime, endTime, disabledTimes = [], selectedDate) => {
@@ -548,6 +551,17 @@ const createTimeList = (containerId, duration, startTime, endTime, disabledTimes
     // Если суббота, устанавливаем конечное время на 12:00
     if (isSaturday(selectedDate)) {
         endTime = 12;
+    }
+
+    if (isSunday(selectedDate)) {
+        const noteDiv = document.createElement('div');
+        noteDiv.className = 'sunday-note';
+        noteDiv.textContent = 'Vasárnap zárva vagyunk';
+        noteDiv.style.textAlign = 'center';
+        noteDiv.style.color = '#c2a74e';
+        noteDiv.style.padding = '20px';
+        container.appendChild(noteDiv);
+        return;
     }
     
     const timeSlots = generateTimeSlots(startTime, endTime, 35);
