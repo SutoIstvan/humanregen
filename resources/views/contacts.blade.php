@@ -64,6 +64,25 @@
   </section><!-- /Hero Section -->
 
 
+  <div class="px-4 pt-5 my-5 text-center ">
+    <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Térkép</h2>
+
+    <div class="col-lg-10 mx-auto">
+
+      <p class="lead mb-4">Az alábbi címen találhat meg minket</p>
+      <!-- <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p> -->
+
+    </div>
+
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="col-11">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2740.9546746208853!2d18.8517212!3d46.60789869999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47425c6b0503bd07%3A0x4426f920bc68de44!2sPaks%2C%20Vas%C3%BAt%20u.%2010%2C%207030%20Magyarorsz%C3%A1g!5e0!3m2!1shu!2sua!4v1731274488035!5m2!1shu!2sua" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    
+
+  </div>
+
 
   <div class="px-4 pt-5 my-5 text-center border-bottom">
     <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Töltsd fel a tested és ébredj új életre</h2>
