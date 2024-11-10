@@ -101,7 +101,7 @@
           <p>Sejtszinten aktiválja a szervezet öngyógyító folyamatait, ellensúlyozza a sejtekben lévő oxidatív stresszt
             és akkumulátorként tölti fel a sejteket.</p>
           <div class="d-flex">
-            <a href="#" class="btn-get-started">Időpontot foglalok</a>
+            <a href="{{ route('appointments') }}" class="btn-get-started">Időpontot foglalok</a>
             <a href="#" class="glightbox btn-watch-video d-flex align-items-center">
               <i class="bi bi-play-circle"></i><span>További információk</span>
             </a>
