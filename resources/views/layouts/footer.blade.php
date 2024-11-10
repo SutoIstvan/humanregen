@@ -35,7 +35,7 @@
         <h4>Nyitvatartás</h4>
 
         <ul>
-          <li>Az előre jelzett időpontban</li>
+          <li><a href="" class="text-decoration-none">Az előre jelzett időpontban</a></li>
           {{-- <i class="fa-regular fa-clock ms-5" style="font-size: 24px;"></i> --}}
           <li><a href="" class="text-decoration-none">Hétfőtől – péntekig:</a></li>
           <li><a href="" class="text-decoration-none">8:00 - 18:00</a></li>
