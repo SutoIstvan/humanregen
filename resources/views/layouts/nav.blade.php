@@ -26,6 +26,9 @@
         {{ Auth::check() ? 'Fiok' : 'Belépés' }}
       </a>
 
+      <a href="{{ route('appointments') }}" class="nav-item nav-link {{ request()->routeIs('appointments') ? 'active' : '' }} d-block d-lg-none">IDŐPONTFOGLALÁS</a>
+
+
       
 
     </div>

@@ -92,8 +92,8 @@
 
     <div class="container">
       <div class="row gy-4">
-        <div class="col-lg-4 order-lg-last hero-img mb-4" data-aos="zoom-out" data-aos-delay="100">
-          <img src="{{ asset('assets/img/main.png') }}" class="animated" height="400px" alt="">
+        <div class="col-lg-6 order-lg-last hero-img mb-4" data-aos="zoom-out" data-aos-delay="100">
+          <img src="{{ asset('assets/img/main.png') }}" class="img-fluid animated"  alt="">
         </div>
 
         <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
@@ -102,7 +102,7 @@
             és akkumulátorként tölti fel a sejteket.</p>
           <div class="d-flex">
             <a href="{{ route('appointments') }}" class="btn-get-started">Időpontot foglalok</a>
-            <a href="#" class="glightbox btn-watch-video d-flex align-items-center">
+            <a href="{{ route('effects') }}" class="glightbox btn-watch-video d-flex align-items-center">
               <i class="bi bi-play-circle"></i><span>További információk</span>
             </a>
           </div>
@@ -163,16 +163,17 @@
             valóban változást hozhatnak.
           </p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <button type="button" style="background-color: #c2a74e; border-color: #c2a74e;"
-              class="btn btn-primary btn-lg px-4 me-md-2 ">További információ</button>
-            <!-- <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button> -->
-          </div>
+            <a href="{{ route('effects') }}" class="btn btn-primary btn-lg px-4 me-md-2" style="background-color: #c2a74e; border-color: #c2a74e;">
+                További információ
+            </a>
+        </div>
+        
         </div>
 
 
 
-        <div class="col-10 col-sm-8 col-lg-6">
-          <img src="{{ asset('assets/img/face.png') }}" class="d-block mx-lg-auto img-fluid" width="700" height="500"
+        <div class="col-10 col-sm-12 col-lg-6">
+          <img src="{{ asset('assets/img/face.png') }}" class="d-block mx-lg-auto img-fluid" 
             loading="lazy">
 
         </div>
@@ -261,7 +262,7 @@
         </div>
       </div>
     </div>
-    <div class="image-column col-lg-4">
+    <div class="image-column col-lg-4 d-flex justify-content-center align-items-center">
       <div class="inner-box">
         {{-- <div class="bg bg-image bounce-y" style="background-image: url(&quot;/https://purerelax-next.vercel.app/images/resource/flower1.png&quot;);">
         </div> --}}
