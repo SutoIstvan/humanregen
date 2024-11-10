@@ -427,7 +427,205 @@
         </div><!-- End Section Title -->
 
 
-
+        <section class="bsb-faq-2 py-3 py-md-5 py-xl-8">
+          <div class="container">
+            <div class="row gy-5 gy-lg-0" id="accordionExample">
+        
+              <div class="col-12 col-lg-4">
+                <div class="row justify-content-xl-end">
+                  <div class="col-12 col-xl-12">
+                    <div class="accordion accordion-flush" >
+              
+                      <div class="accordion-item mb-4 shadow-sm">
+                        <h2 class="accordion-header" id="headingTwoRow1">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoRow1" aria-expanded="false" aria-controls="collapseTwoRow1">
+                            Hatással van a mozgásszervi betegségekre
+                          </button>
+                        </h2>
+                        <div id="collapseTwoRow1" class="accordion-collapse collapse" aria-labelledby="headingTwoRow1" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            A Humán Regenerátor a keringés javításával regenerálhatja az ízületi gyulladt felszíneket és a szinoviális folyadékokat. A keringés javításával erőteljes gyulladáscsökkentő hatásával kezelheti és gyógyíthatja a mozgásszervi eredetű betegségeket és az azzal járó fájdalmakat (izületi kopásos betegségek – arthorosis – csontritkulás – osteoporosis ) Hatása gyors, pár kezelés is érezhető változást eredményezhet.                  </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item mb-4 shadow-sm">
+                        <h2 class="accordion-header" id="headingThreeRow1">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeRow1" aria-expanded="false" aria-controls="collapseThreeRow1">
+                            Sérülésekre gyakorolt hatás
+                          </button>
+                        </h2>
+                        <div id="collapseThreeRow1" class="accordion-collapse collapse" aria-labelledby="headingThreeRow1" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            A Humán Regenerátor serkentheti a kötőszövetek és izmok, a lábak és a csontok regenerálódását, ezáltal lehetőséget nyújthat a sportolóknak a legkorábbi visszatérésre. A regenerációs idő lerövidítése napjaink egyik legnagyobb elvárása. Komoly hatással lehet az életminőség javítására.                  </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item mb-4 shadow-sm">
+                        <h2 class="accordion-header" id="headingFourRow1">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourRow1" aria-expanded="false" aria-controls="collapseFourRow1">
+                            Kiegyensúlyozott alvás (insomnia)
+                          </button>
+                        </h2>
+                        <div id="collapseFourRow1" class="accordion-collapse collapse" aria-labelledby="headingFourRow1" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            A Humán Regenerátor kezelés hatása alvás közben észlelhető, amely egyszerűbbé és mélyebbé teheti a légzést. Mindezek eredményeként pihentető, energiatudatos ébredés lehet. Mély alvás és friss ébredés után a nap aktívan indulhat. Ez azonban nem meglepő, mivel a jó vérellátás jó alapot nyújt erre. A Humán Regenerátor támogathatja a légzést azáltal, hogy feloldja a váladékot a maxilláris sinusban. Komoly segítséget nyújthat az allergiában is.                  </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item shadow-sm">
+                        <h2 class="accordion-header" id="headingFiveRow1">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveRow1" aria-expanded="false" aria-controls="collapseFiveRow1">
+                            Teljesítmény fokozás
+                          </button>
+                        </h2>
+                        <div id="collapseFiveRow1" class="accordion-collapse collapse" aria-labelledby="headingFiveRow1" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <p>
+                              A Humán Regenerátor javíthatja a mentális, kognitív és fizikai teljesítményt. A Humán Regenerátor növelheti a vér viszkozitását és a keringést a koncentráció és a teljesítmény javítása érdekében. A Humán Regenerátor másodpercek töredéke alatt milliónyi impulzust ad ki, hogy javítsa a test keringését azáltal, hogy kinyitja a kis ereket. Ez az erős mikrocirkulációs javítás logikus és komoly alapot nyújthat a teljesítmény növeléséhez. A Humán Regenerátor kezelés során rengeteg kapilláris és vaszkuláris ereket nyithat meg, amelyek mozgással vagy más erőkkel ilyen mértékben nem nyithatók meg. A nyirok áramlása is jelentősen megnőhet, ami párhuzamosan a vénás keringés javulásával jár. Ez a hatás gyors oxigéncserét biztosít, amely minden élő szervezet alapja. A Humán Regenerátor a véralvadás ellen működik, miközben optimalizálhatja a vér viszkozitását. A vérlemezkék tapadása jelentősen csökkenhet. A Humán Regenerátor növelheti a sejtek membránjainak áteresztőképességét, így az információ gyorsabban továbbadódik az oxigénben gazdag közegben.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-12 col-lg-4">
+                <div class="row justify-content-xl-end">
+                  <div class="col-12 col-xl-11">
+                    <div class="accordion accordion-flush" >
+              
+                      <div class="accordion-item mb-4 shadow-sm">
+                        <h2 class="accordion-header" id="headingTwoRow2">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoRow2" aria-expanded="false" aria-controls="collapseTwoRow2">
+                            Véráramlás serkentése
+                          </button>
+                        </h2>
+                        <div id="collapseTwoRow2" class="accordion-collapse collapse" aria-labelledby="headingTwoRow2" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            A Humán Regenerátor növelheti a vér viszkozitását és a keringést a koncentráció és a teljesítmény javítása érdekében. A Humán Regenerátor másodpercek töredéke alatt milliónyi impulzust ad ki, hogy javítsa a test keringését azáltal, hogy kinyitja a kis ereket. Ez az erős mikrocirkulációs javítás logikus és komoly alapot nyújthat a teljesítmény növeléséhez. A Humán Regenerátor a kezelés során rengeteg kapilláris és vaszkuláris ereket nyithat meg, amelyek mozgással vagy más erőkkel ilyen mértékben nem nyithatók meg. A nyirok áramlása is jelentősen megnőhet, ami párhuzamosan a vénás keringés javulásával járhat. Ez a hatás gyors oxigéncserét biztosít, amely minden élő szervezet alapja. A Humán Regenerátor a véralvadás ellen működik, miközben optimalizálhatja a vér viszkozitását. A vérlemezkék tapadása jelentősen csökkenhet. A Humán Regenerátor növelheti a sejtek membránjainak áteresztőképességét, így az információ gyorsabban továbbadódik az oxigénben gazdag közegben.                  </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item mb-4 shadow-sm">
+                        <h2 class="accordion-header" id="headingThreeRow2">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeRow2" aria-expanded="false" aria-controls="collapseThreeRow2">
+                            Hatása van a szorongásra, stresszre, kiégésre
+                          </button>
+                        </h2>
+                        <div id="collapseThreeRow2" class="accordion-collapse collapse" aria-labelledby="headingThreeRow2" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            A Humán Regenerátor csökkentheti a stresszt, szorongást, pánikot és depressziót.
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item mb-4 shadow-sm">
+                        <h2 class="accordion-header" id="headingFourRow2">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourRow2" aria-expanded="false" aria-controls="collapseFourRow2">
+                            Sejtregeneráció (sérülés, műtét)
+                          </button>
+                        </h2>
+                        <div id="collapseFourRow2" class="accordion-collapse collapse" aria-labelledby="headingFourRow2" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            A Humán Regenerátor csökkentheti a műtét utáni regeneráció idejét. Segítheti a sérült idegsejtek regenerálódását. Az idegek gyógyulása általában lassú folyamat. Általában naponta 1 mm regenerálható. A sérült ideg 10 cm-es regenerálása körülbelül 100 napot vesz igénybe. A nagyobb idegek regenerálódásához általában több év szükséges. Sérülések vagy műtét után a Humán Regenerátor jelentősen lerövidítheti a gyógyulás idejét.
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item shadow-sm">
+                        <h2 class="accordion-header" id="headingFiveRow2">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveRow2" aria-expanded="false" aria-controls="collapseFiveRow2">
+                            Állóképesség és koncentráció növelés 
+                          </button>
+                        </h2>
+                        <div id="collapseFiveRow2" class="accordion-collapse collapse" aria-labelledby="headingFiveRow2" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <p>
+                              A Humán Regenerátor növelheti a vér viszkozitását és a keringést a koncentráció és a teljesítmény javítása érdekében. A Humán Regenerátor másodpercek töredéke alatt milliónyi impulzust ad ki, hogy javítsa a test keringését azáltal, hogy kinyitja a kis ereket. Ez az erős mikrocirkulációs javítás logikus és komoly alapot nyújthat a teljesítmény növeléséhez. A Humán Regenerátor kezelés során rengeteg kapilláris és vaszkuláris ereket nyit meg, amelyek mozgással vagy más erőkkel ilyen mértékben nem nyithatók meg. A nyirok áramlása is jelentősen megnőhet, ami párhuzamosan a vénás keringés javulásával jár. Ez a hatás gyors oxigéncserét biztosít, amely minden élő szervezet alapja. Az Humán Regenerátor a véralvadás ellen működik, miközben optimalizálhatja a vér viszkozitását. A vérlemezkék tapadása jelentősen csökkenhet. A Humán Regenerátor növelheti a sejtek membránjainak áteresztőképességét, így az információ gyorsabban továbbadódik az oxigénben gazdag közegben.
+                            </p>
+        
+                          </div>
+                        </div>
+                      </div>
+              
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+        
+              <div class="col-12 col-lg-4">
+                <div class="row justify-content-xl-end">
+                  <div class="col-12 col-xl-11">
+                    <div class="accordion accordion-flush" >
+              
+                      <div class="accordion-item mb-4 shadow-sm">
+                        <h2 class="accordion-header" id="headingTwoRow3">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoRow3" aria-expanded="false" aria-controls="collapseTwoRow3">
+                            Immunrendszer erősítés
+                          </button>
+                        </h2>
+                        <div id="collapseTwoRow3" class="accordion-collapse collapse" aria-labelledby="headingTwoRow3" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            A Humán Regenerátor erős hatással van az egész testre, mivel sejtszinten stimulálja az immunrendszert, ami egészséges, erőteljes élethez vezethet. Fontos hangsúlyozni azokat az eszközöket, amelyek optimalizálhatják a vércukorszintre gyakorolt hatást, ami nagyon összetett folyamat.
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item mb-4 shadow-sm">
+                        <h2 class="accordion-header" id="headingThreeRow3">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeRow3" aria-expanded="false" aria-controls="collapseThreeRow3">
+                            Öregedésgátló hatás (Anti-aging)
+                          </button>
+                        </h2>
+                        <div id="collapseThreeRow3" class="accordion-collapse collapse" aria-labelledby="headingThreeRow3" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            A Humán Regenerátor növeli a szövetek kollagén termelését, amely az egész életen át csökken, és erősíti a bőr kötőszöveteinek szerkezetét. A Humán Regenerátor rendszeres használata megakadályozhatja a bőr természetes és fiziológiai vízvesztését, amely az öregedés természetes és logikus következménye. Ne feledje, hogy minden nap sok folyadékot kell fogyasztania, ha méregteleníteni akar. Kérjük, a Humán Regenerátor kezelés után is igyon sok folyadékot a kívánt hatás elérése érdekében.
+                          </div>
+                        </div>
+                      </div>
+              
+                      <div class="accordion-item mb-4 shadow-sm">
+                        <h2 class="accordion-header" id="headingFourRow3">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourRow3" aria-expanded="false" aria-controls="collapseFourRow3">
+                            Bioenergetika (anyagcsere)
+                          </button>
+                        </h2>
+                        <div id="collapseFourRow3" class="accordion-collapse collapse" aria-labelledby="headingFourRow3" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            A Humán Regenerátor optimalizálhatja a szervezet anyagcseréjét, pozitív, stimuláló hatása lehet a sejtosztódásra. Ez nagyon fontos, mert ha a folyamat lassú, a régi elemek bomlása meghosszabbodik, azonban a gyors folyamat nem ad elegendő időt a sejtek progressziójához. A hosszú és sikeres kutatások által kifejlesztett Humán Regenerátor technológia biztosíthatja az optimalizált hatás elősegítését az anyagcsere kiválasztásában.
+                          </div>
+                        </div>
+                      </div>
+              
+                      <!-- <div class="accordion-item shadow-sm">
+                        <h2 class="accordion-header" id="headingFiveRow3">
+                          <button class="accordion-button collapsed bg-transparent fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveRow3" aria-expanded="false" aria-controls="collapseFiveRow3">
+                            How Do I Cancel My Account?
+                          </button>
+                        </h2>
+                        <div id="collapseFiveRow3" class="accordion-collapse collapse" aria-labelledby="headingFiveRow3" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            <p>To cancel your account, please follow these steps:</p>
+                            <ul>
+                              <li>Go to our website and sign in to your account...</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div> -->
+              
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+        
+            </div>
+          </div>
+        </section>
   
 
 
