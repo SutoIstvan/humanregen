@@ -319,10 +319,10 @@
                     </div>
                     <ul class="pricing-feature-list">
                       <li class="pricing-feature">30 perces kezelés</li>
-                      <li class="pricing-feature">10 000 Ft</li>
+                      <li class="pricing-feature"><h4>20 000 Ft</h4></li>
                     </ul>
-                    <button class="pricing-action">Időpontot foglalok</button>
-                </div>
+                    <a href="{{ route('appointments') }}" class="pricing-action text-decoration-none">Időpontot foglalok</a>
+                  </div>
                 {{-- <div class="pricing-item features-item ja-animate pricing__item--featured" data-animation="move-from-bottom" data-delay="item-1" style="min-height: 497px;">
                     <div class="pricing-deco" style="background: linear-gradient(135deg,#a93bfe,#584efd)">
                         <svg class="pricing-deco-img" enable-background="new 0 0 300 100" height="100px" id="Layer_1" preserveAspectRatio="none" version="1.1" viewBox="0 0 300 100" width="300px" x="0px" xml:space="preserve" y="0px">
@@ -359,9 +359,9 @@
 
                     <ul class="pricing-feature-list">
                       <li class="pricing-feature">60 perces kezelés</li>
-                      <li class="pricing-feature">20 000 Ft</li>
+                      <li class="pricing-feature"><h4>40 000 Ft</h4></li>
                     </ul>
-                    <button class="pricing-action">Időpontot foglalok</button>
+                    <a href="{{ route('appointments') }}" class="pricing-action text-decoration-none">Időpontot foglalok</a>
                 </div>
             </div>
         </section>
@@ -390,7 +390,7 @@
 
 
   <div class="px-4 pt-5 my-5 text-center border-bottom">
-    <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Töltsd fel a tested és ébredj új életre</h2>
+    <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Töltsd fel a tested és ébredj új életre</h2>
 
     <h1 class="display-4 fw-bold text-body-emphasis">Humán Regenerátor Sports</h1>
     <div class="col-lg-10 mx-auto">
@@ -416,7 +416,7 @@
 
           <div class="row d-flex justify-content-center">
             <div class="col-md-10 col-xl-8 text-center">
-              <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Jótékony hatások</h2>
+              <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Jótékony hatások</h2>
     
               <p class=" mb-md-5 pb-md-0 lead">
                 Ismerd meg a Humán Regenerátor Jótékony hatásait

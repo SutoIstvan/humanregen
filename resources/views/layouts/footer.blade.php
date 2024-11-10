@@ -2,7 +2,7 @@
 
   <div class="container footer-top mt-5">
     <div class="row gy-4">
-      <div class="col-lg-4 col-md-6 footer-about">
+      <div class="col-lg-3 col-md-6 footer-about">
         <a href="index.html" class="d-flex align-items-center">
           <img src="{{ asset('assets/img/logo_footer.png') }}" height="80px" alt="">
         </a>
@@ -23,19 +23,20 @@
       <div class="col-lg-2 col-md-3 footer-links">
         <h4>Hasznos linkek</h4>
         <ul>
-          <li><a href="#">Főoldal</a></li>
-          <li><a href="#">Szolgáltatássunk</a></li>
-          <li><a href="#">Árak</a></li>
-          <li><a href="#">Galéria</a></li>
-          <li><a href="#">Kapcsolat</a></li>
+          <li><a href="{{ route('home') }}">Főoldal</a></li>
+          <li><a href="{{ route('effects') }}">Jótékony hatások</a></li>
+          <li><a href="#">Adatkezelési feltételek</a></li>
+          <li><a href="{{ route('price') }}">Árak</a></li>
+          <li><a href="{{ route('contacts') }}">Kapcsolat</a></li>
         </ul>
       </div>
 
-      <div class="col-lg-2 col-md-3 footer-links">
+      <div class="col-lg-3 col-md-3 footer-links">
         <h4>Nyitvatartás</h4>
 
         <ul>
-          <i class="fa-regular fa-clock ms-5" style="font-size: 24px;"></i>
+          <li>Az előre jelzett időpontban</li>
+          {{-- <i class="fa-regular fa-clock ms-5" style="font-size: 24px;"></i> --}}
           <li><a href="" class="text-decoration-none">Hétfőtől – péntekig:</a></li>
           <li><a href="" class="text-decoration-none">8:00 - 18:00</a></li>
           <!-- <li><a href="">Product Management</a></li> -->

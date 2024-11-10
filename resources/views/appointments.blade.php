@@ -351,7 +351,7 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-md-10 col-xl-8 text-center">
-                <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Kezelés időtartam</h2>
+                <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Kezelés időtartam</h2>
 
                 <p class=" mb-md-5 pb-md-0 lead">
                     Kérem válasszon kezelési időtartamot 30 és 60 perc között.
@@ -399,7 +399,7 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-md-10 col-xl-8 text-center">
-                <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Dátum és időpont foglalás</h2>
+                <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Dátum és időpont foglalás</h2>
 
                 <p class=" mb-md-5 pb-md-0 lead">
                     Kérem válasszon napot és időpontot, majd nyomja meg a Tovább gombot.

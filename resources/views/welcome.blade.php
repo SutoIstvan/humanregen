@@ -93,7 +93,7 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-6 order-lg-last hero-img mb-4" data-aos="zoom-out" data-aos-delay="100">
-          <img src="{{ asset('assets/img/main.png') }}" class="img-fluid animated"  alt="">
+          <img src="{{ asset('assets/img/main.png') }}" class="img-fluid"  alt="">
         </div>
 
         <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
@@ -144,7 +144,7 @@
       </div> -->
 
   <!-- <div class="container col-xxl-8 px-4 py-5">
-        <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Hatások</h2>
+        <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Hatások</h2>
 
       </div> -->
 
@@ -153,7 +153,7 @@
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 
         <div class="col-lg-6">
-          <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Miért a Humán Regenerátor Sports?</h2>
+          <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px; ">Miért a Humán Regenerátor Sports?</h2>
           <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">A Humán Regenerátor Sports -ot</h1>
           <p class="lead">
             A kiválóság, A transzparencia és az eredmények iránti
@@ -172,7 +172,7 @@
 
 
 
-        <div class="col-10 col-sm-12 col-lg-6">
+        <div class="col-12 col-sm-12 col-lg-6">
           <img src="{{ asset('assets/img/face.png') }}" class="d-block mx-lg-auto img-fluid" 
             loading="lazy">
 
@@ -192,7 +192,7 @@
 
         <div class="row d-flex justify-content-center">
           <div class="col-md-10 col-xl-8 text-center">
-            <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Jótékony hatások</h2>
+            <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Jótékony hatások</h2>
   
             <p class="mb-4 pb-2 mb-md-5 pb-md-0 lead">
               Ismerd meg a Humán Regenerátor Jótékony hatásait
@@ -372,7 +372,7 @@
 
       <div class="row d-flex justify-content-center">
         <div class="col-md-10 col-xl-8 text-center">
-          <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Fotóalbum és Galéria</h2>
+          <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Fotóalbum és Galéria</h2>
 
           <p class="mb-4 pb-2 mb-md-5 pb-md-0 lead">
             Szalonunk pillanatai, ahol az egészségével törődünk.
@@ -431,7 +431,7 @@
     <div class="container pt-5 pb-5">
       <div class="row d-flex justify-content-center">
         <div class="col-md-10 col-xl-8 text-center">
-          <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Visszajelzés ügyfeleinktól</h2>
+          <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Visszajelzés ügyfeleinktól</h2>
 
           <p class="mb-4 pb-2 mb-md-5 pb-md-0 lead">
             A kedves ügyfeleink értékelései inspirálnak minket.<br> A ti szavaitok a mi motivációnk!

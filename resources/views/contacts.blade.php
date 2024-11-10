@@ -66,7 +66,7 @@
 
 
   <div class="px-4 pt-5 my-5 text-center border-bottom">
-    <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Töltsd fel a tested és ébredj új életre</h2>
+    <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Töltsd fel a tested és ébredj új életre</h2>
 
     <h1 class="display-4 fw-bold text-body-emphasis">Humán Regenerátor Sports</h1>
     <div class="col-lg-10 mx-auto">
@@ -92,7 +92,7 @@
 
           <div class="row d-flex justify-content-center">
             <div class="col-md-10 col-xl-8 text-center">
-              <h2 class="alex-brush-regular" style="color: #c2a74e; size: 44px;">Jótékony hatások</h2>
+              <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Jótékony hatások</h2>
     
               <p class=" mb-md-5 pb-md-0 lead">
                 Ismerd meg a Humán Regenerátor Jótékony hatásait
