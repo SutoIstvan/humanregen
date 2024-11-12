@@ -409,13 +409,13 @@
 
     </div>
 
-    <div class="container mt-1">
-        <div class="row">
-            <div class="col-12 col-lg-6 d-flex justify-content-center">
+    <div class="container mt-1 ">
+        <div class="row d-flex justify-content-center">
+            <div class=" col-lg-6 col-xl-5 d-flex justify-content-center">
                 <div id="calendar"></div>
             </div>
 
-            <div class="col-12 col-lg-6">
+            <div class=" col-lg-6 col-xl-5">
                 <div class="time-list-container" id="time-list"></div>
             </div>
 

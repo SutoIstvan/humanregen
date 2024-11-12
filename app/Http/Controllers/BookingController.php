@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Booking;
 use App\Models\Price;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
 
 class BookingController extends Controller
 {
@@ -118,7 +119,11 @@ class BookingController extends Controller
                 ->withErrors(['time_slot' => 'Ez az időpont átfedésben van egy másik foglalással. Kérem válasszon egy másik időpontot.']);
         }
 
+
+
         Booking::create($validatedData);
+
+        // mail
 
         return redirect()->route('appointments');
     }

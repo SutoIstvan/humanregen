@@ -8,4 +8,3 @@ import 'aos/dist/aos.css';
 // AOS init
 
 AOS.init();
-

@@ -59,7 +59,8 @@
             var calendarEl = document.getElementById('calendar');
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
-                height: 550,
+                height: 'auto',
+                themeSystem: 'bootstrap', // Используем тему Bootstrap
                 initialView: 'timeGridWeek', // Вид календаря - недельный
                 initialDate: new Date(), // Устанавливаем начальную дату как текущую
                 events: @json($bookings), // Ваши события из базы данных
