@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -22,34 +24,23 @@ class LoginController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function showLoginForm()
-    {
-        // Сохраняем предыдущий URL, если он отличается от текущего (страницы логина)
-        if (url()->previous() != url()->current()) {
-            session(['url.intended' => url()->previous()]);
+
+    public function login(Request $request)
+{
+    $credentials = $request->only('email', 'password');
+
+    if (Auth::attempt($credentials)) {
+        // Проверяем и используем параметр 'redirect'
+        if ($request->filled('redirect')) {
+            return redirect()->to($request->input('redirect')); // Исправлено: добавлен метод `to()`
         }
 
-        return view('auth.login');
+        // Перенаправление на маршрут по умолчанию
+        return redirect()->route('dashboard');
     }
 
-    /**
-     * Get the post login redirect path.
-     *
-     * @return string
-     */
-    protected function redirectTo()
-    {
-        // Возвращаем сохраненный URL или стандартный путь
-        return session('url.intended', $this->redirectTo);
-    }
+    return redirect()->back()->withErrors(['email' => 'Неверные данные для входа.']);
+}
 
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('guest')->except('logout');
-    }
+    
 }

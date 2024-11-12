@@ -80,6 +80,8 @@
               @if (!Auth::check())
                 <p class="lead">
                   Már van Humanregen fiókom: 
+                  <a href="{{ route('login', ['redirect' => url()->full()]) }}" class="btn btn-primary">Войти</a>
+
                   <a href="{{ route('login') }}" class="text-decoration-none">Bejelentkezem</a>
                   <br>
                   Még nincs fiókod? 
