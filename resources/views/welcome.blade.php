@@ -50,7 +50,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
     
     <style>
-      .img-fluid {
+      .img-fluid-img {
         max-width: 100%;
         height: 133px;
         object-fit: cover;
@@ -409,7 +409,7 @@
         <div class="col-lg-2 col-md-4">
           <div class="gallery-item">
             <a href="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" class="glightbox" data-gallery="images-gallery">
-              <img src="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" alt="" class="img-fluid">
+              <img src="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" alt="" class="img-fluid-img">
             </a>
           </div>
         </div><!-- End Gallery Item -->
@@ -417,7 +417,7 @@
         <div class="col-lg-2 col-md-4" style="height: 133px; width: 77px;">
           <div class="gallery-item" >
             <a href="{{ asset('assets/img/gallery/20241106_130708.jpg') }}" class="glightbox" data-gallery="images-gallery" >
-              <img src="{{ asset('assets/img/gallery/20241106_130708.jpg') }}" alt="" class="img-fluid">
+              <img src="{{ asset('assets/img/gallery/20241106_130708.jpg') }}" alt="" class="img-fluid-img">
             </a>
           </div>
         </div><!-- End Gallery Item -->
@@ -425,7 +425,7 @@
         <div class="col-lg-2 col-md-4">
           <div class="gallery-item">
             <a href="{{ asset('assets/img/gallery/20241106_132309.jpg') }}" class="glightbox" data-gallery="images-gallery">
-              <img src="{{ asset('assets/img/gallery/20241106_132309.jpg') }}" alt="" class="img-fluid">
+              <img src="{{ asset('assets/img/gallery/20241106_132309.jpg') }}" alt="" class="img-fluid-img">
             </a>
           </div>
         </div><!-- End Gallery Item -->
@@ -433,7 +433,7 @@
         <div class="col-lg-2 col-md-4">
           <div class="gallery-item">
             <a href="{{ asset('assets/img/gallery/20241106_132320.jpg') }}" class="glightbox" data-gallery="images-gallery">
-              <img src="{{ asset('assets/img/gallery/20241106_132320.jpg') }}" alt="" class="img-fluid">
+              <img src="{{ asset('assets/img/gallery/20241106_132320.jpg') }}" alt="" class="img-fluid-img">
             </a>
           </div>
         </div><!-- End Gallery Item -->
@@ -441,7 +441,7 @@
         <div class="col-lg-2 col-md-4">
           <div class="gallery-item">
             <a href="{{ asset('assets/img/gallery/20241106_132352.jpg') }}" class="glightbox" data-gallery="images-gallery">
-              <img src="{{ asset('assets/img/gallery/20241106_132352.jpg') }}" alt="" class="img-fluid">
+              <img src="{{ asset('assets/img/gallery/20241106_132352.jpg') }}" alt="" class="img-fluid-img">
             </a>
           </div>
         </div><!-- End Gallery Item -->
@@ -449,7 +449,7 @@
         <div class="col-lg-2 col-md-4" style="height: 133px; width: 77px;">
           <div class="gallery-item" >
             <a href="{{ asset('assets/img/gallery/20241106_132428.jpg') }}" class="glightbox" data-gallery="images-gallery" >
-              <img src="{{ asset('assets/img/gallery/20241106_132428.jpg') }}" alt="" class="img-fluid">
+              <img src="{{ asset('assets/img/gallery/20241106_132428.jpg') }}" alt="" class="img-fluid-img">
             </a>
           </div>
         </div><!-- End Gallery Item -->
@@ -457,7 +457,7 @@
         <div class="col-lg-2 col-md-4">
           <div class="gallery-item">
             <a href="{{ asset('assets/img/gallery/20241106_132403.jpg') }}" class="glightbox" data-gallery="images-gallery">
-              <img src="{{ asset('assets/img/gallery/20241106_132403.jpg') }}" alt="" class="img-fluid">
+              <img src="{{ asset('assets/img/gallery/20241106_132403.jpg') }}" alt="" class="img-fluid-img">
             </a>
           </div>
         </div><!-- End Gallery Item -->
