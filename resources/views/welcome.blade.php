@@ -48,7 +48,16 @@
     
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
-</head>
+    
+    <style>
+      .img-fluid {
+        max-width: 100%;
+        height: 133px;
+        object-fit: cover;
+    }
+    </style>
+
+ </head>
 
 <body>
 
@@ -397,39 +406,61 @@
 
       <div class="row g-1 ">
 
-        <div class="col-lg-3 col-md-4">
+        <div class="col-lg-2 col-md-4">
           <div class="gallery-item">
-            <a href="{{ asset('assets/img/gallery/gallery-1.jpg') }}" class="glightbox" data-gallery="images-gallery">
-              <img src="{{ asset('assets/img/gallery/gallery-1.jpg') }}" alt="" class="img-fluid">
+            <a href="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" class="glightbox" data-gallery="images-gallery">
+              <img src="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" alt="" class="img-fluid">
             </a>
           </div>
         </div><!-- End Gallery Item -->
 
-        <div class="col-lg-3 col-md-4">
-          <div class="gallery-item">
-            <a href="{{ asset('assets/img/gallery/gallery-2.jpg') }}" class="glightbox" data-gallery="images-gallery">
-              <img src="{{ asset('assets/img/gallery/gallery-2.jpg') }}" alt="" class="img-fluid">
+        <div class="col-lg-2 col-md-4" style="height: 133px; width: 77px;">
+          <div class="gallery-item" >
+            <a href="{{ asset('assets/img/gallery/20241106_130708.jpg') }}" class="glightbox" data-gallery="images-gallery" >
+              <img src="{{ asset('assets/img/gallery/20241106_130708.jpg') }}" alt="" class="img-fluid">
             </a>
           </div>
         </div><!-- End Gallery Item -->
 
-        <div class="col-lg-3 col-md-4">
+        <div class="col-lg-2 col-md-4">
           <div class="gallery-item">
-            <a href="{{ asset('assets/img/gallery/gallery-3.jpg') }}" class="glightbox" data-gallery="images-gallery">
-              <img src="{{ asset('assets/img/gallery/gallery-3.jpg') }}" alt="" class="img-fluid">
+            <a href="{{ asset('assets/img/gallery/20241106_132309.jpg') }}" class="glightbox" data-gallery="images-gallery">
+              <img src="{{ asset('assets/img/gallery/20241106_132309.jpg') }}" alt="" class="img-fluid">
             </a>
           </div>
         </div><!-- End Gallery Item -->
 
-        <div class="col-lg-3 col-md-4">
+        <div class="col-lg-2 col-md-4">
           <div class="gallery-item">
-            <a href="{{ asset('assets/img/gallery/gallery-4.jpg') }}" class="glightbox" data-gallery="images-gallery">
-              <img src="{{ asset('assets/img/gallery/gallery-4.jpg') }}" alt="" class="img-fluid">
+            <a href="{{ asset('assets/img/gallery/20241106_132320.jpg') }}" class="glightbox" data-gallery="images-gallery">
+              <img src="{{ asset('assets/img/gallery/20241106_132320.jpg') }}" alt="" class="img-fluid">
             </a>
           </div>
         </div><!-- End Gallery Item -->
 
+        <div class="col-lg-2 col-md-4">
+          <div class="gallery-item">
+            <a href="{{ asset('assets/img/gallery/20241106_132352.jpg') }}" class="glightbox" data-gallery="images-gallery">
+              <img src="{{ asset('assets/img/gallery/20241106_132352.jpg') }}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div><!-- End Gallery Item -->
 
+        <div class="col-lg-2 col-md-4" style="height: 133px; width: 77px;">
+          <div class="gallery-item" >
+            <a href="{{ asset('assets/img/gallery/20241106_132428.jpg') }}" class="glightbox" data-gallery="images-gallery" >
+              <img src="{{ asset('assets/img/gallery/20241106_132428.jpg') }}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div><!-- End Gallery Item -->
+
+        <div class="col-lg-2 col-md-4">
+          <div class="gallery-item">
+            <a href="{{ asset('assets/img/gallery/20241106_132403.jpg') }}" class="glightbox" data-gallery="images-gallery">
+              <img src="{{ asset('assets/img/gallery/20241106_132403.jpg') }}" alt="" class="img-fluid">
+            </a>
+          </div>
+        </div><!-- End Gallery Item -->
 
       </div>
 
