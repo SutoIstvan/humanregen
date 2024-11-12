@@ -4,7 +4,7 @@
     <div class="row gy-4">
       <div class="col-lg-3 col-md-6 footer-about">
         <a href="index.html" class="d-flex align-items-center">
-          <img src="{{ asset('assets/img/logo_footer.png') }}" height="80px" alt="">
+          <img src="{{ asset('assets/img/logo_footer2.png') }}" height="80px" alt="">
         </a>
         <div class="footer-contact pt-3">
           <p><strong>Cím:</strong> 7030 Paks, Vasút utca 10.</p>

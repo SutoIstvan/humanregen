@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
   <a href="{{ route('welcome') }}" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
     <!-- <h2 class="m-0 text-primary">LOGO</h2> -->
-    <img src="{{asset('assets/logo.png')}}" height="75px" alt="">
+    <img src="{{asset('assets/logo2.png')}}" height="75px" alt="">
   </a>
   <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
       
 
     </div>
-    <a href="{{ route('appointments') }}" class="btn btn-green py-4 px-lg-4 d-none d-lg-block">IDŐPONTFOGLALÁS<i
+    <a href="{{ route('appointments') }}" class="btn btn-green py-4 px-lg-4 d-none d-lg-block" style="border-radius: 8px 0px 0px 8px !important;">IDŐPONTFOGLALÁS<i
         class="fa fa-arrow-right ms-3"></i></a>
   </div>
 </nav>
