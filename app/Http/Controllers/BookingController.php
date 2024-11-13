@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Booking;
 use App\Models\Price;
 use Carbon\Carbon;
+use App\Mail\BookingConfirmationMail;
 use Illuminate\Support\Facades\Mail;
 
 class BookingController extends Controller
@@ -124,6 +125,24 @@ class BookingController extends Controller
         Booking::create($validatedData);
 
         // mail
+
+        // $validatedData = $request->validate([
+        //     'date' => 'required|date',
+        //     'time_slot' => 'required|date_format:H:i',
+        //     'duration' => 'required|integer|in:35,70',
+        //     'client_name' => 'required|string|max:255',
+        //     'client_email' => 'required|email|max:255',
+        //     'client_phone' => 'required|string|max:20',
+        // ]);
+
+        $bookingDetails = [
+            'name' => $validatedData['client_name'],
+            'date' => $validatedData['date'],
+            'time' => $validatedData['time_slot'],
+            'service' => $validatedData['duration'],
+        ];
+        
+        Mail::to($validatedData['client_email'])->send(new BookingConfirmationMail($bookingDetails));
 
         return redirect()->route('appointments');
     }

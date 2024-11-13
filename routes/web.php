@@ -30,6 +30,7 @@ Route::get('/price', function () {
 
 Route::get('/contacts', function () {
     return view('contacts');
+    // return view('emails.booking_confirmation');
 })->name('contacts');
 
 
