@@ -13,7 +13,7 @@
    <meta name="format-detection" content="address=no" />
    <meta name="format-detection" content="telephone=no" />
    <meta name="x-apple-disable-message-reformatting" />
-   <title>Foglalás megerősítése</title>
+   <title>HumanRegen Foglalás megerősítése</title>
    <!--[if gte mso 9]>  <style type="text/css" media="all">  sup { font-size: 100% !important; }   table, th, td, div, p, strong, span { font-family: Arial,sans-serif !important; } .intro-title-3, .hero-title-2, .hero-title-3 {font-weight:bold;} </style>  <![endif]-->
    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900" rel="stylesheet">
  
@@ -478,7 +478,7 @@
  
                              <!--  hero-title-1 -->
                              <tr>
-                               <td bgcolor="#4D7268" class="hero-title-1" style="padding: 15px 78px 30px 78px;color:#FFFFFF; font-family: 'Proxima Nova Light', Arial,sans-serif; font-size:16px; line-height:20px; font-weight: normal; text-align:center; letter-spacing: .01em"><span style="font-family: Proxima Nova semibold, Arial,sans-serif;"><span style="font-family: 'Proxima Nova Bold', Arial,sans-serif; font-weight: bold;">Örömmel értesítünk</span></span>, hogy foglalásod a Humán Regenerátor Sports - Egész testes sejtregeneráció kezelés véglegesítve lett! Várunk szeretettel a megadott időpontban.</td>
+                               <td bgcolor="#4D7268" class="hero-title-1" style="padding: 15px 78px 30px 78px;color:#FFFFFF; font-family: 'Proxima Nova Light', Arial,sans-serif; font-size:16px; line-height:20px; font-weight: normal; text-align:center; letter-spacing: .01em"><span style="font-family: Proxima Nova semibold, Arial,sans-serif;"><span style="font-family: 'Proxima Nova Bold', Arial,sans-serif; font-weight: bold;">Örömmel értesítünk</span></span>, hogy foglalásod a Humán Regenerátor Sports - Egész testes sejtregeneráció <span style="font-family: Proxima Nova semibold, Arial,sans-serif;"><span style="font-family: 'Proxima Nova Bold', Arial,sans-serif; font-weight: bold;">{{ $bookingDetails['sercices'] }}</span></span> perces kezelés véglegesítve lett! Várunk szeretettel a megadott időpontban.</td>
                              </tr>
                              <!-- #hero-title-1 -->
  
@@ -487,7 +487,7 @@
                                <td bgcolor="#4D7268" align="center" class="fallback-font btn-pb" style="padding-bottom: 45px">
                                  <div class="btn" style="text-align:center;">
                                    <!--[if mso]>                                                                     <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.fitbit.com/campaign/shop/versa?color=black&utm_source=ET&utm_medium=EM&utm_campaign=20191117_PreBFV2_US_FM_M_SU_SW_32_NA&utm_content=HeroCTALink" style="font-family: Arial, Helvetica, sans-serif;height:36px;v-text-anchor:middle;width:150px;" arcsize="152%" stroke="f" fillcolor="#002A3A">                                                                     <w:anchorlock/>                                                                     <center>                                                                     <![endif]-->
-                                   <a href="#" class="mob-btn" target="_blank" style="background-color:#002A3A;border-radius:50px;color:#ffffff;display:inline-block;font-family:'Proxima Nova Bold', Arial, sans-serif;font-size:15px; letter-spacing: .01em; font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none; padding-top: 1px"> 2024-11-13 - 15:00 </a>
+                                   <a href="#" class="mob-btn" target="_blank" style="background-color:#002A3A;border-radius:50px;color:#ffffff;display:inline-block;font-family:'Proxima Nova Bold', Arial, sans-serif;font-size:15px; letter-spacing: .01em; font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none; padding-top: 1px"> {{ $bookingDetails['date'] }} - {{ $bookingDetails['time'] }} </a>
                                    <!--[if mso]>                                                                     </center>                                                                     </v:roundrect>                                                                     <![endif]-->
                                  </div>
                                </td>
