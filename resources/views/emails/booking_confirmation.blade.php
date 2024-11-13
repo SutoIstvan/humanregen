@@ -545,9 +545,10 @@
                        </tr>
  
                        <tr>
-                         <td valign="top" style="padding:0px 1px 0px 20px;color:#ffffff; font-family:'Proxima Nova Light', Arial,sans-serif;font-weight: 300; font-size: 16px;  text-align:center; line-height: 20px;">
-                            Email:<br>info@humanregen.hu
-                         </td>
+                        <td valign="top" style="padding:0px 1px 0px 20px; color:#ffffff; font-family:'Proxima Nova Light', Arial, sans-serif; font-weight: 300; font-size: 16px; text-align:center; line-height: 20px;">
+                            Email:<br><span style="color: #ffffff; text-decoration: none;">info@humanregen.hu</span>
+                        </td>
+                        
                          <td valign="top" style="padding:0px 5px 0px 5px;color:#ffffff; font-family:'Proxima Nova Light', Arial,sans-serif;font-weight: 300; font-size: 16px; text-align:center; line-height: 20px; text-decoration: none;">
                             Telefon:<br>+36 00 0000 00
                          </td>
