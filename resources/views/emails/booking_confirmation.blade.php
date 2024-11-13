@@ -453,7 +453,7 @@
                                  <table border="0" cellpadding="0" align="center" cellspacing="0" style="border:none;border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;" width="100%" class="wrapper" bgcolor="#ffffff">
                                    <tr>
                                     <td style="text-align: center;">
-                                        <a href="#"><img src="http://humanregen.local/assets/logo2.png" width="221" height="80" style="display: inline-block; border: none;" alt="Fitbit" class="logoimage"></a>
+                                        <a href="#"><img src="{{ asset('assets/logo2.png') }}" width="221" height="80" style="display: inline-block; border: none;" alt="Fitbit" class="logoimage"></a>
                                     </td> 
                                    </tr>
                                  </table>
