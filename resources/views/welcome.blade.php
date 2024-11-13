@@ -173,16 +173,16 @@
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 
         <div class="col-lg-6">
-          <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px; ">Miért a Humán Regenerátor Sports?</h2>
-          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">A Humán Regenerátor Sports -ot</h1>
-          <p class="lead">
+          <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px; " data-aos="fade-up" data-aos-delay="1">Miért a Humán Regenerátor Sports?</h2>
+          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" data-aos="fade-up" data-aos-delay="50">A Humán Regenerátor Sports -ot</h1>
+          <p class="lead" data-aos="fade-up" data-aos-delay="100">
             A kiválóság, A transzparencia és az eredmények iránti
             elkötelezettsége különbözteti meg. <br> Mi meghaladjuk az átlagot, és az egyik legújabb tudományos
             felfedezést
             és technológiát alkalmazzuk annak érdekében, hogy olyan regenerációs megoldást nyújtsunk, amelyek
             valóban változást hozhatnak.
           </p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <div class="d-grid gap-2 d-md-flex justify-content-md-start" data-aos="fade-up" data-aos-delay="130">
             <a href="{{ route('effects') }}" class="btn btn-primary btn-lg px-4 me-md-2" style="background-color: #c2a74e; border-color: #c2a74e;">
                 További információ
             </a>
@@ -192,7 +192,7 @@
 
 
 
-        <div class="col-12 col-sm-12 col-lg-6">
+        <div class="col-12 col-sm-12 col-lg-6" data-aos="zoom-in" data-aos-delay="10">
           <img src="{{ asset('assets/img/face.png') }}" class="d-block mx-lg-auto img-fluid" 
             loading="lazy">
 
@@ -227,11 +227,11 @@
     <div class="content-column col-lg-4">
       <div class="pricing-block">
         <div class="inner-box">
-          <div class="image-box">
+          <div class="image-box" data-aos="fade-up" data-aos-delay="10">
             <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/1.png') }}"
                   alt="Image"></figure>
           </div>
-          <div class="content-box ms-2">
+          <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
               <div class="lead"> a mozgásszervi betegségekre</div>
@@ -241,11 +241,11 @@
       </div>
       <div class="pricing-block">
         <div class="inner-box">
-          <div class="image-box">
+          <div class="image-box" data-aos="fade-up" data-aos-delay="10">
             <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/2.png') }}"
                   alt="Image"></figure>
           </div>
-          <div class="content-box ms-2">
+          <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
               <div class="lead">a véráramlás serkentése</div>
@@ -255,11 +255,11 @@
       </div>
       <div class="pricing-block">
         <div class="inner-box">
-          <div class="image-box">
+          <div class="image-box" data-aos="fade-up" data-aos-delay="10">
             <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/3.png') }}"
                   alt="Image"></figure>
           </div>
-          <div class="content-box ms-2">
+          <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
               <div class="lead">Immunrendszer erősítés</div>
@@ -269,11 +269,11 @@
       </div>
       <div class="pricing-block">
         <div class="inner-box">
-          <div class="image-box">
+          <div class="image-box" data-aos="fade-up" data-aos-delay="10">
             <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/4.png') }}"
                   alt="Image"></figure>
           </div>
-          <div class="content-box ms-2">
+          <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
               <div class="lead">Sérülésekre</div>
@@ -282,7 +282,7 @@
         </div>
       </div>
     </div>
-    <div class="image-column col-lg-4 d-flex justify-content-center align-items-center">
+    <div class="image-column col-lg-4 d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="10">
       <div class="inner-box">
         {{-- <div class="bg bg-image bounce-y" style="background-image: url(&quot;/https://purerelax-next.vercel.app/images/resource/flower1.png&quot;);">
         </div> --}}
@@ -292,11 +292,11 @@
     <div class="content-column col-lg-4">
       <div class="pricing-block">
         <div class="inner-box">
-          <div class="image-box">
+          <div class="image-box" data-aos="fade-up" data-aos-delay="10">
             <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/5.png') }}"
                   alt="Image"></figure>
           </div>
-          <div class="content-box ms-2">
+          <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
               <div class="lead">a szorongásra, stresszre</div>
@@ -306,11 +306,11 @@
       </div>
       <div class="pricing-block">
         <div class="inner-box">
-          <div class="image-box">
+          <div class="image-box" data-aos="fade-up" data-aos-delay="10">
             <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/6.png') }}"
                   alt="Image"></figure>
           </div>
-          <div class="content-box ms-2">
+          <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
               <div class="lead">Öregedésgátló hatás</div>
@@ -320,11 +320,11 @@
       </div>
       <div class="pricing-block">
         <div class="inner-box">
-          <div class="image-box">
+          <div class="image-box" data-aos="fade-up" data-aos-delay="10">
             <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/7.png') }}"
                   alt="Image"></figure>
           </div>
-          <div class="content-box ms-2">
+          <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
               <div class="lead">Kiegyensúlyozott alvás</div>
@@ -335,11 +335,11 @@
 
       <div class="pricing-block">
         <div class="inner-box">
-          <div class="image-box">
+          <div class="image-box" data-aos="fade-up" data-aos-delay="10">
             <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/8.png') }}"
                   alt="Image"></figure>
           </div>
-          <div class="content-box ms-2">
+          <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
               <div class="lead">Sejtregeneráció (sérülés, műtét) </div>
@@ -471,7 +471,7 @@
 
   <section>
     <div class="container pt-5 pb-5">
-      <div class="row d-flex justify-content-center">
+      <div class="row d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
         <div class="col-md-10 col-xl-8 text-center">
           <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Visszajelzés ügyfeleinktól</h2>
 
@@ -481,7 +481,7 @@
         </div>
       </div>
 
-      <div class="row text-center">
+      <div class="row text-center" data-aos="fade-up" data-aos-delay="100">
         <div class="col-md-4 mb-5 mb-md-0">
           <div class="d-flex justify-content-center mb-4">
             <img src="{{ asset('assets/img/testimonials/testimonials-4.jpg') }}" class="rounded-circle shadow-1-strong"
