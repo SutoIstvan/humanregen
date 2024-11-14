@@ -127,7 +127,7 @@
             és akkumulátorként tölti fel a sejteket.</p>
           <div class="d-flex">
             <a href="{{ route('appointments') }}" class="btn-get-started">Időpontot foglalok</a>
-            <a href="{{ route('effects') }}" class="glightbox btn-watch-video d-flex align-items-center">
+            <a href="{{ route('effects') }}" class="btn-watch-video d-flex align-items-center">
               <i class="bi bi-play-circle"></i><span>További információk</span>
             </a>
           </div>

@@ -14,12 +14,14 @@
     <style>
           .hero {
             width: 100%;
-            min-height: 40vh !important;
+            min-height: 20vh !important;
             position: relative;
             padding: 80px 0 80px 0;
             display: flex;
             align-items: center;
           }
+
+          
     </style>
 </head>
 
@@ -63,6 +65,31 @@
 
   </section><!-- /Hero Section -->
 
+  {{-- <div class="container d-flex justify-content-center">
+    <div class="col-10">
+      <div class="row">
+        <div class="col-lg-4 text-center">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+          <h2 class="fw-normal">Heading</h2>
+          <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4 text-center">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+          <h2 class="fw-normal">Heading</h2>
+          <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4 text-center">
+          <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
+          <h2 class="fw-normal">Heading</h2>
+          <p>And lastly this, the third column of representative placeholder content.</p>
+          <p><a class="btn btn-secondary" href="#">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div>
+    </div>
+  
+  </div> --}}
 
   <div class="px-4 pt-5 my-5 text-center ">
     <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Térkép</h2>
@@ -84,11 +111,11 @@
   </div>
 
 
-  <div class="px-4 pt-5 my-5 text-center border-bottom">
+  <div class="px-4 pt-5 my-5 text-center border-bottom" data-aos="fade-up">
     <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Töltsd fel a tested és ébredj új életre</h2>
 
     <h1 class="display-4 fw-bold text-body-emphasis">Humán Regenerátor Sports</h1>
-    <div class="col-lg-10 mx-auto">
+    <div class="col-lg-10 col-xl-10 col-xxl-8 mx-auto">
 
       <p class="lead mb-4">A Humán Regenerátor Sports kezelés <strong>orvosi alapja egy 18 éves kutatássorozat eredményeként </strong>megszületett és folyamatosan fejlesztett&nbsp;világszerte egyedülálló high-tech eszköz, amely <strong>sejtszinten aktiválja a szervezet öngyógyító folyamatait, ellensúlyozza a sejtekben lévő oxidatív stresszt és akkumulátorként tölti fel a sejteket</strong>. A<strong> Humán Regenerátor Sports a piacon elérhető legerősebb generátorral büszkélkedhet</strong>. Kimagasló generátor teljesítményével túlszárnyalja a Humán Regenerátor Power Jet és Professionel modelleket, kifejezetten erős hatást gyakorolva már a vázizmokra is.</p>
       <!-- <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p> -->
@@ -121,7 +148,7 @@
     
         </div><!-- End Section Title -->
 
-        <section class="bsb-faq-2 py-3 py-md-5 py-xl-8">
+        <section class="bsb-faq-2 py-3 py-md-5 py-xl-8" data-aos="fade-up">
           <div class="container">
             <div class="row gy-5 gy-lg-0" id="accordionExample">
         

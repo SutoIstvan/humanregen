@@ -28,7 +28,7 @@
     <style>
         .hero {
             width: 100%;
-            min-height: 40vh !important;
+            min-height: 20vh !important;
             position: relative;
             padding: 80px 0 80px 0;
             display: flex;
@@ -110,198 +110,7 @@
         }
 
 
-        /* Radio Button */
-        .plans {
-            display: flex;
-            justify-content: center;
-            /* Горизонтальное центрирование */
-            align-items: center;
-            /* Вертикальное центрирование */
-            flex-wrap: wrap;
-            /* Позволяет элементам переноситься на новую строку */
-            box-sizing: border-box;
-            border-radius: 20px;
-        }
 
-        .plans .plan input[type="radio"] {
-            position: absolute;
-            opacity: 0;
-        }
-
-        .plans .plan {
-            cursor: pointer;
-            /* width: 48.5%; */
-            width: 455px;
-            background-color: #fff;
-            border-radius: 10px;
-
-        }
-
-        .plans .plan .plan-content {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            padding: 20px;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            border: 2px solid #ffffff;
-            border-radius: 10px;
-            -webkit-transition: -webkit-box-shadow 0.4s;
-            transition: -webkit-box-shadow 0.4s;
-            -o-transition: box-shadow 0.4s;
-            transition: box-shadow 0.4s;
-            transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
-            position: relative;
-        }
-
-        .plans .plan .plan-content img {
-            margin-right: 30px;
-            height: 72px;
-        }
-
-        .plans .plan .plan-details span {
-            margin-bottom: 10px;
-            display: block;
-            font-size: 20px;
-            line-height: 24px;
-            color: #252f42;
-        }
-
-        .container .title {
-            font-size: 20px;
-            font-weight: 500;
-            -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
-            color: #252f42;
-            margin-bottom: 20px;
-        }
-
-        .plans .plan .plan-details p {
-            color: #646a79;
-            font-size: 14px;
-            line-height: 18px;
-        }
-
-        .plans .plan .plan-content:hover {
-            -webkit-box-shadow: 0px 3px 5px 0px #e8e8e8;
-            box-shadow: 0px 3px 5px 0px #e8e8e8;
-        }
-
-        .plans .plan input[type="radio"]:checked+.plan-content:after {
-            content: "";
-            position: absolute;
-            height: 16px;
-            width: 16px;
-            background: #1dbfc7;
-            right: 20px;
-            top: 20px;
-            border-radius: 100%;
-            border: 3px solid #fff;
-            -webkit-box-shadow: 0px 0px 0px 2px #006469;
-            box-shadow: 0px 0px 0px 2px #006469;
-        }
-
-        .plans .plan input[type="radio"]:checked+.plan-content {
-            border: 2px solid #006469;
-            background: #eff8f7;
-            -webkit-transition: ease-in 0.3s;
-            -o-transition: ease-in 0.3s;
-            transition: ease-in 0.3s;
-        }
-
-        @media screen and (max-width: 991px) {
-            .plans {
-                margin: 0 20px;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                -webkit-box-align: start;
-                -ms-flex-align: start;
-                align-items: flex-start;
-                padding: 40px;
-            }
-
-            .plans .plan {
-                width: 100%;
-            }
-
-            .plan.complete-plan {
-                margin-top: 20px;
-            }
-
-            .plans .plan .plan-content .plan-details {
-                width: 70%;
-                display: inline-block;
-            }
-
-            .plans .plan input[type="radio"]:checked+.plan-content:after {
-                top: 45%;
-                -webkit-transform: translate(-50%);
-                -ms-transform: translate(-50%);
-                transform: translate(-50%);
-            }
-        }
-
-        @media screen and (max-width: 767px) {
-            .plans .plan .plan-content .plan-details {
-                width: 60%;
-                display: inline-block;
-            }
-        }
-
-        @media screen and (max-width: 540px) {
-            .plans .plan .plan-content img {
-                margin-bottom: 20px;
-                height: 56px;
-                -webkit-transition: height 0.4s;
-                -o-transition: height 0.4s;
-                transition: height 0.4s;
-            }
-
-            .plans .plan input[type="radio"]:checked+.plan-content:after {
-                top: 20px;
-                right: 10px;
-            }
-
-            .plans .plan .plan-content .plan-details {
-                width: 100%;
-            }
-
-            .plans .plan .plan-content {
-                padding: 20px;
-                -webkit-box-orient: vertical;
-                -webkit-box-direction: normal;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                -webkit-box-align: baseline;
-                -ms-flex-align: baseline;
-                align-items: baseline;
-            }
-        }
-
-        /* inspiration */
-        .inspiration {
-            font-size: 12px;
-            margin-top: 50px;
-            position: absolute;
-            bottom: 10px;
-            font-weight: 300;
-        }
-
-        .inspiration a {
-            color: #666;
-        }
-
-        @media screen and (max-width: 767px) {
-
-            /* inspiration */
-            .inspiration {
-                display: none;
-            }
-        }
-
-        /* Radio button */
     </style>
 </head>
 
@@ -372,7 +181,7 @@
 
         <div class="">
             <div class="plans mb-5">
-                <label class="plan basic-plan me-xl-5 me-lg-3" for="basic">
+                <label class="plan basic-plan me-xxl-5 me-lg-3" for="basic">
                     <input checked type="radio" id="basic" name="duration" value="35" />
                     <div class="plan-content ">
                         <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
@@ -383,7 +192,7 @@
                     </div>
                 </label>
 
-                <label class="plan complete-plan ms-xl-5 ms-lg-2" for="complete">
+                <label class="plan complete-plan ms-xxl-5 ms-lg-2" for="complete">
                     <input type="radio" id="complete" name="duration" value="70" />
                     <div class="plan-content">
                         <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
@@ -455,7 +264,10 @@ document.addEventListener('DOMContentLoaded', () => {
             range: {
                 min: 'today',
                 disableWeekday: [0], // Отключаем воскресенье
-            }
+            },
+            visibility: {
+                theme: 'light',
+            },
         },
         popups: {
             weekdays: ['H', 'K', 'Sz', 'Cs', 'P', 'Sz', 'V'],

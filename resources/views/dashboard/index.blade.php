@@ -173,7 +173,7 @@
                     // Удаление события при нажатии на кнопку "Удалить"
                     document.getElementById('deleteEventButton').onclick = function() {
                         // Подтверждение удаления
-                        if (confirm('Вы уверены, что хотите удалить это событие?')) {
+                        if (confirm('Biztosan törölni szeretné ezt a foglalást?')) {
                             // Отправляем запрос на удаление события через AJAX
                             fetch(`/bookings/${eventId}`, {
                                     method: 'DELETE',
@@ -190,7 +190,7 @@
                                         // Удаляем событие из календаря
                                         info.event.remove();
                                         $('#modalMin').modal('hide');
-                                        alert('Событие удалено.');
+                                        // alert('Событие удалено.');
                                     } else {
                                         alert('Ошибка при удалении события.');
                                     }

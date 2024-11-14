@@ -259,6 +259,10 @@
   }
 }
 
+.plans {
+  padding: 0px !important;
+}
+
     </style>
 </head>
 
@@ -321,7 +325,7 @@
                       <li class="pricing-feature">30 perces kezelés</li>
                       <li class="pricing-feature"><h4>20 000 Ft</h4></li>
                     </ul>
-                    <a href="{{ route('appointments') }}" class="pricing-action text-decoration-none">Időpontot foglalok</a>
+                    <a href="{{ route('appointments') }}" class=" btn-get-started" style="    margin: auto 3em 2em 3em;">Időpontot foglalok</a>
                   </div>
                 {{-- <div class="pricing-item features-item ja-animate pricing__item--featured" data-animation="move-from-bottom" data-delay="item-1" style="min-height: 497px;">
                     <div class="pricing-deco" style="background: linear-gradient(135deg,#a93bfe,#584efd)">
@@ -361,7 +365,7 @@
                       <li class="pricing-feature">60 perces kezelés</li>
                       <li class="pricing-feature"><h4>40 000 Ft</h4></li>
                     </ul>
-                    <a href="{{ route('appointments') }}" class="pricing-action text-decoration-none">Időpontot foglalok</a>
+                    <a href="{{ route('appointments') }}" class=" btn-get-started" style="    margin: auto 3em 2em 3em;">Időpontot foglalok</a>
                 </div>
             </div>
         </section>
@@ -387,13 +391,52 @@
 
   </section><!-- /Hero Section -->
 
+        <!-- Section Title -->
+        <div class="container section-title pt-5" data-aos="fade-up">
 
+          <div class="row d-flex justify-content-center">
+            <div class="col-md-6 col-xl-6 text-center">
+              <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Bérlet</h2>
+    
+              <p class="  pb-md-0 lead">
+                A Humán Regenerátor Sports szalonunkban 5 és 10 alkalmas bérleteket vásárolhat kedvező áron.
+              </p>
+            </div>
+          </div>
+    
+        </div><!-- End Section Title -->
 
-  <div class="px-4 pt-5 my-5 text-center border-bottom">
+  <div class="" data-aos="fade-up">
+    <div class="plans mb-5">
+        <label class="plan basic-plan me-xxl-5 me-lg-3 " for="basic">
+            <input checked type="radio" id="basic" name="duration" value="35" />
+            <div class="plan-content ">
+                <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
+                <div class="plan-details">
+                    <span>5 alkalmas bérlet 90 000 ft</span>
+                    <p>1 alkalom = 30 perces kezelés<br>Érvényesség: vásárlástól számított 185 napig</p>
+                </div>
+            </div>
+        </label>
+
+        <label class="plan complete-plan ms-xxl-5 ms-lg-2" for="complete">
+            <input type="radio" id="complete" name="duration" value="70" />
+            <div class="plan-content">
+                <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
+                <div class="plan-details">
+                  <span>10 alkalmas bérlet 180 000 ft</span>
+                  <p>1 alkalom = 30 perces kezelés<br>Érvényesség: vásárlástól számított 185 napig</p>
+                </div>
+            </div>
+        </label>
+    </div>
+</div>
+
+  <div class="px-4 pt-5 my-5 text-center border-bottom" data-aos="fade-up">
     <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Töltsd fel a tested és ébredj új életre</h2>
 
     <h1 class="display-4 fw-bold text-body-emphasis">Humán Regenerátor Sports</h1>
-    <div class="col-lg-10 mx-auto">
+    <div class="col-lg-10 col-xl-10 col-xxl-8 mx-auto">
 
       <p class="lead mb-4">A Humán Regenerátor Sports kezelés <strong>orvosi alapja egy 18 éves kutatássorozat eredményeként </strong>megszületett és folyamatosan fejlesztett&nbsp;világszerte egyedülálló high-tech eszköz, amely <strong>sejtszinten aktiválja a szervezet öngyógyító folyamatait, ellensúlyozza a sejtekben lévő oxidatív stresszt és akkumulátorként tölti fel a sejteket</strong>. A<strong> Humán Regenerátor Sports a piacon elérhető legerősebb generátorral büszkélkedhet</strong>. Kimagasló generátor teljesítményével túlszárnyalja a Humán Regenerátor Power Jet és Professionel modelleket, kifejezetten erős hatást gyakorolva már a vázizmokra is.</p>
       <!-- <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p> -->
@@ -427,7 +470,7 @@
         </div><!-- End Section Title -->
 
 
-        <section class="bsb-faq-2 py-3 py-md-5 py-xl-8">
+        <section class="bsb-faq-2 py-3 py-md-5 py-xl-8" data-aos="fade-up">
           <div class="container">
             <div class="row gy-5 gy-lg-0" id="accordionExample">
         

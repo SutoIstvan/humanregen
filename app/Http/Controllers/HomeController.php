@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Booking;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -24,9 +25,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
-    }
+        // Получение email текущего аутентифицированного пользователя
+        $userEmail = Auth::user()->email;
+        
+        // Получение всех бронирований пользователя по его email
+        $bookings = Booking::where('client_email', $userEmail)->get();
 
+        $user = Auth::user();
+        
+        return view('home', compact('bookings', 'user'));
+    }
+    
         /**
      * Show the application dashboard.
      *
