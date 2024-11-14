@@ -27,8 +27,8 @@
       integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
       crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
     <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> --}}
   
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> --}}
   
@@ -54,6 +54,11 @@
         max-width: 100%;
         height: 133px;
         object-fit: cover;
+    }
+    @media (max-width: 768px) {
+        .img-fluid-img {
+            height: 100% !important;
+        }
     }
     </style>
 
@@ -169,10 +174,10 @@
       </div> -->
 
   <div style=" background-color: #f9f6f1;">
-    <div class="container col-xxl-8 px-4 py-5">
+    <div class="container col-xxl-10 px-4 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-xxl-7">
           <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px; " data-aos="fade-up" data-aos-delay="1">Miért a Humán Regenerátor Sports?</h2>
           <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" data-aos="fade-up" data-aos-delay="50">A Humán Regenerátor Sports -ot</h1>
           <p class="lead" data-aos="fade-up" data-aos-delay="100">
@@ -192,7 +197,7 @@
 
 
 
-        <div class="col-12 col-sm-12 col-lg-6" data-aos="zoom-in" data-aos-delay="10">
+        <div class="col-12 col-sm-12 col-lg-6 col-xxl-5" data-aos="zoom-in" data-aos-delay="10">
           <img src="{{ asset('assets/img/face.png') }}" class="d-block mx-lg-auto img-fluid" 
             loading="lazy">
 
@@ -224,7 +229,7 @@
 
 
   <div class="row align-items-center ">
-    <div class="content-column col-lg-4">
+    <div class="content-column col-lg-4 d-block d-lg-none">
       <div class="pricing-block">
         <div class="inner-box">
           <div class="image-box" data-aos="fade-up" data-aos-delay="10">
@@ -248,7 +253,7 @@
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
-              <div class="lead">a véráramlás serkentése</div>
+              <div class="lead">véráramlás serkentésére</div>
             </div><span class="price"></span>
           </div>
         </div>
@@ -262,7 +267,7 @@
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
-              <div class="lead">Immunrendszer erősítés</div>
+              <div class="lead">az immunrendszer erősítésére</div>
             </div><span class="price"></span>
           </div>
         </div>
@@ -276,14 +281,79 @@
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
-              <div class="lead">Sérülésekre</div>
+              <div class="lead">a sérülésekre</div>
             </div><span class="price"></span>
           </div>
         </div>
       </div>
     </div>
-    <div class="image-column col-lg-4 d-flex justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="10">
-      <div class="inner-box">
+
+    <div class="content-column col-lg-4 d-none d-lg-block">
+      <div class="pricing-block-end" >
+        <div class="inner-box">
+
+          <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
+            <div class="inner">
+              <h2 class="title">Hatással van</h2>
+              <div class="lead">a mozgásszervi betegségekre</div>
+            </div><span class="price"></span>
+          </div>
+
+          <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+            <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/1.png') }}"
+                  alt="Image"></figure>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-block-end">
+        <div class="inner-box">
+
+          <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
+            <div class="inner">
+              <h2 class="title">Hatással van</h2>
+              <div class="lead">a véráramlás serkentésére</div>
+            </div><span class="price"></span>
+          </div>
+          <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+            <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/2.png') }}"
+                  alt="Image"></figure>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-block-end">
+        <div class="inner-box">
+
+          <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
+            <div class="inner">
+              <h2 class="title">Hatással van</h2>
+              <div class="lead">az immunrendszer erősítésére</div>
+            </div><span class="price"></span>
+          </div>
+          <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+            <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/3.png') }}"
+                  alt="Image"></figure>
+          </div>
+        </div>
+      </div>
+      <div class="pricing-block-end">
+        <div class="inner-box">
+
+          <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
+            <div class="inner">
+              <h2 class="title">Hatással van</h2>
+              <div class="lead">a sérülésekre</div>
+            </div><span class="price"></span>
+          </div>
+          <div class="image-box " data-aos="fade-up" data-aos-delay="10">
+            <figure class="image overlay-anim mb-0"><img class="rounded-3" src="{{ asset('assets/img/effects/4.png') }}"
+                  alt="Image"></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-column col-lg-4 d-flex justify-content-center align-items-center d-none d-lg-block" data-aos="fade-up" data-aos-delay="10">
+      <div class="inner-box" style="justify-content: center !important;">
         {{-- <div class="bg bg-image bounce-y" style="background-image: url(&quot;/https://purerelax-next.vercel.app/images/resource/flower1.png&quot;);">
         </div> --}}
         <figure class="image overlay-anim mb-0"><img height="500px" src="{{ asset('assets/img/effects/main.png') }}" alt="Image"></figure>
@@ -299,7 +369,7 @@
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
-              <div class="lead">a szorongásra, stresszre</div>
+              <div class="lead">a szorongásra és a stresszre</div>
             </div><span class="price"></span>
           </div>
         </div>
@@ -313,7 +383,7 @@
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
-              <div class="lead">Öregedésgátló hatás</div>
+              <div class="lead">az öregedésgátlásra</div>
             </div><span class="price"></span>
           </div>
         </div>
@@ -327,7 +397,7 @@
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
-              <div class="lead">Kiegyensúlyozott alvás</div>
+              <div class="lead">a kiegyensúlyozott alvásra</div>
             </div><span class="price"></span>
           </div>
         </div>
@@ -342,7 +412,7 @@
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
               <h2 class="title">Hatással van</h2>
-              <div class="lead">Sejtregeneráció (sérülés, műtét) </div>
+              <div class="lead">a sejtregenerációra</div>
             </div><span class="price"></span>
           </div>
         </div>
@@ -390,7 +460,7 @@
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
 
-      <div class="row d-flex justify-content-center">
+      <div class="row d-flex justify-content-center" style="justify-content: center !important;">
         <div class="col-md-10 col-xl-8 text-center">
           <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Fotóalbum és Galéria</h2>
 
@@ -404,9 +474,9 @@
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-      <div class="row g-1 ">
+      <div class="row g-1 d-flex justify-content-center">
 
-        <div class="col-lg-2 col-md-4">
+        <div class="col-lg-2 col-md-4 col-12">
           <div class="gallery-item">
             <a href="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" class="glightbox" data-gallery="images-gallery">
               <img src="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" alt="" class="img-fluid-img">
@@ -414,7 +484,7 @@
           </div>
         </div><!-- End Gallery Item -->
 
-        <div class="col-lg-2 col-md-4" style="height: 133px; width: 77px;">
+        <div class="col-lg-2 col-md-4 d-none d-md-block" style="height: 133px; width: 77px;">
           <div class="gallery-item" >
             <a href="{{ asset('assets/img/gallery/20241106_130708.jpg') }}" class="glightbox" data-gallery="images-gallery" >
               <img src="{{ asset('assets/img/gallery/20241106_130708.jpg') }}" alt="" class="img-fluid-img">
@@ -430,6 +500,14 @@
           </div>
         </div><!-- End Gallery Item -->
 
+        <div class="col-lg-2 col-md-4 d-none d-md-block" style="height: 133px; width: 77px;">
+          <div class="gallery-item" >
+            <a href="{{ asset('assets/img/gallery/20241106_132428.jpg') }}" class="glightbox" data-gallery="images-gallery" >
+              <img src="{{ asset('assets/img/gallery/20241106_132428.jpg') }}" alt="" class="img-fluid-img">
+            </a>
+          </div>
+        </div><!-- End Gallery Item -->
+
         <div class="col-lg-2 col-md-4">
           <div class="gallery-item">
             <a href="{{ asset('assets/img/gallery/20241106_132320.jpg') }}" class="glightbox" data-gallery="images-gallery">
@@ -438,7 +516,7 @@
           </div>
         </div><!-- End Gallery Item -->
 
-        <div class="col-lg-2 col-md-4">
+        <div class="col-lg-2 col-md-4 d-none d-md-block">
           <div class="gallery-item">
             <a href="{{ asset('assets/img/gallery/20241106_132352.jpg') }}" class="glightbox" data-gallery="images-gallery">
               <img src="{{ asset('assets/img/gallery/20241106_132352.jpg') }}" alt="" class="img-fluid-img">
@@ -446,13 +524,7 @@
           </div>
         </div><!-- End Gallery Item -->
 
-        <div class="col-lg-2 col-md-4" style="height: 133px; width: 77px;">
-          <div class="gallery-item" >
-            <a href="{{ asset('assets/img/gallery/20241106_132428.jpg') }}" class="glightbox" data-gallery="images-gallery" >
-              <img src="{{ asset('assets/img/gallery/20241106_132428.jpg') }}" alt="" class="img-fluid-img">
-            </a>
-          </div>
-        </div><!-- End Gallery Item -->
+
 
         <div class="col-lg-2 col-md-4">
           <div class="gallery-item">
@@ -574,28 +646,14 @@
 
 @include('layouts.footer')
 
-{{-- <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script> --}}
-  {{-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> --}}
-
-  <script>
-
-
-    /**
-     * Initiate glightbox
-     */
-    const glightbox = GLightbox({
-      selector: '.glightbox'
-    });
-
-
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 250) {
-        $('.sticky-top').addClass('sticky-nav').css('top', '0px');
-      } else {
-        $('.sticky-top').removeClass('sticky-nav').css('top', '-100px');
-      }
-    });
-  </script>
+<script>
+  /**
+   * Initiate glightbox
+   */
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
 
 </body>
 </html>

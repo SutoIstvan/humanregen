@@ -536,11 +536,19 @@ body {
 .inner-box {
   align-items: center !important;
   display: flex !important;
-  padding-bottom: 24px !important;
+  padding-bottom: 14px !important;
 }
 .pricing-block {
   align-items: center !important;
   display: flex !important;
+  padding-bottom: 24px !important;
+}
+
+.pricing-block-end {
+  align-items: center !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  text-align: end !important;
   padding-bottom: 24px !important;
 }
 
