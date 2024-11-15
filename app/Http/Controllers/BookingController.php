@@ -124,16 +124,7 @@ class BookingController extends Controller
 
         Booking::create($validatedData);
 
-        // mail
 
-        // $validatedData = $request->validate([
-        //     'date' => 'required|date',
-        //     'time_slot' => 'required|date_format:H:i',
-        //     'duration' => 'required|integer|in:35,70',
-        //     'client_name' => 'required|string|max:255',
-        //     'client_email' => 'required|email|max:255',
-        //     'client_phone' => 'required|string|max:20',
-        // ]);
 
         $bookingDetails = [
             'name' => $validatedData['client_name'],
@@ -144,7 +135,31 @@ class BookingController extends Controller
         
         Mail::to($validatedData['client_email'])->send(new BookingConfirmationMail($bookingDetails));
 
-        return redirect()->route('appointments');
+        $validatedData = $request->validate([
+            'date' => 'required|date',
+            'time_slot' => 'required|date_format:H:i',
+            'duration' => 'required|integer|in:35,70',
+            'client_name' => 'required|string|max:255',
+            'client_email' => 'required|email|max:255',
+            'client_phone' => 'required|string|max:20',
+        ]);
+
+        $name = $validatedData['client_name'];
+        $mail = $validatedData['client_email'];
+        $duration = $validatedData['duration'];
+        $date = $validatedData['date'];
+        $time = $validatedData['time_slot'];
+
+        return redirect()->route('message')->with(
+            'message', "
+                Tisztelt {$name}!
+                A {$duration} perces foglalását sikeresen rögzítettük {$date} napra, {$time} időpontra. 
+                A megadott {$mail} email címre küldünk megerősítést, amikor feldolgoztuk az adatokat.
+                Köszönjük a foglalást, a Human Regen csapata!
+            "
+        );
+
+        // return redirect()->route('appointments');
     }
 
 

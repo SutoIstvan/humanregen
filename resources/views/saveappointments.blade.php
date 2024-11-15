@@ -161,7 +161,7 @@
             </div>
             <div class="col-md-7 col-lg-7">
               {{-- <h4 class="mb-3">Billing address</h4> --}}
-              <form action="{{ route('bookstore')}}" method="POST" class="needs-validation mt-5" novalidate="">
+              <form action="{{ route('bookstore')}}" method="POST" class="needs-validation mt-5">
                 @csrf
 
                 <input type="hidden" name="date" value="{{ $selectedDate }}">
@@ -203,12 +203,17 @@
                   <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
                 </div> --}}
       
-                <div class="form-check mb-3 mt-3">
-                  <input type="checkbox" class="form-check-input" id="save-info">
-                  <label class="form-check-label" for="save-info">Elfogadom az adatkezelési feltételeket.</label>
+                <div class="form-check mb-3 mt-3 ms-1">
+                  <input type="checkbox" class="form-check-input" id="save-info" required>
+                  <label class="form-check-label" for="save-info">Elfogadom az 
+                    <a href="{{ route('gdpr') }}" target="_blank">
+                      adatkezelési feltételeket.
+                    </a>
+                  </label>
                 </div>
     
-                <button type="submit" style="background-color: #c2a74e; border-color: #c2a74e;" class="btn btn-primary btn-lg px-4 me-md-2 w-100">Foglalás elküldése</button>
+                
+                <button type="submit" style="background-color: #c2a74e; border-color: #c2a74e;" class="btn btn-primary btn-lg px-4 me-md-2 w-100" required>Foglalás elküldése</button>
 
                 {{-- <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button> --}}
               </form>

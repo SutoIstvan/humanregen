@@ -32,6 +32,10 @@ Route::get('/message', function () {
     return view('message');
 })->name('message');
 
+Route::get('/gdpr', function () {
+    return view('gdpr');
+})->name('gdpr');
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
