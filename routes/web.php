@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -66,4 +67,8 @@ Route::get('/get-client-bookings/{email}', [BookingController::class, 'getClient
 // Route::delete('/booking/{id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
 
+
+// Subscribe
+Route::post('/subscribe', [HomeController::class, 'subscribe'])->name('subscribe');
+Route::post('/unsubscribe', [HomeController::class, 'unsubscribe'])->name('unsubscribe');
 

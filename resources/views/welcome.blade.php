@@ -42,12 +42,8 @@
     <link href="{{ asset('vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <script src="{{ asset('vendor/glightbox/js/glightbox.min.js') }}"></script>
 
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.3.0/js/glightbox.min.js" integrity="sha512-RBWI5Qf647bcVhqbEnRoL4KuUT+Liz+oG5jtF+HP05Oa5088M9G0GxG0uoHR9cyq35VbjahcI+Hd1xwY8E1/Kg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
-    {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script> --}}
-
-    
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     
     <style>
       .img-fluid-img {
@@ -238,7 +234,7 @@
           </div>
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead"> a mozgásszervi betegségekre</div>
             </div><span class="price"></span>
           </div>
@@ -252,7 +248,7 @@
           </div>
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead">véráramlás serkentésére</div>
             </div><span class="price"></span>
           </div>
@@ -266,7 +262,7 @@
           </div>
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead">az immunrendszer erősítésére</div>
             </div><span class="price"></span>
           </div>
@@ -280,7 +276,7 @@
           </div>
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead">a sérülésekre</div>
             </div><span class="price"></span>
           </div>
@@ -294,7 +290,7 @@
 
           <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead">a mozgásszervi betegségekre</div>
             </div><span class="price"></span>
           </div>
@@ -310,7 +306,7 @@
 
           <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead">a véráramlás serkentésére</div>
             </div><span class="price"></span>
           </div>
@@ -325,7 +321,7 @@
 
           <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead">az immunrendszer erősítésére</div>
             </div><span class="price"></span>
           </div>
@@ -340,7 +336,7 @@
 
           <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead">a sérülésekre</div>
             </div><span class="price"></span>
           </div>
@@ -368,7 +364,7 @@
           </div>
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead">a szorongásra és a stresszre</div>
             </div><span class="price"></span>
           </div>
@@ -382,7 +378,7 @@
           </div>
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead">az öregedésgátlásra</div>
             </div><span class="price"></span>
           </div>
@@ -396,7 +392,7 @@
           </div>
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead">a kiegyensúlyozott alvásra</div>
             </div><span class="price"></span>
           </div>
@@ -411,7 +407,7 @@
           </div>
           <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
             <div class="inner">
-              <h2 class="title">Hatással van</h2>
+              <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">Hatással van</h2>
               <div class="lead">a sejtregenerációra</div>
             </div><span class="price"></span>
           </div>
@@ -646,13 +642,60 @@
 
 @include('layouts.footer')
 
+@if (session('success') || $errors->any())
+<!-- Modal -->
+<div class="modal fade show" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true" style="display: block;">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="messageModalLabel">Üzenet</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+          @if (session('success'))
+            {{ session('success') }} <!-- Сообщение об успешной подписке -->
+          @elseif ($errors->any())
+            @foreach ($errors->all() as $error)
+              <p>{{ $error }}</p> <!-- Сообщения об ошибках -->
+            @endforeach
+          @endif
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bezárás</button>
+      </div>
+    </div>
+  </div>
+</div>
+@endif
+
+
+
 <script>
+
   /**
    * Initiate glightbox
    */
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
+
+  /**
+   * Hirlevel feliratkozas
+   */
+  document.addEventListener('DOMContentLoaded', function () {
+      // Проверяем, если есть сообщения успеха или ошибки
+      @if (session('success') || $errors->any())
+          var myModal = new bootstrap.Modal(document.getElementById('messageModal'), {
+              keyboard: false // запрещает закрытие модального окна клавишей Escape
+          });
+          myModal.show(); // Показать модальное окно
+      @endif
+  });
+
+
+
 </script>
 
 </body>

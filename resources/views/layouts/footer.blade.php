@@ -9,7 +9,7 @@
         <div class="footer-contact pt-3">
           <p><strong>Cím:</strong> 7030 Paks, Vasút utca 10.</p>
           <!-- <p>New York, NY 535022</p> -->
-          <p class="mt-3"><strong>Telefon:</strong> <span>+36 00 0000 00</span></p>
+          <p class="mt-3"><strong>Telefon:</strong> <span>+36 30 39 677 67</span></p>
           <p class="mt-3"><strong>Email:</strong> <span>info@humanregen.hu</span></p>
         </div>
         <!-- <div class="social-links d-flex mt-4">
@@ -49,8 +49,11 @@
         <h4>Hírlevelünk</h4>
         <p>Iratkozzon fel hírlevelünkre, és értesüljön legfrissebb híreinkről szolgáltatásainkkal kapcsolatban!
         </p>
-        <form action="forms/newsletter.php" method="post" class="php-email-form">
-          <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Feliratkozás">
+
+        <form action="{{ route('subscribe') }}" method="POST" class="php-email-form">
+          @csrf
+          <div class="newsletter-form">
+            <input type="email" name="email"><input type="submit" value="Feliratkozás" required>
           </div>
           <!-- <div class="loading">Loading</div> -->
           <div class="error-message"></div>

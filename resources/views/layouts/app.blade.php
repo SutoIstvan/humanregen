@@ -50,7 +50,7 @@
     
     
             <div class="col-lg-12  d-flex flex-column justify-content-center" data-aos="fade-in" >
-              <h1><span>Fiok</span></h1>    
+              <h1><span>Fiók</span></h1>    
             </div>
     
           </div>

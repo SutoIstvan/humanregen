@@ -56,7 +56,7 @@
             margin: 5px;
             text-align: center;
             font-size: 16px;
-            background-color: #e9e9e9;
+            background-color: #e8e9e0;
             cursor: pointer;
             border-radius: 3px;
             transition: background-color 0.3s;
@@ -105,11 +105,32 @@
             background-color: rgb(73, 184, 170) !important;
             /* Новый цвет фона */
 
-            color: #fff;
+            color: #ffffff;
             /* Цвет текста, белый */
         }
 
+        .vanilla-calendar-day__btn {
+            --tw-bg-opacity: 1;
+            /* background-color: #e8e9e055 !important; */
+            /* background-color: #e8e9e0  !important;  */
+            background-color:rgb(232 233 224 / var(--tw-bg-opacity)) !important;
+            color: #4a664b;
+        }
 
+        .vanilla-calendar-day__btn:hover {
+            background-color: #d1d1d1 !important;
+        }
+
+        .vanilla-calendar-day__btn_disabled {
+            color: #cbd5e1;
+            background-color: #f5f5f096 !important;
+        }
+
+        .vanilla-calendar-day {
+            height: 60px;
+            width: 55px;
+            margin-left: 4px;
+        }
 
     </style>
 </head>
@@ -224,7 +245,7 @@
                 <div id="calendar"></div>
             </div>
 
-            <div class=" col-lg-6 col-xl-5">
+            <div class=" col-lg-6 col-xl-5 mt-sm-3 mt-lg-0 mt-3">
                 <div class="time-list-container" id="time-list"></div>
             </div>
 

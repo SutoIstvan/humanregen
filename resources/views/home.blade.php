@@ -18,7 +18,7 @@
                     <div>
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
-                            <button type="submit" class="btn btn-link" style="padding: 0; border: none; background: none;">
+                            <button type="submit" class="btn btn-link" style="padding: 0; border: none; background: none; text-decoration: none; color:crimson;">
                                 Kijelentkezés
                             </button>
                         </form>
@@ -68,7 +68,50 @@
     </div>
 </div>
 
-<div class="container mt-5">
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    {{ __('Hírlevelünk') }}
+                </div>
+
+                <div class="card-body">
+                    <div class="container">
+                        <div class="row">
+                            @if ($subscribe)
+                            <!-- Сообщение и кнопка для отписки -->
+                                <div class="col-md-12 mb-3">
+                                    <p>Ön fel van iratkozva a hírlevélre és akciokra.</p>
+                                    <form action="{{ route('unsubscribe') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" class="form-control mb-2" id="subscription_email" name="email" placeholder="Adja meg e-mail címét" value="{{ $user->email }}">
+
+                                        <button type="submit" class="btn btn-danger w-100">Lemondás a hírlevélről</button>
+                                    </form>
+                                </div>
+                            @else
+                                <!-- Сообщение и инпут с кнопкой для подписки -->
+                                <div class="col-md-12 mb-3">
+                                    <p>Iratkozzon fel hírlevelünkre, és értesüljön legfrissebb híreinkről szolgáltatásainkkal kapcsolatban!</p>
+                                    <form action="{{ route('subscribe') }}" method="POST">
+                                        @csrf
+                                        <input type="hidden" class="form-control mb-2" id="subscription_email" name="email" placeholder="Adja meg e-mail címét" value="{{ $user->email }}">
+                                        <button type="submit" class="btn btn-success w-100" style="background-color: #006469; border-color: #006469;">Feliratkozás</button>
+                                    </form>
+                                </div>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -92,7 +135,7 @@
                                     <th>Dátum</th>
                                     <th>Időpont</th>
                                     <th>Időtartam</th>
-                                    <th>Művelet</th>
+                                    <th style=" justify-content: end; display: flex;">Művelet</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -102,7 +145,7 @@
                                     <td>{{ $booking->date }}</td>
                                     <td>{{ \Carbon\Carbon::parse($booking->time_slot)->format('H:i') }}</td>
                                     <td>{{ $booking->duration ?? 'Nincs megadva' }} perc</td>
-                                    <td>
+                                    <td style=" justify-content: end; display: flex;">
                                         {{-- <form action="{{ route('bookings.destroy', $booking->id) }}" method="POST"> --}}
                                             <form action="{{ route('bookings.destroy', $booking->id) }}" method="POST" onsubmit="return confirm('Biztosan törölni szeretné ezt a foglalást?');">
                                                 @csrf
