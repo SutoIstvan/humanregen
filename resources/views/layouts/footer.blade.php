@@ -57,7 +57,18 @@
           </div>
           <!-- <div class="loading">Loading</div> -->
           <div class="error-message"></div>
-          <div class="sent-message">Adja meg az email címét!</div>
+
+          <div class="form-check sent-message">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+                Elfogadom az 
+                <a href="{{ route('message') }}" target="_blank" style="color: #fff">
+                  adatkezelési feltételeket.
+                </a>
+            </label>
+        </div>
+
+
         </form>
       </div>
 

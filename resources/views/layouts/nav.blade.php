@@ -16,7 +16,7 @@
       <a href="{{ route('price') }}" class="nav-item nav-link {{ request()->routeIs('price') ? 'active' : '' }}">Árak</a>
       <a href="{{ route('contacts') }}" class="nav-item nav-link {{ request()->routeIs('contacts') ? 'active' : '' }}">Kapcsolat</a>
       <a href="{{ route('dashboard') }}" class="nav-item nav-link {{ request()->routeIs('login') ? 'active' : '' }}">
-        {{ Auth::check() ? 'Fiok' : 'Belépés' }}
+        {{ Auth::check() ? 'Fiók' : 'Belépés' }}
       </a>
 
       <a href="{{ route('appointments') }}" class="nav-item nav-link {{ request()->routeIs('appointments') ? 'active' : '' }} d-block d-lg-none">IDŐPONTFOGLALÁS</a>

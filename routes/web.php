@@ -3,19 +3,9 @@
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SubscribeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -34,41 +24,34 @@ Route::get('/contacts', function () {
     // return view('emails.booking_confirmation');
 })->name('contacts');
 
-
 Route::get('/appointments', function () {
     return view('appointments');
 })->name('appointments');
 
-
-Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+Route::get('/message', function () {
+    return view('message');
+})->name('message');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::post('/profile/update', [HomeController::class, 'update'])->name('profile.update');
 
 Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
+    Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 });
 
-
 Route::get('/bookings/disabled-times', [BookingController::class, 'getDisabledTimes']);
-
-Route::get('/saveappointments', [BookingController::class, 'saveappointments'])->name('saveappointments');
-
-Route::post('/bookings', [BookingController::class, 'store'])->name('bookstore');
-
-Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
-
-Route::post('/bookings/update-status/{id}', [BookingController::class, 'updateStatus'])->name('bookings.update-status');
-
 Route::get('/get-client-bookings/{email}', [BookingController::class, 'getClientBookings']);
+Route::get('/saveappointments', [BookingController::class, 'saveappointments'])->name('saveappointments');
+Route::post('/bookings/update-status/{id}', [BookingController::class, 'updateStatus'])->name('bookings.update-status');
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookstore');
+Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
+Route::delete('/booking/{id}', [BookingController::class, 'destroyprofile'])->name('bookings.destroyprofile');
 
-// Route::delete('/booking/{id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
+Route::post('/subscribe', [SubscribeController::class, 'subscribe'])->name('subscribe');
+Route::post('/unsubscribe', [SubscribeController::class, 'unsubscribe'])->name('unsubscribe');
+Route::get('/unsubscribe/{email}', [SubscribeController::class, 'unsubscribeemail'])->name('unsubscribeemail');
 
-
-
-// Subscribe
-Route::post('/subscribe', [HomeController::class, 'subscribe'])->name('subscribe');
-Route::post('/unsubscribe', [HomeController::class, 'unsubscribe'])->name('unsubscribe');
-
+// удалить
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');

@@ -162,6 +162,15 @@ class BookingController extends Controller
         return response()->json(['success' => false], 400);
     }
 
+    public function destroyprofile($id)
+    {
+        $booking = Booking::find($id);
+
+        $booking->delete();
+
+        return redirect()->back()->with('success', 'Sikeresen törölve.');
+    }
+
     /**
      * Обновление статуса бронирования клиента.
      */

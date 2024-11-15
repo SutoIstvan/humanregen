@@ -2,6 +2,17 @@
 
 @section('content')
 <div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            @if(session('success'))
+                <div class="alert alert-warning">
+                    {{ session('success') }}
+                </div>
+            @endif
+        </div>
+    </div>
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -29,35 +40,34 @@
                 <div class="card-body">
 
                     <div class="container">
+
                         <div class="row">
+                            <form action="{{ route('profile.update') }}" method="POST">
+                                @csrf
+        
                             <!-- Колонка для редактирования имени -->
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-12 mb-3">
                                 <label for="name" class="form-label">Név</label>
-                                <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}">
-                            </div>
-                    
-                            <!-- Колонка для редактирования адреса электронной почты -->
-                            <div class="col-md-6 mb-3">
-                                <label for="email" class="form-label">Email cím</label>
-                                <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}">
+                                <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}" required>
                             </div>
                     
                             <!-- Колонка для редактирования телефона -->
-                            <div class="col-md-6 mb-3">
+                            <div class="col-md-12 mb-3">
                                 <label for="phone" class="form-label">Telefonszám</label>
-                                <input type="text" class="form-control" id="phone" name="phone" value="{{ $user->phone }}">
+                                <input type="text" class="form-control" id="phone" name="phone" value="{{ $user->phone }}" required>
                             </div>
-                    
-                            <!-- Колонка для редактирования пароля -->
-                            <div class="col-md-6 mb-3">
-                                <label for="password" class="form-label">Jelszó</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Jelszó">
+
+                            <!-- Колонка для редактирования адреса электронной почты -->
+                            <div class="col-md-12 mb-3">
+                                <label for="email" class="form-label">Email cím</label>
+                                <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}" readonly>
                             </div>
                     
                             <!-- Кнопка для отправки формы -->
                             <div class="col-md-12 mb-3">
                                 <button type="submit" class="btn btn-primary w-100" style="background-color: #006469; border-color:#006469">Adatok módosítása</button>
                             </div>
+                            </form>
                         </div>
                     </div>
                     
@@ -146,12 +156,11 @@
                                     <td>{{ \Carbon\Carbon::parse($booking->time_slot)->format('H:i') }}</td>
                                     <td>{{ $booking->duration ?? 'Nincs megadva' }} perc</td>
                                     <td style=" justify-content: end; display: flex;">
-                                        {{-- <form action="{{ route('bookings.destroy', $booking->id) }}" method="POST"> --}}
-                                            <form action="{{ route('bookings.destroy', $booking->id) }}" method="POST" onsubmit="return confirm('Biztosan törölni szeretné ezt a foglalást?');">
+                                            <form action="{{ route('bookings.destroyprofile', $booking->id) }}" method="POST" onsubmit="return confirm('Biztosan törölni szeretné ezt a foglalást?');">
                                                 @csrf
                                                 @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm">Foglalás Törlése</button>
-                                        </form>
+                                                <button type="submit" class="btn btn-danger btn-sm">Foglalás Törlése</button>
+                                            </form>
                                     </td>
                                 </tr>
                                 @endforeach

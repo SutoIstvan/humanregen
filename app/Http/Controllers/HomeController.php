@@ -6,6 +6,7 @@ use App\Models\Booking;
 use App\Models\Subscription;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -26,10 +27,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // Получение email текущего аутентифицированного пользователя
         $userEmail = Auth::user()->email;
 
-        // Получение всех бронирований пользователя по его email
         $bookings = Booking::where('client_email', $userEmail)->get();
 
         $user = Auth::user();
@@ -50,10 +49,10 @@ class HomeController extends Controller
         $bookings = Booking::all()->map(function ($booking) {
 
             $color = match ($booking->status) {
-                'new' => '#007bff', // Синий для новых
-                'confirmed' => '#28a745', // Зеленый для подтвержденных
-                'canceled' => '#dc3545', // Красный для отмененных
-                default => '#6c757d', // Серый для других статусов
+                'new' => '#007bff',
+                'confirmed' => '#28a745',
+                'canceled' => '#dc3545',
+                default => '#6c757d',
             };
 
             $startDateTime = $booking->date . ' ' . $booking->time_slot;
@@ -63,11 +62,13 @@ class HomeController extends Controller
             $formattedTimeStart = date('H:i', strtotime($startDateTime));
             $formattedTimeEnd = date('H:i', strtotime($endDateTime));
 
+            $title = $booking->status === 'new' ? 'Új foglalás' : 'Megerősítve';
+
             return [
-                'title' => 'Foglalás', // или что-то, что вы хотите показывать
-                'color' => $color, // Добавляем цвет события
-                'start' => $booking->date . 'T' . $booking->time_slot, // Формат даты и времени: YYYY-MM-DDTHH:MM
-                'end' => date('Y-m-d\TH:i', strtotime($booking->date . ' ' . $booking->time_slot . ' + ' . $booking->duration . ' minutes')), // вычисляем end
+                'title' => $title,
+                'color' => $color,
+                'start' => $booking->date . 'T' . $booking->time_slot,
+                'end' => date('Y-m-d\TH:i', strtotime($booking->date . ' ' . $booking->time_slot . ' + ' . $booking->duration . ' minutes')),
                 'extendedProps' => [
                     'client_name' => $booking->client_name,
                     'client_email' => $booking->client_email,
@@ -84,27 +85,22 @@ class HomeController extends Controller
         return view('dashboard.index', ['bookings' => $bookings]);
     }
 
-    public function subscribe(Request $request)
+    public function update(Request $request)
     {
         $request->validate([
-            'email' => 'required|email|unique:subscriptions,email',
+            'name' => 'required|string|max:255',
+            'phone' => 'nullable|string|max:15',
         ]);
 
-        Subscription::create([
-            'email' => $request->input('email'),
-        ]);
+        $id = Auth::user()->id;
 
-        return redirect()->back()->with('success', 'Sikeresen feliratkozott a hírlevélre.');
-    }
+        $user = User::find($id);
 
-    public function unsubscribe(Request $request)
-    {
-        $request->validate([
-            'email' => 'required|email|exists:subscriptions,email',
-        ]);
+        $user->name = $request->input('name');
+        $user->phone = $request->input('phone');
+    
+        $user->save();
 
-        Subscription::where('email', $request->input('email'))->delete();
-
-        return redirect()->back()->with('success', 'Sikeresen leiratkozott a hírlevélről.');
+        return redirect()->back()->with('success', 'Adataid sikeresen frissítve.');
     }
 }
