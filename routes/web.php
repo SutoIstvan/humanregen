@@ -42,10 +42,12 @@ Route::post('/profile/update', [HomeController::class, 'update'])->name('profile
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+    Route::get('/dashboard/users', [HomeController::class, 'users'])->name('users');
     Route::get('/dashboard/prices/edit', [PriceController::class, 'edit'])->name('price.edit');
     Route::put('/dashboard/prices/update-all', [PriceController::class, 'updateAllPrices'])->name('prices.updateAll');
 
-
+    Route::get('/dashboard/users/create', [HomeController::class, 'usercreate'])->name('users.create');
+    Route::post('/dashboard/users', [HomeController::class, 'userstore'])->name('users.store');
 });
 
 Route::get('/bookings/disabled-times', [BookingController::class, 'getDisabledTimes']);

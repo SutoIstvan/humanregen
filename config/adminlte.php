@@ -336,19 +336,19 @@ return [
         ],
         [
             'text' => 'Felhasználók',
-            'url' => '/',
+            'url' => '/dashboard/users',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'Admin hozzáadása',
-            'url' => '/',
+            'url' => '/dashboard/users/create',
             'icon' => 'fas fa-fw fa-user-plus',
         ],
-        [
-            'text' => 'change_password',
-            'url' => '/',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
+        // [
+        //     'text' => 'change_password',
+        //     'url' => '/',
+        //     'icon' => 'fas fa-fw fa-lock',
+        // ],
         // [
         //     'text' => 'multilevel',
         //     'icon' => 'fas fa-fw fa-share',

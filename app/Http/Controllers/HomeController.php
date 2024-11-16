@@ -6,6 +6,7 @@ use App\Models\Booking;
 use App\Models\Subscription;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
 class HomeController extends Controller
@@ -103,4 +104,39 @@ class HomeController extends Controller
 
         return redirect()->back()->with('success', 'Adataid sikeresen frissítve.');
     }
+
+    public function users(Request $request)
+    {
+        $users = User::paginate(15);
+
+        return view('dashboard.users', compact('users'));
+    }
+
+    public function usercreate()
+    {
+        return view('dashboard.usercreate');
+    }
+
+    // Метод для обработки данных формы и добавления пользователя
+    public function userstore(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:8|confirmed',
+            'phone' => 'nullable|string|max:20',
+        ]);
+
+        // Создание нового пользователя
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'password' => Hash::make($request->password),
+            'role' => "admin",
+        ]);
+
+        return redirect()->route('users.create')->with('success', 'Az adminisztrátor sikeresen hozzáadva');
+    }
 }
+
