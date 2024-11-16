@@ -3,6 +3,7 @@
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PriceController;
 use App\Http\Controllers\SubscribeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -14,10 +15,6 @@ Route::get('/', function () {
 Route::get('/effects', function () {
     return view('effects');
 })->name('effects');
-
-Route::get('/price', function () {
-    return view('price');
-})->name('price');
 
 Route::get('/contacts', function () {
     return view('contacts');
@@ -38,11 +35,17 @@ Route::get('/gdpr', function () {
 
 Auth::routes();
 
+Route::get('/price', [PriceController::class, 'index'])->name('price');
+
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/profile/update', [HomeController::class, 'update'])->name('profile.update');
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+    Route::get('/dashboard/prices/edit', [PriceController::class, 'edit'])->name('price.edit');
+    Route::put('/dashboard/prices/update-all', [PriceController::class, 'updateAllPrices'])->name('prices.updateAll');
+
+
 });
 
 Route::get('/bookings/disabled-times', [BookingController::class, 'getDisabledTimes']);

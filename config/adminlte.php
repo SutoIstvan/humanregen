@@ -331,7 +331,7 @@ return [
         // ['header' => 'account_settings'],
         [
             'text' => 'Árak szerkesztése',
-            'url' => '/',
+            'url' => '/dashboard/prices/edit',
             'icon' => 'fas fa-fw fa-coins',
         ],
         [

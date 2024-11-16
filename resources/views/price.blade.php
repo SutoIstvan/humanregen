@@ -323,7 +323,7 @@
                     </div>
                     <ul class="pricing-feature-list">
                       <li class="pricing-feature">30 perces kezelés</li>
-                      <li class="pricing-feature"><h4>20 000 Ft</h4></li>
+                      <li class="pricing-feature"><h4>{{ number_format($price1->amount, 0, ',', ' ') }} Ft</h4></li>
                     </ul>
                     <a href="{{ route('appointments') }}" class=" btn-get-started" style="    margin: auto 3em 2em 3em;">Időpontot foglalok</a>
                   </div>
@@ -363,7 +363,7 @@
 
                     <ul class="pricing-feature-list">
                       <li class="pricing-feature">60 perces kezelés</li>
-                      <li class="pricing-feature"><h4>40 000 Ft</h4></li>
+                      <li class="pricing-feature"><h4>{{ number_format($price2->amount, 0, ',', ' ') }} Ft</h4></li>
                     </ul>
                     <a href="{{ route('appointments') }}" class=" btn-get-started" style="    margin: auto 3em 2em 3em;">Időpontot foglalok</a>
                 </div>
@@ -413,7 +413,7 @@
             <div class="plan-content ">
                 <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                 <div class="plan-details">
-                    <span>5 alkalmas bérlet 90 000 ft</span>
+                    <span>5 alkalmas bérlet {{ number_format($price3->amount, 0, ',', ' ') }} ft</span>
                     <p>1 alkalom = 30 perces kezelés<br>Érvényesség: vásárlástól számított 185 napig</p>
                 </div>
             </div>
@@ -424,7 +424,7 @@
             <div class="plan-content">
                 <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                 <div class="plan-details">
-                  <span>10 alkalmas bérlet 180 000 ft</span>
+                  <span>10 alkalmas bérlet {{ number_format($price4->amount, 0, ',', ' ') }} ft</span>
                   <p>1 alkalom = 30 perces kezelés<br>Érvényesség: vásárlástól számított 185 napig</p>
                 </div>
             </div>
