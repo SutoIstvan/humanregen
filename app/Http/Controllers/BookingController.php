@@ -138,7 +138,7 @@ class BookingController extends Controller
         
         // Mail::to($validatedData['client_email'])->send(new BookingConfirmationMail($bookingDetails));
 
-        Mail::to('info@ghumanregen.hu')->send(new AdminBookingNotificationMail($bookingDetails));
+        Mail::to('info@humanregen.hu')->send(new AdminBookingNotificationMail($bookingDetails));
 
         // $validatedData = $request->validate([
         //     'date' => 'required|date',
