@@ -8,6 +8,7 @@ use App\Models\Booking;
 use App\Models\Price;
 use Carbon\Carbon;
 use App\Mail\BookingConfirmationMail;
+use App\Mail\NewBookingNotification;
 use Illuminate\Support\Facades\Mail;
 
 class BookingController extends Controller
@@ -135,10 +136,10 @@ class BookingController extends Controller
             'client_email' => $validatedData['client_email'],
             'client_phone' => $validatedData['client_phone'],
         ];
-        
-        // Mail::to($validatedData['client_email'])->send(new BookingConfirmationMail($bookingDetails));
+                
+        Mail::to('info@humanregen.hu')->send(new NewBookingNotification($bookingDetails));
 
-        Mail::to('info@humanregen.hu')->send(new AdminBookingNotificationMail($bookingDetails));
+        // Mail::to('info@humanregen.hu')->send(new AdminBookingNotificationMail($bookingDetails));
 
         // $validatedData = $request->validate([
         //     'date' => 'required|date',
