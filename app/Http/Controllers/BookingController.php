@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\AdminBookingNotificationMail;
 use Illuminate\Http\Request;
 use App\Models\Booking;
 use App\Models\Price;
@@ -131,18 +132,22 @@ class BookingController extends Controller
             'date' => $validatedData['date'],
             'time' => $validatedData['time_slot'],
             'service' => $validatedData['duration'],
+            'client_email' => $validatedData['client_email'],
+            'client_phone' => $validatedData['client_phone'],
         ];
         
-        Mail::to($validatedData['client_email'])->send(new BookingConfirmationMail($bookingDetails));
+        // Mail::to($validatedData['client_email'])->send(new BookingConfirmationMail($bookingDetails));
 
-        $validatedData = $request->validate([
-            'date' => 'required|date',
-            'time_slot' => 'required|date_format:H:i',
-            'duration' => 'required|integer|in:35,70',
-            'client_name' => 'required|string|max:255',
-            'client_email' => 'required|email|max:255',
-            'client_phone' => 'required|string|max:20',
-        ]);
+        Mail::to('info@ghumanregen.hu')->send(new AdminBookingNotificationMail($bookingDetails));
+
+        // $validatedData = $request->validate([
+        //     'date' => 'required|date',
+        //     'time_slot' => 'required|date_format:H:i',
+        //     'duration' => 'required|integer|in:35,70',
+        //     'client_name' => 'required|string|max:255',
+        //     'client_email' => 'required|email|max:255',
+        //     'client_phone' => 'required|string|max:20',
+        // ]);
 
         $name = $validatedData['client_name'];
         $mail = $validatedData['client_email'];
@@ -194,6 +199,16 @@ class BookingController extends Controller
         $booking = Booking::findOrFail($id);
         $booking->status = $request->input('status');
         $booking->save();
+
+        $bookingDetails = [
+            'name' => $booking['client_name'],
+            'date' => $booking['date'],
+            'time' => $booking['time_slot'],
+            'service' => $booking['duration'],
+        ];
+        
+        Mail::to($booking['client_email'])->send(new BookingConfirmationMail($bookingDetails));
+
 
         return response()->json(['success' => true]);
     }

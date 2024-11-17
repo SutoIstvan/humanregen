@@ -8,7 +8,11 @@
 
 // Bootstrap
 
-@import 'bootstrap/scss/bootstrap';
+// @import 'bootstrap/scss/bootstrap';
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+// @import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 
 @import '@fortawesome/fontawesome-free/css/fontawesome.css';
@@ -685,7 +689,7 @@ font-size: 44px;
               -webkit-box-align: start;
               -ms-flex-align: start;
               align-items: flex-start;
-              padding: 40px;
+              // padding: 40px;
           }
 
           .plans .plan {
@@ -697,7 +701,7 @@ font-size: 44px;
           }
 
           .plans .plan .plan-content .plan-details {
-              width: 70%;
+              width: 100%;
               display: inline-block;
           }
 
@@ -711,15 +715,21 @@ font-size: 44px;
 
       @media screen and (max-width: 767px) {
           .plans .plan .plan-content .plan-details {
-              width: 60%;
+              width: 100%;
               display: inline-block;
           }
       }
 
-      @media screen and (max-width: 540px) {
+      @media screen and (max-width: 575px) {
+          .plans .plan .plan-content .plan-details {
+              width: 100%;
+              display: inline-block;
+              padding: 1px !important;
+          }
           .plans .plan .plan-content img {
-              margin-bottom: 20px;
-              height: 56px;
+              // margin-bottom: 20px;
+              margin-right: 1px !important;
+              height: 30px;
               -webkit-transition: height 0.4s;
               -o-transition: height 0.4s;
               transition: height 0.4s;

@@ -8,6 +8,7 @@
     <title>@yield('title', __('menu.title'))</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -17,6 +18,8 @@
     <!-- Подключаем jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
     <!-- Подключаем jQuery timepicker -->
 
 
@@ -132,6 +135,66 @@
             margin-left: 4px;
         }
 
+        @media (max-width: 575.98px) {
+            .vanilla-calendar-day {
+                height: 40px;
+                width: 45px;
+                margin-left: 2px;
+            }
+            .time-list-container {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 359px;
+                /* Ширина для двух колонок */
+                max-height: 416px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #ffffff;
+                /* border: 1px solid #ccc; */
+                border-radius: 11px;
+            }
+        }
+
+        /* Для экранов `sm` (576px и больше) */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .vanilla-calendar-day {
+                height: 60px;
+                width: 57px;
+                margin-left: 3px;
+            }
+
+
+        }
+
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .plans {
+                margin: 0 20px;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                padding: 4px !important;
+            }
+        }
+        /* @media (max-width: 575.98px) {
+            .plans {
+                margin: 0 20px;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-align: start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                padding: 40px;
+            }
+        } */
+
+
+
     </style>
 </head>
 
@@ -205,9 +268,14 @@
                 <label class="plan basic-plan me-xxl-5 me-lg-3" for="basic">
                     <input checked type="radio" id="basic" name="duration" value="35" />
                     <div class="plan-content ">
-                        <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
+                        {{-- <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""/> --}}
+
+                        <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" class="d-none d-sm-block"/>
                         <div class="plan-details">
-                            <span>30 perc</span>
+                            <span>
+                                <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" class="d-sm-none" />
+                                30 perc
+                            </span>
                             <p>Humán Regenerátor Sports - Egész testes sejtregeneráció kezelés</p>
                         </div>
                     </div>
@@ -216,9 +284,12 @@
                 <label class="plan complete-plan ms-xxl-5 ms-lg-2" for="complete">
                     <input type="radio" id="complete" name="duration" value="70" />
                     <div class="plan-content">
-                        <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
+                        <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" class="d-none d-sm-block"/>
                         <div class="plan-details">
-                            <span>60 perc</span>
+                            <span>
+                                <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" class="d-sm-none" />
+                                60 perc
+                            </span>
                             <p>Humán Regenerátor Sports - Egész testes sejtregeneráció kezelés</p>
                         </div>
                     </div>
@@ -265,6 +336,7 @@
     <div class="selected-time" id="selected-time" style="display: none">Выберите время</div>
     <div class="selected-time" id="date-display" style="display: none">Выбранная дата:</div>
 
+    @include('layouts.modal')
 
     @include('layouts.footer')
 

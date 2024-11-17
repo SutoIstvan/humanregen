@@ -10,14 +10,14 @@ class SubscribeController extends Controller
     public function subscribe(Request $request)
     {
         $request->validate([
-            'email' => 'required|email|unique:subscriptions,email',
+            'subscribeemail' => 'required|email|unique:subscriptions,email',
         ]);
 
         Subscription::create([
-            'email' => $request->input('email'),
+            'email' => $request->input('subscribeemail'),
         ]);
 
-        return redirect()->back()->with('success', 'Sikeresen feliratkozott a hírlevélre.');
+        return redirect()->back()->with('modalsuccess', 'Sikeresen feliratkozott a hírlevélre.');
     }
 
     public function unsubscribe(Request $request)

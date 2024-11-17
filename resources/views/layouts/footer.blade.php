@@ -53,7 +53,7 @@
                 <form action="{{ route('subscribe') }}" method="POST" class="php-email-form">
                     @csrf
                     <div class="newsletter-form">
-                        <input type="email" name="email"><input type="submit" value="Feliratkozás" required>
+                        <input type="email" name="subscribeemail"><input type="submit" value="Feliratkozás" required>
                     </div>
                     <!-- <div class="loading">Loading</div> -->
                     <div class="error-message"></div>
