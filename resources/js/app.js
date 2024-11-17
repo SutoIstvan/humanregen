@@ -1,14 +1,14 @@
 import $ from 'jquery';
 
-import './bootstrap';
+// import './bootstrap';
 
-import * as bootstrap from 'bootstrap';
+// import * as bootstrap from 'bootstrap';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import '@popperjs/core';
-import 'bootstrap';
+// import '@popperjs/core';
+// import 'bootstrap';
 
 // AOS init
 
