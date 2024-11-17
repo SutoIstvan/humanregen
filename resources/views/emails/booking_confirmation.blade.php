@@ -414,15 +414,15 @@
  <body class="body" style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f5f5f5; -webkit-text-size-adjust:none;">
    <!-- MOBILE PREHEADER PUSH ANY CONTENT AFTER THE PREHEADER FROM SHOWING UP INSERT UNDER BODY TAG -->
  
-   <div style="display: none; max-height: 0px; overflow: hidden;">
+   {{-- <div style="display: none; max-height: 0px; overflow: hidden;">
     Ez az e-mail nem jelenik meg helyesen?
-   </div>
+   </div> --}}
  
    <!-- Insert &zwnj;&nbsp; hack after hidden preview text -->
    <div style="display: none; max-height: 0px; overflow: hidden;">
      &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
    </div>
-   <img src="{{ asset('assets/logo2.png') }}" width="1" height="1"></custom>
+   <img src="{{ asset('assets/logo2.png') }}" width="1" height="1" alt="logo"></custom>
    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f5f5f5">
      <tr>
        <td align="center" valign="top">
@@ -441,9 +441,9 @@
                                <td>
                                  <table border="0" cellpadding="10" cellspacing="0" width="100%" class="wrapper" bgcolor="#f5f5f5">
                                    <tr>
-                                     <td style="font-family:Helvetica, Arial, sans-serif; color:#a4acae; font-size:12px; padding-top:15px; padding-bottom:15px; padding-left:10px;"><a href="" style="color:#a4acae; text-decoration:none;"></a></td>
+                                     {{-- <td style="font-family:Helvetica, Arial, sans-serif; color:#a4acae; font-size:12px; padding-top:15px; padding-bottom:15px; padding-left:10px;"><a href="" style="color:#a4acae; text-decoration:none;"></a></td>
                                      <td class="hidden" align="center" style="font-family:Helvetica, Arial, sans-serif; color:#a4acae; font-size:12px; padding-top:15px; padding-bottom:15px; padding-right:10px;"><a href="#" style="color:#a4acae; text-decoration:underline;">Ez az e-mail nem jelenik meg helyesen? Kattintson ide a böngészőben való megtekintéshez.</a></td>
- 
+  --}}
                                    </tr>
                                  </table>
                                </td>
@@ -501,7 +501,7 @@
                        <tr>
                          <td width="600" bgcolor="#4D7268" style="width:600px;">
                            <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
-                               <img src="{{ asset('assets/mail/main2.png') }}" border="0" style="display: block; width: 100%;" align="bottom" alt="" />
+                               <img src="{{ asset('assets/mail/main2.png') }}" border="0" style="display: block; width: 100%;" align="bottom" alt="main" />
                            </div>
                          </td>
                        </tr>
@@ -509,7 +509,7 @@
 
                          <td width="600" bgcolor="#4D7268" style="width:600px;">
                            <div class="no-mobile">
-                               <img src="{{ asset('assets/mail/main2.png') }}" border="0" width="600" height="360" style="margin-top: -50px; display: block; width: 600px; height:360px;border: none;" align="top" alt="" />
+                               <img src="{{ asset('assets/mail/main2.png') }}" border="0" width="600" height="360" style="margin-top: -50px; display: block; width: 600px; height:360px;border: none;" align="top" alt="main" />
                            </div>
                          </td>
                        </tr>
@@ -529,17 +529,17 @@
                        <tr>
                          <td width="120" style="padding:50px 0px 15px 25px;color:#ffffff; text-align:center;">
                             <a href="">
-                                <img src="{{ asset('assets/mail/email.png') }}" width="25" height="25" style="width: 25px;height: 25px;" border="0" alt="" />
+                                <img src="{{ asset('assets/mail/email.png') }}" width="25" height="25" style="width: 25px;height: 25px;" border="0" alt="email" />
                             </a>
                         </td>
                          <td width="120" style="padding:50px 0px 15px 0px;color:#ffffff; text-align:center;">
                             <a href="">
-                                <img src="{{ asset('assets/mail/phone.png') }}" width="25" height="25" style="width: 25px;height: 25px;" border="0" alt="" />
+                                <img src="{{ asset('assets/mail/phone.png') }}" width="25" height="25" style="width: 25px;height: 25px;" border="0" alt="phone" />
                             </a>
                          </td>
                          <td width="120" style="padding:50px 0px 15px 0px;color:#ffffff; text-align:center; ">
                             <a href="">
-                                <img src="{{ asset('assets/mail/address.png') }}" width="25" height="25" style="width: 25px;height: 25px;" border="0" alt="" />
+                                <img src="{{ asset('assets/mail/address.png') }}" width="25" height="25" style="width: 25px;height: 25px;" border="0" alt="address" />
                             </a>                           
                          </td>
                        </tr>
@@ -595,7 +595,7 @@
                                <tr>
                                  <td style="padding: 0px; color:#ffffff; text-align:right;">
                                     <a href="">
-                                        <img src="{{ asset('assets/mail/phone.png') }}" width="25" height="25" style="width: 25px;height: 25px;" border="0" alt="" />
+                                        <img src="{{ asset('assets/mail/phone.png') }}" width="25" height="25" style="width: 25px;height: 25px;" border="0" alt="phone" />
                                     </a>
                                  </td>
                                </tr>
@@ -614,7 +614,7 @@
                                <tr>
                                  <td style="padding: 0px; color:#ffffff; text-align:right;">
                                     <a href="">
-                                        <img src="{{ asset('assets/mail/address.png') }}" width="25" height="25" style="width: 25px;height: 25px;" border="0" alt="" />
+                                        <img src="{{ asset('assets/mail/address.png') }}" width="25" height="25" style="width: 25px;height: 25px;" border="0" alt="address" />
                                     </a>
                                  </td>
                                </tr>
@@ -637,14 +637,14 @@
                      <!-- Footer -->
                      <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
                        <tr>
-                         <td bgcolor="#002A3A" class="disclaimer2" style="padding: 40px 77px 40px 77px;color:#FFFFFF; font-family: 'Proxima Nova Light', Arial,sans-serif; font-size:16px; line-height:20px; font-weight: normal; text-align:center; letter-spacing: .01em">Ezen a linken keresztül lemondhatja a foglalását.
+                         {{-- <td bgcolor="#002A3A" class="disclaimer2" style="padding: 40px 77px 40px 77px;color:#FFFFFF; font-family: 'Proxima Nova Light', Arial,sans-serif; font-size:16px; line-height:20px; font-weight: normal; text-align:center; letter-spacing: .01em">Ezen a linken keresztül lemondhatja a foglalását.
                            <p style="padding-left: 17px !important; font-family:'Proxima Nova Bold', Arial , sans-serif; font-weight: bold; font-size: 15px; color: #00B0B9;margin-top: 15px;  margin-bottom: 0px; letter-spacing: .01em;line-height: 20px;">
                              <a href="#" target="_blank" style="color:#FFFFFF; text-decoration:none;">
                                <u>Foglalás Lemondása</u>&nbsp;<img width="15" height="15" src="http://image.e.fitbit.com/lib/fe87137275620d7472/m/6/fa3c5b67-3303-4786-8fc2-6ffc5cfaca30.png" alt="Right arrow" style="margin:0px; height: 15px ; max-width: 100%; display: inline-block; vertical-align: -3px; width: 15px;" />
                              </a>
  
                            </p>
-                         </td>
+                         </td> --}}
                        </tr>
                      </table>
                      <!-- Footer -->
@@ -703,7 +703,7 @@
        </td>
      </tr>
    </table>
-   <img src="{{ asset('assets/logo2.png') }}" width="1" height="1"></custom>
+   <img src="{{ asset('assets/logo2.png') }}" width="1" height="1" alt="logo"></custom>
  </body>
  
  </html>
