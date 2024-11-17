@@ -13,7 +13,7 @@
         <li><strong>Ügyfél telefonszáma:</strong> {{ $bookingDetails['client_phone'] }}</li>
         <li><strong>Foglalás dátuma:</strong> {{ $bookingDetails['date'] }}</li>
         <li><strong>Foglalás ideje:</strong> {{ $bookingDetails['time'] }}</li>
-        <li><strong>Szolgáltatás:</strong> {{ $bookingDetails['service'] }}</li>
+        <li><strong>Időtartam:</strong> {{ $bookingDetails['service'] }}</li>
     </ul>
 </body>
 </html>
