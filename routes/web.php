@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\SubscribeController;
+use App\Models\Booking;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,8 +18,16 @@ Route::get('/effects', function () {
 })->name('effects');
 
 Route::get('/contacts', function () {
+    // $booking = Booking::findOrFail(1);
+
+    // $bookingDetails = [
+    //     'name' => $booking['client_name'],
+    //     'date' => $booking['date'],
+    //     'time' => $booking['time_slot'],
+    //     'service' => $booking['duration'],
+    // ];
     return view('contacts');
-    // return view('emails.booking_confirmation');
+    // return view('emails.booking_confirmation', compact('bookingDetails'));
 })->name('contacts');
 
 Route::get('/appointments', function () {

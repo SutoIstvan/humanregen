@@ -472,7 +472,7 @@
  
                              <!-- headline -->
                              <tr>
-                               <td bgcolor="#4D7268" class="headline" style="padding: 50px 135px 0px 135px;color:#FFFFFF; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:33px; line-height:56px; font-weight: Bold; text-align:center; letter-spacing: .01em">Kedves {{ $bookingDetails['name'] }}!</td>
+                               <td bgcolor="#4D7268" class="headline" style="padding: 50px 135px 0px 135px;color:#FFFFFF; font-family: 'Proxima Nova Bold', Arial,sans-serif; font-size:33px; line-height:56px; font-weight: Bold; text-align:center; letter-spacing: .01em">Kedves <br>{{ $bookingDetails['name'] }}!</td>
                              </tr>
                              <!-- #headline -->
  
@@ -487,7 +487,7 @@
                                <td bgcolor="#4D7268" align="center" class="fallback-font btn-pb" style="padding-bottom: 45px">
                                  <div class="btn" style="text-align:center;">
                                    <!--[if mso]>                                                                     <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.fitbit.com/campaign/shop/versa?color=black&utm_source=ET&utm_medium=EM&utm_campaign=20191117_PreBFV2_US_FM_M_SU_SW_32_NA&utm_content=HeroCTALink" style="font-family: Arial, Helvetica, sans-serif;height:36px;v-text-anchor:middle;width:150px;" arcsize="152%" stroke="f" fillcolor="#002A3A">                                                                     <w:anchorlock/>                                                                     <center>                                                                     <![endif]-->
-                                   <a href="#" class="mob-btn" target="_blank" style="background-color:#002A3A;border-radius:50px;color:#ffffff;display:inline-block;font-family:'Proxima Nova Bold', Arial, sans-serif;font-size:15px; letter-spacing: .01em; font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none; padding-top: 1px"> {{ $bookingDetails['date'] }} - {{ $bookingDetails['time'] }} </a>
+                                   <p class="mob-btn" target="_blank" style="background-color:#002A3A;border-radius:50px;color:#ffffff;display:inline-block;font-family:'Proxima Nova Bold', Arial, sans-serif;font-size:15px; letter-spacing: .01em; font-weight:bold;line-height:35px;text-align:center;text-decoration:none;width:150px;-webkit-text-size-adjust:none; padding-top: 15px; height: 80px;"> {{ $bookingDetails['date'] }} <br> {{ $bookingDetails['time'] }} </p>
                                    <!--[if mso]>                                                                     </center>                                                                     </v:roundrect>                                                                     <![endif]-->
                                  </div>
                                </td>
@@ -501,7 +501,7 @@
                        <tr>
                          <td width="600" bgcolor="#4D7268" style="width:600px;">
                            <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
-                               <img src="{{ asset('assets/mail/main2.png') }}" border="0" style="display: block; width: 100%;" align="bottom" alt="main" />
+                               <img src="{{ asset('assets/mail/main3.png') }}" border="0" style="display: block; width: 100%;" align="bottom" alt="main" />
                            </div>
                          </td>
                        </tr>
@@ -509,7 +509,7 @@
 
                          <td width="600" bgcolor="#4D7268" style="width:600px;">
                            <div class="no-mobile">
-                               <img src="{{ asset('assets/mail/main2.png') }}" border="0" width="600" height="360" style="margin-top: -50px; display: block; width: 600px; height:360px;border: none;" align="top" alt="main" />
+                               <img src="{{ asset('assets/mail/main3.png') }}" border="0" width="600" height="260" style="margin-top: -100px; display: block; width: 600px; height:260px;border: none;" align="top" alt="main" />
                            </div>
                          </td>
                        </tr>
@@ -525,7 +525,7 @@
                    <td>
                      <!--Start Content-->
                      <!--Desktop RTBs-->
-                     <table class="no-mobile" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4D7268">
+                     {{-- <table class="no-mobile" width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4D7268">
                        <tr>
                          <td width="120" style="padding:50px 0px 15px 25px;color:#ffffff; text-align:center;">
                             <a href="">
@@ -561,11 +561,11 @@
                        <tr>
                          <td bgcolor="#4D7268" height="50" style="font-size:50px;line-height:50px;">&nbsp;</td>
                        </tr>
-                     </table>
+                     </table> --}}
                      <!--End Desktop RTBs-->
                      <!--Mobile RTBs-->
                      <!--[if !mso]><!-->
-                     <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
+                     {{-- <div class="mobile-only" style="text-indent: -99999em; display: none; height: 0; width: 0; overflow: hidden; max-height: 0;">
                        <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#4D7268">
                          <tr>
                            <td bgcolor="#4D7268" height="51" style="font-size:51px;line-height:51px;">&nbsp;</td>
@@ -630,21 +630,24 @@
 
 
                        </table>
-                     </div>
+                     </div> --}}
                      <!--End Mobile RTBs-->
                      <!--<![endif]-->
                      <!--END Features-->
                      <!-- Footer -->
                      <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
                        <tr>
-                         {{-- <td bgcolor="#002A3A" class="disclaimer2" style="padding: 40px 77px 40px 77px;color:#FFFFFF; font-family: 'Proxima Nova Light', Arial,sans-serif; font-size:16px; line-height:20px; font-weight: normal; text-align:center; letter-spacing: .01em">Ezen a linken keresztül lemondhatja a foglalását.
-                           <p style="padding-left: 17px !important; font-family:'Proxima Nova Bold', Arial , sans-serif; font-weight: bold; font-size: 15px; color: #00B0B9;margin-top: 15px;  margin-bottom: 0px; letter-spacing: .01em;line-height: 20px;">
-                             <a href="#" target="_blank" style="color:#FFFFFF; text-decoration:none;">
-                               <u>Foglalás Lemondása</u>&nbsp;<img width="15" height="15" src="http://image.e.fitbit.com/lib/fe87137275620d7472/m/6/fa3c5b67-3303-4786-8fc2-6ffc5cfaca30.png" alt="Right arrow" style="margin:0px; height: 15px ; max-width: 100%; display: inline-block; vertical-align: -3px; width: 15px;" />
-                             </a>
- 
+                         <td bgcolor="#002A3A" class="disclaimer2" style="padding: 40px 77px 40px 77px;color:#FFFFFF; font-family: 'Proxima Nova Light', Arial,sans-serif; font-size:16px; line-height:20px; font-weight: normal; letter-spacing: .01em">
+                            <h1>Foglalás részletei:</h1>
+                            <p style="padding-bottom: 3px;">Dátum: {{ $bookingDetails['date'] }}</p>
+                            <p style="padding-bottom: 3px;">Időpont: {{ $bookingDetails['time'] }}</p>
+                            <p>Időtartam: {{ $bookingDetails['service'] }}</p>
+                            <br>
+                            <p style="padding-bottom: 3px;">Helyszín: 7030 Paks, Vasút utca 10.</p>
+                            <p style="padding-bottom: 3px;">Telefon: +36 30 39 677 67</p>
+                            <p>Email: info@humanregen.hu</p>
                            </p>
-                         </td> --}}
+                         </td>
                        </tr>
                      </table>
                      <!-- Footer -->
@@ -680,7 +683,7 @@
                                <td class="mobileContainer mobileFooter nowrap" align="center" style="font-family:Helvetica, Arial, sans-serif; font-size:16px; line-height:18px; color:#939c9e; padding-left:30px; padding-right:30px; padding-bottom:40px; background-color:#ffffff;  width:100%;">
  
                                    <br>
-                                   Kérjük, érkezz 10 perccel korábban, hogy kényelmesen felkészülhess. Ha bármilyen kérdésed vagy változtatásod lenne, kérjük, jelezd nekünk a [Kapcsolattartó email/telefon] elérhetőségen.                                   <br>
+                                   Kérjük, érkezz 10 perccel korábban, hogy kényelmesen felkészülhess. Ha bármilyen kérdésed vagy változtatásod lenne, kérjük, jelezd nekünk Telefon: +36 30 39 677 67, Email: info@humanregen.hu elérhetőségeken.                                   <br>
                                    <br>
                                    Üdvözlettel,
                                    <br><br>
