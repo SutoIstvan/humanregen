@@ -21,7 +21,7 @@
             @csrf
         
             <x-adminlte-input name="name" label="Név" placeholder="Adja meg a nevét" type="text" igroup-size="sm"
-                value="{{ old('name') }}" required>
+                value="" required>
                 <x-slot name="appendSlot">
                     <div class="input-group-text bg-dark">
                         <i class="fas fa-user"></i>
@@ -30,7 +30,7 @@
             </x-adminlte-input>
 
             <x-adminlte-input name="phone" label="Telefonszám" placeholder="Adja meg a telefonszámát" type="text" igroup-size="sm"
-                value="{{ old('phone') }}" required>
+                value="" required>
                 <x-slot name="appendSlot">
                     <div class="input-group-text bg-dark">
                         <i class="fas fa-user"></i>
@@ -39,7 +39,7 @@
             </x-adminlte-input>
         
             <x-adminlte-input name="email" label="Email" placeholder="Adja meg az email címet" type="email" igroup-size="sm"
-                value="{{ old('email') }}" required>
+                value="" required>
                 <x-slot name="appendSlot">
                     <div class="input-group-text bg-dark">
                         <i class="fas fa-envelope"></i>

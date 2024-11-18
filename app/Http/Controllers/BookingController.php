@@ -77,6 +77,8 @@ class BookingController extends Controller
             'client_name' => 'required|string|max:255',
             'client_email' => 'required|email|max:255',
             'client_phone' => 'required|string|max:20',
+            // 'client_phone' => ['required', 'string', 'max:20', 'regex:/^\+?[0-9]+$/'],
+
         ]);
 
         // Преобразуем выбранную дату и время в объект Carbon
