@@ -63,7 +63,7 @@
                             <div class="col-md-12 mt-2">
 
                                 @if (Route::has('register'))
-                                    <a class="btn btn-light w-100" href="{{ route('register') }}">
+                                    <a class="btn btn-secondary w-100 mt-2" href="{{ route('register') }}">
                                         {{ __('Register') }}
                                     </a>
                                 @endif

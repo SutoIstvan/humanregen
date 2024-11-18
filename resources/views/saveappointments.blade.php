@@ -76,23 +76,22 @@
         <div class="container section-title pt-5" data-aos="fade-up">
 
           <div class="row d-flex justify-content-center">
-            <div class="col-md-10 col-xl-8 text-center">
+            <div class="col-md-10 col-xl-8 text-center ">
               <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Foglalás véglegesítése</h2>
     
-              @if (!Auth::check())
-                <p class="lead">
-                  Már van Humanregen fiókom: 
-                  <a href="{{ route('login', ['redirect' => url()->full()]) }}" class="text-decoration-none">Bejelentkezem</a>
-
-                  {{-- <a href="{{ route('login') }}" class="text-decoration-none">Bejelentkezem</a> --}}
-                  <br>
-                  Még nincs fiókod? 
-                  <a href="{{ route('register') }}" class="text-decoration-none">Regisztrálj most!</a>
-                </p>
-              
-                <h2>Foglalás Humanregen fiók nélkül</h2>
-              @endif
-            
+              <div class="d-none d-md-block">
+                @if (!Auth::check())
+                  <p class="lead ">
+                    Már van Humanregen fiókom: 
+                    <a href="{{ route('login', ['redirect' => url()->full()]) }}" class="text-decoration-none">Bejelentkezem</a>
+                    <br>
+                    Még nincs fiókod? 
+                    <a href="{{ route('register') }}" class="text-decoration-none">Regisztrálj most!</a>
+                  </p>
+                
+                  <h2>Foglalás Humanregen fiók nélkül</h2>
+                @endif
+              </div>
 
 
             </div>
@@ -100,49 +99,39 @@
     
         </div><!-- End Section Title -->
 
-        <div class="container col-8">
+        <div class="container col-12 col-md-10 col-lg-8">
           <div class="row g-5">
             <div class="col-md-5 col-lg-4 order-md-last">
-              <h4 class="d-flex justify-content-between align-items-center mb-4 mt-4">
-                {{-- <span class="text-primary">Your cart</span> --}}
-                {{-- <span class="badge bg-primary rounded-pill">3</span> --}}
+              <h4 class="d-flex justify-content-between align-items-center mb-0 mb-md-4 mt-4">
+
               </h4>
               <ul class="list-group mb-4">
                 <li class="list-group-item d-flex justify-content-between lh-sm">
                   <div>
                     <h6 class="my-0">Dátum</h6>
-                    {{-- <small class="text-body-secondary">{{ $selectedDate }}</small> --}}
                   </div>
                   <span class="text-body-secondary">{{ $selectedDate }}</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between lh-sm">
                   <div>
                     <h6 class="my-0">Időpont</h6>
-                    {{-- <small class="text-body-secondary">{{ $selectedTime }}</small> --}}
                   </div>
                   <span class="text-body-secondary">{{ $selectedTime }}</span>
                 </li>
-                {{-- <li class="list-group-item d-flex justify-content-between lh-sm">
-                  <div>
-                    <h6 class="my-0">Third item</h6>
-                    <small class="text-body-secondary">Brief description</small>
-                  </div>
-                  <span class="text-body-secondary">$5</span>
-                </li> --}}
+
                 <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
                   <div class="text-success">
                     <h6 class="my-0">Időtartam</h6>
-                    {{-- <small>Időtartam</small> --}}
                   </div>
                   <span class="text-success">{{ $duration }} perc</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between">
-                  <span>Ár (Ft)</span>
+                  <span>Ár</span>
 
                   @if ($duration == 35)
-                      <strong>{{ $price->amount }}</strong>
+                      <strong>{{ number_format($price->amount, 0, '.', ' ') }} Ft</strong>
                   @elseif ($duration == 70)
-                      <strong>{{ $price2->amount }}</strong>
+                      <strong>{{ number_format($price2->amount, 0, '.', ' ') }} Ft</strong>
                   @endif
 
                 </li>
@@ -154,16 +143,35 @@
                   <button type="submit" class="btn btn-secondary">Redeem</button>
                 </div>
               </form> --}}
-              <div class="input-group mt-5 w-100">
+              <div class="input-group mt-5 w-100 d-none d-md-block">
                 <form action="{{ route('appointments') }}" method="get" class="w-100">
                     <button type="submit" class="btn btn-secondary btn-lg w-100 ">Vissza</button>
                 </form>
               </div>
 
+              <div class="d-flex justify-content-center">
+
+
+              <div class="d-block d-md-none ">
+                @if (!Auth::check())
+                  <p class="lead">
+                    Már van Humanregen fiókom:
+                    <a href="{{ route('login', ['redirect' => url()->full()]) }}" class="text-decoration-none">Bejelentkezem</a>
+                    <br>
+                    Még nincs fiókod?
+                    <a href="{{ route('register') }}" class="text-decoration-none">Regisztrálj most!</a>
+                  </p>
+                
+                  <h2>Foglalás Humanregen fiók nélkül</h2>
+                @endif
+              </div>
             </div>
-            <div class="col-md-7 col-lg-7">
+              
+
+            </div>
+            <div class="col-md-7 col-lg-7 mt-3 mt-md-5">
               {{-- <h4 class="mb-3">Billing address</h4> --}}
-              <form action="{{ route('bookstore')}}" method="POST" class="needs-validation mt-5">
+              <form action="{{ route('bookstore')}}" method="POST" class="needs-validation mt-md-5">
                 @csrf
 
                 <input type="hidden" name="date" value="{{ $selectedDate }}">
@@ -219,6 +227,13 @@
 
                 {{-- <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button> --}}
               </form>
+
+              <div class="input-group mt-3 w-100 d-block d-md-none">
+                <form action="{{ route('appointments') }}" method="get" class="w-100">
+                    <button type="submit" class="btn btn-secondary btn-lg w-100 ">Vissza</button>
+                </form>
+              </div>
+
             </div>
           </div>
         </div>
