@@ -24,7 +24,39 @@
             display: flex;
             align-items: center;
           }
+          .custom-max-height {
+          max-height: 40vh;
+        }
 
+        @media (max-width: 1192px) { /* для экранов меньше чем 992px */
+          .custom-max-height {
+            max-height: 30vh !important;
+          }
+        }
+
+        @media (max-width: 992px) { /* для экранов меньше чем 992px */
+          .custom-max-height {
+            max-height: 30vh !important;
+          }
+        }
+
+        @media (max-width: 768px) { /* для экранов меньше чем 768px */
+          .custom-max-height {
+            max-height: 20vh !important;
+          }
+        }
+
+        @media (max-width: 576px) { /* для экранов меньше чем 576px */
+          .custom-max-height {
+            max-height: 15vh !important;
+          }
+        }
+
+        @media (max-width: 426px) { /* для экранов меньше чем 576px */
+          .custom-max-height {
+            max-height: 5vh !important;
+          }
+        }
           
     </style>
 </head>
@@ -69,7 +101,7 @@
 
   </section><!-- /Hero Section -->
 
-  <div class="px-4 pt-5 my-5 text-center ">
+  <div class="px-4 pt-4 my-5 text-center ">
     <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Kapcsolat</h2>
     <div class="col-lg-10 mx-auto">
       <p class="lead mb-4">Az alábbi elérhetőségeken léphet velünk kapcsolatba</p>
@@ -149,7 +181,7 @@
   </div>
   
 
-  <div class="px-4 pt-5 my-5 text-center ">
+  <div class="px-4 my-5 text-center ">
     <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Térkép</h2>
 
     <div class="mx-auto">
@@ -173,15 +205,15 @@
     <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Töltsd fel a tested és ébredj új életre</h2>
 
     <h1 class="display-4 fw-bold text-body-emphasis">Humán Regenerátor Sports</h1>
-    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-8 mx-auto">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-6 mx-auto">
 
       <p class="lead mb-4 ">A Humán Regenerátor Sports kezelés <strong>orvosi alapja egy 18 éves kutatássorozat eredményeként </strong>megszületett és folyamatosan fejlesztett&nbsp;világszerte egyedülálló high-tech eszköz, amely <strong>sejtszinten aktiválja a szervezet öngyógyító folyamatait, ellensúlyozza a sejtekben lévő oxidatív stresszt és akkumulátorként tölti fel a sejteket</strong>. A<strong> Humán Regenerátor Sports a piacon elérhető legerősebb generátorral büszkélkedhet</strong>. Kimagasló generátor teljesítményével túlszárnyalja a Humán Regenerátor Power Jet és Professionel modelleket, kifejezetten erős hatást gyakorolva már a vázizmokra is.</p>
       <!-- <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p> -->
 
     </div>
-    <div class="overflow-hidden" style="max-height: 40vh;">
+    <div class="overflow-hidden custom-max-height">
       <div class="container px-5">
-        <img src="{{ asset('assets/img/humanregensport.png') }}" class="img-fluid border rounded-3 shadow-lg mb-4" width="900" height="500" loading="lazy">
+        <img src="{{ asset('assets/img/humanregensport2.png') }}" class="img-fluid border rounded-3 shadow-lg mb-4" width="900" height="500" loading="lazy">
       </div>
     </div>
   </div>
