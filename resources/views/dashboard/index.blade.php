@@ -35,6 +35,50 @@
         </x-slot>
     </x-adminlte-modal>
 
+    <x-adminlte-modal id="createBookingModal" title="Új foglalás" size="lg" theme="primary" icon="fas fa-calendar-plus" v-centered backdrop="true">
+        <form action="" method="POST">
+            @csrf
+
+            <div class="row">
+
+                <div class="form-group col-lg-4">
+                    <label for="bookingDate">Dátum</label>
+                    <input type="date" id="bookingDate" name="booking_date" class="form-control" required>
+                </div>
+                <div class="form-group col-lg-4">
+                    <label for="bookingTime">Idő</label>
+                    <input type="time" id="bookingTime" name="booking_time" class="form-control" required>
+                </div>
+                <div class="form-group col-lg-4">
+                    <label for="bookingDuration">Időtartam:</label>
+                    <select id="bookingDuration" name="duration" class="form-control">
+                        <option value="30">30 perc</option>
+                        <option value="60">60 perc</option>
+                    </select>
+                </div>
+                
+                <div class="form-group col-lg-12">
+                    <label for="clientName">Ügyfél neve</label>
+                    <input type="text" id="clientName" name="client_name" class="form-control" required>
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="clientEmail">Ügyfél email címe</label>
+                    <input type="email" id="clientEmail" name="client_email" class="form-control" required>
+                </div>
+                <div class="form-group col-lg-12">
+                    <label for="clientPhone">Ügyfél telefonszáma</label>
+                    <input type="text" id="clientPhone" name="client_phone" class="form-control" required>
+                </div>
+                <x-slot name="footerSlot">
+                    <x-adminlte-button type="submit" theme="success" label="Mentés" />
+                    <x-adminlte-button theme="secondary" label="Bezárás" data-dismiss="modal" />
+                </x-slot>
+            
+            </div>
+        </form>
+    </x-adminlte-modal>
+
+    
     {{-- Кнопка для открытия модального окна --}}
     <x-adminlte-button label="Открыть окно" data-toggle="modal" data-target="#modalMin" class="bg-teal d-none" />
 
@@ -97,6 +141,28 @@
                     day: 'Nap', // День
                     list: 'Naptár' // Календарь (для списка)
                 },
+                dateClick: function(info) {
+                    // Логирование полной строки даты и времени
+                    // console.log('Clicked date and time:', info.dateStr);
+
+                    // Разделение строки на дату и время
+                    const dateTime = info.dateStr.split('T'); // Разделяем дату и время
+                    const date = dateTime[0]; // Дата
+                    const time = dateTime[1] || ''; // Время (если доступно)
+
+                    // Логирование отдельных значений
+                    // console.log('Date:', date);
+                    // console.log('Time:', time);
+
+                    // Открываем модальное окно для добавления бронирования
+                    $('#createBookingModal').modal('show');
+
+                    // Заполняем поля модального окна
+                    document.getElementById('bookingDate').value = date; // Устанавливаем дату
+                    document.getElementById('bookingTime').value = time.slice(0, 5); // Устанавливаем время (формат HH:MM)
+                },
+
+
                 eventClick: function(info) {
                     // Открываем модальное окно
                     $('#modalMin').modal('show');

@@ -39,7 +39,7 @@ class LoginController extends Controller
         return redirect()->route('dashboard');
     }
 
-    return redirect()->back()->withErrors(['email' => 'Неверные данные для входа.']);
+    return redirect()->back()->withErrors(['email' => 'Érvénytelen bejelentkezési adatok.']);
 }
 
     
