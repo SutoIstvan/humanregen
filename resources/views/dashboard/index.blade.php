@@ -98,10 +98,7 @@
 
     <script>
 
-console.log($('#bookingTime').timepicker // Если используется Bootstrap TimePicker
-$('#bookingTime').flatpickr // Если используется Flatpickr
-$('#bookingTime').datetimepicker // Если используется Tempus Dominus
-);
+
 
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
