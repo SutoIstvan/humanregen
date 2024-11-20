@@ -128,9 +128,9 @@
                 <li class="list-group-item d-flex justify-content-between">
                   <span>Ár</span>
 
-                  @if ($duration == 35)
+                  @if ($duration == 30)
                       <strong>{{ number_format($price->amount, 0, '.', ' ') }} Ft</strong>
-                  @elseif ($duration == 70)
+                  @elseif ($duration == 60)
                       <strong>{{ number_format($price2->amount, 0, '.', ' ') }} Ft</strong>
                   @endif
 

@@ -33,7 +33,7 @@ class BookingController extends Controller
             // Перебираем все временные слоты, которые блокируются
             while ($startTime < $endTime) {
                 $disabledTimes[] = $startTime->format('H:i'); // Добавляем занятый интервал в массив
-                $startTime->modify("+35 minutes"); // Переходим к следующему слоту (каждые 35 минут)
+                $startTime->modify("+30 minutes"); // Переходим к следующему слоту (каждые 35 минут)
             }
         }
 
@@ -73,7 +73,7 @@ class BookingController extends Controller
         $validatedData = $request->validate([
             'date' => 'required|date',
             'time_slot' => 'required|date_format:H:i',
-            'duration' => 'required|integer|in:35,70',
+            'duration' => 'required|integer|in:30,60',
             'client_name' => 'required|string|max:255',
             'client_email' => 'required|email|max:255',
             'client_phone' => 'required|string|max:20',
@@ -139,18 +139,7 @@ class BookingController extends Controller
             'client_phone' => $validatedData['client_phone'],
         ];
                 
-        Mail::to('info@humanregen.hu')->send(new NewBookingNotification($bookingDetails));
-
-        // Mail::to('info@humanregen.hu')->send(new AdminBookingNotificationMail($bookingDetails));
-
-        // $validatedData = $request->validate([
-        //     'date' => 'required|date',
-        //     'time_slot' => 'required|date_format:H:i',
-        //     'duration' => 'required|integer|in:35,70',
-        //     'client_name' => 'required|string|max:255',
-        //     'client_email' => 'required|email|max:255',
-        //     'client_phone' => 'required|string|max:20',
-        // ]);
+        // Mail::to('info@humanregen.hu')->send(new NewBookingNotification($bookingDetails));
 
         $name = $validatedData['client_name'];
         $mail = $validatedData['client_email'];

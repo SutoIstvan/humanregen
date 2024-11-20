@@ -413,7 +413,7 @@
   <div class="" data-aos="fade-up">
     <div class="plans mb-5">
         <label class="plan basic-plan me-xxl-5 me-lg-3 " for="basic">
-            <input checked type="radio" id="basic" name="duration" value="35" />
+            <input checked type="radio" id="basic" name="duration" value="30" />
             <div class="plan-content ">
                 <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                 <div class="plan-details">
@@ -424,7 +424,7 @@
         </label>
 
         <label class="plan complete-plan ms-xxl-5 ms-lg-2" for="complete">
-            <input type="radio" id="complete" name="duration" value="70" />
+            <input type="radio" id="complete" name="duration" value="60" />
             <div class="plan-content">
                 <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                 <div class="plan-details">

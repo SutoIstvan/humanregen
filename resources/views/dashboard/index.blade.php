@@ -71,10 +71,10 @@
                     center: 'title',
                     right: 'timeGridWeek,timeGridDay'
                 },
-                slotDuration: '00:35:00', // Шаг времени 30 минут
-                slotLabelInterval: '00:35', // Интервал меток времени
+                slotDuration: '00:30:00', // Шаг времени 30 минут
+                slotLabelInterval: '00:30', // Интервал меток времени
                 slotMinTime: '08:00:00', // Время начала отображения
-                slotMaxTime: '17:50:00', // Время окончания отображения
+                slotMaxTime: '18:00:00', // Время окончания отображения
                 allDaySlot: false, // Отключение слота для событий на весь день
                 slotLabelFormat: {
                     hour: '2-digit',

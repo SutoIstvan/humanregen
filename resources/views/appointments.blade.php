@@ -56,7 +56,7 @@
             /* Каждый элемент занимает 50% контейнера (две колонки) */
             box-sizing: border-box;
             padding: 4px;
-            margin: 5px;
+            margin: 3px;
             text-align: center;
             font-size: 16px;
             background-color: #e8e9e0;
@@ -266,7 +266,7 @@
         <div class="">
             <div class="plans mb-5">
                 <label class="plan basic-plan me-xxl-5 me-lg-3" for="basic">
-                    <input checked type="radio" id="basic" name="duration" value="35" />
+                    <input checked type="radio" id="basic" name="duration" value="30" />
                     <div class="plan-content ">
                         {{-- <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""/> --}}
 
@@ -282,7 +282,7 @@
                 </label>
 
                 <label class="plan complete-plan ms-xxl-5 ms-lg-2" for="complete">
-                    <input type="radio" id="complete" name="duration" value="70" />
+                    <input type="radio" id="complete" name="duration" value="60" />
                     <div class="plan-content">
                         <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" class="d-none d-sm-block"/>
                         <div class="plan-details">
@@ -325,7 +325,7 @@
 
     <form action="/saveappointments" method="GET" class="selected-time">
 
-        <input type="hidden" id="durationinput" name="durationinput" value="35">
+        <input type="hidden" id="durationinput" name="durationinput" value="30">
 
         <input type="hidden" id="selected-date-input" name="selected_date">
         <input type="hidden" id="selected-time-input" name="selected_time">
@@ -416,7 +416,7 @@ const generateTimeSlots = (startTime, endTime, interval) => {
     
     // Устанавливаем максимальное время как 17:20
     const maxHour = 17;
-    const maxMinute = 20;
+    const maxMinute = 30;
     
     while (
         currentHour < maxHour || 
@@ -469,7 +469,7 @@ const createTimeList = (containerId, duration, startTime, endTime, disabledTimes
         return;
     }
     
-    const timeSlots = generateTimeSlots(startTime, endTime, 35);
+    const timeSlots = generateTimeSlots(startTime, endTime, 30);
     
     timeSlots.forEach(time => {
         const timeDiv = document.createElement('div');
@@ -534,7 +534,7 @@ const fetchAndUpdateTimeSlots = async (date) => {
 // Получение выбранной длительности
 const getDuration = () => {
     const selectedDuration = document.querySelector('input[name="duration"]:checked');
-    return selectedDuration ? parseInt(selectedDuration.value, 10) : 35;
+    return selectedDuration ? parseInt(selectedDuration.value, 10) : 30;
 };
 
 // Обработчики для радио-кнопок длительности
