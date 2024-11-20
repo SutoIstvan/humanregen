@@ -138,5 +138,31 @@ class HomeController extends Controller
 
         return redirect()->route('users.create')->with('success', 'Az adminisztrátor sikeresen hozzáadva');
     }
+
+
+    public function userdelete(Request $request, $id)
+    {
+        // Найти пользователя по ID
+        $user = User::find($id);
+
+        if ($user) {
+            // Удалить пользователя
+            $user->delete();
+
+            // Перенаправить с сообщением об успехе
+            return redirect()->route('users')->with('success', 'A felhasználó sikeresen törölve lett');
+        }
+
+        // Если пользователь не найден, вернуть ошибку
+        return redirect()->route('users')->with('error', 'A felhasználó nem található');
+    }
+
+    public function useredit($id)
+    {
+        $user = User::findOrFail($id);
+
+        return view('dashboard.useredit', compact('user'));
+    }
+
 }
 

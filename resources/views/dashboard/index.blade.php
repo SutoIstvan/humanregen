@@ -2,6 +2,8 @@
 
 @section('title', 'Dashboard')
 
+
+
 @section('content_header')
     {{-- <h1>Dashboard</h1> --}}
 @stop
@@ -11,7 +13,7 @@
 
     <div id="calendar" style="height: 410px;"></div>
 
-
+   
     {{-- Модальное окно --}}
 
     {{-- Модальное окно для отображения данных события --}}

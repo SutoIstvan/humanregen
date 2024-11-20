@@ -57,6 +57,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::get('/dashboard/users/create', [HomeController::class, 'usercreate'])->name('users.create');
     Route::post('/dashboard/users', [HomeController::class, 'userstore'])->name('users.store');
+    Route::delete('users/{id}', [HomeController::class, 'userdelete'])->name('users.delete');
+    Route::get('/dashboard/users/edit/{id}', [HomeController::class, 'useredit'])->name('users.edit');
+
 });
 
 Route::get('/bookings/disabled-times', [BookingController::class, 'getDisabledTimes']);

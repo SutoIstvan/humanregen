@@ -18,6 +18,9 @@
             'Name',
             'Email',
             'Phone',
+            'Role',
+            ['label' => 'Actions', 'no-export' => true, 'width' => 15],
+
         ];
 
     @endphp
@@ -30,6 +33,23 @@
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->phone }}</td>
+                <td>{{ $user->role }}</td>
+                <td>
+
+                    <a href="{{ route('users.edit', $user->id) }}" class="btn btn-xs btn-default text-primary mx-1 shadow" title="Edit">
+                        <i class="fa fa-lg fa-fw fa-pen"></i>
+                    </a>
+                    
+                    <!-- Кнопка для удаления с подтверждением -->
+                    <form action="{{ route('users.delete', $user->id) }}" method="POST" id="delete-form-{{ $user->id }}" style="display: inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="button" class="btn btn-xs btn-default text-danger mx-1 shadow" title="Delete" onclick="confirmDelete('{{ $user->name }}', {{ $user->id }})">
+                            <i class="fa fa-lg fa-fw fa-trash"></i>
+                        </button>
+                    </form>
+                    
+                </td>
 
             </tr>
         @endforeach
@@ -54,7 +74,11 @@
 @stop
 
 @section('js')
-    <script>
-        console.log("Hi, I'm using the Laravel-AdminLTE package!");
-    </script>
+<script>
+    function confirmDelete(userName, userId) {
+        if (confirm('Biztosan törli ' + userName + ' nevű felhasználót?')) {
+            document.getElementById('delete-form-' + userId).submit();
+        }
+    }
+</script>
 @stop
