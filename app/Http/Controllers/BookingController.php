@@ -16,8 +16,8 @@ class BookingController extends Controller
 
     /**
      * Получаем все бронирования на указанную дату.
-     */    
-    
+     */
+
     public function getDisabledTimes(Request $request)
     {
         $date = $request->query('date');
@@ -227,6 +227,44 @@ class BookingController extends Controller
             return response()->json($formattedBookings);
         } catch (\Exception $e) {
             return response()->json(['error' => 'Failed to load bookings'], 500);
+        }
+    }
+
+    public function dashboardbookstore(Request $request)
+    {
+        try {
+            // Логирование входящих данных
+            // \Log::info('Incoming booking data:', $request->all());
+    
+            $validated = $request->validate([
+                'booking_date' => 'required|date',
+                'booking_time' => 'required|date_format:H:i',
+                'duration' => 'required|in:30,60',
+                'client_name' => 'required|string|max:255',
+                'client_email' => 'required|email|max:255',
+                'client_phone' => 'required|string|max:20',
+            ]);
+    
+            $booking = new Booking();
+            $booking->date = $validated['booking_date'];
+            $booking->time_slot = $validated['booking_time'];
+            $booking->duration = $validated['duration'];
+            $booking->client_name = $validated['client_name'];
+            $booking->client_email = $validated['client_email'];
+            $booking->client_phone = $validated['client_phone'];
+            $booking->status = 'confirmed';
+            $booking->save();
+    
+            return response()->json(['success' => true, 'message' => 'A foglalás sikeresen megtörtént']);
+        } catch (\Exception $e) {
+            // Логирование полной ошибки
+            // \Log::error('Booking creation error: ' . $e->getMessage());
+            // \Log::error($e->getTraceAsString());
+    
+            return response()->json([
+                'success' => false, 
+                'message' => $e->getMessage()
+            ], 500);
         }
     }
 }

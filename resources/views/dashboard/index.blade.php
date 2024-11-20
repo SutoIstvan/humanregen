@@ -29,7 +29,8 @@
         </x-slot>
     </x-adminlte-modal>
 
-    <x-adminlte-modal id="createBookingModal" title="Új foglalás" size="lg" theme="primary" icon="fas fa-calendar-plus" v-centered backdrop="true">
+    <x-adminlte-modal id="createBookingModal" title="Új foglalás" size="lg" theme="primary" icon="fas fa-calendar-plus"
+        v-centered backdrop="true">
         <form action="" method="POST">
             @csrf
 
@@ -52,7 +53,7 @@
                         <option value="60">60 perc</option>
                     </select>
                 </div>
-                
+
                 <div class="form-group col-lg-12">
                     <label for="clientName">Ügyfél neve</label>
                     <input type="text" id="clientName" name="client_name" class="form-control" required>
@@ -66,15 +67,15 @@
                     <input type="text" id="clientPhone" name="client_phone" class="form-control" required>
                 </div>
                 <x-slot name="footerSlot">
-                    <x-adminlte-button type="submit" theme="success" label="Mentés" />
+                    <x-adminlte-button type="button" theme="success" id="saveBookingButton" label="Mentés" />
                     <x-adminlte-button theme="secondary" label="Bezárás" data-dismiss="modal" />
                 </x-slot>
-            
+
             </div>
         </form>
     </x-adminlte-modal>
 
-    
+
     {{-- Кнопка для открытия модального окна --}}
     <x-adminlte-button label="Открыть окно" data-toggle="modal" data-target="#modalMin" class="bg-teal d-none" />
 
@@ -85,6 +86,7 @@
         .fc-event-time {
             font-size: 13px !important;
         }
+
         .fc-event {
             cursor: pointer;
         }
@@ -97,9 +99,6 @@
 
 
     <script>
-
-
-
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
 
@@ -140,26 +139,22 @@
                     day: 'Nap', // День
                     list: 'Naptár' // Календарь (для списка)
                 },
-                dateClick: function(info) {
-                    // Логирование полной строки даты и времени
-                    // console.log('Clicked date and time:', info.dateStr);
 
-                    // Разделение строки на дату и время
+                // Добавляем новое бронирование с админ панели
+                dateClick: function(info) {
                     const dateTime = info.dateStr.split('T'); // Разделяем дату и время
                     const date = dateTime[0]; // Дата
                     const time = dateTime[1] || ''; // Время (если доступно)
-
-                    // Логирование отдельных значений
-                    // console.log('Date:', date);
-                    // console.log('Time:', time);
 
                     // Открываем модальное окно для добавления бронирования
                     $('#createBookingModal').modal('show');
 
                     // Заполняем поля модального окна
                     document.getElementById('bookingDate').value = date; // Устанавливаем дату
-                    document.getElementById('bookingTime').value = time.slice(0, 5); // Устанавливаем время (формат HH:MM)
+                    document.getElementById('bookingTime').value = time.slice(0,
+                        5); // Устанавливаем время (формат HH:MM)
                 },
+
 
 
                 eventClick: function(info) {
@@ -304,12 +299,68 @@
                             });
                     });
 
-
                 },
 
             });
 
             calendar.render();
+        });
+
+
+        // Добавление нового бронирования с админ панели через модальное окно
+        document.getElementById('saveBookingButton').addEventListener('click', function() {
+            const date = document.getElementById('bookingDate').value;
+            const time = document.getElementById('bookingTime').value;
+            const duration = document.getElementById('bookingDuration').value;
+            const clientName = document.getElementById('clientName').value;
+            const clientEmail = document.getElementById('clientEmail').value;
+            const clientPhone = document.getElementById('clientPhone').value;
+
+            fetch('/dashboard/bookings', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
+                            'content')
+                    },
+                    body: JSON.stringify({
+                        booking_date: date,
+                        booking_time: time,
+                        duration: duration,
+                        client_name: clientName,
+                        client_email: clientEmail,
+                        client_phone: clientPhone
+                    })
+                })
+                .then(response => {
+                    // Проверяем статус ответа
+                    console.log('Response status:', response.status);
+
+                    // Пытаемся получить текст ответа
+                    return response.text().then(text => {
+                        try {
+                            // Пробуем распарсить как JSON
+                            return JSON.parse(text);
+                        } catch (error) {
+                            // Если не JSON, выводим текст ответа
+                            console.error('Non-JSON response:', text);
+                            throw new Error('Received non-JSON response: ' + text);
+                        }
+                    });
+                })
+                .then(data => {
+                    if (data.success) {
+                        alert('A foglalás sikeresen megtörtént!');
+                        $('#createBookingModal').modal('hide');
+                        location.reload();
+                    } else {
+                        alert(data.message || 'Hiba történt a foglalás létrehozása során.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Teljes hiba:', error);
+                    alert('Hiba történt: ' + error.message);
+                });
         });
     </script>
 

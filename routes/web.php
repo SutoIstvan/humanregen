@@ -57,6 +57,8 @@ Route::get('/get-client-bookings/{email}', [BookingController::class, 'getClient
 Route::get('/saveappointments', [BookingController::class, 'saveappointments'])->name('saveappointments');
 Route::post('/bookings/update-status/{id}', [BookingController::class, 'updateStatus'])->name('bookings.update-status');
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookstore');
+Route::post('/dashboard/bookings', [BookingController::class, 'dashboardbookstore']);
+
 Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 Route::delete('/booking/{id}', [BookingController::class, 'destroyprofile'])->name('bookings.destroyprofile');
 
