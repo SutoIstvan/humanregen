@@ -16,7 +16,6 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                {{-- <div class="card-header">{{ __('Dashboard') }}</div> --}}
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <div>
                         {{ __('Profilom') }}
@@ -45,33 +44,27 @@
                             <form action="{{ route('profile.update') }}" method="POST">
                                 @csrf
         
-                            <!-- Колонка для редактирования имени -->
                             <div class="col-md-12 mb-3">
                                 <label for="name" class="form-label">Név</label>
                                 <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}" required>
                             </div>
                     
-                            <!-- Колонка для редактирования телефона -->
                             <div class="col-md-12 mb-3">
                                 <label for="phone" class="form-label">Telefonszám</label>
                                 <input type="text" class="form-control" id="phone" name="phone" value="{{ $user->phone }}" required>
                             </div>
 
-                            <!-- Колонка для редактирования адреса электронной почты -->
                             <div class="col-md-12 mb-3">
                                 <label for="email" class="form-label">Email cím</label>
                                 <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}" readonly>
                             </div>
                     
-                            <!-- Кнопка для отправки формы -->
                             <div class="col-md-12 mb-3">
                                 <button type="submit" class="btn btn-primary w-100" style="background-color: #006469; border-color:#006469">Adatok módosítása</button>
                             </div>
                             </form>
                         </div>
-                    </div>
-                    
-                    
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -90,7 +83,6 @@
                     <div class="container">
                         <div class="row">
                             @if ($subscribe)
-                            <!-- Сообщение и кнопка для отписки -->
                                 <div class="col-md-12 mb-3">
                                     <p>Ön fel van iratkozva a hírlevélre és akciokra.</p>
                                     <form action="{{ route('unsubscribe') }}" method="POST">
@@ -101,7 +93,6 @@
                                     </form>
                                 </div>
                             @else
-                                <!-- Сообщение и инпут с кнопкой для подписки -->
                                 <div class="col-md-12 mb-3">
                                     <p>Iratkozzon fel hírlevelünkre, és értesüljön legfrissebb híreinkről szolgáltatásainkkal kapcsolatban!</p>
                                     <form action="{{ route('subscribe') }}" method="POST">
@@ -114,8 +105,6 @@
                         </div>
                     </div>
                 </div>
-                
-
             </div>
         </div>
     </div>
@@ -125,16 +114,12 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                {{-- <div class="card-header">{{ __('Dashboard') }}</div> --}}
                 <div class="card-header">
-                    
                     {{ __('Foglalási előzmények') }}
-
                 </div>
 
                 <div class="card-body">
                     <div>
-                        
                         @if($bookings->isEmpty())
                         <p class="text-center mt-2">Nincs foglalási előzmény.</p>
                         @else
@@ -165,11 +150,8 @@
                                 </tr>
                                 @endforeach
                             </tbody>
-                        </table>
-                        
-                        
+                        </table>                       
                         @endif
-
                     </div>
                 </div>
             </div>

@@ -13,7 +13,6 @@
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-
     <style>
         .hero {
             width: 100%;
@@ -30,8 +29,6 @@
 
     @include('layouts.nav')
 
-
-    <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
         <img src="{{ asset('assets/img/hero-bg-8.jpg') }}" alt="" class="hero-bg">
 
@@ -59,8 +56,7 @@
                 <use xlink:href="#wave-path" x="50" y="9"></use>
             </g>
         </svg>
-
-    </section><!-- /Hero Section -->
+    </section>
 
     <div class="container">
         <div class="row justify-content-center mt-5">

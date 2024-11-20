@@ -1,11 +1,9 @@
 <?php
 
 use App\Http\Controllers\BookingController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\SubscribeController;
-use App\Models\Booking;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -18,16 +16,7 @@ Route::get('/effects', function () {
 })->name('effects');
 
 Route::get('/contacts', function () {
-    // $booking = Booking::findOrFail(1);
-
-    // $bookingDetails = [
-    //     'name' => $booking['client_name'],
-    //     'date' => $booking['date'],
-    //     'time' => $booking['time_slot'],
-    //     'service' => $booking['duration'],
-    // ];
     return view('contacts');
-    // return view('emails.booking_confirmation', compact('bookingDetails'));
 })->name('contacts');
 
 Route::get('/appointments', function () {
@@ -56,10 +45,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/dashboard/prices/update-all', [PriceController::class, 'updateAllPrices'])->name('prices.updateAll');
 
     Route::get('/dashboard/users/create', [HomeController::class, 'usercreate'])->name('users.create');
-    Route::post('/dashboard/users', [HomeController::class, 'userstore'])->name('users.store');
-    Route::delete('users/{id}', [HomeController::class, 'userdelete'])->name('users.delete');
     Route::get('/dashboard/users/edit/{id}', [HomeController::class, 'useredit'])->name('users.edit');
+    Route::post('/dashboard/users', [HomeController::class, 'userstore'])->name('users.store');
     Route::put('/users/update/{id}', [HomeController::class, 'userupdate'])->name('users.update');
+    Route::delete('users/{id}', [HomeController::class, 'userdelete'])->name('users.delete');
 
 });
 
@@ -74,6 +63,3 @@ Route::delete('/booking/{id}', [BookingController::class, 'destroyprofile'])->na
 Route::post('/subscribe', [SubscribeController::class, 'subscribe'])->name('subscribe');
 Route::post('/unsubscribe', [SubscribeController::class, 'unsubscribe'])->name('unsubscribe');
 Route::get('/unsubscribe/{email}', [SubscribeController::class, 'unsubscribeemail'])->name('unsubscribeemail');
-
-// удалить
-Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');

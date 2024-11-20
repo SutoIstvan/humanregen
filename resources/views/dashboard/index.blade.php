@@ -2,19 +2,13 @@
 
 @section('title', 'Dashboard')
 
-
-
 @section('content_header')
     {{-- <h1>Dashboard</h1> --}}
 @stop
 
 @section('content')
-    {{-- <p><br>Időpont foglaló lista</p> --}}
 
     <div id="calendar" style="height: 410px;"></div>
-
-   
-    {{-- Модальное окно --}}
 
     {{-- Модальное окно для отображения данных события --}}
     <x-adminlte-modal id="modalMin" title="Foglalás részletei" size="lg" theme="teal" icon="fas fa-bell" v-centered
@@ -45,10 +39,12 @@
                     <label for="bookingDate">Dátum</label>
                     <input type="date" id="bookingDate" name="booking_date" class="form-control" required>
                 </div>
+
                 <div class="form-group col-lg-4">
                     <label for="bookingTime">Idő</label>
                     <input type="time" id="bookingTime" name="booking_time" class="form-control" required>
                 </div>
+
                 <div class="form-group col-lg-4">
                     <label for="bookingDuration">Időtartam:</label>
                     <select id="bookingDuration" name="duration" class="form-control">
@@ -101,6 +97,12 @@
 
 
     <script>
+
+console.log($('#bookingTime').timepicker // Если используется Bootstrap TimePicker
+$('#bookingTime').flatpickr // Если используется Flatpickr
+$('#bookingTime').datetimepicker // Если используется Tempus Dominus
+);
+
         document.addEventListener('DOMContentLoaded', function() {
             var calendarEl = document.getElementById('calendar');
 

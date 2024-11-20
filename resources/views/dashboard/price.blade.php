@@ -8,7 +8,6 @@
 
 @section('content')
 
-
     <x-adminlte-card title="Árak szerkesztése" theme="lightblue" theme-mode="outline" class="w-50"
         icon="fas fa-md fa-coins" header-class="text-uppercase rounded-bottom border-info">
 
@@ -57,16 +56,4 @@
         </form>
     </x-adminlte-card>
 
-    
-@stop
-
-@section('css')
-    {{-- Add here extra stylesheets --}}
-    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
-@stop
-
-@section('js')
-    <script>
-        console.log("Hi, I'm using the Laravel-AdminLTE package!");
-    </script>
 @stop

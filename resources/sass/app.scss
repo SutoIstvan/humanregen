@@ -6,13 +6,18 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
+/* Bootstrap */
 
-// @import 'bootstrap/scss/bootstrap';
+@import 'bootstrap/scss/bootstrap';
 
-@import 'node_modules/bootstrap/scss/bootstrap';
+// @import 'node_modules/bootstrap/scss/bootstrap';
 // @import 'node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+// @import 'public/vendor/bootstrap/css/bootstrap.css';
+
+// @import 'bootstrap/scss/bootstrap.scss';
+
+// @import 'bootstrap/dist/css/bootstrap.css';
 
 
 @import '@fortawesome/fontawesome-free/css/fontawesome.css';

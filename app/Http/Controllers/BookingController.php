@@ -16,7 +16,9 @@ class BookingController extends Controller
 
     /**
      * Получаем все бронирования на указанную дату.
-     */    public function getDisabledTimes(Request $request)
+     */    
+    
+    public function getDisabledTimes(Request $request)
     {
         $date = $request->query('date');
 
@@ -124,11 +126,7 @@ class BookingController extends Controller
                 ->withErrors(['time_slot' => 'Ez az időpont átfedésben van egy másik foglalással. Kérem válasszon egy másik időpontot.']);
         }
 
-
-
         Booking::create($validatedData);
-
-
 
         $bookingDetails = [
             'name' => $validatedData['client_name'],
@@ -138,7 +136,7 @@ class BookingController extends Controller
             'client_email' => $validatedData['client_email'],
             'client_phone' => $validatedData['client_phone'],
         ];
-                
+
         Mail::to('info@humanregen.hu')->send(new NewBookingNotification($bookingDetails));
 
         $name = $validatedData['client_name'];
@@ -148,17 +146,15 @@ class BookingController extends Controller
         $time = $validatedData['time_slot'];
 
         return redirect()->route('message')->with(
-            'message', "
+            'message',
+            "
                 Tisztelt {$name}!
                 A {$duration} perces foglalását sikeresen rögzítettük {$date} napra, {$time} időpontra. 
                 A megadott {$mail} email címre küldünk megerősítést, amikor feldolgoztuk az adatokat.
                 Köszönjük a foglalást, a Human Regen csapata!
             "
         );
-
-        // return redirect()->route('appointments');
     }
-
 
     /**
      * Удаление бронирования клиента.
@@ -198,9 +194,8 @@ class BookingController extends Controller
             'time' => $booking['time_slot'],
             'service' => $booking['duration'],
         ];
-        
-        Mail::to($booking['client_email'])->send(new BookingConfirmationMail($bookingDetails));
 
+        Mail::to($booking['client_email'])->send(new BookingConfirmationMail($bookingDetails));
 
         return response()->json(['success' => true]);
     }

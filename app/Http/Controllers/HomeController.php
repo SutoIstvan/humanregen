@@ -94,12 +94,10 @@ class HomeController extends Controller
         ]);
 
         $id = Auth::user()->id;
-
         $user = User::find($id);
 
         $user->name = $request->input('name');
         $user->phone = $request->input('phone');
-    
         $user->save();
 
         return redirect()->back()->with('success', 'Adataid sikeresen frissítve.');
@@ -117,7 +115,6 @@ class HomeController extends Controller
         return view('dashboard.usercreate');
     }
 
-    // Метод для обработки данных формы и добавления пользователя
     public function userstore(Request $request)
     {
         $request->validate([
@@ -127,7 +124,6 @@ class HomeController extends Controller
             'phone' => 'nullable|string|max:20',
         ]);
 
-        // Создание нового пользователя
         User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -142,18 +138,14 @@ class HomeController extends Controller
 
     public function userdelete(Request $request, $id)
     {
-        // Найти пользователя по ID
         $user = User::find($id);
 
         if ($user) {
-            // Удалить пользователя
             $user->delete();
 
-            // Перенаправить с сообщением об успехе
             return redirect()->route('users')->with('success', 'A felhasználó sikeresen törölve lett');
         }
 
-        // Если пользователь не найден, вернуть ошибку
         return redirect()->route('users')->with('error', 'A felhasználó nem található');
     }
 
@@ -164,35 +156,24 @@ class HomeController extends Controller
         return view('dashboard.useredit', compact('user'));
     }
     public function userupdate(Request $request, $id)
-{
-    // Валидация данных
-    $request->validate([
-        'name' => 'required|string|max:255',
-        'email' => 'required|email|max:255|unique:users,email,' . $id,
-        'phone' => 'nullable|string|max:20',
-        'role' => 'required',
-    ]);
-    // dd($request);
-    $user = User::findOrFail($id);
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:users,email,' . $id,
+            'phone' => 'nullable|string|max:20',
+            'role' => 'required',
+        ]);
+        $user = User::findOrFail($id);
 
-    // Обновление данных пользователя
-    $user->update([
-        'name' => $request->input('name'),
-        'email' => $request->input('email'),
-        'phone' => $request->input('phone'),
-        'role' => $request->input('role'),
-    ]);
+        $user->update([
+            'name' => $request->input('name'),
+            'email' => $request->input('email'),
+            'phone' => $request->input('phone'),
+            'role' => $request->input('role'),
+        ]);
 
-    // Обновление роли пользователя
-    // Устанавливаем роль, используя ID роли (1 - админ, 2 - пользователь)
-    // if ($request->input('role') == 1) {
-    //     $user->syncRoles('admin');
-    // } else {
-    //     $user->syncRoles('user');
-    // }
-
-    return redirect()->route('users')->with('success', 'Пользователь успешно обновлен');
-}
+        return redirect()->route('users')->with('success', 'Пользователь успешно обновлен');
+    }
 
 }
 

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Adminisztrátor hozzáadása')
+@section('title', 'Felhasználói adatok szerkesztése')
 
 @section('content_header')
     <h1></h1>
@@ -65,13 +65,4 @@
 
     <div class="pb-2">
     </div>
-@stop
-
-@section('css')
-    {{-- Adja hozzá a szükséges stílusokat itt --}}
-@stop
-
-@section('js')
-    <script>
-    </script>
 @stop

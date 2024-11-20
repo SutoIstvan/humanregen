@@ -48,28 +48,24 @@ class PriceController extends Controller
             'price4' => 'required|numeric|min:0',
         ]);
     
-        // Обновление цены с ID 1
         $price1 = Price::find(1);
         if ($price1) {
             $price1->amount = $request->input('price1');
             $price1->save();
         }
     
-        // Обновление цены с ID 2
         $price2 = Price::find(2);
         if ($price2) {
             $price2->amount = $request->input('price2');
             $price2->save();
         }
     
-        // Обновление цены с ID 3
         $price3 = Price::find(3);
         if ($price3) {
             $price3->amount = $request->input('price3');
             $price3->save();
         }
     
-        // Обновление цены с ID 4
         $price4 = Price::find(4);
         if ($price4) {
             $price4->amount = $request->input('price4');

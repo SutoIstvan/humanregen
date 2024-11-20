@@ -72,12 +72,3 @@
     <div class="pb-2">
     </div>
 @stop
-
-@section('css')
-    {{-- Adja hozzá a szükséges stílusokat itt --}}
-@stop
-
-@section('js')
-    <script>
-    </script>
-@stop
