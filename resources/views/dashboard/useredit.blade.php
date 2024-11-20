@@ -14,12 +14,13 @@
 </x-adminlte-alert>
 @endif
 
-    <x-adminlte-card title="Adminisztrátor hozzáadása" theme="lightblue" theme-mode="outline" class="w-50"
+    <x-adminlte-card title="Felhasználói adatok szerkesztése" theme="lightblue" theme-mode="outline" class="w-50"
         icon="fas fa-user-plus" header-class="text-uppercase rounded-bottom border-info">
         
-        <form action="{{ route('users.store') }}" method="POST">
+        <form action="{{ route('users.update', $user->id) }}" method="POST">
             @csrf
-        
+            @method('PUT')
+
             <x-adminlte-input name="name" label="Név" placeholder="Adja meg a nevét" type="text" igroup-size="sm"
                 value="{{ old('name', $user->name) }}" required>
                 <x-slot name="appendSlot">
@@ -39,7 +40,7 @@
             </x-adminlte-input>
         
             <x-adminlte-input name="email" label="Email" placeholder="Adja meg az email címet" type="email" igroup-size="sm"
-                value="{{ old('name', $user->email) }}" required>
+                value="{{ old('name', $user->email) }}" readonly>
                 <x-slot name="appendSlot">
                     <div class="input-group-text bg-dark">
                         <i class="fas fa-envelope"></i>
@@ -58,7 +59,7 @@
                 
             </x-adminlte-select2>
                 
-            <x-adminlte-button class="btn-flat w-100 mt-3" type="submit" label="Adminisztrátor hozzáadása" theme="success" icon="fas fa-user-plus"/>
+            <x-adminlte-button class="btn-flat w-100 mt-3" type="submit" label="Felhasználói adatok frissítése" theme="success" icon="fas fa-user-plus"/>
         </form>
     </x-adminlte-card>
 

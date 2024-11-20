@@ -59,6 +59,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/dashboard/users', [HomeController::class, 'userstore'])->name('users.store');
     Route::delete('users/{id}', [HomeController::class, 'userdelete'])->name('users.delete');
     Route::get('/dashboard/users/edit/{id}', [HomeController::class, 'useredit'])->name('users.edit');
+    Route::put('/users/update/{id}', [HomeController::class, 'userupdate'])->name('users.update');
 
 });
 

@@ -163,6 +163,36 @@ class HomeController extends Controller
 
         return view('dashboard.useredit', compact('user'));
     }
+    public function userupdate(Request $request, $id)
+{
+    // Валидация данных
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|email|max:255|unique:users,email,' . $id,
+        'phone' => 'nullable|string|max:20',
+        'role' => 'required',
+    ]);
+    // dd($request);
+    $user = User::findOrFail($id);
+
+    // Обновление данных пользователя
+    $user->update([
+        'name' => $request->input('name'),
+        'email' => $request->input('email'),
+        'phone' => $request->input('phone'),
+        'role' => $request->input('role'),
+    ]);
+
+    // Обновление роли пользователя
+    // Устанавливаем роль, используя ID роли (1 - админ, 2 - пользователь)
+    // if ($request->input('role') == 1) {
+    //     $user->syncRoles('admin');
+    // } else {
+    //     $user->syncRoles('user');
+    // }
+
+    return redirect()->route('users')->with('success', 'Пользователь успешно обновлен');
+}
 
 }
 

@@ -15,12 +15,11 @@
     @php
         $heads = [
             'ID',
-            'Name',
+            'Név',
             'Email',
-            'Phone',
-            'Role',
-            ['label' => 'Actions', 'no-export' => true, 'width' => 15],
-
+            'Telefonszám',
+            'Jogosultság',
+            ['label' => 'Műveletek', 'no-export' => true, 'width' => 15],
         ];
 
     @endphp
@@ -36,7 +35,7 @@
                 <td>{{ $user->role }}</td>
                 <td>
 
-                    <a href="{{ route('users.edit', $user->id) }}" class="btn btn-xs btn-default text-primary mx-1 shadow" title="Edit">
+                    <a href="{{ route('users.edit', $user->id) }}" class="btn btn-xs btn-default text-primary mx-1 shadow" title="Szerkesztése">
                         <i class="fa fa-lg fa-fw fa-pen"></i>
                     </a>
                     
@@ -44,7 +43,7 @@
                     <form action="{{ route('users.delete', $user->id) }}" method="POST" id="delete-form-{{ $user->id }}" style="display: inline;">
                         @csrf
                         @method('DELETE')
-                        <button type="button" class="btn btn-xs btn-default text-danger mx-1 shadow" title="Delete" onclick="confirmDelete('{{ $user->name }}', {{ $user->id }})">
+                        <button type="button" class="btn btn-xs btn-default text-danger mx-1 shadow" title="Törlés" onclick="confirmDelete('{{ $user->name }}', {{ $user->id }})">
                             <i class="fa fa-lg fa-fw fa-trash"></i>
                         </button>
                     </form>
