@@ -43,6 +43,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('/dashboard/users', [HomeController::class, 'users'])->name('users');
     Route::get('/dashboard/prices/edit', [PriceController::class, 'edit'])->name('price.edit');
     Route::put('/dashboard/prices/update-all', [PriceController::class, 'updateAllPrices'])->name('prices.updateAll');
+    Route::post('/save-calendar-view', [HomeController::class, 'saveCalendarView'])->name('save.calendar.view');
 
     Route::get('/dashboard/users/create', [HomeController::class, 'usercreate'])->name('users.create');
     Route::get('/dashboard/users/edit/{id}', [HomeController::class, 'useredit'])->name('users.edit');

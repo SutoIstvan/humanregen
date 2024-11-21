@@ -7,6 +7,7 @@ use App\Models\Subscription;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use App\Models\User;
 
 class HomeController extends Controller
@@ -47,6 +48,9 @@ class HomeController extends Controller
 
     public function dashboard()
     {
+
+        $calendarView = Session::get('calendar_view', 'timeGridWeek');
+
         $bookings = Booking::all()->map(function ($booking) {
 
             $color = match ($booking->status) {
@@ -83,7 +87,7 @@ class HomeController extends Controller
             ];
         });
 
-        return view('dashboard.index', ['bookings' => $bookings]);
+        return view('dashboard.index', ['bookings' => $bookings , 'calendarView' => $calendarView]);
     }
 
     public function update(Request $request)
@@ -173,6 +177,13 @@ class HomeController extends Controller
         ]);
 
         return redirect()->route('users')->with('success', 'Пользователь успешно обновлен');
+    }
+
+    public function saveCalendarView(Request $request)
+    {
+        $view = $request->input('view');
+        Session::put('calendar_view', $view);
+        return response()->json(['success' => true]);
     }
 
 }

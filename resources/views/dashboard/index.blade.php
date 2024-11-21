@@ -1,5 +1,9 @@
 @extends('adminlte::page')
 
+@section('content_header')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+@stop
+
 @section('title', 'Dashboard')
 
 @section('content_header')
@@ -105,7 +109,7 @@
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 height: 'auto',
                 themeSystem: 'bootstrap', // Используем тему Bootstrap
-                initialView: 'timeGridWeek', // Вид календаря - недельный
+                initialView: '{{ $calendarView ?? 'timeGridWeek' }}', // Если $calendarView не определен, использовать 'timeGridWeek'
                 initialDate: new Date(), // Устанавливаем начальную дату как текущую
                 events: @json($bookings), // Ваши события из базы данных
                 headerToolbar: {
@@ -139,6 +143,31 @@
                     day: 'Nap', // День
                     list: 'Naptár' // Календарь (для списка)
                 },
+
+                // Сохраняем текущий вид календаря в сессию
+                datesSet: function(info) {
+                    fetch('/save-calendar-view', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                        },
+                        body: JSON.stringify({ view: info.view.type }),
+                    })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('View saved successfully:', data);
+                    })
+                    .catch(error => {
+                        console.error('Error saving view:', error);
+                    });
+                },
+
 
                 // Добавляем новое бронирование с админ панели
                 dateClick: function(info) {
@@ -299,7 +328,11 @@
                             });
                     });
 
+                    
+
                 },
+
+
 
             });
 
@@ -350,7 +383,7 @@
                 })
                 .then(data => {
                     if (data.success) {
-                        alert('A foglalás sikeresen megtörtént!');
+                        // alert('A foglalás sikeresen megtörtént!');
                         $('#createBookingModal').modal('hide');
                         location.reload();
                     } else {
@@ -365,3 +398,4 @@
     </script>
 
 @stop
+

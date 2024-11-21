@@ -241,8 +241,8 @@ class BookingController extends Controller
                 'booking_time' => 'required|date_format:H:i',
                 'duration' => 'required|in:30,60',
                 'client_name' => 'required|string|max:255',
-                'client_email' => 'required|email|max:255',
-                'client_phone' => 'required|string|max:20',
+                'client_email' => 'max:255',
+                'client_phone' => 'max:20',
             ]);
     
             $booking = new Booking();
@@ -250,8 +250,8 @@ class BookingController extends Controller
             $booking->time_slot = $validated['booking_time'];
             $booking->duration = $validated['duration'];
             $booking->client_name = $validated['client_name'];
-            $booking->client_email = $validated['client_email'];
-            $booking->client_phone = $validated['client_phone'];
+            $booking->client_email = $validated['client_email'] ?? 'nem volt megadva';
+            $booking->client_phone = $validated['client_phone'] ?? 'nem volt megadva';
             $booking->status = 'confirmed';
             $booking->save();
     
