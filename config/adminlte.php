@@ -114,7 +114,7 @@ return [
         'enabled' => true,
         'mode' => 'fullscreen',
         'img' => [
-            'path' => '/assets/ico.png',
+            'path' => '/assets/icoadmin.png',
             'alt' => 'Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
