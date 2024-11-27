@@ -71,6 +71,9 @@
                     <input type="text" id="clientPhone" name="client_phone" class="form-control" required>
                 </div>
                 <x-slot name="footerSlot">
+
+                    <x-adminlte-button theme="danger" label="Időpont letiltása" id="blockTime" class="mr-auto" />
+
                     <x-adminlte-button type="button" theme="success" id="saveBookingButton" label="Mentés" />
                     <x-adminlte-button theme="secondary" label="Bezárás" data-dismiss="modal" />
                 </x-slot>
@@ -108,20 +111,21 @@
 
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 height: 'auto',
-                themeSystem: 'bootstrap', // Используем тему Bootstrap
+                themeSystem: 'bootstrap',
                 initialView: '{{ $calendarView ?? 'timeGridWeek' }}', // Если $calendarView не определен, использовать 'timeGridWeek'
                 initialDate: new Date(), // Устанавливаем начальную дату как текущую
                 events: @json($bookings), // Ваши события из базы данных
                 headerToolbar: {
                     left: 'prev,next today',
                     center: 'title',
-                    right: 'timeGridWeek,timeGridDay'
+                    right: 'timeGridWeek,timeGridDay,listWeek'
                 },
                 slotDuration: '00:30:00', // Шаг времени 30 минут
                 slotLabelInterval: '00:30', // Интервал меток времени
                 slotMinTime: '08:00:00', // Время начала отображения
                 slotMaxTime: '18:00:00', // Время окончания отображения
                 allDaySlot: false, // Отключение слота для событий на весь день
+                selectable: true,
                 slotLabelFormat: {
                     hour: '2-digit',
                     minute: '2-digit',
@@ -144,28 +148,105 @@
                     list: 'Naptár' // Календарь (для списка)
                 },
 
+
+                // Кастомизация заголовков дней ///////////////////////////////////////////////////
+                dayHeaderContent: function(arg) {
+                    // Создаем контейнер для даты и кнопки
+                    var container = document.createElement('div');
+                    container.classList.add('day-header-container');
+
+                    // Создаем элемент с текстом дня
+                    var dateText = document.createElement('span');
+                    dateText.innerText = arg.text;
+
+                    // Создаем кнопку
+                    var button = document.createElement('button');
+                    button.innerHTML = '<i class="fas fa-lock"></i>';
+                    button.classList.add('btn', 'btn-danger', 'btn-xs', 'ml-2');
+                    button.style.padding = '0 5px';
+                    button.title = 'Nap letiltása';
+
+                    // Обработчик клика на кнопку
+                    button.addEventListener('click', function(e) {
+                        e.stopPropagation(); // Предотвращаем распространение события
+
+                        // Выводим подтверждающее сообщение
+                        // Подтверждение блокировки дня
+
+                            // Устанавливаем дату для блокировки
+                            var localDate = new Date(arg.date);
+
+                            var formattedDate = localDate.getFullYear() + '-' +
+                                ('0' + (localDate.getMonth() + 1)).slice(-2) + '-' +
+                                ('0' + localDate.getDate()).slice(-2);
+                            // Отправляем запрос на сервер для блокировки дня
+                            fetch('/block-day', {
+                                method: 'DELETE',  // Используем DELETE для удаления
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                                },
+                                    body: JSON.stringify({
+                                        booking_date: formattedDate, // Передаём дату
+                                        client_name: 'Admin' // Указываем имя администратора
+                                    }),
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    if (data.success) {
+                                        // alert('A nap sikeresen le van tiltva.');
+                                        // Логика обновления интерфейса (например, обновить календарь)
+                                        window.location
+                                            .reload(); // Перезагрузка страницы или обновление календаря
+                                    } else {
+                                        alert(`Hiba: ${data.message}`);
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Hiba:', error);
+                                    alert('Hiba történt a nap letiltása közben.');
+                                });
+                        
+                    });
+
+
+                    // Добавляем текст и кнопку в контейнер
+                    container.appendChild(dateText);
+                    container.appendChild(button);
+
+                    return {
+                        domNodes: [container]
+                    };
+                },
+
+                // Кастомизация заголовков дней ///////////////////////////////////////////////////
+
+
                 // Сохраняем текущий вид календаря в сессию
                 datesSet: function(info) {
                     fetch('/save-calendar-view', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-                        },
-                        body: JSON.stringify({ view: info.view.type }),
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        console.log('View saved successfully:', data);
-                    })
-                    .catch(error => {
-                        console.error('Error saving view:', error);
-                    });
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]')
+                                    .getAttribute('content'),
+                            },
+                            body: JSON.stringify({
+                                view: info.view.type
+                            }),
+                        })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log('View saved successfully:', data);
+                        })
+                        .catch(error => {
+                            console.error('Error saving view:', error);
+                        });
                 },
 
 
@@ -193,7 +274,7 @@
                     // Извлекаем данные из события
                     var eventTitle = info.event.title;
                     var eventStart = info.event.start.toLocaleString();
-                    var eventEnd = info.event.end ? info.event.end.toLocaleString() : 'Не указано';
+                    var eventEnd = info.event.end ? info.event.end.toLocaleString() : 'Nincs megadva';
                     var clientName = info.event.extendedProps.client_name;
                     var clientEmail = info.event.extendedProps.client_email;
                     var clientPhone = info.event.extendedProps.client_phone;
@@ -328,8 +409,6 @@
                             });
                     });
 
-                    
-
                 },
 
 
@@ -337,7 +416,11 @@
             });
 
             calendar.render();
+
         });
+
+
+
 
 
         // Добавление нового бронирования с админ панели через модальное окно
@@ -395,7 +478,44 @@
                     alert('Hiba történt: ' + error.message);
                 });
         });
+
+        // блокировку времени
+        document.getElementById('blockTime').addEventListener('click', function() {
+            const date = document.getElementById('bookingDate').value;
+            const time = document.getElementById('bookingTime').value;
+            const duration = document.getElementById('bookingDuration').value;
+
+            if (confirm(`Biztosan le akarod tiltani az időpontot: ${time} ${date}?`)) {
+                // Отправляем запрос на блокировку времени
+                fetch('/dashboard/block-time', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
+                                'content')
+                        },
+                        body: JSON.stringify({
+                            booking_date: date,
+                            booking_time: time,
+                            duration: duration,
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // alert('Az időpont sikeresen le van tiltva!');
+                            $('#createBookingModal').modal('hide');
+                            location.reload();
+                        } else {
+                            alert(data.message || 'Hiba történt az időpont letiltása közben.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Teljes hiba:', error);
+                        alert('Hiba történt: ' + error.message);
+                    });
+            }
+        });
     </script>
 
 @stop
-

@@ -51,6 +51,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::put('/users/update/{id}', [HomeController::class, 'userupdate'])->name('users.update');
     Route::delete('users/{id}', [HomeController::class, 'userdelete'])->name('users.delete');
 
+    Route::post('/dashboard/block-time', [BookingController::class, 'blockTime'])->name('block-time');
+    Route::delete('/block-day', [BookingController::class, 'blockDay'])->name('block-day');
+
 });
 
 Route::get('/bookings/disabled-times', [BookingController::class, 'getDisabledTimes']);

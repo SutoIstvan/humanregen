@@ -233,9 +233,6 @@ class BookingController extends Controller
     public function dashboardbookstore(Request $request)
     {
         try {
-            // Логирование входящих данных
-            // \Log::info('Incoming booking data:', $request->all());
-    
             $validated = $request->validate([
                 'booking_date' => 'required|date',
                 'booking_time' => 'required|date_format:H:i',
@@ -244,7 +241,7 @@ class BookingController extends Controller
                 'client_email' => 'max:255',
                 'client_phone' => 'max:20',
             ]);
-    
+
             $booking = new Booking();
             $booking->date = $validated['booking_date'];
             $booking->time_slot = $validated['booking_time'];
@@ -254,16 +251,102 @@ class BookingController extends Controller
             $booking->client_phone = $validated['client_phone'] ?? 'nem volt megadva';
             $booking->status = 'confirmed';
             $booking->save();
-    
+
             return response()->json(['success' => true, 'message' => 'A foglalás sikeresen megtörtént']);
         } catch (\Exception $e) {
-            // Логирование полной ошибки
-            // \Log::error('Booking creation error: ' . $e->getMessage());
-            // \Log::error($e->getTraceAsString());
-    
+
             return response()->json([
-                'success' => false, 
+                'success' => false,
                 'message' => $e->getMessage()
+            ], 500);
+        }
+    }
+
+    public function blockDay(Request $request)
+    {
+        try {
+            $validated = $request->validate([
+                'booking_date' => 'required|date',
+                'client_name' => 'required|string|max:255',
+            ]);
+
+            // Проверяем, не заблокирован ли день уже
+            $existingBlock = Booking::where('date', $validated['booking_date'])
+                ->where('status', 'canceled')
+                ->first();
+    
+                if ($existingBlock) {
+                    $existingBlock->delete();
+                    return response()->json([
+                        'success' => true,
+                        'message' => 'Время успешно разблокировано.',
+                    ]);
+                }
+
+            // Создаём запись для блокировки дня
+            $booking = new Booking();
+            $booking->date = $validated['booking_date'];
+            $booking->time_slot = '08:00'; // Начало дня
+            $booking->duration = 1440; // 24 часа (в минутах)
+            $booking->client_name = $validated['client_name']; // Имя администратора или ответственного
+            $booking->client_email = 'tiltva'; // Технический email
+            $booking->client_phone = '';
+            $booking->status = 'canceled'; // Статус "заблокирован"
+            $booking->save();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'A nap sikeresen le van tiltva.',
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    public function blockTime(Request $request)
+    {
+        try {
+            $validated = $request->validate([
+                'booking_date' => 'required|date',
+                'booking_time' => 'required|string',
+                'duration' => 'required|in:30,60',
+            ]);
+
+            // Проверяем, заблокирован ли уже этот временной слот
+            $existingBlock = Booking::where('date', $validated['booking_date'])
+                ->where('time_slot', $validated['booking_time'])
+                ->where('status', 'canceled')
+                ->first();
+
+            if ($existingBlock) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Этот временной слот уже заблокирован.',
+                ], 400);
+            }
+
+            // Создаём запись для блокировки времени
+            $booking = new Booking();
+            $booking->date = $validated['booking_date'];
+            $booking->time_slot = $validated['booking_time'];  // Время для блокировки
+            $booking->duration = $validated['duration'];
+            $booking->client_name = 'Admin';  // Имя администратора
+            $booking->client_email = 'tiltva'; // Пустой email
+            $booking->client_phone = ''; // Пустой телефон
+            $booking->status = 'canceled'; // Статус блокировки
+            $booking->save();
+
+            return response()->json([
+                'success' => true,
+                'message' => 'Время успешно заблокировано.',
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage(),
             ], 500);
         }
     }

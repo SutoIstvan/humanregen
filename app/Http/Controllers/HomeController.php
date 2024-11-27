@@ -56,7 +56,7 @@ class HomeController extends Controller
             $color = match ($booking->status) {
                 'new' => '#007bff',
                 'confirmed' => '#28a745',
-                'canceled' => '#dc3545',
+                'canceled' => '#ff768b',
                 default => '#6c757d',
             };
 
@@ -67,7 +67,8 @@ class HomeController extends Controller
             $formattedTimeStart = date('H:i', strtotime($startDateTime));
             $formattedTimeEnd = date('H:i', strtotime($endDateTime));
 
-            $title = $booking->status === 'new' ? 'Új foglalás' : 'Megerősítve';
+            $title = $booking->status === 'new' ? 'Új foglalás' : 
+            ($booking->status === 'canceled' ? 'A foglalás le van tiltva' : $booking->client_name);
 
             return [
                 'title' => $title,

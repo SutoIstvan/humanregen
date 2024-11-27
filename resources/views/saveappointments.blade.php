@@ -17,7 +17,7 @@
     <style>
         .hero {
             width: 100%;
-            min-height: 40vh !important;
+            min-height: 20vh !important;
             position: relative;
             padding: 80px 0 80px 0;
             display: flex;
