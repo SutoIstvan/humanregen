@@ -84,6 +84,7 @@ Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('bo
 Route::delete('/booking/{id}', [BookingController::class, 'destroyprofile'])->name('bookings.destroyprofile');
 
 Route::post('/subscribe', [SubscribeController::class, 'subscribe'])->name('subscribe');
+Route::post('/subscribeemail', [SubscribeController::class, 'subscribeemail'])->name('subscribeemail');
 Route::post('/unsubscribe', [SubscribeController::class, 'unsubscribe'])->name('unsubscribe');
 Route::get('/unsubscribe/{email}', [SubscribeController::class, 'unsubscribeemail'])->name('unsubscribeemail');
 

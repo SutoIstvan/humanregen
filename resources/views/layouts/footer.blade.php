@@ -50,7 +50,7 @@
                 <p>Iratkozzon fel hírlevelünkre, és értesüljön legfrissebb híreinkről szolgáltatásainkkal kapcsolatban!
                 </p>
 
-                <form action="{{ route('subscribe') }}" method="POST" class="php-email-form">
+                <form action="{{ route('subscribeemail') }}" method="POST" class="php-email-form">
                     @csrf
                     <div class="newsletter-form">
                         <input type="email" name="subscribeemail"><input type="submit" value="Feliratkozás" required>

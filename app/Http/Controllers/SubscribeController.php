@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class SubscribeController extends Controller
 {
-    public function subscribe(Request $request)
+    public function subscribeemail(Request $request)
     {
         $request->validate([
             'subscribeemail' => 'required|email|unique:subscriptions,email',
@@ -15,6 +15,20 @@ class SubscribeController extends Controller
 
         Subscription::create([
             'email' => $request->input('subscribeemail'),
+        ]);
+
+        return redirect()->back()->with('modalsuccess', 'Sikeresen feliratkozott a hírlevélre.');
+    }
+
+    public function subscribe(Request $request)
+    {
+
+        $request->validate([
+            'email' => 'required|email|unique:subscriptions,email',
+        ]);
+
+        Subscription::create([
+            'email' => $request->input('email'),
         ]);
 
         return redirect()->back()->with('modalsuccess', 'Sikeresen feliratkozott a hírlevélre.');
