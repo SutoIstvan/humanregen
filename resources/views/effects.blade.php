@@ -58,7 +58,228 @@
 
     </section>
 
-    <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <div style=" background-color: #f9f6f1;" class="">
+        <div class="container pb-5">
+
+            <div class="container section-title px-4 pt-4 my-1" data-aos="fade-up">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-10 col-xl-8 text-center">
+                        <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Jótékony hatások</h2>
+                        <p class="mb-4 pb-2 mb-md-5 pb-md-0 lead">
+                            Ismerd meg a Humán Regenerátor Jótékony hatásait
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center ">
+                <div class="content-column col-lg-4 d-block d-lg-none">
+                    <div class="pricing-block">
+                        <div class="inner-box">
+                            <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/1.png') }}" alt="Image"></figure>
+                            </div>
+                            <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead"> a mozgásszervi betegségekre</div>
+                                </div><span class="price"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-block">
+                        <div class="inner-box">
+                            <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/2.png') }}" alt="Image"></figure>
+                            </div>
+                            <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead">véráramlás serkentésére</div>
+                                </div><span class="price"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-block">
+                        <div class="inner-box">
+                            <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/3.png') }}" alt="Image"></figure>
+                            </div>
+                            <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead">az immunrendszer erősítésére</div>
+                                </div><span class="price"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-block">
+                        <div class="inner-box">
+                            <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/4.png') }}" alt="Image"></figure>
+                            </div>
+                            <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead">a sérülésekre</div>
+                                </div><span class="price"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-column col-lg-4 d-none d-lg-block">
+                    <div class="pricing-block-end">
+                        <div class="inner-box">
+
+                            <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead">a mozgásszervi betegségekre</div>
+                                </div><span class="price"></span>
+                            </div>
+
+                            <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/1.png') }}" alt="Image"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-block-end">
+                        <div class="inner-box">
+
+                            <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead">a véráramlás serkentésére</div>
+                                </div><span class="price"></span>
+                            </div>
+                            <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/2.png') }}" alt="Image"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-block-end">
+                        <div class="inner-box">
+
+                            <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead">az immunrendszer erősítésére</div>
+                                </div><span class="price"></span>
+                            </div>
+                            <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/3.png') }}" alt="Image"></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-block-end">
+                        <div class="inner-box">
+
+                            <div class="content-box me-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead">a sérülésekre</div>
+                                </div><span class="price"></span>
+                            </div>
+                            <div class="image-box " data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/4.png') }}" alt="Image"></figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-column col-lg-4 d-flex justify-content-center align-items-center d-none d-lg-block"
+                    data-aos="fade-up" data-aos-delay="10">
+                    <div class="inner-box" style="justify-content: center !important;">
+                        <figure class="image overlay-anim mb-0"><img height="500px"
+                                src="{{ asset('assets/img/effects/main.png') }}" alt="Image"></figure>
+                    </div>
+                </div>
+                <div class="content-column col-lg-4">
+                    <div class="pricing-block">
+                        <div class="inner-box">
+                            <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/5.png') }}" alt="Image"></figure>
+                            </div>
+                            <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead">a szorongásra és a stresszre</div>
+                                </div><span class="price"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-block">
+                        <div class="inner-box">
+                            <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/6.png') }}" alt="Image"></figure>
+                            </div>
+                            <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead">az öregedésgátlásra</div>
+                                </div><span class="price"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pricing-block">
+                        <div class="inner-box">
+                            <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/7.png') }}" alt="Image"></figure>
+                            </div>
+                            <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead">a kiegyensúlyozott alvásra</div>
+                                </div><span class="price"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pricing-block">
+                        <div class="inner-box">
+                            <div class="image-box" data-aos="fade-up" data-aos-delay="10">
+                                <figure class="image overlay-anim mb-0"><img class="rounded-3"
+                                        src="{{ asset('assets/img/effects/8.png') }}" alt="Image"></figure>
+                            </div>
+                            <div class="content-box ms-2" data-aos="fade-up" data-aos-delay="100">
+                                <div class="inner">
+                                    <h2 class="title" style="color: #008288; font-size: 28px; margin-bottom: 0px;">
+                                        Hatással van</h2>
+                                    <div class="lead">a sejtregenerációra</div>
+                                </div><span class="price"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{-- <div class="px-4 pt-5 my-5 text-center border-bottom">
         <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Töltsd fel a tested és ébredj új életre
         </h2>
         <h1 class="display-4 fw-bold text-body-emphasis">Humán Regenerátor Sports</h1>
@@ -79,7 +300,7 @@
                     class="img-fluid border rounded-3 shadow-lg mb-4" width="900" height="500" loading="lazy">
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="container section-title pt-5" data-aos="fade-up">
         <div class="row d-flex justify-content-center">

@@ -11,6 +11,12 @@ use App\Mail\BookingConfirmationMail;
 use App\Mail\NewBookingNotification;
 use Illuminate\Support\Facades\Mail;
 
+
+
+// use Illuminate\Support\Facades\Log;
+
+
+
 class BookingController extends Controller
 {
 
@@ -305,6 +311,47 @@ class BookingController extends Controller
             ], 500);
         }
     }
+
+
+    public function blockDayTime(Request $request) {
+        try {
+            // Log::info($request->all());
+
+            $validated = $request->validate([
+                'booking_date' => 'required|date',
+                'start_time' => 'required|string',
+                'end_time' => 'required|string',
+                'client_name' => 'required|string|max:255',
+            ]);
+    
+            // Формируем полный datetime для начала и окончания
+            $startDateTime = Carbon::parse($validated['booking_date'] . ' ' . $validated['start_time']);
+            $endDateTime = Carbon::parse($validated['booking_date'] . ' ' . $validated['end_time']);
+            $bookingDate = \Carbon\Carbon::parse($validated['booking_date'])->format('Y-m-d');
+
+            $booking = new Booking();
+            $booking->date = $validated['booking_date']; // только дата
+            $booking->time_slot = $startDateTime->toTimeString(); // только время
+            $booking->duration = $startDateTime->diffInMinutes($endDateTime); // разница в минутах
+            $booking->client_name = $validated['client_name'];
+            $booking->client_email = 'tiltva';
+            $booking->client_phone = '';
+            $booking->status = 'canceled';
+            $booking->save();
+    
+            return response()->json([
+                'success' => true,
+                'message' => 'A kiválasztott időszak sikeresen le van tiltva.',
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => $e->getMessage(),
+            ], 500);
+        }
+    }
+    
+    
 
     public function blockTime(Request $request)
     {

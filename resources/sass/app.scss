@@ -62,14 +62,34 @@ body {
     font-weight: normal;
   }
 
-  .navbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    vertical-align: middle;
-    margin-left: 8px;
+  // .navbar .dropdown-toggle::after {
+  //   border: none;
+  //   content: "\f107";
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 900;
+  //   vertical-align: middle;
+  //   margin-left: 8px;
+  // }
+
+  .dropdown-item.active, .dropdown-item:active {
+      color: #ffffff;
+      text-decoration: none;
+      background-color: #006469 !important;
   }
+
+  .dropdown-item:hover {
+      color: #ffffff !important;
+      text-decoration: none;
+      background-color: #4bb9ab !important;
+  }
+
+  // .dropdown-item {
+  //     height: 39px;
+  //     padding-top: 10px;
+  // }
+  // .dropdown-item a {
+  //   padding-top: 7px;
+  // }
 
   .navbar-light .navbar-nav .nav-link {
     margin-right: 20px;

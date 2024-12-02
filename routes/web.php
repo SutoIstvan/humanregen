@@ -19,6 +19,10 @@ Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
 
+Route::get('/gallery', function () {
+    return view('gallery');
+})->name('gallery');
+
 Route::get('/appointments', function () {
     return view('appointments');
 })->name('appointments');
@@ -54,6 +58,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/dashboard/block-time', [BookingController::class, 'blockTime'])->name('block-time');
     Route::delete('/block-day', [BookingController::class, 'blockDay'])->name('block-day');
 
+    Route::post('/block-day-time', [BookingController::class, 'blockDayTime'])->name('block-day-time');
+
+
 });
 
 Route::get('/bookings/disabled-times', [BookingController::class, 'getDisabledTimes']);
@@ -69,3 +76,39 @@ Route::delete('/booking/{id}', [BookingController::class, 'destroyprofile'])->na
 Route::post('/subscribe', [SubscribeController::class, 'subscribe'])->name('subscribe');
 Route::post('/unsubscribe', [SubscribeController::class, 'unsubscribe'])->name('unsubscribe');
 Route::get('/unsubscribe/{email}', [SubscribeController::class, 'unsubscribeemail'])->name('unsubscribeemail');
+
+
+
+Route::prefix('about')->group(function () {
+    Route::get('/mission', function () {
+        return view('about.mission');
+    })->name('about.mission');
+
+    Route::get('/credo', function () {
+        return view('about.credo');
+    })->name('about.credo');
+
+    Route::get('/cap', function () {
+        return view('about.cap');
+    })->name('about.cap');
+
+    Route::get('/introduction', function () {
+        return view('about.introduction');
+    })->name('about.introduction');
+
+    Route::get('/using-plasma-cancer', function () {
+        return view('about.using-plasma-cancer');
+    })->name('about.using-plasma-cancer');
+
+    Route::get('/how-human-regeneration-works', function () {
+        return view('about.how-human-regeneration-works');
+    })->name('about.how-human-regeneration-works');
+
+    Route::get('/regeneration-process', function () {
+        return view('about.regeneration-process');
+    })->name('about.regeneration-process');
+
+    Route::get('/when-not-usable', function () {
+        return view('about.when-not-usable');
+    })->name('about.when-not-usable');
+});

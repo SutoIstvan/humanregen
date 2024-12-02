@@ -366,7 +366,7 @@
         </svg>
     </section>
 
-    <div class="container section-title pt-5" data-aos="fade-up">
+    <div class="container section-title pt-5 pb-5" data-aos="fade-up">
 
         <div class="row d-flex justify-content-center">
             <div class="col-md-6 col-xl-6 text-center">
@@ -378,7 +378,7 @@
         </div>
     </div>
 
-    <div class="" data-aos="fade-up">
+    <div class="pb-3" data-aos="fade-up">
         <div class="plans mb-5">
             <label class="plan basic-plan me-xxl-5 me-lg-3 " for="basic">
                 <input checked type="radio" id="basic" name="duration" value="30" />
@@ -404,7 +404,7 @@
         </div>
     </div>
 
-    <div class="px-4 pt-5 my-5 text-center border-bottom" data-aos="fade-up">
+    {{-- <div class="px-4 pt-5 my-5 text-center border-bottom" data-aos="fade-up">
         <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Töltsd fel a tested és ébredj új
             életre</h2>
 
@@ -427,9 +427,9 @@
                     class="img-fluid border rounded-3 shadow-lg mb-4" width="900" height="500" loading="lazy">
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <div class="container section-title pt-5" data-aos="fade-up">
+    {{-- <div class="container section-title pt-5" data-aos="fade-up">
         <div class="row d-flex justify-content-center">
             <div class="col-md-10 col-xl-8 text-center">
                 <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Jótékony hatások</h2>
@@ -438,9 +438,9 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div> --}}
 
-    <section class="bsb-faq-2 py-3 py-md-5 py-xl-8" data-aos="fade-up">
+    {{-- <section class="bsb-faq-2 py-3 py-md-5 py-xl-8" data-aos="fade-up">
         <div class="container">
             <div class="row gy-5 gy-lg-0" id="accordionExample">
                 <div class="col-12 col-lg-4">
@@ -732,7 +732,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     @include('layouts.modal')
 
