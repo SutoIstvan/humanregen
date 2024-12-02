@@ -20,7 +20,17 @@ Route::get('/contacts', function () {
 })->name('contacts');
 
 Route::get('/gallery', function () {
-    return view('gallery');
+    $images = [
+        ['src' => 'assets/img/gallery/20241106_132427.jpg'],
+        ['src' => 'assets/img/gallery/20241106_130708.jpg'],
+        ['src' => 'assets/img/gallery/20241106_132309.jpg'],
+        ['src' => 'assets/img/gallery/20241106_132428.jpg'],
+        ['src' => 'assets/img/gallery/20241106_132320.jpg'],
+        ['src' => 'assets/img/gallery/20241106_132352.jpg'],
+        ['src' => 'assets/img/gallery/20241106_132403.jpg'],
+        ['src' => 'assets/img/gallery/20241106_132427.jpg'],
+    ];
+    return view('gallery', compact('images'));
 })->name('gallery');
 
 Route::get('/appointments', function () {
