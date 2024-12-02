@@ -68,11 +68,11 @@
     display: flex; /* Для корректного отображения до инициализации Masonry */
     flex-wrap: wrap; /* Перенос элементов на следующую строку */
     gap: 15px; /* Расстояние между элементами */
-    padding: 0 15px; /* Добавляем отступы слева и справа */
+    padding: 0 10px; /* Добавляем отступы слева и справа */
 }
 
 .grid-item {
-    padding: 10px;
+    padding: 9px;
     width: calc((100% - 60px) / 3); /* Три элемента в строке с учетом gap и padding */
     /* margin-bottom: 15px; Отступ между строками */
     box-sizing: border-box; /* Учет отступов и границ в размере элемента */
@@ -273,9 +273,9 @@
             <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-item" }'>
                 @foreach($images as $image)
                     <div class="grid-item">
-                        <a href="{{ $image['src'] }}" class="glightbox" data-gallery="gallery">
+                        <a href="{{ asset('storage/' . $image->image_path) }}" class="glightbox" data-gallery="gallery">
                             <img 
-                                src="{{ $image['src'] }}" 
+                                src="{{ asset('storage/' . $image->image_path) }}" 
                                 alt="{{ $image['alt'] ?? 'Image' }}" 
                                 class="w-100 shadow-1-strong rounded"
                             />

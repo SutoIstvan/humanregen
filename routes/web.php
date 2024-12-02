@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\BookingController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\SubscribeController;
+use App\Models\Gallery;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,16 +22,8 @@ Route::get('/contacts', function () {
 })->name('contacts');
 
 Route::get('/gallery', function () {
-    $images = [
-        ['src' => 'assets/img/gallery/20241106_132427.jpg'],
-        ['src' => 'assets/img/gallery/20241106_130708.jpg'],
-        ['src' => 'assets/img/gallery/20241106_132309.jpg'],
-        ['src' => 'assets/img/gallery/20241106_132428.jpg'],
-        ['src' => 'assets/img/gallery/20241106_132320.jpg'],
-        ['src' => 'assets/img/gallery/20241106_132352.jpg'],
-        ['src' => 'assets/img/gallery/20241106_132403.jpg'],
-        ['src' => 'assets/img/gallery/20241106_132427.jpg'],
-    ];
+    $images = Gallery::all();
+
     return view('gallery', compact('images'));
 })->name('gallery');
 
@@ -70,6 +64,10 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::post('/block-day-time', [BookingController::class, 'blockDayTime'])->name('block-day-time');
 
+    Route::get('/dashboard/gallery', [GalleryController::class, 'gallerydashboard'])->name('gallery.dashboard');
+    Route::post('/dashboard/gallery', [GalleryController::class, 'store'])->name('gallery.store');
+    Route::delete('/dashboard/gallery/{id}', [GalleryController::class, 'delete'])->name('gallery.delete');
+    Route::post('/dashboard/gallery/upload', [GalleryController::class, 'upload'])->name('gallery.upload');
 
 });
 

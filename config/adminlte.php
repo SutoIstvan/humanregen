@@ -344,6 +344,11 @@ return [
             'url' => '/dashboard/users/create',
             'icon' => 'fas fa-fw fa-user-plus',
         ],
+        [
+            'text' => 'Fotóalbum és Galéria',
+            'url' => '/dashboard/gallery',
+            'icon' => 'fas fa-fw fa-image',
+        ],
         // [
         //     'text' => 'change_password',
         //     'url' => '/',
