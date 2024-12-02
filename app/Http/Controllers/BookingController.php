@@ -258,6 +258,18 @@ class BookingController extends Controller
             $booking->status = 'confirmed';
             $booking->save();
 
+            if (!empty($validated['client_email'])) { // Проверяем, указан ли email
+                $bookingDetails = [
+                    'name' => $booking['client_name'],
+                    'date' => $booking['date'],
+                    'time' => $booking['time_slot'],
+                    'service' => $booking['duration'],
+                ];
+            
+                Mail::to($validated['client_email'])->send(new BookingConfirmationMail($bookingDetails));
+            }
+
+
             return response()->json(['success' => true, 'message' => 'A foglalás sikeresen megtörtént']);
         } catch (\Exception $e) {
 
