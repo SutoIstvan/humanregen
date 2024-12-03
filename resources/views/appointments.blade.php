@@ -460,7 +460,7 @@
             }
             const disabledTimes = await response.json();
             const duration = getDuration();
-            createTimeList('time-list', duration, 8, 18, disabledTimes, date); // Передаем выбранную дату
+            createTimeList('time-list', duration, 7, 18, disabledTimes, date); // Передаем выбранную дату
         } catch (error) {
             console.error('Ошибка при получении заблокированных времён:', error);
             container.innerHTML = '<div class="error">Ошибка при загрузке доступного времени</div>';
