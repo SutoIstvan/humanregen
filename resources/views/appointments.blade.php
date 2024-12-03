@@ -32,7 +32,7 @@
             display: flex;
             flex-wrap: wrap;
             max-width: 452px;
-            max-height: 416px;
+            max-height: 456px;
             margin: 0 auto;
             padding: 20px;
             background-color: #ffffff;
