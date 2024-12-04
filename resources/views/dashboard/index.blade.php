@@ -134,7 +134,7 @@
                 selectMirror: false,
                 selectOverlap: false,
                 initialView: '{{ $calendarView ?? 'timeGridWeek' }}', // Если $calendarView не определен, использовать 'timeGridWeek'
-                initialDate: new Date(), // Устанавливаем начальную дату как текущую
+                initialDate: '{{ $calendarStartDate }}', // Устанавливаем дату начала недели
                 events: @json($bookings), // Ваши события из базы данных
                 headerToolbar: {
                     left: 'prev,next today',
@@ -450,7 +450,8 @@
                                     .getAttribute('content'),
                             },
                             body: JSON.stringify({
-                                view: info.view.type
+                                view: info.view.type,
+                                startDate: info.startStr // Дата начала видимой недели
                             }),
                         })
                         .then(response => {

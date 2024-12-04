@@ -50,6 +50,7 @@ class HomeController extends Controller
     {
 
         $calendarView = Session::get('calendar_view', 'timeGridWeek');
+        $calendarStartDate = Session::get('calendar_start_date', now()->format('Y-m-d')); // Дата начала недели
 
         $bookings = Booking::all()->map(function ($booking) {
 
@@ -88,7 +89,7 @@ class HomeController extends Controller
             ];
         });
 
-        return view('dashboard.index', ['bookings' => $bookings , 'calendarView' => $calendarView]);
+        return view('dashboard.index', ['bookings' => $bookings , 'calendarView' => $calendarView , 'calendarStartDate' => $calendarStartDate]);
     }
 
     public function update(Request $request)
@@ -182,8 +183,12 @@ class HomeController extends Controller
 
     public function saveCalendarView(Request $request)
     {
+        $startDate = $request->input('startDate'); // Получаем дату начала недели
+        Session::put('calendar_start_date', $startDate); // Сохраняем в сессию дату начала недели
+
         $view = $request->input('view');
         Session::put('calendar_view', $view);
+
         return response()->json(['success' => true]);
     }
 
