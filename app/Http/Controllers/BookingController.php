@@ -304,7 +304,7 @@ class BookingController extends Controller
             // Создаём запись для блокировки дня
             $booking = new Booking();
             $booking->date = $validated['booking_date'];
-            $booking->time_slot = '08:00'; // Начало дня
+            $booking->time_slot = '07:00'; // Начало дня
             $booking->duration = 1440; // 24 часа (в минутах)
             $booking->client_name = $validated['client_name']; // Имя администратора или ответственного
             $booking->client_email = 'tiltva'; // Технический email
