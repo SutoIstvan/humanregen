@@ -285,7 +285,7 @@
     <div class="container">
         <div class="row gy-5" id="accordionExample2">
             <!-- Первая колонка -->
-            <div class="col-12 col-lg-4 text-end">
+            <div class="col-12 col-lg-4 text-end mt-0">
 
                 <div class="d-none d-lg-block" id="accordionExample2">
                     <!-- Блок 1 -->
@@ -495,8 +495,8 @@
             </div>
 
             <!-- Вторая колонка -->
-            <div class="col-12 col-lg-4">
-                <div class="d-flex justify-content-center align-items-center" data-aos-delay="10">
+            <div class="col-12 col-lg-4 d-none d-lg-block mt-0">
+                <div class="d-flex justify-content-center align-items-center " data-aos-delay="10">
                     <div class="inner-box">
                         <figure class="image overlay-anim mb-0"><img height="500px"
                                 src="{{ asset('assets/img/effects/main.png') }}" alt="Image"></figure>
@@ -505,11 +505,224 @@
             </div>
 
             <!-- Третья колонка -->
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 mt-0">
                 <!-- Дополнительные блоки -->
                 <div class="" id="accordionExample2">
+                                        <!-- Блок 1 mobile -->
+                                        <div class="accordion-item mt-2 d-lg-none">
+                                            <h2 class="accordion-header" id="headingSixMobile">
+                                                <button class="collapsed"
+                                                    style="border: 0px; background-color: transparent; text-align: left;" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseSixMobile" aria-expanded="false"
+                                                    aria-controls="collapseSixMobile">
+                                                    <div class="pricing-block-end">
+                                                        <div class="inner-box">
+                    
+                                                            <div class="image-box" data-aos-delay="10">
+                                                                <figure class="image overlay-anim mb-0">
+                                                                    <img class="rounded-3" src="{{ asset('assets/img/effects/1.png') }}"
+                                                                        alt="Image">
+                                                                </figure>
+                                                            </div>
+                    
+                                                            <div class="content-box ms-2" data-aos-delay="100">
+                                                                <div class="inner">
+                                                                    <h2 class="title"
+                                                                        style="color: #008288; font-size: 28px; margin-bottom: 0px; text-align: start;">
+                                                                        Hatással van
+                                                                    </h2>
+                                                                    <div class="lead" style="text-align: start !important;">a mozgásszervi betegségekre</div>
+                                                                </div>
+                                                                <span class="price"></span>
+                                                            </div>
+                    
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSixMobile" class="accordion-collapse collapse" aria-labelledby="headingSixMobile"
+                                                data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body mb-2 ms-2">
+                                                    A Humán Regenerátor a keringés javításával regenerálhatja az ízületi gyulladt
+                                                    felszíneket és a szinoviális folyadékokat. A keringés javításával erőteljes
+                                                    gyulladáscsökkentő hatásával kezelheti és gyógyíthatja a mozgásszervi eredetű
+                                                    betegségeket és az azzal járó fájdalmakat (izületi kopásos betegségek – arthorosis –
+                                                    csontritkulás – osteoporosis ) Hatása gyors, pár kezelés is érezhető változást
+                                                    eredményezhet.
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <!-- Блок 2 mobile -->
+                                        <div class="accordion-item d-lg-none">
+                                            <h2 class="accordion-header" id="headingSevenMobile">
+                                                <button class="collapsed"
+                                                    style="border: 0px; background-color: transparent; text-align: left;" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseSevenMobile" aria-expanded="false"
+                                                    aria-controls="collapseSevenMobile">
+                                                    <div class="pricing-block-end">
+                                                        <div class="inner-box">
+                                                            <div class="image-box" data-aos-delay="10">
+                                                                <figure class="image overlay-anim mb-0">
+                                                                    <img class="rounded-3" src="{{ asset('assets/img/effects/2.png') }}"
+                                                                        alt="Image">
+                                                                </figure>
+                                                            </div>
+                                                            <div class="content-box ms-2" data-aos-delay="100">
+                                                                <div class="inner">
+                                                                    <h2 class="title"
+                                                                        style="color: #008288; font-size: 28px; margin-bottom: 0px;  text-align: start;">
+                                                                        Hatással van
+                                                                    </h2>
+                                                                    <div class="lead" style="text-align: start !important;">a véráramlás serkentésére</div>
+                                                                </div>
+                                                                <span class="price"></span>
+                                                            </div>
+                    
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseSevenMobile" class="accordion-collapse collapse" aria-labelledby="headingSevenMobile"
+                                                data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body mb-2 ms-2">
+                                                    A Humán Regenerátor növelheti a vér viszkozitását és a keringést a koncentráció és a
+                                                    teljesítmény javítása érdekében. A Humán Regenerátor másodpercek töredéke alatt
+                                                    milliónyi impulzust ad ki, hogy javítsa a test keringését azáltal, hogy kinyitja a kis
+                                                    ereket. Ez az erős mikrocirkulációs javítás logikus és komoly alapot nyújthat a
+                                                    teljesítmény növeléséhez. A Humán Regenerátor a kezelés során rengeteg kapilláris és
+                                                    vaszkuláris ereket nyithat meg, amelyek mozgással vagy más erőkkel ilyen mértékben nem
+                                                    nyithatók meg. A nyirok áramlása is jelentősen megnőhet, ami párhuzamosan a vénás
+                                                    keringés javulásával járhat. Ez a hatás gyors oxigéncserét biztosít, amely minden élő
+                                                    szervezet alapja. A Humán Regenerátor a véralvadás ellen működik, miközben
+                                                    optimalizálhatja a vér viszkozitását. A vérlemezkék tapadása jelentősen csökkenhet. A
+                                                    Humán Regenerátor növelheti a sejtek membránjainak áteresztőképességét, így az
+                                                    információ gyorsabban továbbadódik az oxigénben gazdag közegben.
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <!-- Блок 3 mobile -->
+                                        <div class="accordion-item d-lg-none">
+                                            <h2 class="accordion-header" id="headingEightMobile">
+                                                <button class="collapsed"
+                                                    style="border: 0px; background-color: transparent; text-align: left;" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseEightMobile" aria-expanded="false"
+                                                    aria-controls="collapseEightMobile">
+                                                    <div class="pricing-block-end">
+                                                        <div class="inner-box">
+                                                            <div class="image-box" data-aos-delay="10">
+                                                                <figure class="image overlay-anim mb-0">
+                                                                    <img class="rounded-3" src="{{ asset('assets/img/effects/3.png') }}"
+                                                                        alt="Image">
+                                                                </figure>
+                                                            </div>
+                                                            <div class="content-box ms-2" data-aos-delay="100">
+                                                                <div class="inner">
+                                                                    <h2 class="title"
+                                                                        style="color: #008288; font-size: 28px; margin-bottom: 0px;  text-align: start;">
+                                                                        Hatással van
+                                                                    </h2>
+                                                                    <div class="lead" style="text-align: start !important;">az immunrendszer erősítésére</div>
+                                                                </div>
+                                                                <span class="price"></span>
+                                                            </div>
+                    
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseEightMobile" class="accordion-collapse collapse" aria-labelledby="headingEightMobile"
+                                                data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body mb-2 ms-2">
+                                                    A Humán Regenerátor erős hatással van az egész testre, mivel sejtszinten stimulálja az
+                                                    immunrendszert, ami egészséges, erőteljes élethez vezethet. Fontos hangsúlyozni azokat
+                                                    az eszközöket, amelyek optimalizálhatják a vércukorszintre gyakorolt hatást, ami nagyon
+                                                    összetett folyamat.
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <!-- Блок 4 mobile -->
+                                        <div class="accordion-item d-lg-none">
+                                            <h2 class="accordion-header" id="headingNineMobile">
+                                                <button class="collapsed"
+                                                    style="border: 0px; background-color: transparent; text-align: left;" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseNineMobile" aria-expanded="false"
+                                                    aria-controls="collapseNineMobile">
+                                                    <div class="pricing-block-end">
+                                                        <div class="inner-box">
+                                                            <div class="image-box" data-aos-delay="10">
+                                                                <figure class="image overlay-anim mb-0">
+                                                                    <img class="rounded-3" src="{{ asset('assets/img/effects/4.png') }}"
+                                                                        alt="Image">
+                                                                </figure>
+                                                            </div>
+                                                            <div class="content-box ms-2" data-aos-delay="100">
+                                                                <div class="inner">
+                                                                    <h2 class="title"
+                                                                        style="color: #008288; font-size: 28px; margin-bottom: 0px;  text-align: start;">
+                                                                        Hatással van
+                                                                    </h2>
+                                                                    <div class="lead" style="text-align: start !important;">a sérülésekre</div>
+                                                                </div>
+                                                                <span class="price"></span>
+                                                            </div>
+                    
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseNineMobile" class="accordion-collapse collapse" aria-labelledby="headingNineMobile"
+                                                data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body mb-2 ms-2">
+                                                    A Humán Regenerátor serkentheti a kötőszövetek és izmok, a lábak és a csontok
+                                                    regenerálódását, ezáltal lehetőséget nyújthat a sportolóknak a legkorábbi visszatérésre.
+                                                    A regenerációs idő lerövidítése napjaink egyik legnagyobb elvárása. Komoly hatással
+                                                    lehet az életminőség javítására.
+                                                </div>
+                                            </div>
+                                        </div>
+                    
+                                        <!-- Блок 4 mobile -->
+                                        <div class="accordion-item d-lg-none">
+                                            <h2 class="accordion-header" id="headingTenMobile">
+                                                <button class="collapsed"
+                                                    style="border: 0px; background-color: transparent; text-align: left;" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTenMobile" aria-expanded="false"
+                                                    aria-controls="collapseTenMobile">
+                                                    <div class="pricing-block-end">
+                                                        <div class="inner-box">
+                                                            <div class="image-box" data-aos-delay="10">
+                                                                <figure class="image overlay-anim mb-0">
+                                                                    <img class="rounded-3" src="{{ asset('assets/img/effects/5.png') }}"
+                                                                        alt="Image">
+                                                                </figure>
+                                                            </div>
+                                                            <div class="contenMobilet-box ms-2" data-aos-delay="100">
+                                                                <div class="inner">
+                                                                    <h2 class="title"
+                                                                        style="color: #008288; font-size: 28px; margin-bottom: 0px; text-align: start;">
+                                                                        Hatással van
+                                                                    </h2>
+                                                                    <div class="lead" style="text-align: start !important;">a szorongásra és a stresszre</div>
+                                                                </div>
+                                                                <span class="price"></span>
+                                                            </div>
+                    
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTenMobile" class="accordion-collapse collapse" aria-labelledby="headingTenMobile"
+                                                data-bs-parent="#accordionExample2">
+                                                <div class="accordion-body mb-2 ms-2">
+                                                    A Humán Regenerátor csökkentheti a stresszt, szorongást, pánikot és depressziót.
+                                                </div>
+                                            </div>
+                                        </div>
                     <!-- Блок 6 -->
-                    <div class="accordion-item mt-4">
+                    <div class="accordion-item mt-0 mt-lg-4">
                         <h2 class="accordion-header" id="headingSix">
                             <button class="collapsed"
                                 style="border: 0px; background-color: transparent; text-align: left;" type="button"
@@ -531,7 +744,7 @@
                                                     style="color: #008288; font-size: 28px; margin-bottom: 0px; text-align: start;">
                                                     Hatással van
                                                 </h2>
-                                                <div class="lead">az öregedésgátlásra</div>
+                                                <div class="lead" style="text-align: start !important;">az öregedésgátlásra</div>
                                             </div>
                                             <span class="price"></span>
                                         </div>
@@ -574,7 +787,7 @@
                                                     style="color: #008288; font-size: 28px; margin-bottom: 0px;  text-align: start;">
                                                     Hatással van
                                                 </h2>
-                                                <div class="lead">a kiegyensúlyozott alvásra</div>
+                                                <div class="lead" style="text-align: start !important;">a kiegyensúlyozott alvásra</div>
                                             </div>
                                             <span class="price"></span>
                                         </div>
@@ -617,7 +830,7 @@
                                                     style="color: #008288; font-size: 28px; margin-bottom: 0px;  text-align: start;">
                                                     Hatással van
                                                 </h2>
-                                                <div class="lead">a sejtregenerációra</div>
+                                                <div class="lead" style="text-align: start !important;">a sejtregenerációra</div>
                                             </div>
                                             <span class="price"></span>
                                         </div>
@@ -659,7 +872,7 @@
                                                     style="color: #008288; font-size: 28px; margin-bottom: 0px;  text-align: start;">
                                                     Hatással van
                                                 </h2>
-                                                <div class="lead">Bioenergetikára (anyagcserére)</div>
+                                                <div class="lead" style="text-align: start !important;">Bioenergetikára (anyagcserére)</div>
                                             </div>
                                             <span class="price"></span>
                                         </div>
@@ -702,7 +915,7 @@
                                                     style="color: #008288; font-size: 28px; margin-bottom: 0px; text-align: start;">
                                                     Hatással van
                                                 </h2>
-                                                <div class="lead">Teljesítmény fokozásra</div>
+                                                <div class="lead" style="text-align: start !important;">Teljesítmény fokozásra</div>
                                             </div>
                                             <span class="price"></span>
                                         </div>
