@@ -93,6 +93,7 @@
 
 @media (max-width: 480px) {
     .grid-item {
+        left: 0px !important;
         width: 100%; /* Один элемент в ряд */
     }
 }
@@ -134,7 +135,7 @@
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery section pb-5" style=" background-color: #f9f6f1;">
+    <section id="gallery" class="gallery section" style=" background-color: #f9f6f1;">
         <div class="container section-title" data-aos="fade-up">
             <div class="row d-flex justify-content-center" style="justify-content: center !important;">
                 <div class="col-md-10 col-xl-8 text-center mt-5">
@@ -305,23 +306,18 @@
         });
 
 
-        $('.grid').masonry({
-        // options
-        itemSelector: '.grid-item',
-        columnWidth: 200
-        });
+    // Инициализация Masonry
+    document.addEventListener('DOMContentLoaded', function () {
+        const grid = document.querySelector('.grid');
+        if (grid) {
+            new Masonry(grid, {
+                // options
+                itemSelector: '.grid-item',
+                // columnWidth: 200
+            });
+        }
+    });
 
-        /**
-         * Hirlevel feliratkozas
-         */
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     @if (session('success') || $errors->any())
-        //         var myModal = new bootstrap.Modal(document.getElementById('messageModal'), {
-        //             keyboard: false
-        //         });
-        //         myModal.show();
-        //     @endif
-        // });
     </script>
 
 </body>
