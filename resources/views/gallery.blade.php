@@ -77,8 +77,7 @@
     width: calc((100% - 60px) / 3); /* Три элемента в строке с учетом gap и padding */
     /* margin-bottom: 15px; Отступ между строками */
     box-sizing: border-box; /* Учет отступов и границ в размере элемента */
-    position: relative; /* Абсолютное позиционирование */
-
+    position: absolute;
 }
 
 .grid-item img {
@@ -88,14 +87,11 @@
     border-radius: 8px; /* Закругленные углы */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
 
-    opacity: 0;
-    transition: opacity 0.3s ease;
+
 
 }
 
-.grid-item.loaded img {
-    opacity: 1;
-}
+
 
 @media (max-width: 768px) {
     .grid-item {
