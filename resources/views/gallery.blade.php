@@ -18,6 +18,7 @@
 
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
     <style>
         .hero {
@@ -76,6 +77,8 @@
     width: calc((100% - 60px) / 3); /* Три элемента в строке с учетом gap и padding */
     /* margin-bottom: 15px; Отступ между строками */
     box-sizing: border-box; /* Учет отступов и границ в размере элемента */
+    position: relative; /* Абсолютное позиционирование */
+
 }
 
 .grid-item img {
@@ -84,7 +87,16 @@
     height: auto; /* Сохранение пропорций изображения */
     border-radius: 8px; /* Закругленные углы */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
 }
+
+.grid-item.loaded img {
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     .grid-item {
         width: calc((100% - 45px) / 2); /* Два элемента в ряд */
@@ -96,6 +108,19 @@
         left: 0px !important;
         width: 100%; /* Один элемент в ряд */
     }
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #008288;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
 }
 
     </style>
@@ -153,13 +178,14 @@
 
         <!-- Gallery -->
         <div class="container section-title" data-aos="fade-up">
-            <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": ".grid-item" }'>
+            <div class="grid" id="masonry-grid">
                 @foreach($images as $image)
                     <div class="grid-item">
-                        <a href="{{ asset('storage/' . $image->image_path) }}" class="glightbox" data-gallery="gallery">
+                        <a href="{{ asset('storage/' . $image->image_path) }}" class="glightbox">
                             <img 
                                 src="{{ asset('storage/' . $image->image_path) }}" 
                                 alt="{{ $image['alt'] ?? 'Image' }}" 
+                                loading="lazy"
                                 class="w-100 shadow-1-strong rounded"
                             />
                         </a>
@@ -179,7 +205,39 @@
     @include('layouts.footer')
 
 
+
     <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const gridItems = document.querySelectorAll('.grid-item');
+    
+    gridItems.forEach(item => {
+        const img = item.querySelector('img');
+        const loader = document.createElement('div');
+        loader.classList.add('loader');
+        item.appendChild(loader);
+
+        img.onload = function() {
+            loader.remove();
+            item.classList.add('loaded');
+        };
+
+        img.onerror = function() {
+            loader.remove();
+            item.innerHTML = '<p>Ошибка загрузки</p>';
+        };
+    });
+
+    var grid = document.querySelector('.grid');
+    imagesLoaded(grid, function() {
+        var msnry = new Masonry(grid, {
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item',
+            percentPosition: true,
+            gutter: 15
+        });
+    });
+});
         /**
          * Initiate glightbox
          */
@@ -189,20 +247,7 @@
 
 
     // Инициализация Masonry
-    document.addEventListener('DOMContentLoaded', function () {
-        const grid = document.querySelector('.grid');
 
-        if (grid) {
-            // Дожидаемся загрузки всех изображений
-            imagesLoaded(grid, function () {
-                new Masonry(grid, {
-                    itemSelector: '.grid-item',
-                    columnWidth: '.grid-item',
-                    percentPosition: true
-                });
-            });
-        }
-    });
 
     </script>
 
