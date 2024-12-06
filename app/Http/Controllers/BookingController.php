@@ -9,6 +9,7 @@ use App\Models\Price;
 use Carbon\Carbon;
 use App\Mail\BookingConfirmationMail;
 use App\Mail\NewBookingNotification;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 
@@ -258,7 +259,8 @@ class BookingController extends Controller
             $booking->status = 'confirmed';
             $booking->save();
 
-            if (!empty($validated['client_email'])) { // Проверяем, указан ли email
+            if (!empty($validated['client_email']) && $validated['client_email'] !== 'nem volt megadva') {
+                // Если email указан и не равен "nem volt megadva"
                 $bookingDetails = [
                     'name' => $booking['client_name'],
                     'date' => $booking['date'],
@@ -267,7 +269,10 @@ class BookingController extends Controller
                 ];
             
                 Mail::to($validated['client_email'])->send(new BookingConfirmationMail($bookingDetails));
+            } else {
+                Log::info("Email не отправлен: email либо пустой, либо равен 'nem volt megadva'.");
             }
+            
 
 
             return response()->json(['success' => true, 'message' => 'A foglalás sikeresen megtörtént']);

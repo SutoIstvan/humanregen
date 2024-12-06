@@ -85,6 +85,7 @@ class HomeController extends Controller
                     'formatted_time_start' => $formattedTimeStart,
                     'formatted_time_end' => $formattedTimeEnd,
                     'id' => $booking->id,
+                    'status' => $booking->status,
                 ]
             ];
         });

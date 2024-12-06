@@ -27,7 +27,9 @@
 
         <x-slot name="footerSlot">
             <x-adminlte-button theme="danger" label="Foglalás törlése" id="deleteEventButton" class="mr-auto" />
+            
             <x-adminlte-button theme="success" label="Megerősítve" id="changeStatusButton" />
+
             <x-adminlte-button theme="secondary" label="Bezárás" data-dismiss="modal" />
 
         </x-slot>
@@ -502,7 +504,7 @@
                     var formattedTimeStart = info.event.extendedProps.formatted_time_start;
                     var formattedTimeEnd = info.event.extendedProps.formatted_time_end;
                     var eventId = info.event.extendedProps.id;
-
+                    var eventStatus = info.event.extendedProps.status;
 
 
                     // Обновляем содержимое модального окна
@@ -521,6 +523,14 @@
                     document.getElementById('eventDetails').dataset.eventId =
                         eventId; // Добавление ID в data-атрибут
 
+                        // Скрытие или отображение кнопки в зависимости от статуса
+                    const changeStatusButton = document.getElementById('changeStatusButton');
+                    if (eventStatus === 'confirmed') {
+                        changeStatusButton.style.display = 'none'; // Скрыть кнопку
+                    } else {
+                        changeStatusButton.style.display = 'block'; // Показать кнопку
+                    }
+                    
                     // Получение данных о бронированиях с сервера по email клиента
                     fetch(`/get-client-bookings/${clientEmail}`)
                         .then(response => response.json())
