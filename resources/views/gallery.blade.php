@@ -209,32 +209,15 @@
     <script>
 
 document.addEventListener('DOMContentLoaded', function() {
-    const gridItems = document.querySelectorAll('.grid-item');
-    
-    gridItems.forEach(item => {
-        const img = item.querySelector('img');
-        const loader = document.createElement('div');
-        loader.classList.add('loader');
-        item.appendChild(loader);
-
-        img.onload = function() {
-            loader.remove();
-            item.classList.add('loaded');
-        };
-
-        img.onerror = function() {
-            loader.remove();
-            item.innerHTML = '<p>Ошибка загрузки</p>';
-        };
-    });
-
     var grid = document.querySelector('.grid');
+    
+    // Используем imagesLoaded для корректной инициализации
     imagesLoaded(grid, function() {
         var msnry = new Masonry(grid, {
             itemSelector: '.grid-item',
             columnWidth: '.grid-item',
-            percentPosition: true,
-            gutter: 15
+            percentPosition: true, // Важный параметр
+            gutter: 15 // Добавляем отступы между элементами
         });
     });
 });
