@@ -148,125 +148,7 @@
         </div>
 
 
-        {{-- <ul class="box-container three-cols">
-            <li class="box show" style="transition-delay: 0s;">
-                <div class="inner">
-                    <a href="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" class="glightbox">
-                        <img src="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" alt="image">
-                    </a>
-                </div>
-            </li>
-            <li class="box show" style="transition-delay: 0.15s;">
-                <div class="inner">
-                    <a href="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" class="glightbox">
-                        <img src="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" alt="image">
-                    </a>
-                </div>
-            </li>
-            <li class="box show" style="transition-delay: 0.3s;">
-                <div class="inner">
-                    <a href="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" class="glightbox">
-                        <img src="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" alt="image">
-                    </a>
-                </div>
-            </li>
-            <li class="box show" style="transition-delay: 0.45s;">
-                <div class="inner">
-                    <a href="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" class="glightbox">
-                        <img src="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" alt="image">
-                    </a>
-                </div>
-            </li>
-            <li class="box show" style="transition-delay: 0.6s;">
-                <div class="inner">
-                    <a href="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" class="glightbox">
-                        <img src="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" alt="image">
-                    </a>
-                </div>
-            </li>
-            <li class="box show" style="transition-delay: 0.75s;">
-                <div class="inner">
-                    <a href="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" class="glightbox">
-                        <img src="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" alt="image">
-                    </a>
-                </div>
-            </li>
-        </ul> --}}
 
-
-        {{-- <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row g-1 d-flex justify-content-center">
-                <div class="col-lg-2 col-md-4 col-12">
-                    <div class="gallery-item">
-                        <a href="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" class="glightbox"
-                            data-gallery="images-gallery">
-                            <img src="{{ asset('assets/img/gallery/20241106_132427.jpg') }}" alt=""
-                                class="img-fluid-img">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-4 d-none d-md-block" style="height: 133px; width: 77px;">
-                    <div class="gallery-item">
-                        <a href="{{ asset('assets/img/gallery/20241106_130708.jpg') }}" class="glightbox"
-                            data-gallery="images-gallery">
-                            <img src="{{ asset('assets/img/gallery/20241106_130708.jpg') }}" alt=""
-                                class="img-fluid-img">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{ asset('assets/img/gallery/20241106_132309.jpg') }}" class="glightbox"
-                            data-gallery="images-gallery">
-                            <img src="{{ asset('assets/img/gallery/20241106_132309.jpg') }}" alt=""
-                                class="img-fluid-img">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-4 d-none d-md-block" style="height: 133px; width: 77px;">
-                    <div class="gallery-item">
-                        <a href="{{ asset('assets/img/gallery/20241106_132428.jpg') }}" class="glightbox"
-                            data-gallery="images-gallery">
-                            <img src="{{ asset('assets/img/gallery/20241106_132428.jpg') }}" alt=""
-                                class="img-fluid-img">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{ asset('assets/img/gallery/20241106_132320.jpg') }}" class="glightbox"
-                            data-gallery="images-gallery">
-                            <img src="{{ asset('assets/img/gallery/20241106_132320.jpg') }}" alt=""
-                                class="img-fluid-img">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-4 d-none d-md-block">
-                    <div class="gallery-item">
-                        <a href="{{ asset('assets/img/gallery/20241106_132352.jpg') }}" class="glightbox"
-                            data-gallery="images-gallery">
-                            <img src="{{ asset('assets/img/gallery/20241106_132352.jpg') }}" alt=""
-                                class="img-fluid-img">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-4">
-                    <div class="gallery-item">
-                        <a href="{{ asset('assets/img/gallery/20241106_132403.jpg') }}" class="glightbox"
-                            data-gallery="images-gallery">
-                            <img src="{{ asset('assets/img/gallery/20241106_132403.jpg') }}" alt=""
-                                class="img-fluid-img">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
 
 
         <!-- Gallery -->
@@ -309,11 +191,15 @@
     // Инициализация Masonry
     document.addEventListener('DOMContentLoaded', function () {
         const grid = document.querySelector('.grid');
+
         if (grid) {
-            new Masonry(grid, {
-                // options
-                itemSelector: '.grid-item',
-                // columnWidth: 200
+            // Дожидаемся загрузки всех изображений
+            imagesLoaded(grid, function () {
+                new Masonry(grid, {
+                    itemSelector: '.grid-item',
+                    columnWidth: '.grid-item',
+                    percentPosition: true
+                });
             });
         }
     });
