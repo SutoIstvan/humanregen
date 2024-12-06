@@ -160,15 +160,15 @@
                     hour12: false // Отображение времени событий в 24-часовом формате
                 },
                 hiddenDays: [0], // Отключение воскресенья (0 соответствует воскресенью)
-                locale: 'hu', // Установка венгерского языка
+                locale: 'hu',
                 buttonText: {
-                    prev: 'Előző', // Предыдущий
-                    next: 'Következő', // Следующий
-                    today: 'Ma', // Сегодня
-                    month: 'Hónap', // Месяц
-                    week: 'Hét', // Неделя
-                    day: 'Nap', // День
-                    list: 'Naptár' // Календарь (для списка)
+                    prev: 'Előző',
+                    next: 'Következő',
+                    today: 'Ma',
+                    month: 'Hónap',
+                    week: 'Hét',
+                    day: 'Nap',
+                    list: 'Naptár'
                 },
 
                 // Кастомизация заголовков дней ///////////////////////////////////////////////////
@@ -242,125 +242,6 @@
                         domNodes: [container]
                     };
                 },
-
-                // Кастомизация заголовков дней ///////////////////////////////////////////////////
-
-
-                // select: function(info) {
-                //     // Вычисляем разницу между началом и концом в минутах
-                //     const durationInMinutes = (info.end - info.start) / (1000 * 60);
-
-                //     if (durationInMinutes > 30) {
-                //         const startDate = info.start.toISOString().split('T')[0];
-                //         const startTime = info.start.toLocaleTimeString('hu-HU', {
-                //             hour: '2-digit',
-                //             minute: '2-digit',
-                //         });
-                //         const endTime = info.end.toLocaleTimeString('hu-HU', {
-                //             hour: '2-digit',
-                //             minute: '2-digit',
-                //         });
-
-                //         const confirmBlock = confirm(
-                //             `Biztosan le akarja tiltani az alábbi időpontot?\n\nKezdete: ${startDate} ${startTime}\nVége: ${endTime}`
-                //         );
-
-                //         if (confirmBlock) {
-                //             fetch('/block-day-time', {
-                //                 method: 'POST', // Используем POST
-                //                 headers: {
-                //                     'Content-Type': 'application/json',
-                //                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-                //                 },
-                //                 body: JSON.stringify({
-                //                     booking_date: startDate,
-                //                     start_time: startTime,
-                //                     end_time: endTime,
-                //                     client_name: 'Admin',
-                //                 }),
-                //             })
-                //             .then(response => response.json())
-                //             .then(data => {
-                //                 if (data.success) {
-                //                     alert(data.message);
-                //                     window.location.reload(); // Перезагрузка страницы или обновление календаря
-                //                 } else {
-                //                     alert(`Hiba: ${data.message}`);
-                //                 }
-                //             })
-                //             .catch(error => {
-                //                 console.error('Hiba:', error);
-                //                 alert('Hiba történt a nap letiltása közben.');
-                //             });
-                //         }
-                //     }
-                // },
-
-                // select: function (info) {
-
-                //     // Устанавливаем значения времени в переменные
-                //     let bookingDate = info.start.toISOString().split('T')[0]; // "2024-11-26"
-                //     let startTime = info.start.toLocaleTimeString('hu-HU'); // Время начала
-                //     let endTime = info.end.toLocaleTimeString('hu-HU'); // Время окончания
-
-                //     const durationInMinutes = (info.end - info.start) / (1000 * 60);
-
-                //     // Проверяем, что выбранный интервал больше 30 минут
-                //     if (durationInMinutes <= 30) {
-                //         alert('Пожалуйста, выберите интервал больше 30 минут.');
-                //         return;
-                //     }
-
-                //     // Устанавливаем значения в модальное окно
-                //     blockStartSpan.textContent = `${bookingDate} ${startTime}`;
-                //     blockEndSpan.textContent = `${bookingDate} ${endTime}`;
-
-                //     // Удаляем все предыдущие обработчики кнопки
-                //     const newConfirmBlockButton = confirmBlockButton.cloneNode(true);
-                //     confirmBlockButton.replaceWith(newConfirmBlockButton);
-
-                //     // Обработчик для кнопки подтверждения
-                //     newConfirmBlockButton.addEventListener('click', function () {
-                //         // Актуализируем данные времени (на случай, если выбор изменился)
-                //         bookingDate = info.start.toISOString().split('T')[0];
-                //         startTime = info.start.toLocaleTimeString('hu-HU');
-                //         endTime = info.end.toLocaleTimeString('hu-HU');
-
-                //         // Отправляем запрос на блокировку времени
-                //         fetch('/block-day-time', {
-                //             method: 'POST',
-                //             headers: {
-                //                 'Content-Type': 'application/json',
-                //                 'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-                //             },
-                //             body: JSON.stringify({
-                //                 booking_date: bookingDate,
-                //                 start_time: startTime,
-                //                 end_time: endTime,
-                //                 client_name: 'Admin',
-                //             }),
-                //         })
-                //             .then(response => response.json())
-                //             .then(data => {
-                //                 if (data.success) {
-                //                     alert('A foglalás sikeresen letiltva!');
-                //                     window.location.reload(); // Обновляем страницу
-                //                 } else {
-                //                     alert(`Hiba: ${data.message}`);
-                //                 }
-                //             })
-                //             .catch(error => {
-                //                 console.error('Hiba:', error);
-                //                 alert('Hiba történt az időpont letiltása során.');
-                //             });
-
-                //         // Закрываем модальное окно
-                //         $(`#blockTimeModal`).modal('hide');
-                //     });
-
-                //     // Показываем confirm-диалог
-                //     $(`#blockTimeModal`).modal('show');
-                // },
 
 
                 select: function(info) {
@@ -458,7 +339,7 @@
                         })
                         .then(response => {
                             if (!response.ok) {
-                                throw new Error('Network response was not ok');
+                                throw new Error('A hálózati válasz nem volt megfelelő');
                             }
                             return response.json();
                         })
@@ -466,7 +347,7 @@
                             // console.log('View saved successfully:', data);
                         })
                         .catch(error => {
-                            console.error('Error saving view:', error);
+                            console.error('Hiba a nézet mentésekor:', error);
                         });
                 },
 
@@ -567,7 +448,7 @@
                             document.getElementById('eventDetailsUser').innerHTML = detailsHtml;
                         })
                         .catch(error => {
-                            console.error('Error fetching client bookings:', error);
+                            console.error('Hiba történt az ügyfélfoglalások lekérésekor:', error);
                         });
 
 
@@ -593,12 +474,12 @@
                                         $('#modalMin').modal('hide');
                                         // alert('Событие удалено.');
                                     } else {
-                                        alert('Ошибка при удалении события.');
+                                        alert('Hiba történt az esemény törlésekor.');
                                     }
                                 })
                                 .catch(error => {
-                                    console.error('Ошибка при удалении:', error);
-                                    alert('Произошла ошибка.');
+                                    console.error('Hiba a törlés során:', error);
+                                    alert('Hiba történt.');
                                 });
                         }
                     };
@@ -629,12 +510,12 @@
                                     window.location
                                         .reload(); // Перезагрузка страницы или обновление календаря
                                 } else {
-                                    alert('Ошибка при изменении статуса.');
+                                    alert('Hiba az állapot módosítása közben.');
                                 }
                             })
                             .catch(error => {
                                 // console.error('Ошибка:', error);
-                                alert('Произошла ошибка при изменении статуса.');
+                                alert('Hiba történt az állapot megváltoztatása közben.');
                             });
                     });
 
@@ -688,8 +569,8 @@
                             return JSON.parse(text);
                         } catch (error) {
                             // Если не JSON, выводим текст ответа
-                            console.error('Non-JSON response:', text);
-                            throw new Error('Received non-JSON response: ' + text);
+                            console.error('Nem JSON-válasz:', text);
+                            throw new Error('Nem JSON-válasz érkezett: ' + text);
                         }
                     });
                 })
@@ -708,43 +589,7 @@
                 });
         });
 
-        // блокировку времени
-        // document.getElementById('blockTime').addEventListener('click', function() {
-        //     const date = document.getElementById('bookingDate').value;
-        //     const time = document.getElementById('bookingTime').value;
-        //     const duration = document.getElementById('bookingDuration').value;
-
-        //     if (confirm(`Biztosan le akarod tiltani az időpontot: ${time} ${date}?`)) {
-        //         // Отправляем запрос на блокировку времени
-        //         fetch('/dashboard/block-time', {
-        //                 method: 'POST',
-        //                 headers: {
-        //                     'Content-Type': 'application/json',
-        //                     'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
-        //                         'content')
-        //                 },
-        //                 body: JSON.stringify({
-        //                     booking_date: date,
-        //                     booking_time: time,
-        //                     duration: duration,
-        //                 })
-        //             })
-        //             .then(response => response.json())
-        //             .then(data => {
-        //                 if (data.success) {
-        //                     // alert('Az időpont sikeresen le van tiltva!');
-        //                     $('#createBookingModal').modal('hide');
-        //                     location.reload();
-        //                 } else {
-        //                     alert(data.message || 'Hiba történt az időpont letiltása közben.');
-        //                 }
-        //             })
-        //             .catch(error => {
-        //                 console.error('Teljes hiba:', error);
-        //                 alert('Hiba történt: ' + error.message);
-        //             });
-        //     }
-        // });
+ 
     </script>
 
 @stop
