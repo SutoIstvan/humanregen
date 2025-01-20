@@ -27,7 +27,7 @@
 
         <x-slot name="footerSlot">
             <x-adminlte-button theme="danger" label="Foglalás törlése" id="deleteEventButton" class="mr-auto" />
-            
+
             <x-adminlte-button theme="success" label="Megerősítve" id="changeStatusButton" />
 
             <x-adminlte-button theme="secondary" label="Bezárás" data-dismiss="modal" />
@@ -74,7 +74,7 @@
                 </div>
                 <x-slot name="footerSlot">
 
-                    {{-- <x-adminlte-button theme="danger" label="Időpont letiltása" id="blockTime" class="mr-auto" /> --}}
+                    <x-adminlte-button theme="danger" label="Időpont letiltása" id="blockTime" class="mr-auto" />
 
                     <x-adminlte-button type="button" theme="success" id="saveBookingButton" label="Mentés" />
                     <x-adminlte-button theme="secondary" label="Bezárás" data-dismiss="modal" />
@@ -248,9 +248,9 @@
                     // Вычисляем форматированные данные
                     const bookingDate = info.start.toISOString().split('T')[0]; // "2024-11-26"
                     const startTime = info.start.toLocaleTimeString(
-                    'hu-HU'); // Время начала, например, "09:30"
+                        'hu-HU'); // Время начала, например, "09:30"
                     const endTime = info.end.toLocaleTimeString(
-                    'hu-HU'); // Время окончания, например, "11:30"
+                        'hu-HU'); // Время окончания, например, "11:30"
 
                     const durationInMinutes = (info.end - info.start) / (1000 * 60);
 
@@ -404,14 +404,14 @@
                     document.getElementById('eventDetails').dataset.eventId =
                         eventId; // Добавление ID в data-атрибут
 
-                        // Скрытие или отображение кнопки в зависимости от статуса
+                    // Скрытие или отображение кнопки в зависимости от статуса
                     const changeStatusButton = document.getElementById('changeStatusButton');
                     if (eventStatus === 'confirmed') {
                         changeStatusButton.style.display = 'none'; // Скрыть кнопку
                     } else {
                         changeStatusButton.style.display = 'block'; // Показать кнопку
                     }
-                    
+
                     // Получение данных о бронированиях с сервера по email клиента
                     fetch(`/get-client-bookings/${clientEmail}`)
                         .then(response => response.json())
@@ -519,6 +519,9 @@
                             });
                     });
 
+
+
+
                 },
 
 
@@ -589,7 +592,45 @@
                 });
         });
 
- 
+
+
+        // блокировку времени
+        document.getElementById('blockTime').addEventListener('click', function() {
+            const date = document.getElementById('bookingDate').value;
+            const time = document.getElementById('bookingTime').value;
+            const duration = document.getElementById('bookingDuration').value;
+
+            if (confirm(`Biztosan le akarod tiltani az időpontot: ${time} ${date}?`)) {
+                // Отправляем запрос на блокировку времени
+                fetch('/dashboard/block-time', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute(
+                                'content')
+                        },
+                        body: JSON.stringify({
+                            booking_date: date,
+                            booking_time: time,
+                            duration: duration,
+                        })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // alert('Az időpont sikeresen le van tiltva!');
+                            $('#createBookingModal').modal('hide');
+                            location.reload();
+                        } else {
+                            alert(data.message || 'Hiba történt az időpont letiltása közben.');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Teljes hiba:', error);
+                        alert('Hiba történt: ' + error.message);
+                    });
+            }
+        });
     </script>
 
 @stop
