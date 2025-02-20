@@ -472,7 +472,7 @@
                     <h5 class="mb-3">Varga Edina</h5>
                     <p class="px-xl-3 lead">
                         <i class="fas fa-quote-left pe-2"></i>
-                        Egyszerűen fantasztikus, hogy egy ilyen high-tech készülék elérhető Magyarországon! A kezelés
+                        Egyszerűen fantasztikus, hogy egy ilyen high-tech készülék elérhető Pakson! A kezelés
                         alatt teljesen feltöltődtem, a sejtjeimben mintha újra életre keltek volna az energiák. Azóta
                         frissebb és fittebb vagyok minden sportolás után. Köszönöm, HumanRegen!
                     </p>
@@ -502,8 +502,7 @@
                     <h5 class="mb-3">Kovács László</h5>
                     <p class="px-xl-3 lead">
                         <i class="fas fa-quote-left pe-2"></i>
-                        Már több regenerációs technológiát is kipróbáltam, de a Humán Regenerátor Sports egyedülálló! A
-                        szalonban nyugodt környezetben, profi szakemberekkel dolgozhatok együtt, és a gép ereje valóban
+                        Már több regenerációs technológiát is kipróbáltam, de a Humán Regenerátor Sports egyedülálló! A gép ereje valóban
                         lenyűgöző. Sportolóként is maximálisan meg vagyok elégedve az eredménnyel.
                     </p>
                     <ul class="list-unstyled d-flex justify-content-center mb-0">

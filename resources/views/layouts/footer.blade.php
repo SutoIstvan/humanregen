@@ -75,12 +75,20 @@
         </div>
     </div>
 
-    <div class="container copyright text-center mt-4">
+    {{-- <div class="container copyright text-center mt-4">
         <p>© <span>Copyright 2024</span> <span>All Rights Reserved</span></p>
         <div class="credits">
 
             Designed by <a href="https://pikft.hu/" style="color: #fff;">Paksi informatika</a>
         </div>
-    </div>
+    </div> --}}
 
+    <div class="container copyright text-center mt-4">
+        <p>© <span>Copyright 2025</span> <span>Kópis és Társa Kft. All Rights Reserved</span></p>
+        <div class="credits">
+
+            Designed by <a href="https://pikft.hu/" style="color: #fff;">Paksi Informatika</a>
+        </div>
+    </div>
+    
 </footer>
