@@ -13,6 +13,7 @@ class Booking extends Model
         'date',
         'time_slot',
         'duration',
+        'chair_id',
         'client_name',
         'client_email',
         'client_phone',

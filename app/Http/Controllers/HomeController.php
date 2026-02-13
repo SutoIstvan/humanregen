@@ -68,8 +68,12 @@ class HomeController extends Controller
             $formattedTimeStart = date('H:i', strtotime($startDateTime));
             $formattedTimeEnd = date('H:i', strtotime($endDateTime));
 
-            $title = $booking->status === 'new' ? 'Új foglalás' : 
-            ($booking->status === 'canceled' ? 'A foglalás le van tiltva' : $booking->client_name);
+            $title = $booking->status === 'new' ? 'Új foglalás' : ($booking->status === 'canceled' ? 'A foglalás le van tiltva' : $booking->client_name);
+
+            // Add chair indicator to title
+            $chairId = $booking->chair_id ?? 1;
+            $chairEmoji = $chairId === 2 ? ' I ' : ' H ';
+            $title = $chairEmoji . $title;
 
             return [
                 'title' => $title,
@@ -86,11 +90,12 @@ class HomeController extends Controller
                     'formatted_time_end' => $formattedTimeEnd,
                     'id' => $booking->id,
                     'status' => $booking->status,
+                    'chair_id' => $chairId,
                 ]
             ];
         });
 
-        return view('dashboard.index', ['bookings' => $bookings , 'calendarView' => $calendarView , 'calendarStartDate' => $calendarStartDate]);
+        return view('dashboard.index', ['bookings' => $bookings, 'calendarView' => $calendarView, 'calendarStartDate' => $calendarStartDate]);
     }
 
     public function update(Request $request)
@@ -192,6 +197,4 @@ class HomeController extends Controller
 
         return response()->json(['success' => true]);
     }
-
 }
-

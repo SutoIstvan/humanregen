@@ -12,6 +12,29 @@ class PriceSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        \App\Models\Price::create([
+            'name' => 'Price 1',
+            'amount' => 3000,
+        ]);
+
+        \App\Models\Price::create([
+            'name' => 'Price 2',
+            'amount' => 5000,
+        ]);
+
+        \App\Models\Price::create([
+            'name' => 'Price 3',
+            'amount' => 4000,
+        ]);
+
+        \App\Models\Price::create([
+            'name' => 'Price 4',
+            'amount' => 4000,
+        ]);
+
+        \App\Models\Price::create([
+            'name' => 'Price 5',
+            'amount' => 4000,
+        ]);
     }
 }

@@ -10,8 +10,7 @@ class Price extends Model
     use HasFactory;
 
     protected $fillable = [
-        'price',
+        'name',
         'amount',
     ];
-
 }

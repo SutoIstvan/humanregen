@@ -193,6 +193,51 @@
     <div class="container section-title pt-5" data-aos="fade-up">
         <div class="row d-flex justify-content-center">
             <div class="col-md-10 col-xl-8 text-center">
+                <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Válasszon szolgáltatást</h2>
+                <p class=" mb-md-5 pb-md-0 lead">
+                    Kérjük, válassza ki a kívánt szolgáltatást:
+                </p>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="plans mb-5">
+                <label class="plan basic-plan me-xxl-5 me-lg-3" for="chair1">
+                    <input checked type="radio" id="chair1" name="chair" value="1" />
+                    <div class="plan-content ">
+                        <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""
+                            class="d-none d-sm-block" />
+                        <div class="plan-details">
+                            <span>
+                                <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""
+                                    class="d-sm-none" />
+                                Humán Regenerátor Sports
+                            </span>
+                            <p>Egész testes sejtregeneráció kezelés</p>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="plan complete-plan ms-xxl-5 ms-lg-2" for="chair2">
+                    <input type="radio" id="chair2" name="chair" value="2" />
+                    <div class="plan-content">
+                        <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""
+                            class="d-none d-sm-block" />
+                        <div class="plan-details">
+                            <span>
+                                <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""
+                                    class="d-sm-none" />
+                                InBody 970s
+                            </span>
+                            <p>Testösszetétel elemző</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10 col-xl-8 text-center">
                 <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">Kezelés időtartam</h2>
                 <p class=" mb-md-5 pb-md-0 lead">
                     Kérem válasszon kezelési időtartamot 30 és 60 perc között.
@@ -201,11 +246,11 @@
         </div>
 
         @if ($errors->any())
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <div class="text-center" style="color: red;">Hiba történt: {{ $error }}</div>
-                @endforeach
-            </ul>
+        <ul>
+            @foreach ($errors->all() as $error)
+            <div class="text-center" style="color: red;">Hiba történt: {{ $error }}</div>
+            @endforeach
+        </ul>
         @endif
 
         <div class="">
@@ -266,6 +311,7 @@
     </div>
 
     <form action="/saveappointments" method="GET" class="selected-time">
+        <input type="hidden" id="chairinput" name="chair_id" value="1">
         <input type="hidden" id="durationinput" name="durationinput" value="30">
         <input type="hidden" id="selected-date-input" name="selected_date">
         <input type="hidden" id="selected-time-input" name="selected_time">
@@ -280,212 +326,248 @@
 
     @include('layouts.footer')
 
-<script>
-    // Инициализация календаря
-    document.addEventListener('DOMContentLoaded', () => {
-        const today = new Date();
-        const formattedDate = today.toISOString().split('T')[0];
+    <script>
+        // Инициализация календаря
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            const formattedDate = today.toISOString().split('T')[0];
 
-        // Конфигурация календаря
-        const options = {
-            settings: {
-                lang: 'hu',
-                range: {
-                    min: 'today',
-                    disableWeekday: [0], // Отключаем воскресенье
+            // Конфигурация календаря
+            const options = {
+                settings: {
+                    lang: 'hu',
+                    range: {
+                        min: 'today',
+                        disableWeekday: [0], // Отключаем воскресенье
+                    },
+                    visibility: {
+                        theme: 'light',
+                    },
                 },
-                visibility: {
-                    theme: 'light',
+                popups: {
+                    weekdays: ['H', 'K', 'Sz', 'Cs', 'P', 'Sz', 'V'],
+                    months: [
+                        'Január', 'Február', 'Március', 'Április', 'Május', 'Június',
+                        'Július', 'Augusztus', 'Szeptember', 'Október', 'November', 'December'
+                    ],
                 },
-            },
-            popups: {
-                weekdays: ['H', 'K', 'Sz', 'Cs', 'P', 'Sz', 'V'],
-                months: [
-                    'Január', 'Február', 'Március', 'Április', 'Május', 'Június',
-                    'Július', 'Augusztus', 'Szeptember', 'Október', 'November', 'December'
-                ],
-            },
-            actions: {
-                clickDay(event, self) {
-                    const lastDateString = self.selectedDates[self.selectedDates.length - 1];
-                    const selectedDate = new Date(lastDateString);
+                actions: {
+                    clickDay(event, self) {
+                        const lastDateString = self.selectedDates[self.selectedDates.length - 1];
+                        const selectedDate = new Date(lastDateString);
 
-                    if (!isNaN(selectedDate)) {
-                        const formattedSelectedDate = selectedDate.toISOString().split('T')[0];
+                        if (!isNaN(selectedDate)) {
+                            const formattedSelectedDate = selectedDate.toISOString().split('T')[0];
 
-                        document.getElementById('date-display').textContent =
-                            selectedDate.toLocaleDateString('hu-HU');
-                        document.getElementById('selected-date-input').value = formattedSelectedDate;
+                            document.getElementById('date-display').textContent =
+                                selectedDate.toLocaleDateString('hu-HU');
+                            document.getElementById('selected-date-input').value = formattedSelectedDate;
 
-                        const duration = document.querySelector('input[name="duration"]:checked').value;
-                        document.getElementById('durationinput').value = duration;
+                            const duration = document.querySelector('input[name="duration"]:checked').value;
+                            document.getElementById('durationinput').value = duration;
 
-                        fetchAndUpdateTimeSlots(formattedSelectedDate);
-                    } else {
-                        console.error("Неверная дата:", lastDateString);
-                    }
+                            // Get current chair_id
+                            const currentChairId = parseInt(document.getElementById('chairinput').value) || 1;
+                            fetchAndUpdateTimeSlots(formattedSelectedDate, currentChairId);
+                        } else {
+                            console.error("Неверная дата:", lastDateString);
+                        }
+                    },
                 },
-            },
+            };
+
+            // Инициализируем календарь
+            const calendar = new VanillaCalendar('#calendar', options);
+            calendar.init();
+
+            // Загружаем доступное время для текущей даты
+            document.getElementById('selected-date-input').value = formattedDate;
+            const initialChairId = document.querySelector('input[name="chair"]:checked').value;
+            fetchAndUpdateTimeSlots(formattedDate, initialChairId);
+        });
+
+        // Форматирование времени
+        const formatTimeSlot = (hours, minutes) => {
+            const hourStr = hours < 10 ? `0${hours}` : hours;
+            const minuteStr = minutes < 10 ? `0${minutes}` : minutes;
+            return `${hourStr}:${minuteStr}`;
         };
 
-        // Инициализируем календарь
-        const calendar = new VanillaCalendar('#calendar', options);
-        calendar.init();
+        // Генерация временных слотов
+        const generateTimeSlots = (startTime, endTime, interval) => {
+            const slots = [];
+            let currentHour = startTime;
+            let currentMinute = 0;
 
-        // Загружаем доступное время для текущей даты
-        document.getElementById('selected-date-input').value = formattedDate;
-        fetchAndUpdateTimeSlots(formattedDate);
-    });
+            // Устанавливаем максимальное время как 17:20
+            const maxHour = 17;
+            const maxMinute = 30;
 
-    // Форматирование времени
-    const formatTimeSlot = (hours, minutes) => {
-        const hourStr = hours < 10 ? `0${hours}` : hours;
-        const minuteStr = minutes < 10 ? `0${minutes}` : minutes;
-        return `${hourStr}:${minuteStr}`;
-    };
+            while (
+                currentHour < maxHour ||
+                (currentHour === maxHour && currentMinute <= maxMinute)
+            ) {
+                slots.push(formatTimeSlot(currentHour, currentMinute));
 
-    // Генерация временных слотов
-    const generateTimeSlots = (startTime, endTime, interval) => {
-        const slots = [];
-        let currentHour = startTime;
-        let currentMinute = 0;
-
-        // Устанавливаем максимальное время как 17:20
-        const maxHour = 17;
-        const maxMinute = 30;
-
-        while (
-            currentHour < maxHour ||
-            (currentHour === maxHour && currentMinute <= maxMinute)
-        ) {
-            slots.push(formatTimeSlot(currentHour, currentMinute));
-
-            currentMinute += interval;
-            if (currentMinute >= 60) {
-                currentMinute -= 60;
-                currentHour += 1;
-            }
-        }
-
-        return slots;
-    };
-
-    // Создание списка времени
-    const isSaturday = (date) => {
-        return new Date(date).getDay() === 6;
-    };
-    const isSunday = (date) => {
-        return new Date(date).getDay() === 0;
-    };
-
-    // Модифицированная функция создания списка времени
-    const createTimeList = (containerId, duration, startTime, endTime, disabledTimes = [], selectedDate) => {
-        const container = document.getElementById(containerId);
-        if (!container) {
-            console.error(`Container with id "${containerId}" not found`);
-            return;
-        }
-
-        container.innerHTML = '';
-        let activeTimeDiv = null;
-
-        // Если суббота, устанавливаем конечное время на 12:00
-        if (isSaturday(selectedDate)) {
-            endTime = 12;
-        }
-
-        if (isSunday(selectedDate)) {
-            const noteDiv = document.createElement('div');
-            noteDiv.className = 'sunday-note';
-            noteDiv.textContent = 'Vasárnap zárva vagyunk';
-            noteDiv.style.textAlign = 'center';
-            noteDiv.style.color = '#c2a74e';
-            noteDiv.style.padding = '20px';
-            container.appendChild(noteDiv);
-            return;
-        }
-
-        const timeSlots = generateTimeSlots(startTime, endTime, 30);
-
-        timeSlots.forEach(time => {
-            const timeDiv = document.createElement('div');
-            timeDiv.textContent = time;
-            timeDiv.dataset.time = time;
-
-            // Проверяем, не выходит ли время за пределы 12:00 для субботы
-            const [hours] = time.split(':').map(Number);
-            if (isSaturday(selectedDate) && hours >= 12) {
-                timeDiv.classList.add('disabled-time');
-            } else if (disabledTimes.includes(time)) {
-                timeDiv.classList.add('disabled-time');
-            } else {
-                timeDiv.addEventListener('click', () => {
-                    if (activeTimeDiv) {
-                        activeTimeDiv.classList.remove('active-time');
-                    }
-                    timeDiv.classList.add('active-time');
-                    activeTimeDiv = timeDiv;
-
-                    document.getElementById('selected-time-input').value = time;
-                    // document.getElementById('selected-time').textContent = `Выбрано время: ${time}`;
-                    document.getElementById('selected-time').style.display = 'hidden';
-                });
+                currentMinute += interval;
+                if (currentMinute >= 60) {
+                    currentMinute -= 60;
+                    currentHour += 1;
+                }
             }
 
-            container.appendChild(timeDiv);
+            return slots;
+        };
+
+        // Создание списка времени
+        const isSaturday = (date) => {
+            return new Date(date).getDay() === 6;
+        };
+        const isSunday = (date) => {
+            return new Date(date).getDay() === 0;
+        };
+
+        // Модифицированная функция создания списка времени
+        const createTimeList = (containerId, duration, startTime, endTime, disabledTimes = [], selectedDate) => {
+            const container = document.getElementById(containerId);
+            if (!container) {
+                console.error(`Container with id "${containerId}" not found`);
+                return;
+            }
+
+            container.innerHTML = '';
+            let activeTimeDiv = null;
+
+            // Если суббота, устанавливаем конечное время на 12:00
+            if (isSaturday(selectedDate)) {
+                endTime = 12;
+            }
+
+            if (isSunday(selectedDate)) {
+                const noteDiv = document.createElement('div');
+                noteDiv.className = 'sunday-note';
+                noteDiv.textContent = 'Vasárnap zárva vagyunk';
+                noteDiv.style.textAlign = 'center';
+                noteDiv.style.color = '#c2a74e';
+                noteDiv.style.padding = '20px';
+                container.appendChild(noteDiv);
+                return;
+            }
+
+            const timeSlots = generateTimeSlots(startTime, endTime, 30);
+
+            timeSlots.forEach(time => {
+                const timeDiv = document.createElement('div');
+                timeDiv.textContent = time;
+                timeDiv.dataset.time = time;
+
+                // Проверяем, не выходит ли время за пределы 12:00 для субботы
+                const [hours] = time.split(':').map(Number);
+                if (isSaturday(selectedDate) && hours >= 12) {
+                    timeDiv.classList.add('disabled-time');
+                } else if (disabledTimes.includes(time)) {
+                    timeDiv.classList.add('disabled-time');
+                } else {
+                    timeDiv.addEventListener('click', () => {
+                        if (activeTimeDiv) {
+                            activeTimeDiv.classList.remove('active-time');
+                        }
+                        timeDiv.classList.add('active-time');
+                        activeTimeDiv = timeDiv;
+
+                        document.getElementById('selected-time-input').value = time;
+                        // document.getElementById('selected-time').textContent = `Выбрано время: ${time}`;
+                        document.getElementById('selected-time').style.display = 'hidden';
+                    });
+                }
+
+                container.appendChild(timeDiv);
+            });
+
+            // Добавляем сообщение для субботы
+            if (isSaturday(selectedDate)) {
+                // const noteDiv = document.createElement('div');
+                // noteDiv.className = 'saturday-note';
+                // noteDiv.textContent = 'По субботам доступно время только до 12:00';
+                // noteDiv.style.gridColumn = '1 / -1';
+                // noteDiv.style.textAlign = 'center';
+                // noteDiv.style.color = '#c2a74e';
+                // noteDiv.style.marginTop = '10px';
+                // container.appendChild(noteDiv);
+            }
+        };
+
+        // Получение заблокированных временных слотов
+        const fetchAndUpdateTimeSlots = async (date, chairId = 1) => {
+            const container = document.getElementById('time-list');
+            try {
+                container.innerHTML = '<div class="loading">Betöltés...</div>';
+
+                const response = await fetch(`/bookings/disabled-times?date=${date}&chair_id=${chairId}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const disabledTimes = await response.json();
+                const duration = getDuration();
+                createTimeList('time-list', duration, 7, 18, disabledTimes, date); // Передаем выбранную дату
+            } catch (error) {
+                console.error('Ошибка при получении заблокированных времён:', error);
+                container.innerHTML = '<div class="error">Ошибка при загрузке доступного времени</div>';
+            }
+        };
+
+        // Получение выбранной длительности
+        const getDuration = () => {
+            const selectedDuration = document.querySelector('input[name="duration"]:checked');
+            return selectedDuration ? parseInt(selectedDuration.value, 10) : 30;
+        };
+
+        // Обработчики для радио-кнопок длительности
+        document.querySelectorAll('input[name="duration"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const duration = parseInt(radio.value, 10);
+                document.getElementById('durationinput').value = duration;
+
+                const selectedDate = document.getElementById('selected-date-input').value;
+                const chairId = document.querySelector('input[name="chair"]:checked').value;
+                if (selectedDate) {
+                    fetchAndUpdateTimeSlots(selectedDate, chairId);
+                }
+            });
         });
 
-        // Добавляем сообщение для субботы
-        if (isSaturday(selectedDate)) {
-            // const noteDiv = document.createElement('div');
-            // noteDiv.className = 'saturday-note';
-            // noteDiv.textContent = 'По субботам доступно время только до 12:00';
-            // noteDiv.style.gridColumn = '1 / -1';
-            // noteDiv.style.textAlign = 'center';
-            // noteDiv.style.color = '#c2a74e';
-            // noteDiv.style.marginTop = '10px';
-            // container.appendChild(noteDiv);
-        }
-    };
+        // Обработчики для радио-кнопок выбора кресла
+        document.querySelectorAll('input[name="chair"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                const chairId = parseInt(radio.value, 10);
+                document.getElementById('chairinput').value = chairId;
 
-    // Получение заблокированных временных слотов
-    const fetchAndUpdateTimeSlots = async (date) => {
-        const container = document.getElementById('time-list');
-        try {
-            container.innerHTML = '<div class="loading">Betöltés...</div>';
+                // Если выбрано кресло 2, отключаем опцию 60 минут
+                const duration60 = document.getElementById('complete');
+                const duration30 = document.getElementById('basic');
 
-            const response = await fetch(`/bookings/disabled-times?date=${date}`);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const disabledTimes = await response.json();
-            const duration = getDuration();
-            createTimeList('time-list', duration, 7, 18, disabledTimes, date); // Передаем выбранную дату
-        } catch (error) {
-            console.error('Ошибка при получении заблокированных времён:', error);
-            container.innerHTML = '<div class="error">Ошибка при загрузке доступного времени</div>';
-        }
-    };
+                if (chairId === 2) {
+                    duration60.disabled = true;
+                    duration60.parentElement.style.opacity = '0.5';
+                    duration60.parentElement.style.pointerEvents = 'none';
+                    // Автоматически выбираем 30 минут
+                    duration30.checked = true;
+                    document.getElementById('durationinput').value = 30;
+                } else {
+                    duration60.disabled = false;
+                    duration60.parentElement.style.opacity = '1';
+                    duration60.parentElement.style.pointerEvents = 'auto';
+                }
 
-    // Получение выбранной длительности
-    const getDuration = () => {
-        const selectedDuration = document.querySelector('input[name="duration"]:checked');
-        return selectedDuration ? parseInt(selectedDuration.value, 10) : 30;
-    };
-
-    // Обработчики для радио-кнопок длительности
-    document.querySelectorAll('input[name="duration"]').forEach(radio => {
-        radio.addEventListener('change', () => {
-            const duration = parseInt(radio.value, 10);
-            document.getElementById('durationinput').value = duration;
-
-            const selectedDate = document.getElementById('selected-date-input').value;
-            if (selectedDate) {
-                fetchAndUpdateTimeSlots(selectedDate);
-            }
+                // Обновляем доступные временные слоты
+                const selectedDate = document.getElementById('selected-date-input').value;
+                if (selectedDate) {
+                    fetchAndUpdateTimeSlots(selectedDate, chairId);
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
+
 </html>

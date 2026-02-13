@@ -22,8 +22,11 @@ class BookingController extends Controller
     public function getDisabledTimes(Request $request)
     {
         $date = $request->query('date');
+        $chairId = $request->query('chair_id', 1);
 
-        $bookings = Booking::where('date', $date)->get();
+        $bookings = Booking::where('date', $date)
+            ->where('chair_id', $chairId)
+            ->get();
 
         // Преобразуем их в массив с занятыми временными интервалами
         $disabledTimes = [];
@@ -51,21 +54,27 @@ class BookingController extends Controller
         $request->validate([
             'selected_time' => 'required|string',
             'selected_date' => 'required|date',
+            'chair_id' => 'required|in:1,2',
         ], [
             'selected_time.required' => 'Kérem, válasszon időpontot.',
             'selected_date.required' => 'Kérem, válasszon dátumot.',
             'selected_date.date' => 'Érvénytelen dátum formátum.',
+            'chair_id.required' => 'Kérem, válasszon masszázs széket.',
         ]);
 
         // Получаем данные времени из запроса
         $selectedTime = $request->input('selected_time');
         $selectedDate = $request->input('selected_date');
         $duration = $request->input('durationinput');
+        $chairId = $request->input('chair_id');
         $user = auth()->user();
-        $price = Price::find(1);
-        $price2 = Price::find(2);
 
-        return view('saveappointments', compact('selectedDate', 'selectedTime', 'user', 'price', 'price2', 'duration'));
+        // Получаем цены
+        $price = Price::find(1);  // Chair 1 - 30 min
+        $price2 = Price::find(2); // Chair 1 - 60 min
+        $price3 = Price::find(3); // Chair 2 - 30 min
+
+        return view('saveappointments', compact('selectedDate', 'selectedTime', 'user', 'price', 'price2', 'price3', 'duration', 'chairId'));
     }
 
     /**
@@ -77,6 +86,7 @@ class BookingController extends Controller
             'date' => 'required|date',
             'time_slot' => 'required|date_format:H:i',
             'duration' => 'required|integer|in:30,60',
+            'chair_id' => 'required|integer|in:1,2',
             'client_name' => 'required|string|max:255',
             'client_email' => 'required|email|max:255',
             'client_phone' => 'required|string|max:20',
@@ -88,9 +98,10 @@ class BookingController extends Controller
         $startTime = Carbon::parse($validatedData['date'] . ' ' . $validatedData['time_slot']);
         $endTime = $startTime->copy()->addMinutes($validatedData['duration']); // Время окончания (добавляем длительность)
 
-        // Проверка на занятость времени
+        // Проверка на занятость времени для конкретного кресла
         $existingBooking = Booking::where('date', $validatedData['date'])
             ->where('time_slot', $validatedData['time_slot'])
+            ->where('chair_id', $validatedData['chair_id'])
             ->first();
 
         if ($existingBooking) {
@@ -107,10 +118,11 @@ class BookingController extends Controller
                 ->withErrors(['time_slot' => 'A választott időpont túl későn van. Kérem válasszon egy másik időpontot.']);
         }
 
-        // Проверка на пересечение с другим бронированием
+        // Проверка на пересечение с другим бронированием для того же кресла
         $endTimeAdjusted = $endTime->subMinute();  // Отнимаем 1 минуту от времени окончания
 
         $overlappingBooking = Booking::where('date', $validatedData['date'])
+            ->where('chair_id', $validatedData['chair_id'])
             ->where(function ($query) use ($startTime, $endTimeAdjusted) {
                 // Проверяем, есть ли записи, которые начинаются до конца нового интервала и заканчиваются после его начала
                 $query->whereBetween('time_slot', [$startTime, $endTimeAdjusted])
@@ -238,6 +250,7 @@ class BookingController extends Controller
                 'booking_date' => 'required|date',
                 'booking_time' => 'required|date_format:H:i',
                 'duration' => 'required|in:30,60',
+                'chair_id' => 'required|in:1,2',
                 'client_name' => 'required|string|max:255',
                 'client_email' => 'max:255',
                 'client_phone' => 'max:20',
@@ -247,6 +260,7 @@ class BookingController extends Controller
             $booking->date = $validated['booking_date'];
             $booking->time_slot = $validated['booking_time'];
             $booking->duration = $validated['duration'];
+            $booking->chair_id = $validated['chair_id'];
             $booking->client_name = $validated['client_name'];
             $booking->client_email = $validated['client_email'] ?? 'nem volt megadva';
             $booking->client_phone = $validated['client_phone'] ?? 'nem volt megadva';
@@ -261,12 +275,12 @@ class BookingController extends Controller
                     'time' => $booking['time_slot'],
                     'service' => $booking['duration'],
                 ];
-            
+
                 Mail::to($validated['client_email'])->send(new BookingConfirmationMail($bookingDetails));
             } else {
                 Log::info("Email не отправлен: email либо пустой, либо равен 'nem volt megadva'.");
             }
-            
+
 
 
             return response()->json(['success' => true, 'message' => 'A foglalás sikeresen megtörtént']);
@@ -287,29 +301,35 @@ class BookingController extends Controller
                 'client_name' => 'required|string|max:255',
             ]);
 
-            // Проверяем, не заблокирован ли день уже
-            $existingBlock = Booking::where('date', $validated['booking_date'])
+            // Проверяем, не заблокирован ли день уже (для обоих кресел)
+            $existingBlocks = Booking::where('date', $validated['booking_date'])
                 ->where('status', 'canceled')
-                ->first();
-    
-                if ($existingBlock) {
-                    $existingBlock->delete();
-                    return response()->json([
-                        'success' => true,
-                        'message' => 'Время успешно разблокировано.',
-                    ]);
-                }
+                ->get();
 
-            // Создаём запись для блокировки дня
-            $booking = new Booking();
-            $booking->date = $validated['booking_date'];
-            $booking->time_slot = '07:00'; // Начало дня
-            $booking->duration = 1440; // 24 часа (в минутах)
-            $booking->client_name = $validated['client_name']; // Имя администратора или ответственного
-            $booking->client_email = 'tiltva'; // Технический email
-            $booking->client_phone = '';
-            $booking->status = 'canceled'; // Статус "заблокирован"
-            $booking->save();
+            if ($existingBlocks->count() > 0) {
+                // Удаляем все блокировки для этого дня
+                Booking::where('date', $validated['booking_date'])
+                    ->where('status', 'canceled')
+                    ->delete();
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Время успешно разблокировано.',
+                ]);
+            }
+
+            // Создаём записи для блокировки дня для обоих кресел
+            foreach ([1, 2] as $chairId) {
+                $booking = new Booking();
+                $booking->date = $validated['booking_date'];
+                $booking->time_slot = '07:00'; // Начало дня
+                $booking->duration = 1440; // 24 часа (в минутах)
+                $booking->chair_id = $chairId;
+                $booking->client_name = $validated['client_name']; // Имя администратора или ответственного
+                $booking->client_email = 'tiltva'; // Технический email
+                $booking->client_phone = '';
+                $booking->status = 'canceled'; // Статус "заблокирован"
+                $booking->save();
+            }
 
             return response()->json([
                 'success' => true,
@@ -324,7 +344,8 @@ class BookingController extends Controller
     }
 
 
-    public function blockDayTime(Request $request) {
+    public function blockDayTime(Request $request)
+    {
         try {
             // Log::info($request->all());
 
@@ -334,22 +355,26 @@ class BookingController extends Controller
                 'end_time' => 'required|string',
                 'client_name' => 'required|string|max:255',
             ]);
-    
+
             // Формируем полный datetime для начала и окончания
             $startDateTime = Carbon::parse($validated['booking_date'] . ' ' . $validated['start_time']);
             $endDateTime = Carbon::parse($validated['booking_date'] . ' ' . $validated['end_time']);
             $bookingDate = \Carbon\Carbon::parse($validated['booking_date'])->format('Y-m-d');
 
-            $booking = new Booking();
-            $booking->date = $validated['booking_date']; // только дата
-            $booking->time_slot = $startDateTime->toTimeString(); // только время
-            $booking->duration = $startDateTime->diffInMinutes($endDateTime); // разница в минутах
-            $booking->client_name = $validated['client_name'];
-            $booking->client_email = 'tiltva';
-            $booking->client_phone = '';
-            $booking->status = 'canceled';
-            $booking->save();
-    
+            // Создаём блокировки для обоих кресел
+            foreach ([1, 2] as $chairId) {
+                $booking = new Booking();
+                $booking->date = $validated['booking_date']; // только дата
+                $booking->time_slot = $startDateTime->toTimeString(); // только время
+                $booking->duration = $startDateTime->diffInMinutes($endDateTime); // разница в минутах
+                $booking->chair_id = $chairId;
+                $booking->client_name = $validated['client_name'];
+                $booking->client_email = 'tiltva';
+                $booking->client_phone = '';
+                $booking->status = 'canceled';
+                $booking->save();
+            }
+
             return response()->json([
                 'success' => true,
                 'message' => 'A kiválasztott időszak sikeresen le van tiltva.',
@@ -361,8 +386,8 @@ class BookingController extends Controller
             ], 500);
         }
     }
-    
-    
+
+
 
     public function blockTime(Request $request)
     {
@@ -386,16 +411,19 @@ class BookingController extends Controller
                 ], 400);
             }
 
-            // Создаём запись для блокировки времени
-            $booking = new Booking();
-            $booking->date = $validated['booking_date'];
-            $booking->time_slot = $validated['booking_time'];  // Время для блокировки
-            $booking->duration = $validated['duration'];
-            $booking->client_name = 'Admin';  // Имя администратора
-            $booking->client_email = 'tiltva'; // Пустой email
-            $booking->client_phone = ''; // Пустой телефон
-            $booking->status = 'canceled'; // Статус блокировки
-            $booking->save();
+            // Создаём записи для блокировки времени для обоих кресел
+            foreach ([1, 2] as $chairId) {
+                $booking = new Booking();
+                $booking->date = $validated['booking_date'];
+                $booking->time_slot = $validated['booking_time'];  // Время для блокировки
+                $booking->duration = $validated['duration'];
+                $booking->chair_id = $chairId;
+                $booking->client_name = 'Admin';  // Имя администратора
+                $booking->client_email = 'tiltva'; // Пустой email
+                $booking->client_phone = ''; // Пустой телефон
+                $booking->status = 'canceled'; // Статус блокировки
+                $booking->save();
+            }
 
             return response()->json([
                 'success' => true,
