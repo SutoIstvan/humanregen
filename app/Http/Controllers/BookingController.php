@@ -72,7 +72,7 @@ class BookingController extends Controller
         // Получаем цены
         $price = Price::find(1);  // Chair 1 - 30 min
         $price2 = Price::find(2); // Chair 1 - 60 min
-        $price3 = Price::find(3); // Chair 2 - 30 min
+        $price3 = Price::find(6); // Chair 2 - 30 min
 
         return view('saveappointments', compact('selectedDate', 'selectedTime', 'user', 'price', 'price2', 'price3', 'duration', 'chairId'));
     }
