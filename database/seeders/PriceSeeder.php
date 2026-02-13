@@ -36,5 +36,20 @@ class PriceSeeder extends Seeder
             'name' => 'Price 5',
             'amount' => 4000,
         ]);
+
+        \App\Models\Price::create([
+            'name' => 'Price 6',
+            'amount' => 4000,
+        ]);
+
+        \App\Models\Price::create([
+            'name' => 'Price 7',
+            'amount' => 4000,
+        ]);
+
+        \App\Models\Price::create([
+            'name' => 'Price 8',
+            'amount' => 4000,
+        ]);
     }
 }

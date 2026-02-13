@@ -370,7 +370,7 @@
                             <ul class="pricing-feature-list">
                                 <li class="pricing-feature">30 perces kezelés</li>
                                 <li class="pricing-feature">
-                                    <h4>{{ number_format($price2->amount, 0, ',', ' ') }} Ft</h4>
+                                    <h4>{{ number_format($price6->amount, 0, ',', ' ') }} Ft</h4>
                                 </li>
                             </ul>
                             <a href="{{ route('appointments') }}" class=" btn-get-started"
@@ -458,7 +458,7 @@
                 <div class="plan-content ">
                     <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                     <div class="plan-details">
-                        <span>1. alkalom + konzultáció {{ number_format($price3->amount, 0, ',', ' ') }} ft</span>
+                        <span>1. alkalom + konzultáció {{ number_format($price5->amount, 0, ',', ' ') }} ft</span>
                         <p>1 alkalom = 30 perces kezelés<br>Érvényesség: vásárlástól számított 185 napig</p>
                     </div>
                 </div>
@@ -469,8 +469,8 @@
                 <div class="plan-content">
                     <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                     <div class="plan-details">
-                        <span>Mérés (konzultáció nélkül) {{ number_format($price4->amount, 0, ',', ' ') }} ft</span>
-                        <p>1 alkalom = 30 perces kezelés<br>Érvényesség: vásárlástól számított 185 napig</p>
+                        <span>Mérés {{ number_format($price6->amount, 0, ',', ' ') }} ft</span>
+                        <p>1 alkalom = 30 perces kezelés<br>Konzultáció nélkül</p>
                     </div>
                 </div>
             </label>
@@ -484,8 +484,8 @@
                 <div class="plan-content ">
                     <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                     <div class="plan-details">
-                        <span>5.-dik alkalom (konzultáció nélkül) {{ number_format($price3->amount, 0, ',', ' ') }} ft</span>
-                        <p>1 alkalom = 30 perces kezelés<br>Érvényesség: vásárlástól számított 185 napig</p>
+                        <span>5.-dik alkalom {{ number_format($price7->amount, 0, ',', ' ') }} ft</span>
+                        <p>1 alkalom = 30 perces kezelés<br>Konzultáció nélkül</p>
                     </div>
                 </div>
             </label>
@@ -495,8 +495,8 @@
                 <div class="plan-content">
                     <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                     <div class="plan-details">
-                        <span>Konzultáció (mérés nélkül, korábbi adatokkal) {{ number_format($price4->amount, 0, ',', ' ') }} ft</span>
-                        <p>1 alkalom = 30 perces kezelés<br>Érvényesség: vásárlástól számított 185 napig</p>
+                        <span>Konzultáció {{ number_format($price8->amount, 0, ',', ' ') }} ft</span>
+                        <p>1 alkalom = 30 perces konzultáció<br>Mérés nélkül, korábbi adatokkal</p>
                     </div>
                 </div>
             </label>
