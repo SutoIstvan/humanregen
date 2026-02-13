@@ -556,11 +556,24 @@
                 }
 
                 if (chairId === 2) {
-                    // Yellow semi-transparent overlay for Chair 2
-                    // This preserves the status color while adding yellow tint
-                    const currentBg = info.el.style.backgroundColor || info.event.backgroundColor;
-                    info.el.style.background = `linear-gradient(rgba(255, 193, 7, 0.3), rgba(255, 193, 7, 0.3)), ${currentBg}`;
-                    info.el.style.borderLeft = '6px solid #2c3e50';
+                    const status = info.event.extendedProps.status;
+                    if (status === 'confirmed') {
+                        // Confirmed order - Yellow
+                        info.el.style.backgroundColor = '#ffc107';
+                        info.el.style.borderColor = '#ffc107';
+                        info.el.style.color = '#000000';
+                    } else if (status === 'canceled') {
+                        // Blocked/Canceled order - Burgundy
+                        info.el.style.backgroundColor = '#800020';
+                        info.el.style.borderColor = '#800020';
+                        info.el.style.color = '#ffffff';
+                    } else {
+                        // New order - Purple
+                        info.el.style.backgroundColor = '#6f42c1';
+                        info.el.style.borderColor = '#6f42c1';
+                        info.el.style.color = '#ffffff';
+                    }
+                    info.el.style.borderLeft = '2px solid #3e1366ff';
                 }
             },
 
