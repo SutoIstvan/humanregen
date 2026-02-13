@@ -266,7 +266,7 @@
                                     class="d-sm-none" />
                                 30 perc
                             </span>
-                            <p>Humán Regenerátor Sports - Egész testes sejtregeneráció kezelés</p>
+                            <p id="basic-description">Humán Regenerátor Sports - Egész testes sejtregeneráció kezelés</p>
                         </div>
                     </div>
                 </label>
@@ -548,15 +548,21 @@
 
                 if (chairId === 2) {
                     duration60.disabled = true;
-                    duration60.parentElement.style.opacity = '0.5';
+                    duration60.parentElement.style.opacity = '0';
                     duration60.parentElement.style.pointerEvents = 'none';
                     // Автоматически выбираем 30 минут
                     duration30.checked = true;
                     document.getElementById('durationinput').value = 30;
+
+                    // Change description
+                    document.getElementById('basic-description').innerText = 'InBody 970s - Testösszetétel elemző';
                 } else {
                     duration60.disabled = false;
                     duration60.parentElement.style.opacity = '1';
                     duration60.parentElement.style.pointerEvents = 'auto';
+
+                    // Revert description
+                    document.getElementById('basic-description').innerText = 'Humán Regenerátor Sports - Egész testes sejtregeneráció kezelés';
                 }
 
                 // Обновляем доступные временные слоты

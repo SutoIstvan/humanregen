@@ -68,7 +68,6 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/dashboard/gallery', [GalleryController::class, 'store'])->name('gallery.store');
     Route::delete('/dashboard/gallery/{id}', [GalleryController::class, 'delete'])->name('gallery.delete');
     Route::post('/dashboard/gallery/upload', [GalleryController::class, 'upload'])->name('gallery.upload');
-
 });
 
 Route::get('/bookings/disabled-times', [BookingController::class, 'getDisabledTimes']);
@@ -120,4 +119,8 @@ Route::prefix('about')->group(function () {
     Route::get('/when-not-usable', function () {
         return view('about.when-not-usable');
     })->name('about.when-not-usable');
+
+    Route::get('/inbody', function () {
+        return view('about.inbody');
+    })->name('about.inbody');
 });
