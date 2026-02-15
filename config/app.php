@@ -185,4 +185,5 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
+    'booking_notification_recipients' => env('BOOKING_NOTIFICATION_RECIPIENTS', "")
 ];

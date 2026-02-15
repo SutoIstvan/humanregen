@@ -150,8 +150,13 @@ class BookingController extends Controller
             'client_phone' => $validatedData['client_phone'],
         ];
 
-        Mail::to('info@humanregen.hu')->send(new NewBookingNotification($bookingDetails));
+        // Mail::to('info@humanregen.hu')->send(new NewBookingNotification($bookingDetails));
 
+        $recipients = explode(';', (config('app.booking_notification_recipients')));
+        if (count($recipients) > 0) {
+            Mail::to($recipients)->send(new NewBookingNotification($bookingDetails));
+        }
+        
         $name = $validatedData['client_name'];
         $mail = $validatedData['client_email'];
         $duration = $validatedData['duration'];
