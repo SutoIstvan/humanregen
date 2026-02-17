@@ -368,7 +368,7 @@
                             </div>
 
                             <ul class="pricing-feature-list">
-                                <li class="pricing-feature">30 perces kezelés</li>
+                                <li class="pricing-feature">30 perces mérés</li>
                                 <li class="pricing-feature">
                                     <h4>{{ number_format($price6->amount, 0, ',', ' ') }} Ft</h4>
                                 </li>
@@ -443,7 +443,7 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-md-6 col-xl-6 text-center">
-                <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">InBody</h2>
+                <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">InBody 970S</h2>
                 <!-- <p class="  pb-md-0 lead">
                     A Humán Regenerátor Sports szalonunkban 5 és 10 alkalmas bérleteket vásárolhat kedvező áron.
                 </p> -->
@@ -458,8 +458,8 @@
                 <div class="plan-content ">
                     <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                     <div class="plan-details">
-                        <span>1. alkalom + konzultáció {{ number_format($price5->amount, 0, ',', ' ') }} ft</span>
-                        <p>1 alkalom = 30 perces kezelés<br>Érvényesség: vásárlástól számított 185 napig</p>
+                        <span>1. mérés + konzultáció {{ number_format($price5->amount, 0, ',', ' ') }} ft</span>
+                        <!-- <p>1 alkalom = 30 perces kezelés<br>Érvényesség: vásárlástól számított 185 napig</p> -->
                     </div>
                 </div>
             </label>
@@ -470,7 +470,7 @@
                     <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                     <div class="plan-details">
                         <span>Mérés {{ number_format($price6->amount, 0, ',', ' ') }} ft</span>
-                        <p>1 alkalom = 30 perces kezelés<br>Konzultáció nélkül</p>
+                        <!-- <p>1 alkalom = 30 perces kezelés<br>Konzultáció nélkül</p> -->
                     </div>
                 </div>
             </label>
@@ -484,8 +484,8 @@
                 <div class="plan-content ">
                     <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                     <div class="plan-details">
-                        <span>5.-dik alkalom {{ number_format($price7->amount, 0, ',', ' ') }} ft</span>
-                        <p>1 alkalom = 30 perces kezelés<br>Konzultáció nélkül</p>
+                        <span>5.-dik mérés {{ number_format($price7->amount, 0, ',', ' ') }} ft</span>
+                        <!-- <p>1 alkalom = 30 perces kezelés<br>Konzultáció nélkül</p> -->
                     </div>
                 </div>
             </label>
@@ -496,7 +496,7 @@
                     <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
                     <div class="plan-details">
                         <span>Konzultáció {{ number_format($price8->amount, 0, ',', ' ') }} ft</span>
-                        <p>1 alkalom = 30 perces konzultáció<br>Mérés nélkül, korábbi adatokkal</p>
+                        <!-- <p>1 alkalom = 30 perces konzultáció<br>Mérés nélkül, korábbi adatokkal</p> -->
                     </div>
                 </div>
             </label>

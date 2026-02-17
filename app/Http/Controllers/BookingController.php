@@ -192,6 +192,14 @@ class BookingController extends Controller
     {
         $booking = Booking::find($id);
 
+        if (!$booking) {
+            return redirect()->back()->with('success', 'Nem található a foglalás.');
+        }
+
+        if ($booking->status !== 'new') {
+            return redirect()->back()->with('success', 'A foglalás már megerősítve, nem törölhető.');
+        }
+
         $booking->delete();
 
         return redirect()->back()->with('success', 'Sikeresen törölve.');

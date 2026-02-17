@@ -319,8 +319,8 @@
             class="btn btn-primary btn-lg px-4 me-md-2 mt-4">Tovább</button>
     </form>
 
-    <div class="selected-time" id="selected-time" style="display: none">Выберите время</div>
-    <div class="selected-time" id="date-display" style="display: none">Выбранная дата:</div>
+    <div class="selected-time" id="selected-time" style="display: none">Válasszon időpontot</div>
+    <div class="selected-time" id="date-display" style="display: none">Válasszon dátumot:</div>
 
     @include('layouts.modal')
 
