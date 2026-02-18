@@ -35,7 +35,7 @@
         <div class="container">
             <div class="row gy-4 text-center">
                 <div class="col-lg-12  d-flex flex-column justify-content-center" data-aos="fade-in">
-                    <h1><span>InBody 970S</span></h1>
+                    <h1><span>Hogyan működik az INBODY 970S?</span></h1>
                 </div>
             </div>
         </div>
@@ -64,11 +64,6 @@
         <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">
             Megmutatjuk a Láthatatlant
         </h2>
-        <div class="col-lg-10 mx-auto">
-            <p class="lead mb-4" style="text-indent: 15px; font-weight: 500;">
-                A tökéletes testösszetétel ─ elemző: az INBODY 970S
-            </p>
-        </div>
     </div>
 
     <div class="container d-flex justify-content-center">
@@ -79,57 +74,53 @@
 
             <p class="lead mb-5 d-flex justify-content-center" style="text-indent: 15px; font-weight: 400;">
                 <strong>
-                    Bevezetés
+                    Hogyan is működik az INBODY 970S?
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px;">
                 <strong>
-                    A Kópis és Társa Kft. üzembe helyezettegy orvosi minőségű testösszetétel
-                    elemző eszközt. Bemutatjuk ebben a feljegyzésben , hogy miért jó ez a Kópis és
-                    Társa Kft ügyfeleinek.
+                    Az INBODY 970S egy Bioelektromos Impedancia Analízis (BIA) néven ismert
+                    technológiát használ, amely egy kis, ártalmatlan elektromos áram testen
+                    keresztüli átvezetésével méri és analizálja a testösszetételt. Ahogy halad az áram
+                    a különböző szöveteken ─ zsíron, izmon, vízen ─ keresztül, az INBODY
+                    rendkívül pontos adatokat szolgáltat a test összetételről. A BIA lehetővé teszi
+                    számunkra, hogy a szemmel láthatatlan dolgokat is lássuk., mint például az
+                    izomtömeg százalékos aránya, a zsírtömeg és a hidratáció és sok egyéb
+                    paraméter. Ráadásul ez csak néhány másodpercet vesz igénybe.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px;">
                 <strong>
-                    Az INBODY 97S nem csupán egy újabb eszköz, hanem egy nagyon modern
-                    klinikákon is használt fejlett kutatási eszköz, amely pontos, átfogó és hasznos
-                    adatokat biztosít számunkra időtakarékos módon. Ez nem csak egy mérleg,
-                    hanem segít nyomon követni a számos nagyon fontos mutatatót, az egészségügy
-                    és a regenerálódást területén.
+                    Az INBODY 970S-t a többi BIA modelltől a többfrekvenciás technológia
+                    használata különbözteti meg. A legtöbb BIA eszköz egyetlen frekvenciát
+                    használ az impedancia mérésére, de az INBODY 970S 6 különböző frekvenciát,
+                    8 elektródát (a normál 4-gyel szemben) használ a testösszetétel mélyebb
+                    megértéséhez. Ez lehetővé teszi a test különböző szöveteinek és szegmenseinek
+                    a pontosabb mérését, beleértve az izomtömeg, a zsírtömeg és a víztartalom
+                    nyomon követesét egészen a karokon, lábakon és külön a törzsön, a legnagyobb
+                    nagyobb pontossággal.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px;">
                 <strong>
-                    A Kópis és Társa Kft.- nél mindig keressük a módját, hogy a lehető
-                    legmagasabb szintű szolgáltatást nyújtsunk. Az INBODY 970S-sel személyre
-                    szabottabb egészség javító ,megelőző lehetőségeket jobb fejlődéskövetési
-                    adatokat tudunk biztosítani minden egyes személy számára, aki igénybe veszi
-                    szolgáltatásunkat.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px; font-weight: 400;">
-                <strong>
-                    JOGI NYILATKOZAT
+                    Az izom ─ és zsíreloszlás részletes adatain túl az INBODY 970S a csont ásvány
+                    értékekre, a zsigeri zsírra és az alap anyagcserére (BMR) is képes adatokat
+                    szolgáltatni. Ezek a mérések kulcs fontosságúak az általános egészségi állapot
+                    megértéséhez és egy egészséges fittség és táplálkozási terv kidolgozásához.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px;">
                 <strong>
-                    Ez a cikk kizárólag tájékoztató célokat szolgál, és nem helyettesíti az orvosi
-                    tanácsot, diagnózist vagy kezelést. Mindig konzultáljon szakképzett
-                    egészségügyi szolgáltatóval vagy okleveles fitnesz szakemberrel, mielőtt
-                    bármilyen új programot elkezdene, különösen, ha bármilyen meglévő
-                    egészségügyi problémája vagy sérülése van. Az egyéni eredmények eltérőek
-                    lehetnek, és az edzés mennyiségét, a gyakorlatok kiválasztását és az intenzitását
-                    a személyes regenerálódási képessége, a tapasztalati szintje és a céljai alapján
-                    kell módosítani.
+                    A készülék szegmentális elemzése betekintést nyújt az esetlegesen hiányzó vagy
+                    kiegyensúlyozatlan területekbe, lehetővé téve számunkra az olyan konkrét
+                    problémák kezelését, mint az izomegyensúlyhiány, zsíreloszlás, valamint a
+                    gyulladás vagy ödéma lehetséges előfordulása.
                 </strong>
             </p>
-
         </div>
     </div>
 

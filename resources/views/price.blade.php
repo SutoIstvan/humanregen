@@ -368,7 +368,7 @@
                             </div>
 
                             <ul class="pricing-feature-list">
-                                <li class="pricing-feature">30 perces mérés</li>
+                                <li class="pricing-feature">Egyszeri mérés</li>
                                 <li class="pricing-feature">
                                     <h4>{{ number_format($price6->amount, 0, ',', ' ') }} Ft</h4>
                                 </li>

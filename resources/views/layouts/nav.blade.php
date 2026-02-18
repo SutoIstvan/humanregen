@@ -67,7 +67,12 @@
                 <a href="{{ route('inbody.inbody') }}"
                     class="dropdown-item {{ request()->routeIs('inbody.inbody') ? 'active' : '' }}">
                     InBody 970s testösszetétel elemző</a>
-
+                <a href="{{ route('inbody.how-does-it-work') }}"
+                    class="dropdown-item {{ request()->routeIs('inbody.how-does-it-work') ? 'active' : '' }}">
+                    Hogyan működik</a>
+                <a href="{{ route('inbody.why-inbody') }}"
+                    class="dropdown-item {{ request()->routeIs('inbody.why-inbody') ? 'active' : '' }}">
+                    Miért az INBODY 970S</a>
                 <a href="{{ route('inbody.who-is-worth-showing') }}"
                     class="dropdown-item {{ request()->routeIs('inbody.who-is-worth-showing') ? 'active' : '' }}">
                     Kinek érdemes megmutatni az InBody Adatait?</a>

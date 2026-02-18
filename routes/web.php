@@ -128,6 +128,14 @@ Route::prefix('inbody')->group(function () {
         return view('inbody.inbody');
     })->name('inbody.inbody');
 
+    Route::get('/how-does-it-work', function () {
+        return view('inbody.how-does-it-work');
+    })->name('inbody.how-does-it-work');
+
+    Route::get('/why-inbody', function () {
+        return view('inbody.why-inbody');
+    })->name('inbody.why-inbody');
+
     Route::get('/who-is-worth-showing', function () {
         return view('inbody.who-is-worth-showing');
     })->name('inbody.who-is-worth-showing');
