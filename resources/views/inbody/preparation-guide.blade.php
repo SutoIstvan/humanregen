@@ -35,7 +35,7 @@
         <div class="container">
             <div class="row gy-4 text-center">
                 <div class="col-lg-12  d-flex flex-column justify-content-center" data-aos="fade-in">
-                    <h1><span>InBody 970S</span></h1>
+                    <h1><span>Felkészülési útmutató</span></h1>
                 </div>
             </div>
         </div>
@@ -77,255 +77,294 @@
 
 
 
+
+
+            <p class="lead mb-5" style="text-indent: 15px;">
+                <strong>
+                    Az <strong>InBody mérésnek</strong> (970S vagy bármely más típus) vannak <strong>kötelező és ajánlott előfeltételei</strong>, hogy az
+                    eredmények pontosak és összehasonlíthatóak legyenek. Ezek nem orvosi jellegű vizsgálati feltételek,
+                    hanem <strong>standardizált mérési protokollok</strong>. Az alábbi lista a <strong>hivatalos InBody ajánlásokon</strong> alapul.
+                </strong>
+            </p>
+
             <p class="lead mb-5 d-flex justify-content-center" style="text-indent: 15px; font-weight: 400;">
                 <strong>
-                    Bevezetés
+                    InBody mérés előfeltételei / előzményei
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    A Kópis és Társa Kft. üzembe helyezettegy orvosi minőségű testösszetétel
-                    elemző eszközt. Bemutatjuk ebben a feljegyzésben , hogy miért jó ez a Kópis és
-                    Társa Kft ügyfeleinek.
+                    <strong>1. Éhgyomor / étkezés</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                            A mérés előtt 2–3 órával ne egyél és ne igyál nagy mennyiséget.
+                            Az étel- és folyadékbevitel megváltoztatja a test vízeloszlását → az eredmény torzulhat.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    Az INBODY 97S nem csupán egy újabb eszköz, hanem egy nagyon modern
-                    klinikákon is használt fejlett kutatási eszköz, amely pontos, átfogó és hasznos
-                    adatokat biztosít számunkra időtakarékos módon. Ez nem csak egy mérleg,
-                    hanem segít nyomon követni a számos nagyon fontos mutatatót, az egészségügy
-                    és a regenerálódást területén.
+                    <strong>2. Vizelet- és székelés</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                            Lehetőleg közvetlenül mérés előtt menj wc-re, hogy a hólyag és a belek tartalma ne befolyásolja a súlyt
+                            és a hasi impedanciaértéket.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+
+
+
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    A Kópis és Társa Kft.- nél mindig keressük a módját, hogy a lehető
-                    legmagasabb szintű szolgáltatást nyújtsunk. Az INBODY 970S-sel személyre
-                    szabottabb egészség javító ,megelőző lehetőségeket jobb fejlődéskövetési
-                    adatokat tudunk biztosítani minden egyes személy számára, aki igénybe veszi
-                    szolgáltatásunkat.
+                    <strong>3. Fizikai aktivitás</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px; font-weight: 400;">
+            <p>
+                <ul>
+                    <li class="lead ms-4">
+                        <strong>
+                            A mérés előtt 12 órán át ne végezz intenzív fizikai aktivitást (edzés, futás, súlyzós edzés).
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                            Ennek oka: edzés után a test vízeloszlása, izomglikogén és elektrolitállapot nem stabil, így a mérés torz
+                            lehet.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    Hogyan is működik az INBODY 970S?
+                    <strong>4. Alkohol</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                            24–48 órával mérés előtt ne fogyassz alkoholt.<br>
+                            Az alkohol vízháztartást és sejtközti folyadékot jelentősen megváltoztat → a mért testvıź normalizálásához
+                            több nap is kellhet.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    Az INBODY 970S egy Bioelektromos Impedancia Analízis (BIA) néven ismert
-                    technológiát használ, amely egy kis, ártalmatlan elektromos áram testen
-                    keresztüli átvezetésével méri és analizálja a testösszetételt. Ahogy halad az áram
-                    a különböző szöveteken ─ zsíron, izmon, vízen ─ keresztül, az INBODY
-                    rendkívül pontos adatokat szolgáltat a test összetételről. A BIA lehetővé teszi
-                    számunkra, hogy a szemmel láthatatlan dolgokat is lássuk., mint például az
-                    izomtömeg százalékos aránya, a zsírtömeg és a hidratáció és sok egyéb
-                    paraméter. Ráadásul ez csak néhány másodpercet vesz igénybe.
+                    <strong>5. Koffein és vízhajtók</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p>
+                <ul>
+                    <li class="lead ms-4">
+                        <strong>
+                            A mérés előtt 4–6 órával kerüld (kávé, energiaital, koffein tabletta).
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                            Koffein és vízhajtók csökkentik a test víztartalmát, ami téves zsír%-ot eredményezhet.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    Az INBODY 970S-t a többi BIA modelltől a többfrekvenciás technológia
-                    használata különbözteti meg. A legtöbb BIA eszköz egyetlen frekvenciát
-                    használ az impedancia mérésére, de az INBODY 970S 6 különböző frekvenciát,
-                    8 elektródát (a normál 4-gyel szemben) használ a testösszetétel mélyebb
-                    megértéséhez. Ez lehetővé teszi a test különböző szöveteinek és szegmenseinek
-                    a pontosabb mérését, beleértve az izomtömeg, a zsírtömeg és a víztartalom
-                    nyomon követesét egészen a karokon, lábakon és külön a törzsön, a legnagyobb
-                    nagyobb pontossággal.
+                    <strong>6. Hidratáltság</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                            A mérés napján normál mennyiségű vizet igyál, de közvetlenül előtte ne igyál nagy mennyiséget.
+                            A túl kevés víz → zsıŕ magasabbnak tűnik, a túl sok → vıź magas és izmok alacsonynak tűnnek.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    Az izom ─ és zsíreloszlás részletes adatain túl az INBODY 970S a csont ásvány
-                    értékekre, a zsigeri zsírra és az alap anyagcserére (BMR) is képes adatokat
-                    szolgáltatni. Ezek a mérések kulcs fontosságúak az általános egészségi állapot
-                    megértéséhez és egy egészséges fittség és táplálkozási terv kidolgozásához.
+                    <strong>7. Menstruáció</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                            Menstruáció alatt a vízvisszatartás nagy, ezért:
+                            <ul>
+                                <li class="lead ms-4">
+                                    <strong>
+                                        ajánlott a ciklus azonos napján végezni a mérést
+                                    </strong>
+                                </li>
+                                <li class="lead mb-5 ms-4">
+                                    <strong>
+                                        a menstruáció első 3 napja kevésbé alkalmas a következetes eredményekhez
+                                    </strong>
+                                </li>
+                            </ul>
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    A készülék szegmentális elemzése betekintést nyújt az esetlegesen hiányzó vagy
-                    kiegyensúlyozatlan területekbe, lehetővé téve számunkra az olyan konkrét
-                    problémák kezelését, mint az izomegyensúlyhiány, zsíreloszlás, valamint a
-                    gyulladás vagy ödéma lehetséges előfordulása.
+                    <strong>8. Testhőmérséklet</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px; font-weight: 400;">
+            <p>
+                <ul>
+                    <li class="lead ms-4">
+                        <strong>
+                            Hideg kezek/lábak esetén az impedancia torzulhat.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                            A mérés előtt legyél normál hőmérsékleten, ne legyél átfagyva vagy túlhevülve.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    Miért döntöttünk az INBODY 970S mellett?
+                    <strong>9. Ruházat</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p>
+                <ul>
+                    <li class="lead ms-4">
+                        <strong>
+                            Könnyű ruhában mérj, vagy a mérőhely levonást alkalmazzon.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                            Zsebekből minden tárgyat vedd ki.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    Egyrészt az INBODY 970S nagy pontosságot kínál, különösen más testzsírmérő
-                    eszközökhöz, mint pl. bőrredő-tompítók, a DEXA szkennelések, vagy a
-                    BodPodok-hoz képest. Bár a bőrredő-tompítók hatékonyak lehetnek,
-                    nagymértékben függenek a tesztet végző személy ügyességétől, kevésbé
-                    pontosak lehetnek a testösszetétel időbeli nyomonkövetésében, és nem
-                    nyújtanak betekintést más testösszetétel-mutatókba.
+                    <strong>10. Fémek</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p>
+                <ul>
+                    <li class="lead ms-4">
+                        <strong>
+                            A testen lévő nagyobb fémek, ékszerek, piercingek lehetőleg kerülendők.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                           Az InBody BIA technológia ugyan jobban tolerálja a fémeket, mint a régi gépek, de még így is torzíthat. 
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    A DEXA-szkennelések és a BodPodok nagyon pontosak de drágák,
-                    időigényesek, nagy hely igényűek és speciális felszerelést igényelnek. Az
-                    INBODY 970S ezzel szemben orvosi minőségű eredményeket ad mindössze egy
-                    egyszerű 70 másodperces szkenneléssel. Továbbá a DEXA-val ellentétben
-                    nincsen sugárzás, nincsen speciális beállítás és nincsen hosszú várakozási idő.
-                    Gyakran használható, ami segít jobban nyomon követni a haladást, így praktikus
-                    és hatékony eszköz a folyamatos értékeléshez.
+                    <strong>11. Pacemaker és beültetett elektromos eszköz</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                            ABSZOLÚT ellenjavallat.<br>
+                            Aki pacemakerrel vagy implantált defibrillátorral él → nem mérhető bármilyen InBody készülékkel, mert
+                            áramimpulzust használ.
+                        </strong>
+                    </li>
+                </ul>
+            </p>
+
+            <p class="lead mb-0" style="text-indent: 15px;">
                 <strong>
-                    Az újabb kutatások kimutatták, hogy az INBODY 970S áthidalta a
-                    hagyományos BIA és az arany-standard módszerek, pl.: a DEXA közötti
-                    pontossági szakadékot. A BIA-t és a DEXA-t összehasonlító kutatások
-                    kimutatták, hogy az INBODY 970S olyan eredményeket szolgáltat, melyek
-                    szorosan korrelálnak a DEXA mérésekkel, különösen a zsírmentes tömeg és
-                    zsírtömeg nyomon követésében. Ez teszi az INBODY 970S-t ideális megoldássá
-                    azok számára, akik pontos, gyakori testösszetétel-elemzést keresnek a DEXA -
-                    val járó magas költségek és logisztikai kihívások nélkül.
+                    <strong>12. Terhesség</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az is fontos szempont volt számunkra, hogy a készülék nem csak a testzsír
-                    képen nyomon követni. AZ INBODY 970S betekintést nyújt a víz, a csont
-                    ásványi anyag, a zsigeri zsírok és az alapanyagcsere (BAM) adataiba, amelyek
-                    mind az egészség és a fittség kulcsfontosságú mutatói. A csont ásványianyag
-                    mérésével biztosíthatjuk, hogy ügyfelelink figyelemmel kísérjék a változásokat,
-                    ami különösen fontos az öregedő vagy erejük javításán dolgozók számára.
-                    Ezenkívül az INBODY 970S zsigeri zsír nyomon követésére való képessége
-                    kulcsfontosságú a krónikus betegségekkel kapcsolatos kockázati tényezők
-                    felméréséhez. Az INBODY 970S a test fázisszögeit is méri, ami jelezheti a
-                    sejtek egészségét és a szervezet tápanyag-felszívó és regenerálódó képességét.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Mindezen funkciókat szem előtt tartva tudtuk, hogy az INBODY 970S nem csak
-                    nagyszerű eszköz az általános testösszetétel nyomon követésére, hanem lehetővé
-                    teszi számunkra, hogy az ügyfél egyedi adatai alapján személyre szabott
-                    ajánlásokat kínáljunk. Akár egy teljesítmény optimalizálásra törekvő
-                    sportolónál, akár csak néhány kilót szeretne leadni, az INBODY 970S adatai
-                    segítenek a szakembereknek megalapozott döntéseket hozni és ennek
-                    megfelelően, ha szükséges módosítani az edzési táplálkozási stb. stratégiákat.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S-ből származó adatok értékes eszközt jelentenek a személyre
-                    szabott tervek összeállításához és az időbeli haladás nyomon követéséhez.
-                    Amikor egy ügyfél használja a INBODY 970S-t, azonnal részletes
-                    információkat láthat az izomtömegről, a zsíreloszlásról, a hidratáltsági szintjéről
-                    és egyebekről. Ezek az adatok nagyon hasznosak egy olyan szakember által
-                    készített program megtervezésekor., amely jobban illeszkedik az ügyfél
-                    igényeihez.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Pl.: a szegmentális elemzés lehetővé teszi szakemberek számára, hogy kiszűrje
-                    az izomegyensúly hiányát a felső és alsó test, vagy akár a test bal és jobb oldala
-                    között. Ha azt észleljük, hogy egy kliensnek gyengébbek az izmai az egyik
-                    lábában vagy karjában, akkor ezeket a területeket gyakorlatokkal tudja
-                    megcélozni az egyensúlyhiány kezelése érdekében. Hasonlóképpen, a zsigeri
-                    zsír nyomon követése segít abban, hogy szemmel tartsuk az egészségügyi
-                    kockázatokat, és a szakember módosítsa a kliens étrendjét vagy edzéstervét a
-                    belső szervek körüli zsír csökkentése érdekében.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S BMR-mérést arra is használjuk, hogy személyre szabhassuk
-                    az ügyfél táplálkozási irányelveit. Azzal, hogy tudjuk, mennyi kalóriát éget el
-                    egy ügyfél teste nyugalmim állapotban, jobban meg tudjuk becsülni a kalória
-                    szükségletét a zsírégetéshez vagy az izomtömeg növeléshez. Azzal, hogy ezeket
-                    a számokat idővel nyomon tudjuk követni, biztosítjuk, hogy ügyfeleink a céljaik
-                    felé haladjanak, és folyamatosan fejlődjenek.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S egy másik értékes aspektusa a fázisszög mérésének
-                    képessége. Ez a mérőszám a sejtmembránok egészségét és az általános
-                    sejtműködést jelzi, és korai figyelmeztető jeleket adhat a gyulladásról vagy
-                    egészségügyi problémákról. Ha idővel csökken a fázisszög, a szakemberek
-                    döntéseket hozhatnak az ügyfél edzésével vagy táplálkozásával kapcsolatban.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S beépítése a munkafolyamatokba azt jelenti, hogy az ügyfél
-                    és vagy a szember nem csak sokkal részletesebben tudja nyomon követni a
-                    haladást, hanem a lehetséges egészségügyi problémákat is megelőzheti. Ez
-                    lehetővé teszi számukra, hogy finom hangolják az irányelveket minden egyes
-                    ügyfél számára, biztosítva, hogy ne csak az izom – és zsírtömegük javuljon,
-                    hanem az általános egészségi állapotuk is optimalizálódjon.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S kiváló értéket képvisel a Kópis és Társa Kft. részére, és
-                    kiegészíti szolgáltatásunkat. Gyors, pontos és hatékony, olyan elemzéseket
-                    nyújtunk, amelyekkel más testzsír-mérő eszközök egyszerűen nem tudnak
-                    versenyezni. Az izomtömeg, a zsíreloszlás, a csont ásványianyag, a zsigeri zsír,
-                    a BMR és a fázisszög mérésére való képességgel az INBODY 970S nagyszerű
-                    eszköz a személyre szabott, hatékony tervek létrehozásához.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S-t nem csak a sebessége és a könnyű használhatósága teszi
-                    különlegessé, hanem a pontossága is. Segít abban, hogy lássuk mennyire
-                    teljesítünk jól és felismerjük a potenciális problémákat – pl.: az egyensúly
-                    hiányt, a gyulladást vagy a túlzott zsigeri zsírt –, mielőtt azok nagyobb
-                    problémává válnának. Várjuk, hogy segítsünk ügyfeleinknek elérni céljaikat, és
-                    hosszú távon megőrizni egészségüket.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px; font-weight: 400;">
-                <strong>
-                    JOGI NYILATKOZAT
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Ez a cikk kizárólag tájékoztató célokat szolgál, és nem helyettesíti az orvosi
-                    tanácsot, diagnózist vagy kezelést. Mindig konzultáljon szakképzett
-                    egészségügyi szolgáltatóval vagy okleveles fitnesz szakemberrel, mielőtt
-                    bármilyen új programot elkezdene, különösen, ha bármilyen meglévő
-                    egészségügyi problémája vagy sérülése van. Az egyéni eredmények eltérőek
-                    lehetnek, és az edzés mennyiségét, a gyakorlatok kiválasztását és az intenzitását
-                    a személyes regenerálódási képessége, a tapasztalati szintje és a céljai alapján
-                    kell módosítani.
-                </strong>
+            <p>
+                <ul>
+                    <li class="lead mb-5 ms-4">
+                        <strong>
+                            Nem veszélyes a baba számára, de:
+                            <ul>
+                                <li class="lead ms-4">
+                                    <strong>
+                                        a vízeloszlás más,
+                                    </strong>
+                                </li>
+                                <li class="lead mb-5 ms-4">
+                                    <strong>
+                                        a hasi impedancia torzul.<br>
+                                        → ezért az InBody nem ad megbízható eredményt terhesség alatt.
+                                    </strong>
+                                </li>
+                            </ul>
+                        </strong>
+                    </li>
+                </ul>
             </p>
 
         </div>

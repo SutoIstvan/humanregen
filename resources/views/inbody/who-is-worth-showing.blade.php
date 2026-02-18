@@ -35,7 +35,7 @@
         <div class="container">
             <div class="row gy-4 text-center">
                 <div class="col-lg-12  d-flex flex-column justify-content-center" data-aos="fade-in">
-                    <h1><span>InBody 970S</span></h1>
+                    <h1><span>Kinek érdemes megmutatni az InBody Adatait?</span></h1>
                 </div>
             </div>
         </div>
@@ -64,267 +64,285 @@
         <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">
             Kinek érdemes megmutatni az InBody Adatait?
         </h2>
-        <div class="col-lg-10 mx-auto">
-            <p class="lead mb-4" style="text-indent: 15px; font-weight: 500;">
-                A tökéletes testösszetétel ─ elemző: az INBODY 970S
-            </p>
-        </div>
     </div>
 
     <div class="container d-flex justify-content-center">
         <div class="col-12 col-lg-9">
-
-
-
-
-            <p class="lead mb-5 d-flex justify-content-center" style="text-indent: 15px; font-weight: 400;">
+            <p class="lead mb-5 mt-3 text-center" style="text-indent: 15px;">
                 <strong>
-                    Bevezetés
+                    Az InBody 970S <strong>nagyon részletes, de nem diagnosztikai</strong> mérés, ezért mindig attól függ, <strong>melyik adat
+                    érdekel</strong>, illetve <strong>milyen problémára keresel választ.</strong>
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5 text-center" style="text-indent: 15px;">
                 <strong>
-                    A Kópis és Társa Kft. üzembe helyezettegy orvosi minőségű testösszetétel
-                    elemző eszközt. Bemutatjuk ebben a feljegyzésben , hogy miért jó ez a Kópis és
-                    Társa Kft ügyfeleinek.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 97S nem csupán egy újabb eszköz, hanem egy nagyon modern
-                    klinikákon is használt fejlett kutatási eszköz, amely pontos, átfogó és hasznos
-                    adatokat biztosít számunkra időtakarékos módon. Ez nem csak egy mérleg,
-                    hanem segít nyomon követni a számos nagyon fontos mutatatót, az egészségügy
-                    és a regenerálódást területén.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    A Kópis és Társa Kft.- nél mindig keressük a módját, hogy a lehető
-                    legmagasabb szintű szolgáltatást nyújtsunk. Az INBODY 970S-sel személyre
-                    szabottabb egészség javító ,megelőző lehetőségeket jobb fejlődéskövetési
-                    adatokat tudunk biztosítani minden egyes személy számára, aki igénybe veszi
-                    szolgáltatásunkat.
+                    Az alábbiakban összeraktam, hogy az InBody riport <strong>melyik részét mely szakember tudja a
+                    legjobban értelmezni vagy hasznosítani.</strong>
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; font-weight: 400;">
                 <strong>
-                    Hogyan is működik az INBODY 970S?
+                    ⚕️KINEK ÉRDEMES MEGMUTATNI AZ INBODY ADATAIT?
+                </strong>
+            </p>
+
+            <p class="lead mb-2" style="text-indent: 15px; font-weight: 400;">
+                <strong>
+                    1. Dietetikus / táplálkozási szakember
+                </strong>
+            </p>
+
+            <p class="lead" style="text-indent: 15px;">
+                <strong>
+                    Ha a célod:
+                    <ul class="ms-3">
+                        <li>testzsír csökkentése</li>
+                        <li>tömegnövelés</li>
+                        <li>táplálkozási terv</li>
+                        <li>izom–zsír arány javítása</li>
+                        <li>metabolikus állapot javítása</li>
+                    </ul>
+                </strong>
+            </p>
+
+            <p class="lead" style="text-indent: 15px;">
+                <strong>
+                    Ők értik legjobban:
+                    <ul class="ms-3">
+                        <li>testzsír tömeg, PBF</li>
+                        <li>zsigeri zsír (VFA)</li>
+                        <li>izomtömeg</li>
+                        <li>tápláltsági mutatók</li>
+                        <li>fázisszög értéke</li>
+                        <li>trendek értelmezése</li>
+                    </ul>
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px;">
                 <strong>
-                    Az INBODY 970S egy Bioelektromos Impedancia Analízis (BIA) néven ismert
-                    technológiát használ, amely egy kis, ártalmatlan elektromos áram testen
-                    keresztüli átvezetésével méri és analizálja a testösszetételt. Ahogy halad az áram
-                    a különböző szöveteken ─ zsíron, izmon, vízen ─ keresztül, az INBODY
-                    rendkívül pontos adatokat szolgáltat a test összetételről. A BIA lehetővé teszi
-                    számunkra, hogy a szemmel láthatatlan dolgokat is lássuk., mint például az
-                    izomtömeg százalékos aránya, a zsírtömeg és a hidratáció és sok egyéb
-                    paraméter. Ráadásul ez csak néhány másodpercet vesz igénybe.
+                    Ez az első számú szakember, ha életmód- vagy diétás kérdésről van szó.
+                </strong>
+            </p>
+
+            <p class="lead mb-2" style="text-indent: 15px; font-weight: 400;">
+                <strong>
+                    2. Személyi edző / erőnléti edző
+                </strong>
+            </p>
+
+            <p class="lead" style="text-indent: 15px;">
+                <strong>
+                    Ha a célod:
+                    <ul class="ms-3">
+                        <li>izomépítés</li>
+                        <li>testformálás</li>
+                        <li> sportteljesítmény</li>
+                        <li> funkcionális szimmetria</li>
+                    </ul>
+                </strong>
+            </p>
+
+            <p class="lead" style="text-indent: 15px;">
+                <strong>
+                    Ők értenek hozzá legjobban:
+                    <ul class="ms-3">
+                        <li>szegmentális izomtömeg</li>
+                        <li>izomegyenlőtlenségek (jobb–bal kar/láb)</li>
+                        <li>törzsizom-arány</li>
+                        <li>izomtömeg hiányosságai</li>
+                        <li>testösszetétel változás edzés hatására</li>
+                    </ul>
+                </strong>
+            </p>
+
+
+            <p class="lead mb-5" style="text-indent: 15px;">
+                <strong>
+                    Sportolók esetén kötelező az InBody alapján személyre szabni az edzést.
+                </strong>
+            </p>
+
+
+            <p class="lead mb-2" style="text-indent: 15px; font-weight: 400;">
+                <strong>
+                    3. Sportorvos / rehabilitációs orvos
+                </strong>
+            </p>
+
+            <p class="lead" style="text-indent: 15px;">
+                <strong>
+                    Ha:
+                    <ul class="ms-3">
+                        <li>sérülésed volt</li>
+                        <li>túlterheléses problémád van</li>
+                        <li>tartáshiba gyanúja van</li>
+                        <li>sporthoz kapcsolódó testi funkciót vizsgálnak</li>
+                    </ul>
+                </strong>
+            </p>
+
+            <p class="lead" style="text-indent: 15px;">
+                <strong>
+                    Ők értenek mélyebben:
+                    <ul class="ms-3">
+                        <li>aszimmetriák okai</li>
+                        <li>izomhiány vagy túlterhelés a test egyik oldalán</li>
+                        <li>rehabilitáció haladása testösszetételben</li>
+                        <li>vízháztartási eltérések sportolóknál</li>
+                    </ul>
+                </strong>
+            </p>
+
+            <p class="lead mb-2" style="text-indent: 15px; font-weight: 400;">
+                <strong>
+                    4. Endokrinológus
+                </strong>
+            </p>
+
+            <p class="lead" style="text-indent: 15px;">
+                <strong>
+                    Ha felmerül:
+                    <ul class="ms-3">
+                        <li>elhízás hormonális oka</li>
+                        <li>inzulinrezisztencia</li>
+                        <li>pajzsmirigy-problémák</li>
+                        <li>metabolikus zavar</li>
+                    </ul>
+                </strong>
+            </p>
+
+            <p class="lead" style="text-indent: 15px;">
+                <strong>
+                    Az InBody ezekhez kockázati jelzőt ad:
+                    <ul class="ms-3">
+                        <li>magas zsigeri zsír (VFA)</li>
+                        <li>magas testzsír %</li>
+                        <li>alacsony fázisszög („sejtszintű energiahiány”)</li>
+                        <li>felborult izom–zsír arány</li>
+                    </ul>
+                </strong>
+            </p>
+
+            <p class="lead mb-2" style="text-indent: 15px; font-weight: 400;">
+                <strong>
+                    5. Kardiológus
+                </strong>
+            </p>
+
+            <p class="lead" style="text-indent: 15px;">
+                <strong>
+                    Akkor hasznos, ha:
+                    <ul class="ms-3">
+                        <li>magas VFA → hasi zsír</li>
+                        <li>elhízás → kardiovaszkuláris kockázat</li>
+                        <li>magas ECW/TBW → ödéma lehetőség</li>
+                    </ul>
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px;">
                 <strong>
-                    Az INBODY 970S-t a többi BIA modelltől a többfrekvenciás technológia
-                    használata különbözteti meg. A legtöbb BIA eszköz egyetlen frekvenciát
-                    használ az impedancia mérésére, de az INBODY 970S 6 különböző frekvenciát,
-                    8 elektródát (a normál 4-gyel szemben) használ a testösszetétel mélyebb
-                    megértéséhez. Ez lehetővé teszi a test különböző szöveteinek és szegmenseinek
-                    a pontosabb mérését, beleértve az izomtömeg, a zsírtömeg és a víztartalom
-                    nyomon követesét egészen a karokon, lábakon és külön a törzsön, a legnagyobb
-                    nagyobb pontossággal.
+                    A kardiológus nem a testösszetételt kezeli, de a zsigeri zsír és vízarány fontos adat a szív-érrendszeri kockázatbecslésben.
+                </strong>
+            </p>
+
+            <p class="lead mb-2" style="text-indent: 15px; font-weight: 400;">
+                <strong>
+                    6. Nefrológus (vesespecialista)
+                </strong>
+            </p>
+
+            <p class="lead" style="text-indent: 15px;">
+                <strong>
+                    Csak akkor, ha:
+                    <ul class="ms-3">
+                        <li>ECW/TBW magas</li>
+                        <li>ödémára utal a vízarány</li>
+                        <li>folyadékháztartási problémák vannak</li>
+                    </ul>
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px;">
                 <strong>
-                    Az izom ─ és zsíreloszlás részletes adatain túl az INBODY 970S a csont ásvány
-                    értékekre, a zsigeri zsírra és az alap anyagcserére (BMR) is képes adatokat
-                    szolgáltatni. Ezek a mérések kulcs fontosságúak az általános egészségi állapot
-                    megértéséhez és egy egészséges fittség és táplálkozási terv kidolgozásához.
+                    A vízterek értékei a veseműködéssel kapcsolatos állapotot jelezhetik (NEM diagnosztizálják!).
+                </strong>
+            </p>
+
+            <p class="lead mb-2" style="text-indent: 15px; font-weight: 400;">
+                <strong>
+                    7. Onkológus (speciális eset)
+                </strong>
+            </p>
+
+            <p class="lead" style="text-indent: 15px;">
+                <strong>
+                    Csak akkor, ha:
+                    <ul class="ms-3">
+                        <li>fázisszög extrém alacsony</li>
+                        <li>gyors izomtömeg-vesztés (cachexia gyanú)</li>
+                    </ul>
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px;">
                 <strong>
-                    A készülék szegmentális elemzése betekintést nyújt az esetlegesen hiányzó vagy
-                    kiegyensúlyozatlan területekbe, lehetővé téve számunkra az olyan konkrét
-                    problémák kezelését, mint az izomegyensúlyhiány, zsíreloszlás, valamint a
-                    gyulladás vagy ödéma lehetséges előfordulása.
+                    Ez klinikai környezetben fontos, de átlagembereknél ritkán releváns.
                 </strong>
             </p>
+
 
             <p class="lead mb-5" style="text-indent: 15px; font-weight: 400;">
                 <strong>
-                    Miért döntöttünk az INBODY 970S mellett?
+                    Összefoglaló táblázat
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px;">
                 <strong>
-                    Egyrészt az INBODY 970S nagy pontosságot kínál, különösen más testzsírmérő
-                    eszközökhöz, mint pl. bőrredő-tompítók, a DEXA szkennelések, vagy a
-                    BodPodok-hoz képest. Bár a bőrredő-tompítók hatékonyak lehetnek,
-                    nagymértékben függenek a tesztet végző személy ügyességétől, kevésbé
-                    pontosak lehetnek a testösszetétel időbeli nyomonkövetésében, és nem
-                    nyújtanak betekintést más testösszetétel-mutatókba.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    A DEXA-szkennelések és a BodPodok nagyon pontosak de drágák,
-                    időigényesek, nagy hely igényűek és speciális felszerelést igényelnek. Az
-                    INBODY 970S ezzel szemben orvosi minőségű eredményeket ad mindössze egy
-                    egyszerű 70 másodperces szkenneléssel. Továbbá a DEXA-val ellentétben
-                    nincsen sugárzás, nincsen speciális beállítás és nincsen hosszú várakozási idő.
-                    Gyakran használható, ami segít jobban nyomon követni a haladást, így praktikus
-                    és hatékony eszköz a folyamatos értékeléshez.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az újabb kutatások kimutatták, hogy az INBODY 970S áthidalta a
-                    hagyományos BIA és az arany-standard módszerek, pl.: a DEXA közötti
-                    pontossági szakadékot. A BIA-t és a DEXA-t összehasonlító kutatások
-                    kimutatták, hogy az INBODY 970S olyan eredményeket szolgáltat, melyek
-                    szorosan korrelálnak a DEXA mérésekkel, különösen a zsírmentes tömeg és
-                    zsírtömeg nyomon követésében. Ez teszi az INBODY 970S-t ideális megoldássá
-                    azok számára, akik pontos, gyakori testösszetétel-elemzést keresnek a DEXA -
-                    val járó magas költségek és logisztikai kihívások nélkül.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az is fontos szempont volt számunkra, hogy a készülék nem csak a testzsír
-                    képen nyomon követni. AZ INBODY 970S betekintést nyújt a víz, a csont
-                    ásványi anyag, a zsigeri zsírok és az alapanyagcsere (BAM) adataiba, amelyek
-                    mind az egészség és a fittség kulcsfontosságú mutatói. A csont ásványianyag
-                    mérésével biztosíthatjuk, hogy ügyfelelink figyelemmel kísérjék a változásokat,
-                    ami különösen fontos az öregedő vagy erejük javításán dolgozók számára.
-                    Ezenkívül az INBODY 970S zsigeri zsír nyomon követésére való képessége
-                    kulcsfontosságú a krónikus betegségekkel kapcsolatos kockázati tényezők
-                    felméréséhez. Az INBODY 970S a test fázisszögeit is méri, ami jelezheti a
-                    sejtek egészségét és a szervezet tápanyag-felszívó és regenerálódó képességét.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Mindezen funkciókat szem előtt tartva tudtuk, hogy az INBODY 970S nem csak
-                    nagyszerű eszköz az általános testösszetétel nyomon követésére, hanem lehetővé
-                    teszi számunkra, hogy az ügyfél egyedi adatai alapján személyre szabott
-                    ajánlásokat kínáljunk. Akár egy teljesítmény optimalizálásra törekvő
-                    sportolónál, akár csak néhány kilót szeretne leadni, az INBODY 970S adatai
-                    segítenek a szakembereknek megalapozott döntéseket hozni és ennek
-                    megfelelően, ha szükséges módosítani az edzési táplálkozási stb. stratégiákat.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S-ből származó adatok értékes eszközt jelentenek a személyre
-                    szabott tervek összeállításához és az időbeli haladás nyomon követéséhez.
-                    Amikor egy ügyfél használja a INBODY 970S-t, azonnal részletes
-                    információkat láthat az izomtömegről, a zsíreloszlásról, a hidratáltsági szintjéről
-                    és egyebekről. Ezek az adatok nagyon hasznosak egy olyan szakember által
-                    készített program megtervezésekor., amely jobban illeszkedik az ügyfél
-                    igényeihez.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Pl.: a szegmentális elemzés lehetővé teszi szakemberek számára, hogy kiszűrje
-                    az izomegyensúly hiányát a felső és alsó test, vagy akár a test bal és jobb oldala
-                    között. Ha azt észleljük, hogy egy kliensnek gyengébbek az izmai az egyik
-                    lábában vagy karjában, akkor ezeket a területeket gyakorlatokkal tudja
-                    megcélozni az egyensúlyhiány kezelése érdekében. Hasonlóképpen, a zsigeri
-                    zsír nyomon követése segít abban, hogy szemmel tartsuk az egészségügyi
-                    kockázatokat, és a szakember módosítsa a kliens étrendjét vagy edzéstervét a
-                    belső szervek körüli zsír csökkentése érdekében.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S BMR-mérést arra is használjuk, hogy személyre szabhassuk
-                    az ügyfél táplálkozási irányelveit. Azzal, hogy tudjuk, mennyi kalóriát éget el
-                    egy ügyfél teste nyugalmim állapotban, jobban meg tudjuk becsülni a kalória
-                    szükségletét a zsírégetéshez vagy az izomtömeg növeléshez. Azzal, hogy ezeket
-                    a számokat idővel nyomon tudjuk követni, biztosítjuk, hogy ügyfeleink a céljaik
-                    felé haladjanak, és folyamatosan fejlődjenek.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S egy másik értékes aspektusa a fázisszög mérésének
-                    képessége. Ez a mérőszám a sejtmembránok egészségét és az általános
-                    sejtműködést jelzi, és korai figyelmeztető jeleket adhat a gyulladásról vagy
-                    egészségügyi problémákról. Ha idővel csökken a fázisszög, a szakemberek
-                    döntéseket hozhatnak az ügyfél edzésével vagy táplálkozásával kapcsolatban.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S beépítése a munkafolyamatokba azt jelenti, hogy az ügyfél
-                    és vagy a szember nem csak sokkal részletesebben tudja nyomon követni a
-                    haladást, hanem a lehetséges egészségügyi problémákat is megelőzheti. Ez
-                    lehetővé teszi számukra, hogy finom hangolják az irányelveket minden egyes
-                    ügyfél számára, biztosítva, hogy ne csak az izom – és zsírtömegük javuljon,
-                    hanem az általános egészségi állapotuk is optimalizálódjon.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S kiváló értéket képvisel a Kópis és Társa Kft. részére, és
-                    kiegészíti szolgáltatásunkat. Gyors, pontos és hatékony, olyan elemzéseket
-                    nyújtunk, amelyekkel más testzsír-mérő eszközök egyszerűen nem tudnak
-                    versenyezni. Az izomtömeg, a zsíreloszlás, a csont ásványianyag, a zsigeri zsír,
-                    a BMR és a fázisszög mérésére való képességgel az INBODY 970S nagyszerű
-                    eszköz a személyre szabott, hatékony tervek létrehozásához.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Az INBODY 970S-t nem csak a sebessége és a könnyű használhatósága teszi
-                    különlegessé, hanem a pontossága is. Segít abban, hogy lássuk mennyire
-                    teljesítünk jól és felismerjük a potenciális problémákat – pl.: az egyensúly
-                    hiányt, a gyulladást vagy a túlzott zsigeri zsírt –, mielőtt azok nagyobb
-                    problémává válnának. Várjuk, hogy segítsünk ügyfeleinknek elérni céljaikat, és
-                    hosszú távon megőrizni egészségüket.
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px; font-weight: 400;">
-                <strong>
-                    JOGI NYILATKOZAT
-                </strong>
-            </p>
-
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
-                    Ez a cikk kizárólag tájékoztató célokat szolgál, és nem helyettesíti az orvosi
-                    tanácsot, diagnózist vagy kezelést. Mindig konzultáljon szakképzett
-                    egészségügyi szolgáltatóval vagy okleveles fitnesz szakemberrel, mielőtt
-                    bármilyen új programot elkezdene, különösen, ha bármilyen meglévő
-                    egészségügyi problémája vagy sérülése van. Az egyéni eredmények eltérőek
-                    lehetnek, és az edzés mennyiségét, a gyakorlatok kiválasztását és az intenzitását
-                    a személyes regenerálódási képessége, a tapasztalati szintje és a céljai alapján
-                    kell módosítani.
+                   <div class="table table-bordered mx-3">
+                        <table class="table table-striped align-middle">
+                            <thead class="table-light">
+                            <tr>
+                                <th scope="col">InBody adat</th>
+                                <th scope="col">Legjobb szakember</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Testzsír %, VFA</td>
+                                <td>Dietetikus, endokrinológus</td>
+                            </tr>
+                            <tr>
+                                <td>Izomtömeg</td>
+                                <td>Edző, sportorvos</td>
+                            </tr>
+                            <tr>
+                                <td>Izomegyenlőtlenség</td>
+                                <td>Edző, gyógytornász</td>
+                            </tr>
+                            <tr>
+                                <td>Vízterek (ECW/TBW)</td>
+                                <td>Nefrológus, kardiológus</td>
+                            </tr>
+                            <tr>
+                                <td>Fázisszög</td>
+                                <td>Dietetikus, orvos</td>
+                            </tr>
+                            <tr>
+                                <td>Izom–zsír arány</td>
+                                <td>Dietetikus, edző</td>
+                            </tr>
+                            <tr>
+                                <td>Trendek, változások</td>
+                                <td>Dietetikus, edző</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </strong>
             </p>
 
