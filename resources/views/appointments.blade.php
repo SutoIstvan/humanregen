@@ -221,11 +221,11 @@
                 <label class="plan complete-plan ms-xxl-5 ms-lg-2" for="chair2">
                     <input type="radio" id="chair2" name="chair" value="2" />
                     <div class="plan-content">
-                        <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""
+                        <img loading="lazy" src="{{ asset('assets/inbody-logo.png') }}" alt=""
                             class="d-none d-sm-block" />
                         <div class="plan-details">
                             <span>
-                                <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""
+                                <img loading="lazy" src="{{ asset('assets/inbody-logo.png') }}" alt=""
                                     class="d-sm-none" />
                                 InBody 970s
                             </span>
@@ -258,11 +258,11 @@
                 <label class="plan basic-plan me-xxl-5 me-lg-3" for="basic">
                     <input checked type="radio" id="basic" name="duration" value="30" />
                     <div class="plan-content ">
-                        <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""
+                        <img id="basic-image-desktop" loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""
                             class="d-none d-sm-block" />
                         <div class="plan-details">
                             <span>
-                                <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""
+                                <img id="basic-image" loading="lazy" src="{{ asset('assets/ico.png') }}" alt=""
                                     class="d-sm-none" />
                                 30 perc
                             </span>
@@ -455,6 +455,10 @@
             }
 
             const timeSlots = generateTimeSlots(startTime, endTime, 30);
+            
+            // Получаем текущую дату и время
+            const now = new Date();
+            const isToday = new Date(selectedDate).toDateString() === now.toDateString();
 
             timeSlots.forEach(time => {
                 const timeDiv = document.createElement('div');
@@ -462,10 +466,21 @@
                 timeDiv.dataset.time = time;
 
                 // Проверяем, не выходит ли время за пределы 12:00 для субботы
-                const [hours] = time.split(':').map(Number);
+                const [hours, minutes] = time.split(':').map(Number);
+                
+                // Проверка на прошедшее время для сегодняшнего дня
+                let isPastTime = false;
+                if (isToday) {
+                    const timeSlotDate = new Date(selectedDate);
+                    timeSlotDate.setHours(hours, minutes, 0, 0);
+                    isPastTime = timeSlotDate <= now;
+                }
+                
                 if (isSaturday(selectedDate) && hours >= 12) {
                     timeDiv.classList.add('disabled-time');
                 } else if (disabledTimes.includes(time)) {
+                    timeDiv.classList.add('disabled-time');
+                } else if (isPastTime) {
                     timeDiv.classList.add('disabled-time');
                 } else {
                     timeDiv.addEventListener('click', () => {
@@ -556,6 +571,11 @@
 
                     // Change description
                     document.getElementById('basic-description').innerText = 'InBody 970s - Testösszetétel elemző';
+
+                    // Change logo
+                    document.getElementById('basic-image').src = "{{ asset('assets/inbody-logo.png') }}";
+                    document.getElementById('basic-image-desktop').src = "{{ asset('assets/inbody-logo.png') }}";
+
                 } else {
                     duration60.disabled = false;
                     duration60.parentElement.style.opacity = '1';
@@ -563,6 +583,10 @@
 
                     // Revert description
                     document.getElementById('basic-description').innerText = 'Humán Regenerátor Sports - Egész testes sejtregeneráció kezelés';
+
+                    // Revert logo
+                    document.getElementById('basic-image').src = "{{ asset('assets/ico.png') }}";
+                    document.getElementById('basic-image-desktop').src = "{{ asset('assets/ico.png') }}";
                 }
 
                 // Обновляем доступные временные слоты

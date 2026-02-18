@@ -30,30 +30,30 @@
 
     <div class="nav-item dropdown">
 
-        <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('about.*') ? 'active' : '' }}"
+        <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('humanregen.*') ? 'active' : '' }}"
             data-bs-toggle="dropdown">Humanregen</a>
             <div class="dropdown-menu fade-up m-0">
-                <a href="{{ route('effects') }}"
-                    class="dropdown-item {{ request()->routeIs('effects') ? 'active' : '' }}">
+                <a href="{{ route('humanregen.effects') }}"
+                    class="dropdown-item {{ request()->routeIs('humanregen.effects') ? 'active' : '' }}">
                     Jótékony hatások</a>
 
-                <a href="{{ route('about.cap') }}"
-                    class="dropdown-item {{ request()->routeIs('about.cap') ? 'active' : '' }}">
+                <a href="{{ route('humanregen.cap') }}"
+                    class="dropdown-item {{ request()->routeIs('humanregen.cap') ? 'active' : '' }}">
                     Cold Atmospheric Plasma (CAP)</a>
-                <a href="{{ route('about.introduction') }}"
-                    class="dropdown-item {{ request()->routeIs('about.introduction') ? 'active' : '' }}">
+                <a href="{{ route('humanregen.introduction') }}"
+                    class="dropdown-item {{ request()->routeIs('humanregen.introduction') ? 'active' : '' }}">
                     Bevezetés (Történet)</a>
-                <a href="{{ route('about.using-plasma-cancer') }}"
-                    class="dropdown-item {{ request()->routeIs('about.using-plasma-cancer') ? 'active' : '' }}">A
+                <a href="{{ route('humanregen.using-plasma-cancer') }}"
+                    class="dropdown-item {{ request()->routeIs('humanregen.using-plasma-cancer') ? 'active' : '' }}">A
                     Hideg Atmoszférikus Plazma Használata Rákos Sejtekre</a>
-                <a href="{{ route('about.how-human-regeneration-works') }}"
-                    class="dropdown-item {{ request()->routeIs('about.how-human-regeneration-works') ? 'active' : '' }}">
+                <a href="{{ route('humanregen.how-human-regeneration-works') }}"
+                    class="dropdown-item {{ request()->routeIs('humanregen.how-human-regeneration-works') ? 'active' : '' }}">
                     Hogyan Működik A Humán Regeneráció?</a>
-                <a href="{{ route('about.regeneration-process') }}"
-                    class="dropdown-item {{ request()->routeIs('about.regeneration-process') ? 'active' : '' }}">
+                <a href="{{ route('humanregen.regeneration-process') }}"
+                    class="dropdown-item {{ request()->routeIs('humanregen.regeneration-process') ? 'active' : '' }}">
                     Regeneráció Folyamata</a>
-                <a href="{{ route('about.when-not-usable') }}"
-                    class="dropdown-item {{ request()->routeIs('about.when-not-usable') ? 'active' : '' }}">
+                <a href="{{ route('humanregen.when-not-usable') }}"
+                    class="dropdown-item {{ request()->routeIs('humanregen.when-not-usable') ? 'active' : '' }}">
                     Milyen Esetekben Nem Használható A Humán Regenerátor?</a>
 
             </div>
@@ -61,19 +61,19 @@
 
     <div class="nav-item dropdown">
 
-        <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('about.*') ? 'active' : '' }}"
+        <a href="#" class="nav-link dropdown-toggle {{ request()->routeIs('inbody.*') ? 'active' : '' }}"
             data-bs-toggle="dropdown">InBody 970s</a>
             <div class="dropdown-menu fade-up m-0">
-                <a href="{{ route('about.inbody') }}"
-                    class="dropdown-item {{ request()->routeIs('about.inbody') ? 'active' : '' }}">
+                <a href="{{ route('inbody.inbody') }}"
+                    class="dropdown-item {{ request()->routeIs('inbody.inbody') ? 'active' : '' }}">
                     InBody 970s testösszetétel elemző</a>
 
-                <a href="{{ route('about.inbody') }}"
-                    class="dropdown-item {{ request()->routeIs('about.inbody') ? 'active' : '' }}">
+                <a href="{{ route('inbody.who-is-worth-showing') }}"
+                    class="dropdown-item {{ request()->routeIs('inbody.who-is-worth-showing') ? 'active' : '' }}">
                     Kinek érdemes megmutatni az InBody Adatait?</a>
 
-                <a href="{{ route('about.inbody') }}"
-                    class="dropdown-item {{ request()->routeIs('about.inbody') ? 'active' : '' }}">
+                <a href="{{ route('inbody.preparation-guide') }}"
+                    class="dropdown-item {{ request()->routeIs('inbody.preparation-guide') ? 'active' : '' }}">
                     Felkészülési útmutató</a>
             </div>
     </div>

@@ -24,7 +24,7 @@
                 <h4>Hasznos linkek</h4>
                 <ul>
                     <li><a href="{{ route('home') }}">Főoldal</a></li>
-                    <li><a href="{{ route('effects') }}">Jótékony hatások</a></li>
+                    <li><a href="{{ route('humanregen.effects') }}">Jótékony hatások</a></li>
                     <li><a href="{{ route('gdpr') }}">Adatkezelési feltételek</a></li>
                     <li><a href="{{ route('price') }}">Árak</a></li>
                     <li><a href="{{ route('contacts') }}">Kapcsolat</a></li>

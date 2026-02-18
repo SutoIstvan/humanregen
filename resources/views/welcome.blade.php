@@ -53,7 +53,7 @@
                         és akkumulátorként tölti fel a sejteket.</p>
                     <div class="d-flex">
                         <a href="{{ route('appointments') }}" class="btn-get-started">Időpontot foglalok</a>
-                        <a href="{{ route('effects') }}" class="btn-watch-video d-flex align-items-center">
+                        <a href="{{ route('humanregen.effects') }}" class="btn-watch-video d-flex align-items-center">
                             <i class="bi bi-play-circle"></i><span>További információk</span>
                         </a>
                     </div>
@@ -98,7 +98,7 @@
                     </p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start" data-aos="fade-up"
                         data-aos-delay="130">
-                        <a href="{{ route('effects') }}" class="btn btn-primary btn-lg px-4 me-md-2"
+                        <a href="{{ route('humanregen.effects') }}" class="btn btn-primary btn-lg px-4 me-md-2"
                             style="background-color: #c2a74e; border-color: #c2a74e;">
                             További információ
                         </a>
@@ -131,7 +131,7 @@ Az INBODY 97S nem csupán egy újabb eszköz, hanem egy fejlett kutatási eszkö
                     </p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start" data-aos="fade-up"
                         data-aos-delay="130">
-                        <a href="{{ route('about.inbody') }}" class="btn btn-primary btn-lg px-4 me-md-2"
+                        <a href="{{ route('inbody.inbody') }}" class="btn btn-primary btn-lg px-4 me-md-2"
                             style="background-color: #c2a74e; border-color: #c2a74e;">
                             További információ
                         </a>

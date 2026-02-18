@@ -98,6 +98,12 @@ class BookingController extends Controller
         $startTime = Carbon::parse($validatedData['date'] . ' ' . $validatedData['time_slot']);
         $endTime = $startTime->copy()->addMinutes($validatedData['duration']); // Время окончания (добавляем длительность)
 
+        // Проверка на бронирование в прошлом
+        if ($startTime->isPast()) {
+            return redirect()->route('appointments')
+                ->withErrors(['time_slot' => 'Nem foglalhat időpontot a múltban. Kérem válasszon jövőbeli időpontot.']);
+        }
+
         // Проверка на занятость времени для конкретного кресла
         $existingBooking = Booking::where('date', $validatedData['date'])
             ->where('time_slot', $validatedData['time_slot'])
@@ -268,6 +274,15 @@ class BookingController extends Controller
                 'client_email' => 'max:255',
                 'client_phone' => 'max:20',
             ]);
+
+            // Проверка на бронирование в прошлом
+            $bookingDateTime = Carbon::parse($validated['booking_date'] . ' ' . $validated['booking_time']);
+            if ($bookingDateTime->isPast()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Nem foglalhat időpontot a múltban. Kérem válasszon jövőbeli időpontot.'
+                ], 400);
+            }
 
             $booking = new Booking();
             $booking->date = $validated['booking_date'];

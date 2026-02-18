@@ -13,10 +13,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/effects', function () {
-    return view('effects');
-})->name('effects');
-
 Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
@@ -95,32 +91,48 @@ Route::prefix('about')->group(function () {
     Route::get('/credo', function () {
         return view('about.credo');
     })->name('about.credo');
+});
+
+Route::prefix('humanregen')->group(function () {
+    Route::get('/effects', function () {
+        return view('humanregen.effects');
+    })->name('humanregen.effects');
 
     Route::get('/cap', function () {
-        return view('about.cap');
-    })->name('about.cap');
+        return view('humanregen.cap');
+    })->name('humanregen.cap');
 
     Route::get('/introduction', function () {
-        return view('about.introduction');
-    })->name('about.introduction');
+        return view('humanregen.introduction');
+    })->name('humanregen.introduction');
 
     Route::get('/using-plasma-cancer', function () {
-        return view('about.using-plasma-cancer');
-    })->name('about.using-plasma-cancer');
+        return view('humanregen.using-plasma-cancer');
+    })->name('humanregen.using-plasma-cancer');
 
     Route::get('/how-human-regeneration-works', function () {
-        return view('about.how-human-regeneration-works');
-    })->name('about.how-human-regeneration-works');
+        return view('humanregen.how-human-regeneration-works');
+    })->name('humanregen.how-human-regeneration-works');
 
     Route::get('/regeneration-process', function () {
-        return view('about.regeneration-process');
-    })->name('about.regeneration-process');
+        return view('humanregen.regeneration-process');
+    })->name('humanregen.regeneration-process');
 
     Route::get('/when-not-usable', function () {
-        return view('about.when-not-usable');
-    })->name('about.when-not-usable');
+        return view('humanregen.when-not-usable');
+    })->name('humanregen.when-not-usable');
+});
 
+Route::prefix('inbody')->group(function () {
     Route::get('/inbody', function () {
-        return view('about.inbody');
-    })->name('about.inbody');
+        return view('inbody.inbody');
+    })->name('inbody.inbody');
+
+    Route::get('/who-is-worth-showing', function () {
+        return view('inbody.who-is-worth-showing');
+    })->name('inbody.who-is-worth-showing');
+
+    Route::get('/preparation-guide', function () {
+        return view('inbody.preparation-guide');
+    })->name('inbody.preparation-guide');
 });

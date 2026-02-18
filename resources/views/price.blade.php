@@ -456,9 +456,9 @@
             <label class="plan basic2-plan me-xxl-5 me-lg-3 " for="basic2">
                 <input checked type="radio" id="basic2" name="duration" value="30" />
                 <div class="plan-content ">
-                    <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
+                    <img loading="lazy" src="{{ asset('assets/inbody-logo.png') }}" alt="" />
                     <div class="plan-details">
-                        <span>1. mérés + konzultáció {{ number_format($price5->amount, 0, ',', ' ') }} ft</span>
+                        <span class="mt-4">Mérés + konzultáció {{ number_format($price5->amount, 0, ',', ' ') }} ft</span>
                         <!-- <p>1 alkalom = 30 perces kezelés<br>Érvényesség: vásárlástól számított 185 napig</p> -->
                     </div>
                 </div>
@@ -467,9 +467,9 @@
             <label class="plan complete2-plan ms-xxl-5 ms-lg-2" for="complete2">
                 <input type="radio" id="complete2" name="duration" value="60" />
                 <div class="plan-content">
-                    <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
+                    <img loading="lazy" src="{{ asset('assets/inbody-logo.png') }}" alt="" />
                     <div class="plan-details">
-                        <span>Mérés {{ number_format($price6->amount, 0, ',', ' ') }} ft</span>
+                        <span class="mt-4">Mérés {{ number_format($price6->amount, 0, ',', ' ') }} ft</span>
                         <!-- <p>1 alkalom = 30 perces kezelés<br>Konzultáció nélkül</p> -->
                     </div>
                 </div>
@@ -482,9 +482,9 @@
             <label class="plan basic3-plan me-xxl-5 me-lg-3 " for="basic3">
                 <input checked type="radio" id="basic3" name="duration" value="30" />
                 <div class="plan-content ">
-                    <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
+                    <img loading="lazy" src="{{ asset('assets/inbody-logo.png') }}" alt="" />
                     <div class="plan-details">
-                        <span>5.-dik mérés {{ number_format($price7->amount, 0, ',', ' ') }} ft</span>
+                        <span class="mt-4">5.-dik mérés {{ number_format($price7->amount, 0, ',', ' ') }} ft</span>
                         <!-- <p>1 alkalom = 30 perces kezelés<br>Konzultáció nélkül</p> -->
                     </div>
                 </div>
@@ -493,9 +493,9 @@
             <label class="plan complete3-plan ms-xxl-5 ms-lg-2" for="complete3">
                 <input type="radio" id="complete3" name="duration" value="60" />
                 <div class="plan-content">
-                    <img loading="lazy" src="{{ asset('assets/ico.png') }}" alt="" />
+                    <img loading="lazy" src="{{ asset('assets/inbody-logo.png') }}" alt="" />
                     <div class="plan-details">
-                        <span>Konzultáció {{ number_format($price8->amount, 0, ',', ' ') }} ft</span>
+                        <span class="mt-4">Konzultáció {{ number_format($price8->amount, 0, ',', ' ') }} ft</span>
                         <!-- <p>1 alkalom = 30 perces konzultáció<br>Mérés nélkül, korábbi adatokkal</p> -->
                     </div>
                 </div>
