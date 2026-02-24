@@ -28,7 +28,7 @@ RUN pecl install pcov && docker-php-ext-enable pcov
 # Node.js, NPM, Yarn
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
 RUN apt-get install -y nodejs
-RUN npm install npm@latest -g
+RUN npm install -g npm@10
 RUN npm install yarn -g
 
 # Composer
