@@ -48,7 +48,7 @@ services:
         ports:
             - 3306:3306
         volumes:
-            - .docker/db/data:/var/lib/mysql
+            - db_data:/var/lib/mysql
             - .docker/db/my.cnf:/etc/mysql/conf.d/my.cnf
             - .docker/db/sql:/docker-entrypoint-initdb.d
         environment:
@@ -94,3 +94,6 @@ services:
     #    - .docker/redis/data:/data
     #    ports:
     #    - 6379:6379
+
+volumes:
+    db_data:
