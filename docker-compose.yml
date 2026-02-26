@@ -99,3 +99,4 @@ services:
 volumes:
     db_data:
         external: true
+        name: humanregen_db_data
