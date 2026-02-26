@@ -87,14 +87,12 @@
                         data-aos-delay="1">Miért a Humán Regenerátor Sports?</h2>
                     <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" data-aos="fade-up" data-aos-delay="50">A
                         Humán Regenerátor Sports -ot</h1>
-                    <p class="lead" data-aos="fade-up" data-aos-delay="100">
+                    <p class="lead" data-aos="fade-up" data-aos-delay="100" style="text-align: justify;">
                         A kiválóság, A transzparencia és az eredmények iránti
-                        elkötelezettsége különbözteti meg. <br> Mi meghaladjuk az átlagot, és az egyik legújabb
-                        tudományos
-                        felfedezést
-                        és technológiát alkalmazzuk annak érdekében, hogy olyan regenerációs megoldást nyújtsunk,
-                        amelyek
-                        valóban változást hozhatnak.
+                        elkötelezettsége jellemzi. <br>Vállalkozásunk az átlag feletti, és az egyik legújabb
+                        tudományos felfedezést és technológiát alkalmazzuk annak érdekében, hogy olyan
+                        regenerációs megoldást nyújtsunk,
+                        amelyek valóban változást hozhatnak.
                     </p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start" data-aos="fade-up"
                         data-aos-delay="130">
@@ -126,8 +124,8 @@
                         data-aos-delay="1">Testösszetétel elemző</h2>
                     <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3" data-aos="fade-up" data-aos-delay="50">
                         INBODY 970S</h1>
-                    <p class="lead" data-aos="fade-up" data-aos-delay="100">
-Az INBODY 97S nem csupán egy újabb eszköz, hanem egy fejlett kutatási eszköz, amely pontos, átfogó és hasznos adatokat biztosít számunkra időtakarékos módon. Több mint egy mérleg, segít nyomon követni a fejlődést, az egészségügyi mutatókat és a regenerálódást.
+                    <p class="lead" data-aos="fade-up" data-aos-delay="100" style="text-align: justify;">
+                        Az INBODY 970S nem csupán egy újabb találmány, hanem egy fejlett kutatási eszköz, amely pontos, átfogó és hasznos adatokat biztosít számunkra időtakarékos módon. Több mint egy mérleg, segít nyomon követni a fejlődést, az egészségügyi mutatókat és a regenerálódást.
                     </p>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-start" data-aos="fade-up"
                         data-aos-delay="130">

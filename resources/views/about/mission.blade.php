@@ -67,11 +67,11 @@
     
     <div class="container d-flex justify-content-center">
         <div class="col-12 col-lg-9">
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A 1992-ben alapított <strong>Kópis és Társa Kft</strong> útja 2024-ben egy új vízióval kezdődött - az embereket
                 szeretnénk olyan életre inspirálni, ami által egészségesebb hosszabb életet élhetnek.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A ReGEN szolgáltatásunk célja az emberi sejtregeneráció jótékony hatásait alkalmazni az
                 életminőség javítására - és ebben elkötelezettek vagyunk. Ez egy olyan innovatív megoldás, amely
                 elősegíti a test természetes regenerációs képességeinek fejlesztését az emberi vitalitás és hosszú
@@ -89,13 +89,13 @@
 
     <div class="container d-flex justify-content-center">
         <div class="col-12 col-lg-9">
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A <strong>Humán Regenerátor Sports</strong> -ot a kiválóság, a transzparencia és az eredmények iránti
                 elkötelezettsége különbözteti meg más lehetőségektől. Ezzel olyan szolgáltatást adunk vendégeinknek,
                 ami átlag feletti, és az egyik legújabb tudományos felfedezés és technológia alkalmazásával valódi
                 regenerációs megoldást nyújt, és amely valóban változást hozhat életükben.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Tudjuk, hogy mindenki vitalitás és hosszú élettartam felé vezető útja egyedi, éppen ezért a
                 megoldást is személyre szabjuk az egyéni igényekhez és célokhoz mérten. Az elkötelezettségünk nem
                 csak termék és szolgáltatás nyújtására irányul, hanem arra is, hogy bizalmas partner legyünk az
@@ -111,7 +111,7 @@
 
     <div class="container d-flex justify-content-center">
         <div class="col-12 col-lg-9">
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 Vállalkozásunknál Te is lehetőséget kapsz, hogy csatlakozz hozzánk, és megismerd az új
                 szolgáltatásunkat! Engedd meg, hogy társaid lehessünk az egészségesebb, és hosszabb élet felé vezető
                 utadon! A cél a vitalitás és egy egészségben telt hosszabb élet!

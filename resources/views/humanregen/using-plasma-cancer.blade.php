@@ -70,7 +70,7 @@
 
     <div class="container d-flex justify-content-center">
         <div class="col-12 col-lg-9">
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 CAP ígéretes lehetőség a hatékonyabb tumorkezelésre. Azonban annak végső hatása a
                 ráksejtekre igen érdekes. A ráksejtek nagyobb mennyiségű ROS és RNS előállításával rendelkeznek,
                 és bár ez fokozza a proliferatív aktivitásukat, még magasabb szintek az apoptózist okozhatják. A
@@ -88,7 +88,7 @@
                 leállítása, a DNS- és mitokondriális károsodás, valamint az immunogén sejthalál. Az aktuális
                 eredmény azonban dózisfüggő.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Keidar és munkatársai egy pilotkísérletet végeztek a CAP alkalmazásának tesztelésére a tumor
                 kezelésében. Kezdetben azt tapasztalták, hogy a bőrmelanoma sejtvonalak leváltak a kultúraedényből
                 a CAP alkalmazása után, és ez a számuk csökkenéséhez vezetett, míg az egészséges sejtvonalak
@@ -103,7 +103,7 @@
                 apoptotikus génexpresszió csökkenését. Az ERK1/2/MAPK sejtsignalizációs aktivitásban is változás
                 történt a fehérje szintjén. A létrejövő hatást ROS-elnyelőkkel lehet visszafordítani.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A ráksejtek a metabolikus szinten is különböznek az egészséges sejtektől. Itt a daganatsejtek
                 metabolikus átprogramozása egyszerű szénhidrátokat alakít át makromolekulákba, különösen
                 lipidbe, fehérjékbe és nukleinsav-makromolekulákba. Ez olyan köztes metabolitokat eredményez,
@@ -115,7 +115,7 @@
                 glutaminsavvá. A glutaminsav hiánya, egyidejűleg a glutamin felhalmozódásával a leukémia
                 sejtekben a proliferáció gátlásához és akár a sejthalálhoz is vezethet.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A sejtvonalakon és állati modelleken végzett tanulmányok ismételten bizonyították a CAP
                 eszközök előnyeit és az anti-tumor aktivitásukat. Egy tanulmány szerint a glioblasztóma sejtvonalak
                 elvesztették életképességüket a plazmával történő kezelés után. Ezen tanulmány azt is kimutatta,
@@ -123,7 +123,7 @@
                 Ezenkívül több szerző is beszámolt arról, hogy a CAP expozíció elvesztést okozott az
                 életképességben és indukált apoptózist más típusú agydaganat sejtvonalakban is.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A plazma kibocsátás után indukált apoptózist dokumentáltak a tüdőrák TC-1 sejtvonalakban.
                 Ezt a fibroblaszt vonalakban is rögzítették, de sokkal kisebb mértékben. Az utolsó tanulmány
                 legfontosabb előnye az volt, hogy a plazmaeszközök méretét minimalizálva lehetővé vált a CAP
@@ -137,7 +137,7 @@
                 A szerzők optimalizálták az eszközparamétereket a leginkább megfelelő agyi és emlődaganatok
                 kezelésére.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Az in vivo plazma hatása már bebizonyosodott állati modellekben, amelyeket a 4T
                 emlősejtvonalak szubkután injektáltak. Ezek a sejtvonalak általános tumoros növekedését 250 μm
                 átmérőjű CAP eszköz plazma kibocsátásának tették ki. Fontos megjegyezni, hogy a 3 perces plazma
@@ -145,7 +145,7 @@
                 elemi és anti-apoptotikus génaktivitás arányában is szignifikáns változás történt a molekuláris
                 szinten.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Mashayekh és munkatársai tanulmányozta a CAP in vivo hatását egérmodelleken és az in vitro
                 hatást a melanoma B16/F10 sejtvonalakon. Munkájuk során az állati modelleken tapasztalták a
                 sejtvonalak többségének elvesztett életképességét és az állati modellek tumorának jelentős
@@ -160,14 +160,14 @@
                 növelésére is melanoma sejtvonalakon arany-nanorészecskékkel kombinált plazmával, amelyhez az
                 anti-FAK antitestek voltak kötve.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Az MCF-7 emlőrák sejtvonalakon is elvégeztek analíziseket. Az első eredmények azt mutatták,
                 hogy a CAP kezelés után csökkent a sejtek életképessége az apoptózis növekedése miatt. Ninomiya
                 és munkatársai. később kimutatták, hogy a CAP sérülést okozott a rákos emlősejtvonalak 50%-ánál,
                 függetlenül attól, hogy invazív MB-231 vagy nem invazív MCF-7 sejtvonalak voltak. Végül a CAP
                 antiproliferatív hatásait az emberi emlősejtek metasztázisából származó sejtvonalakban is észlelték.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 További kutatásokat végeztek a HCT-116, SW480 és LoVo vastagbélrák sejtvonalakon. Ezek a
                 sejtek elvesztették életképességüket a CAP alkalmazás után, és ezt a hatást alacsonyabb sejtmobilitás
                 és magasabb B-katenin foszforiláció kísérte. Ezenkívül, bár a CAP eszközt úgy tekintették, hogy az
@@ -180,7 +180,7 @@
                 amelyek a tumorkörnyezetet utánozzák, és dózisfüggő módon. A CAP expozíciót követően
                 megfigyelték a spheroid Ki67 vesztését és a felhalmozódott DNS-károsodást.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Az in vitro kísérleti eredmények azt is sugallják, hogy a CAP alkalmazás előnyös lehet nyak-
                 és fejrákok esetében. Habár ezek a területeken lévő daganatok viszonylag könnyen eltávolíthatók, ez
                 a beavatkozás gyakran invazív, és a CAP ezt a hatást csökkentheti. Guerrero-Preston és munkatársai
@@ -188,7 +188,7 @@
                 úgy gondolták, hogy ez nem-apoptotikus folyamatok eredménye, ellentmondó tanulmányok arra
                 utaltak, hogy az antiproliferatív hatás az apoptotikus kaskád aktiválásából származik.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Több tanulmány is vizsgálta a CAP alkalmazását a méhnyakrákok esetében, főleg a HeLa
                 sejteken. Ezekben a sejtekben apoptotikus folyamatokat észleltek a CAP kezelést követően
                 növekedett ROS és a JNK és p38 utakban bekövetkező változások miatt . Ennek az hatásnak egy
@@ -197,7 +197,7 @@
                 elektródával, és ez szelektív apoptózist váltott ki különböző HeLa sejtekben, anélkül, hogy a
                 szomszédos sejteket érintette volna.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Az eszköz alkalmazásának lehetőségeit vizsgálták a leukémia sejtvonalakon is. Azonban a
                 CAP klinikai körülmények között történő hipotetikus alkalmazása továbbra is tisztázatlan, és annak
                 legjobb módszerének meghatározása további vizsgálatot igényel. Itt a CAP-aktivált folyadékok
@@ -207,7 +207,7 @@
                 apoptózis, és a kezelés után több mint 50 másodpercig nekrózis figyelhető meg. Végül két független
                 tanulmány is kimutatta az antiproliferatív hatásokat a hasnyálmirigysejteken.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A CAP kezelést közvetlenül alkalmazták emberi daganatokon is klinikai beállításokban. Ebben
                 a tanulmányban hat haladó nyak- és fejrákos páciens vett részt. Közülük két páciensnek csökkent a
                 daganatmérete a CAP alkalmazását követően. Habár az egyik páciens legalább részleges remissziót
@@ -218,7 +218,7 @@
                 betegség lefolyását, összességében pozitív hatással volt anélkül, hogy jelentős kárt vagy mellékhatást
                 okozott volna.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A plazma kisütése közvetlenül és közvetve is befolyásolja a sejttenyészet közegét, és ez
                 ösztönzi a CAP-aktivált plazma vagy más folyadék alkalmazásának megfontolását a daganatsejtek
                 életképességének csökkentése érdekében. A plazma-aktivált közeg (PAM), a plazma-aktivált Ringer-
@@ -228,7 +228,7 @@
                 H2O2 tartalmuk miatt indukálnak apoptózist. Az eredmény azonban sejtspecifikus lehet, és attól
                 függhet, hogy az adott sejtvonalban mennyi vízszállító található.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Az apoptotikus morfológiai változások különösen észlelhetők voltak glioblasztóma
                 sejtvonalakban a CAP által kiváltott média alkalmazását követően. Emelkedett effektor kaspáz 3/7
                 aktivitást és csökkent AKT kináz expressziót is megfigyeltek molekuláris szinten. Hasonló
@@ -243,7 +243,7 @@
                 glutation szintézisében, amely nélkülözhetetlen a szabad gyökök semlegesítéséhez és a megfelelő
                 válaszokhoz a stresszjelekre.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Az ovariumrák sejtvonalak életképessége, amelyek ellenálltak a paclitaxel és ciszplatinnek,
                 majdnem 30%-kal csökkent CAP kezelés után. A szerzők elemzést is végeztek a CAP hatásairól egér
                 xenograftokon. Számos kemorezisztens sejtvonalat kezdetben egerekbe oltottak be szérummentes
@@ -256,7 +256,7 @@
                 Emellett a szerzők, Nakamura és munkatársai azt találták, hogy in vivo PAM közeg expozíció egy
                 másik egér xenograft modell esetében gátolta az ES2 ráksejtek peritoneális terjedését.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A PAM mellett a PAL is alkalmazható daganatellenes kezelésre. A PAL az in vitro
                 körülmények között indukálja az apoptózist hasnyálmirigy sejtvonalakban a ROS szint növelésével
                 és a sejtheadás csökkentésével. A PAL-nak daganatellenes hatása is volt az in vivo egér xenograft
@@ -273,7 +273,7 @@
                 fel alkalmazásával a klinikai vizsgálatok során. Ezek az elemzések további jelenségeket és elveket
                 fedhetnek fel, amelyek előnyösek lehetnek a klinikai eljárások szempontjából.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A plazma alkalmazásának egyik legfejlettebb módja a daganatimmunterápia alkalmazása. Ez
                 lehetséges, mert a rák kezdetét és lefolyását jelentősen befolyásolhatja az emberi immunrendszer. Az
                 immunrendszer szabályozó képessége különösen képes felülkerekedni a ráksejtek képességén az
@@ -285,7 +285,7 @@
                 megsemmisítésére. Ami még fontosabb, néhány tanulmány azt sugallja, hogy a CAP is kiválthatja az
                 ICD-t, és ez a következő makrofágstimulációhoz vezet.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Miller és munkatársai és Almeida részletezte a plazma használatának elveit és lehetőségeit az
                 immunterápiában. Különösen Lin és mtsai. munkájában bemutatták, hogy a CAP az in vitro A549
                 tüdőrák és sugárzással szemben ellenálló nasopharyngealis karcinóma sejtvonalakban kiválthatja az
@@ -297,11 +297,11 @@
             </p>
             <p class="lead" style="text-indent: 15px;">
                 <ol>
-                    <li class="lead">
+                    <li class="lead" style="text-align: justify;">
                         30 másodpercnyi CAP stimuláció a makrofágokban megnövelt IL-6 és IL12 termelést
                         eredményezett, és csökkent az anti-gyulladásos citokin IL-10 termelése, valamint
                     </li><br>
-                    <li class="lead">
+                    <li class="lead" style="text-align: justify;">
                         az IL-2 és az IFN-g termelése megnőtt az egér lépőből származó izolált T-sejtvonalakban a
                         CAP expozíció után. A szerzők megpróbálták a valós körülményeket szimulálni, amikor
                         eltávolították az egérmodell nyirokcsomóit és kitették azokat a CAP-nak. Ezután izolálták a
@@ -334,7 +334,7 @@
     
     <div class="container d-flex justify-content-center">
         <div class="col-12 col-lg-9">
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A hideg plazmának jelentős potenciálja van a modern klinikai gyakorlatban való széles körű
                 alkalmazásra. Az eddig elvégzett elemzések arra utalnak, hogy a hideg plazma alkalmazása előnyös
                 volt számos orvosi területen, anélkül, hogy jelentős negatív hatást gyakorolt volna az egészséges
@@ -344,7 +344,7 @@
                 valószínűleg lehetővé teszik egyre kisebb eszközök kifejlesztését, amelyek alkalmasak a plazma
                 kisütés alkalmazására belső struktúrákban.
             </p>
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 Ezek a hideg plazma eljárások valószínűleg előnyösek lesznek azon belső szövetek
                 kezelésében is, amellett, hogy a daganatkezelés területén is alkalmazhatók. Azonban a hideg plazma
                 hatásairól szóló jelenlegi elemzések továbbra is csak sejtvonalakra és állatkísérletekre

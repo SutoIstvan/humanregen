@@ -67,13 +67,13 @@
 
     <div class="container d-flex justify-content-center">
         <div class="col-12 col-lg-9">
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                  Vállalkozásunk új szolgáltatásával azt valljuk, hogy a sejtregeneráció az egészségügyi
                 problémákkal küzdő emberek számára kiemelkedő fontosságú, legyenek azok kisebb vagy súlyosabb
                 gondok. A test regeneratív képességeinek kiaknázása az általános jólét és a hosszú élettartam
                 elérésének sarokköve.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A sejtregeneráció nem csak az egészségügyi problémákkal küzdő emberek számára
                 kiemelkedően fontos, hanem kulcsfontosságú szerepet játszik a sportolók életében is egyaránt,
                 különösen a rehabilitáció és a gyógyulás során. A sportolók számára, akik a csúcsteljesítmény elérésére
@@ -83,11 +83,11 @@
                 hanem növelhetik fizikai képességeiket is, lehetővé téve számukra, hogy felfedezzék határaikat és a
                 legjobbak legyenek.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Vállalkozásunk lehetőséget ad nem csak az egészségügyi problémák orvoslását keresők számára,
                 hanem a vitalitást, a tartósságot és a hosszú életet keresők számára is.
             </p>
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 Célunk egy modern technológia bemutatása, ahol szolgáltatás keretében kínálunk lehetőséget az
                 általános egészség, rehabilitáció, regeneráció, a hosszú élet és a vitalitás előmozdítására. Ez
                 összefoglalja az elkötelezettségünket az egészség legújabb vívmányának felfedezéséhez, amely

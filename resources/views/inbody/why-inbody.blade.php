@@ -75,7 +75,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Egyrészt az INBODY 970S nagy pontosságot kínál, különösen más testzsírmérő
                     eszközökhöz, mint pl. bőrredő-tompítók, a DEXA szkennelések, vagy a
@@ -86,7 +86,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     A DEXA-szkennelések és a BodPodok nagyon pontosak de drágák,
                     időigényesek, nagy hely igényűek és speciális felszerelést igényelnek. Az
@@ -98,7 +98,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Az újabb kutatások kimutatták, hogy az INBODY 970S áthidalta a
                     hagyományos BIA és az arany-standard módszerek, pl.: a DEXA közötti
@@ -111,7 +111,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Az is fontos szempont volt számunkra, hogy a készülék nem csak a testzsír
                     képen nyomon követni. AZ INBODY 970S betekintést nyújt a víz, a csont
@@ -126,7 +126,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Mindezen funkciókat szem előtt tartva tudtuk, hogy az INBODY 970S nem csak
                     nagyszerű eszköz az általános testösszetétel nyomon követésére, hanem lehetővé
@@ -138,7 +138,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Az INBODY 970S-ből származó adatok értékes eszközt jelentenek a személyre
                     szabott tervek összeállításához és az időbeli haladás nyomon követéséhez.
@@ -150,7 +150,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Pl.: a szegmentális elemzés lehetővé teszi szakemberek számára, hogy kiszűrje
                     az izomegyensúly hiányát a felső és alsó test, vagy akár a test bal és jobb oldala
@@ -163,7 +163,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Az INBODY 970S BMR-mérést arra is használjuk, hogy személyre szabhassuk
                     az ügyfél táplálkozási irányelveit. Azzal, hogy tudjuk, mennyi kalóriát éget el
@@ -174,7 +174,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Az INBODY 970S egy másik értékes aspektusa a fázisszög mérésének
                     képessége. Ez a mérőszám a sejtmembránok egészségét és az általános
@@ -184,7 +184,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Az INBODY 970S beépítése a munkafolyamatokba azt jelenti, hogy az ügyfél
                     és vagy a szember nem csak sokkal részletesebben tudja nyomon követni a
@@ -195,7 +195,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Az INBODY 970S kiváló értéket képvisel a Kópis és Társa Kft. részére, és
                     kiegészíti szolgáltatásunkat. Gyors, pontos és hatékony, olyan elemzéseket
@@ -206,7 +206,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Az INBODY 970S-t nem csak a sebessége és a könnyű használhatósága teszi
                     különlegessé, hanem a pontossága is. Segít abban, hogy lássuk mennyire

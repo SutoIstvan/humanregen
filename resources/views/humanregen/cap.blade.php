@@ -71,14 +71,14 @@
 
     <div class="container d-flex justify-content-center">
         <div class="col-12 col-lg-9">
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 A hideg plazmának jelentős potenciálja van a modern klinikai gyakorlatban való széles körű
                 alkalmazásra. Az eddig elvégzett elemzések arra utalnak, hogy a hideg plazma alkalmazása előnyös
                 volt számos orvosi területen, anélkül, hogy jelentős negatív hatást gyakorolt volna az egészséges
                 sejtekre.
             </p>
             <img src="{{ asset('assets/img/plasma.jpg') }}" class="img-fluid rounded-3" alt="">
-            <p class="lead mt-5" style="text-indent: 15px;">
+            <p class="lead mt-5" style="text-indent: 15px; text-align: justify;">
                 A hideg atmoszférikus plazma alkalmazása klinikai tanulmányokban főként a krónikus sebek
                 kezelésére korlátozódik, de most már számos orvosi területre történő alkalmazás a sok elemzés célja.
                 Ezért valószínű, hogy alkalmazási spektruma a jövőben bővülni fog. A hideg atmoszférikus plazma
@@ -88,7 +88,7 @@
                 proliferációját serkenti, ideértve az őssejteket és más tenyésztett sejteket is, és a rendkívül növelt
                 nitrogén-monoxid szinteknek nagyon fontos hatása van ebben a szaporodásban.
             </p>
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 A hideg atmoszférikus plazma használata előnyös hatással lehet az immunterápiára a rákbetegek esetében.
                 Végül lehetséges, hogy a plazmaberendezések használata nem marad korlátozva a felszíni
                 szerkezetekre, mivel a jelenlegi erőfeszítések arra irányulnak, hogy kellően kisméretű mikroplazma

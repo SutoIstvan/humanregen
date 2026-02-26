@@ -69,7 +69,7 @@
 
     <div class="container d-flex justify-content-center">
         <div class="col-12 col-lg-9">
-            <p class="lead mb-4" style="text-indent: 15px;">
+            <p class="lead mb-4" style="text-indent: 15px; text-align: justify;">
                 <strong>A szabad gyökök rendkívül reaktív molekulák a testünkben</strong>, amelyeknek páratlan
                 elektronjaik vannak. Ezek <strong>a páratlan elektronok instabilokká teszik a szabad gyököket, és arra
                     késztetik őket, hogy a közelben lévő molekuláktól elektronokat lopjanak, létrehozva ezzel az
@@ -80,14 +80,14 @@
                 termelődnek. Külső tényezők, mint a szennyezés, a dohányzás, az egészségtelen táplálkozás és a
                 sugárzásnak való kitettség is hozzájárulhat a szabad gyökök kialakulásához a testünkben.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 <strong>A szabad gyökök által okozott oxidatív stressz károsíthatja a sejtek alkotóelemeit, mint
                     például az DNS-t</strong>, a fehérjéket és a lipideket, <strong>ami számos egészségügyi problémát
                         eredményezhet</strong>. Ezek a károsodásokat összefüggésbe hozhatóak az öregedéssel, a gyulladással és
                 különböző krónikus betegségek, beleértve a rákot, a szív- és érrendszeri betegségeket és a neuro-
                 degeneratív rendellenességek kialakulását.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 <strong>A szabad gyökök negatív hatásainak leküzdésére a szervezet antioxidánsokra
                     támaszkodik</strong>. Az antioxidánsok olyan molekulák, amelyek elektronokat tudnak adományozni
                 anélkül, hogy maguk instabillá válnának. <strong>Az antioxidánsok semlegesítik a szabad gyököket
@@ -95,7 +95,7 @@
                     további károsodást</strong>. A Humán Regenerátor hideg atmoszférikus plazma technológiát alkalmaz, ami
                 az ionokat, elektronokat és neutrális részecskéket tartalmaz.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A <strong>Humán Regenerátor készülék hideg atmoszférikus plazmát juttat a testbe, lehetővé
                     téve számára, hogy végtelen mennyiségű elektront kapjon</strong>. Amikor a páciens hideg atmoszférikus
                 plazmának van kitéve, a test felveszi ezeket az elektronokat, és szükség szerint felhasználja őket
@@ -109,14 +109,14 @@
                 eredményeként megszületett és folyamatosan fejlesztett technológia és egy prémium készülék, ami
                 speciális pulzáló hatást fejt ki az őssejtekre azok optimális rezgésszintjén.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Egyik speciális hatása a kezelés közben is kellemesen érezhető ionizátoros hatás, mivel
                 a <strong>sejtek mitokondriális energiaellátottságát optimalizálja, energiahiányát feltölti</strong>. A sejtek
                 energiahiánya a medicinában ismert jelenség, amely betegség, kimerültség esetén is jelentkezik.
                 Egyszerű és evidens megoldás lehet az energiahiány pótlása, amely biztonságosan, egyszerűen,
                 mindenféle beavatkozás és fájdalom nélkül valósulhat meg.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Továbbá, a már fent említett oxidatív stressz felelős az öregedésért és a vitalitás elvesztéséért.
                 Ez számos ismert betegség oka is. Az oxidatív stresszt természetes sejtosztódás vagy külső hatások
                 okozzák, például káros környezeti tényezők, káros élelmiszerek, gyulladások, stressz, fertőzések

@@ -1394,7 +1394,7 @@
                                         aria-labelledby="headingSixHelp">
                                         <div class="accordion-body">
                                             <div>Várandós kismamák, szoptató anyukák, 10 év alatti gyermekek, testhez
-                                                csatlakoztatott elektromос készülékkel rendelkező személyek nem
+                                                csatlakoztatott elektromos készülékkel rendelkező személyek nem
                                                 használhatják!</div>
                                         </div>
                                     </div>

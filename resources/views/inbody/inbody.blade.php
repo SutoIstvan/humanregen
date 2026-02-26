@@ -83,29 +83,29 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;" >
                 <strong>
                     A Kópis és Társa Kft. üzembe helyezettegy orvosi minőségű testösszetétel
-                    elemző eszközt. Bemutatjuk ebben a feljegyzésben , hogy miért jó ez a Kópis és
+                    elemző eszközt. Ebben a feljegyzésben bemutatjuk, hogy miért jó ez a Kópis és
                     Társa Kft ügyfeleinek.
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az INBODY 97S nem csupán egy újabb eszköz, hanem egy nagyon modern
-                    klinikákon is használt fejlett kutatási eszköz, amely pontos, átfogó és hasznos
+                    Az INBODY 970S nem csupán egy újabb eszköz, hanem egy nagyon modern,
+                    klinikákon is használt fejlett kutatási eszköz. Pontos, átfogó és hasznos
                     adatokat biztosít számunkra időtakarékos módon. Ez nem csak egy mérleg,
                     hanem segít nyomon követni a számos nagyon fontos mutatatót, az egészségügy
                     és a regenerálódást területén.
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     A Kópis és Társa Kft.- nél mindig keressük a módját, hogy a lehető
                     legmagasabb szintű szolgáltatást nyújtsunk. Az INBODY 970S-sel személyre
-                    szabottabb egészség javító ,megelőző lehetőségeket jobb fejlődéskövetési
+                    szabottabb, egészség javító, prevenciós lehetőségeket, jobb fejlődéskövetési
                     adatokat tudunk biztosítani minden egyes személy számára, aki igénybe veszi
                     szolgáltatásunkat.
                 </strong>
@@ -117,7 +117,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Ez a cikk kizárólag tájékoztató célokat szolgál, és nem helyettesíti az orvosi
                     tanácsot, diagnózist vagy kezelést. Mindig konzultáljon szakképzett

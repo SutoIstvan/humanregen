@@ -71,7 +71,7 @@
     <div class="container d-flex justify-content-center">
         <div class="col-12 col-lg-9">
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Várandós kismamák, szoptató anyukák, 10 év alatti gyermekek, 120 kg feletti
                     testsúllyal rendelkezők, illetve testhez csatlakoztatott (bármilyen) elektromos

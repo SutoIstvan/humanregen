@@ -79,8 +79,8 @@
 
 
 
-            <p class="lead mb-5" style="text-indent: 15px;">
-                <strong>
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
+                <strong style="text-align: justify;">
                     Az <strong>InBody mérésnek</strong> (970S vagy bármely más típus) vannak <strong>kötelező és ajánlott előfeltételei</strong>, hogy az
                     eredmények pontosak és összehasonlíthatóak legyenek. Ezek nem orvosi jellegű vizsgálati feltételek,
                     hanem <strong>standardizált mérési protokollok</strong>. Az alábbi lista a <strong>hivatalos InBody ajánlásokon</strong> alapul.
@@ -167,7 +167,7 @@
                     <li class="lead mb-5 ms-4">
                         <strong>
                             24–48 órával mérés előtt ne fogyassz alkoholt.<br>
-                            Az alkohol vízháztartást és sejtközti folyadékot jelentősen megváltoztat → a mért testvıź normalizálásához
+                            Az alkohol vízháztartást és sejtközti folyadékot jelentősen megváltoztat → a mért testvíz normalizálásához
                             több nap is kellhet.
                         </strong>
                     </li>

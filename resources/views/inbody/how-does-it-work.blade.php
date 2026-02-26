@@ -78,7 +78,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Az INBODY 970S egy Bioelektromos Impedancia Analízis (BIA) néven ismert
                     technológiát használ, amely egy kis, ártalmatlan elektromos áram testen
@@ -91,7 +91,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Az INBODY 970S-t a többi BIA modelltől a többfrekvenciás technológia
                     használata különbözteti meg. A legtöbb BIA eszköz egyetlen frekvenciát
@@ -104,7 +104,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Az izom ─ és zsíreloszlás részletes adatain túl az INBODY 970S a csont ásvány
                     értékekre, a zsigeri zsírra és az alap anyagcserére (BMR) is képes adatokat
@@ -113,7 +113,7 @@
                 </strong>
             </p>
 
-            <p class="lead mb-5" style="text-indent: 15px;">
+            <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     A készülék szegmentális elemzése betekintést nyújt az esetlegesen hiányzó vagy
                     kiegyensúlyozatlan területekbe, lehetővé téve számunkra az olyan konkrét

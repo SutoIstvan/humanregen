@@ -67,7 +67,7 @@
 
     <div class="container d-flex justify-content-center">
         <div class="col-12 col-lg-9">
-            <p class="lead " style="text-indent: 15px;">
+            <p class="lead " style="text-indent: 15px; text-align: justify;">
                 Az emberi test rendkívül kivételes gépezet, amely képes bizonyos mértékben gyógyítani
                 önmagát és regenerálódni. Míg néhány szerv, mint például a máj és a bőr, képesek regenerálódni, a
                 teljes szerv vagy végtag regenerációja még mindig megoldatlan kérdés. Azonban az olyan állatok
@@ -77,12 +77,12 @@
 
             {{-- <img src="{{ asset('assets/img/regen.jpg') }}" class="img-fluid rounded-3" alt=""> --}}
 
-            <p class="lead " style="text-indent: 15px;">
+            <p class="lead " style="text-indent: 15px; text-align: justify;">
                 Salamandrák, planáriák és más fajok képesek sérült vagy hiányzó testrészeket regenerálni. Ezt
                 nevezzük regenerációnak. Néhány emberi szerv, például a máj és a bőr, szintén regenerálódik, ha
                 megsérülnek.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Vállalkozásunk lehetőséget ad nem csak az egészségügyi problémák orvoslását keresők számára,
                 A regeneráció különböző módon történhet, pluripotens vagy szövet-specifikus őssejtek
                 bevonásával. Néha a regeneráció még az őssejtek részvételét sem igényli, mint ahogy azt például a
@@ -90,13 +90,13 @@
                 regeneráció alapvető mechanizmusainak megértésében, amelyeket aztán alkalmazhatunk az emberi
                 regeneratív gyógyászat fejlesztésére.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Jelenleg számos kutatási terület foglalkozik a regenerációval kapcsolatban, a regeneratív
                 folyamatok beindításáért felelős jelek azonosításától kezdve az emberi őssejtek regenerációs
                 képességének eltéréseinek vizsgálatáig. A tudósok különösen érdeklődnek az iránt, hogy mi indítja el
                 az őssejteket a blastema kialakulására, amely az őssejtek felhalmozódása a sérült szövet helyén.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Ezenkívül, az állatkísérletek során arra törekszenek, hogy megállapítsák, hogy hogyan ismerik
                 fel az őssejtek, melyik testrész regenerálódására van szükség, és pontosan hol találhatók a testben.
                 Míg emlősökben az őssejtek nem rendelkeznek ezzel a képességgel, a salamandrákhoz hasonló
@@ -105,12 +105,12 @@
                 megfelelő területeken. Az emberi regeneráció titkainak megértése érdekében rendkívül fontos
                 ezeknek a folyamatoknak és jeleknek a feltárása.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Azonban, a kutatókat különösen érdeklik azok a jelek, amelyek beindítják az őssejteket a
                 regeneráció során, valamint azok a jelek, amelyek meggátolják az aktivitásukat, amikor már nincs
                 szükség regenerációra.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 A regeneráció azt jelenti, hogy egy sérült vagy hiányzó szervrész regenerálódik a meglévő
                 szövetekből. Felnőttként az ember képes néhány szervet regenerálni, például a májat. Ha a máj egy
                 része megsérül betegség vagy sérülés következtében, akkor a máj visszanő az eredeti méretére, bár
@@ -119,7 +119,7 @@
                 kifejlesztése, amelyek serkentik a szövetregenerációt a szervezetben, vagy csereszövetek előállítását
                 teszik lehetővé.
             </p>
-            <p class="lead" style="text-indent: 15px;">
+            <p class="lead" style="text-indent: 15px; text-align: justify;">
                 Összefoglalva, bár az embernek vannak bizonyos regenerációs képességei, jelentős korlátokkal
                 rendelkeznek más regeneratív fajokhoz képest. Az olyan állatok tanulmányozása, amelyek rendkívüli
                 regenerációs képességekkel rendelkeznek, lehetővé teszi a kutatók számára a regenerációt irányító
