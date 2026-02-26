@@ -526,8 +526,8 @@
                 const duration = getDuration();
                 createTimeList('time-list', duration, 7, 18, disabledTimes, date); // Передаем выбранную дату
             } catch (error) {
-                console.error('Ошибка при получении заблокированных времён:', error);
-                container.innerHTML = '<div class="error">Ошибка при загрузке доступного времени</div>';
+                console.error('Hiba történt a blokkolt idő lekérésekor.:', error);
+                container.innerHTML = '<div class="error">Hiba történt a rendelkezésre álló idő betöltésekor.</div>';
             }
         };
 
