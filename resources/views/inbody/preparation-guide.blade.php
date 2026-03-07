@@ -64,11 +64,11 @@
         <h2 class="alex-brush-regular" style="color: #008288; font-size: 38px;">
             Felkészülési útmutató
         </h2>
-        <div class="col-lg-10 mx-auto">
+        <!-- <div class="col-lg-10 mx-auto">
             <p class="lead mb-4" style="text-indent: 15px; font-weight: 500;">
                 A tökéletes testösszetétel ─ elemző: az INBODY 970S
             </p>
-        </div>
+        </div> -->
     </div>
 
     <div class="container d-flex justify-content-center">
@@ -120,7 +120,7 @@
                 <ul>
                     <li class="lead mb-5 ms-4">
                         <strong>
-                            Lehetőleg közvetlenül mérés előtt menj wc-re, hogy a hólyag és a belek tartalma ne befolyásolja a súlyt
+                            Lehetőleg közvetlenül mérés előtt menj WC-re, hogy a hólyag és a belek tartalma ne befolyásolja a súlyt
                             és a hasi impedanciaértéket.
                         </strong>
                     </li>
@@ -211,7 +211,7 @@
                     <li class="lead mb-5 ms-4">
                         <strong>
                             A mérés napján normál mennyiségű vizet igyál, de közvetlenül előtte ne igyál nagy mennyiséget.
-                            A túl kevés víz → zsıŕ magasabbnak tűnik, a túl sok → vıź magas és izmok alacsonynak tűnnek.
+                            A túl kevés víz → zsír magasabbnak tűnik, a túl sok → víz magas és izmok alacsonynak tűnnek.
                         </strong>
                     </li>
                 </ul>
@@ -280,7 +280,7 @@
                 <ul>
                     <li class="lead ms-4">
                         <strong>
-                            Könnyű ruhában mérj, vagy a mérőhely levonást alkalmazzon.
+                            Könnyű ruhában mérj.
                         </strong>
                     </li>
                 </ul>
@@ -331,8 +331,8 @@
                     <li class="lead mb-5 ms-4">
                         <strong>
                             ABSZOLÚT ellenjavallat.<br>
-                            Aki pacemakerrel vagy implantált defibrillátorral él → nem mérhető bármilyen InBody készülékkel, mert
-                            áramimpulzust használ.
+                            azoknak: pacemakerrel, beépített inzulinpumpával, vagy nagyobb méretű beépített
+                            implantátummal rendelkezik
                         </strong>
                     </li>
                 </ul>
@@ -358,7 +358,7 @@
                                 <li class="lead mb-5 ms-4">
                                     <strong>
                                         a hasi impedancia torzul.<br>
-                                        → ezért az InBody nem ad megbízható eredményt terhesség alatt.
+                                        ezért az InBody nem ad megbízható eredményt terhesség alatt.
                                     </strong>
                                 </li>
                             </ul>

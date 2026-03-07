@@ -80,45 +80,43 @@
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az INBODY 970S egy Bioelektromos Impedancia Analízis (BIA) néven ismert
-                    technológiát használ, amely egy kis, ártalmatlan elektromos áram testen
-                    keresztüli átvezetésével méri és analizálja a testösszetételt. Ahogy halad az áram
-                    a különböző szöveteken ─ zsíron, izmon, vízen ─ keresztül, az INBODY
-                    rendkívül pontos adatokat szolgáltat a test összetételről. A BIA lehetővé teszi
-                    számunkra, hogy a szemmel láthatatlan dolgokat is lássuk., mint például az
-                    izomtömeg százalékos aránya, a zsírtömeg és a hidratáció és sok egyéb
-                    paraméter. Ráadásul ez csak néhány másodpercet vesz igénybe.
+                    Az INBODY 970S egy Bioelektromos Impedancia Analízis (BIA) néven ismert technológiát
+használ, amely egy kis, ártalmatlan elektromos áram testen keresztüli átvezetésével méri
+és analizálja a testösszetételt. Ahogy halad az áram a különböző szöveteken - zsíron,
+izmon, vízen - keresztül, az INBODY rendkívül pontos adatokat szolgáltat a test
+összetételről. A BIA módszer lehetővé teszi számunkra, hogy a szemmel láthatatlan
+dolgokat is lássuk, mint például az izomtömeg százalékos aránya, a zsírtömeg a hidratáció
+és sok egyéb fontos paraméter. Ráadásul ez csak néhány másodpercet vesz igénybe.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az INBODY 970S-t a többi BIA modelltől a többfrekvenciás technológia
-                    használata különbözteti meg. A legtöbb BIA eszköz egyetlen frekvenciát
-                    használ az impedancia mérésére, de az INBODY 970S 6 különböző frekvenciát,
-                    8 elektródát (a normál 4-gyel szemben) használ a testösszetétel mélyebb
-                    megértéséhez. Ez lehetővé teszi a test különböző szöveteinek és szegmenseinek
-                    a pontosabb mérését, beleértve az izomtömeg, a zsírtömeg és a víztartalom
-                    nyomon követesét egészen a karokon, lábakon és külön a törzsön, a legnagyobb
-                    nagyobb pontossággal.
+                    Az INBODY 970S-t a többi BIA modelltől a többfrekvenciás technológia használata
+különbözteti meg. A legtöbb BIA eszköz egyetlen frekvenciát használ az impedancia
+mérésére, de az INBODY 970S 6 különböző frekvenciát, 8 elektródát (a normál 4-gyel
+szemben) használ a testösszetétel mélyebb megértéséhez. Ez lehetővé teszi a test
+különböző szöveteinek és szegmenseinek a pontosabb mérését, beleértve az izomtömeg, a
+zsírtömeg és a víztartalom nyomon követesét a karokon, lábakon és külön a törzsön, a
+legnagyobb pontossággal.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az izom ─ és zsíreloszlás részletes adatain túl az INBODY 970S a csont ásvány
-                    értékekre, a zsigeri zsírra és az alap anyagcserére (BMR) is képes adatokat
-                    szolgáltatni. Ezek a mérések kulcs fontosságúak az általános egészségi állapot
-                    megértéséhez és egy egészséges fittség és táplálkozási terv kidolgozásához.
+                    Az izom- és zsíreloszlás részletes adatain túl az INBODY 970S a csontásványianyag-tartalom
+értékekre, a zsigeri zsírra és az alap anyagcserére (BMR) is képes adatokat szolgáltatni.
+Ezek a mérések kulcsfontosságúak az általános egészségi állapot megértéséhez és az
+egészséges fittség és táplálkozási terv kidolgozásához.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     A készülék szegmentális elemzése betekintést nyújt az esetlegesen hiányzó vagy
-                    kiegyensúlyozatlan területekbe, lehetővé téve számunkra az olyan konkrét
-                    problémák kezelését, mint az izomegyensúlyhiány, zsíreloszlás, valamint a
-                    gyulladás vagy ödéma lehetséges előfordulása.
+kiegyensúlyozatlan területekbe, lehetővé téve számunkra az olyan konkrét problémák
+kezelését, mint az izomegyensúly-hiány, zsíreloszlás, valamint a gyulladás vagy ödéma
+lehetséges előfordulása.
                 </strong>
             </p>
         </div>
