@@ -78,142 +78,131 @@
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
                     Egyrészt az INBODY 970S nagy pontosságot kínál, különösen más testzsírmérő
-                    eszközökhöz, mint pl. bőrredő-tompítók, a DEXA szkennelések, vagy a
-                    BodPodok-hoz képest. Bár a bőrredő-tompítók hatékonyak lehetnek,
-                    nagymértékben függenek a tesztet végző személy ügyességétől, kevésbé
-                    pontosak lehetnek a testösszetétel időbeli nyomonkövetésében, és nem
-                    nyújtanak betekintést más testösszetétel-mutatókba.
+eszközökhöz, mint pl. más testelemző szkennelések, vagy a Bod Podok-hoz képest. Bár a
+DEXA hatékonyabb lehet, de nagymértékben függenek az eredmények a tesztet végző
+személy ügyességétől, és nem nyújtanak betekintést más testösszetétel-mutatókba.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    A DEXA-szkennelések és a BodPodok nagyon pontosak de drágák,
-                    időigényesek, nagy hely igényűek és speciális felszerelést igényelnek. Az
-                    INBODY 970S ezzel szemben orvosi minőségű eredményeket ad mindössze egy
-                    egyszerű 70 másodperces szkenneléssel. Továbbá a DEXA-val ellentétben
-                    nincsen sugárzás, nincsen speciális beállítás és nincsen hosszú várakozási idő.
-                    Gyakran használható, ami segít jobban nyomon követni a haladást, így praktikus
-                    és hatékony eszköz a folyamatos értékeléshez.
+                    A DEXA-szkennelések és a BodPodok nagyon pontosak, de drágák, időigényesek, nagy
+helyigényűek és speciális felszerelést igényelnek. Az INBODY 970S ezzel szemben orvosi
+minőségű eredményeket ad mindössze egy egyszerű 70 másodperces szkenneléssel.
+Továbbá a DEXA-val ellentétben nincsen sugárzás, nincsen speciális beállítás és nincsen
+hosszú várakozási idő. Gyakran használható, ami segít jobban nyomon követni a haladást,
+így praktikus és hatékony eszköz a folyamatos értékeléshez.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az újabb kutatások kimutatták, hogy az INBODY 970S áthidalta a
-                    hagyományos BIA és az arany-standard módszerek, pl.: a DEXA közötti
-                    pontossági szakadékot. A BIA-t és a DEXA-t összehasonlító kutatások
-                    kimutatták, hogy az INBODY 970S olyan eredményeket szolgáltat, melyek
-                    szorosan korrelálnak a DEXA mérésekkel, különösen a zsírmentes tömeg és
-                    zsírtömeg nyomon követésében. Ez teszi az INBODY 970S-t ideális megoldássá
-                    azok számára, akik pontos, gyakori testösszetétel-elemzést keresnek a DEXA -
-                    val járó magas költségek és logisztikai kihívások nélkül.
+                    Az újabb kutatások kimutatták, hogy az INBODY 970S áthidalta a hagyományos BIA és az
+arany-standard módszerek, pl.: a DEXA közötti pontossági szakadékot. A BIA-t és a DEXA-t
+összehasonlító kutatások kimutatták, hogy az INBODY 970S olyan eredményeket
+szolgáltat, melyek szorosan korrelálnak a DEXA mérésekkel, különösen a zsírmentes tömeg
+és zsírtömeg nyomon követésében. Ez teszi az INBODY 970S-t ideális megoldássá azok
+számára, akik pontos, gyakori testösszetétel-elemzést keresnek a DEXA - val járó magas
+költségek és logisztikai kihívások nélkül.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az is fontos szempont volt számunkra, hogy a készülék nem csak a testzsír
-                    képen nyomon követni. AZ INBODY 970S betekintést nyújt a víz, a csont
-                    ásványi anyag, a zsigeri zsírok és az alapanyagcsere (BAM) adataiba, amelyek
-                    mind az egészség és a fittség kulcsfontosságú mutatói. A csont ásványianyag
-                    mérésével biztosíthatjuk, hogy ügyfelelink figyelemmel kísérjék a változásokat,
-                    ami különösen fontos az öregedő vagy erejük javításán dolgozók számára.
-                    Ezenkívül az INBODY 970S zsigeri zsír nyomon követésére való képessége
-                    kulcsfontosságú a krónikus betegségekkel kapcsolatos kockázati tényezők
-                    felméréséhez. Az INBODY 970S a test fázisszögeit is méri, ami jelezheti a
-                    sejtek egészségét és a szervezet tápanyag-felszívó és regenerálódó képességét.
+                    Az is fontos szempont volt számunkra, hogy a készülék nem csak a testzsírt képes nyomon
+követni. AZ INBODY 970S betekintést nyújt a víz, a csontásványianyag-tartalom, a zsigeri
+zsírok és az alapanyagcsere (BMR) adataiba, amelyek mind az egészség és a fittség
+kulcsfontosságú mutatói. A csontásványianyag-tartalom mérésével biztosíthatjuk, hogy
+ügyfeleink figyelemmel kísérjék a változásokat, ami különösen fontos az öregedő vagy
+erejük javításán dolgozók számára. Ezenkívül az INBODY 970S zsigeri zsír nyomon
+követésére való képessége kulcsfontosságú a krónikus betegségekkel kapcsolatos
+kockázati tényezők felméréséhez. Az INBODY 970S a test fázisszögeit is méri, ami jelezheti
+a sejtek egészségét és a szervezet tápanyag-felszívó és regenerálódó képességét.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Mindezen funkciókat szem előtt tartva tudtuk, hogy az INBODY 970S nem csak
-                    nagyszerű eszköz az általános testösszetétel nyomon követésére, hanem lehetővé
-                    teszi számunkra, hogy az ügyfél egyedi adatai alapján személyre szabott
-                    ajánlásokat kínáljunk. Akár egy teljesítmény optimalizálásra törekvő
-                    sportolónál, akár csak néhány kilót szeretne leadni, az INBODY 970S adatai
-                    segítenek a szakembereknek megalapozott döntéseket hozni és ennek
-                    megfelelően, ha szükséges módosítani az edzési táplálkozási stb. stratégiákat.
+                    Mindezen funkciókat szem előtt tartva tudtuk, hogy az INBODY 970S nem csak nagyszerű
+eszköz az általános testösszetétel nyomon követésére, hanem lehetővé teszi számunkra,
+hogy az ügyfél egyedi adatai alapján személyre szabott ajánlásokat kínáljunk. Akár egy
+teljesítmény optimalizálásra törekvő sportolónál, akár csak néhány kilót szeretne leadni,
+az INBODY 970S adatai segítenek a szakembereknek megalapozott döntéseket hozni és
+ennek megfelelően, ha szükséges módosítani az edzési táplálkozási stb. stratégiákat.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az INBODY 970S-ből származó adatok értékes eszközt jelentenek a személyre
-                    szabott tervek összeállításához és az időbeli haladás nyomon követéséhez.
-                    Amikor egy ügyfél használja a INBODY 970S-t, azonnal részletes
-                    információkat láthat az izomtömegről, a zsíreloszlásról, a hidratáltsági szintjéről
-                    és egyebekről. Ezek az adatok nagyon hasznosak egy olyan szakember által
-                    készített program megtervezésekor., amely jobban illeszkedik az ügyfél
-                    igényeihez.
+                    Az INBODY 970S-ből származó adatok értékes eszközt jelentenek a személyre szabott
+tervek összeállításához és az időbeli haladás nyomon követéséhez. Amikor egy ügyfél
+használja a INBODY 970S-t, azonnal részletes információkat láthat az izomtömegről, a
+zsíreloszlásról, a hidratáltsági szintjéről és egyéb szegmensekről. Ezek az adatok nagyon
+hasznosak egy olyan szakember által készített program megtervezésekor, amely jobban
+illeszkedik az ügyfél igényeihez.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Pl.: a szegmentális elemzés lehetővé teszi szakemberek számára, hogy kiszűrje
-                    az izomegyensúly hiányát a felső és alsó test, vagy akár a test bal és jobb oldala
-                    között. Ha azt észleljük, hogy egy kliensnek gyengébbek az izmai az egyik
-                    lábában vagy karjában, akkor ezeket a területeket gyakorlatokkal tudja
-                    megcélozni az egyensúlyhiány kezelése érdekében. Hasonlóképpen, a zsigeri
-                    zsír nyomon követése segít abban, hogy szemmel tartsuk az egészségügyi
-                    kockázatokat, és a szakember módosítsa a kliens étrendjét vagy edzéstervét a
-                    belső szervek körüli zsír csökkentése érdekében.
+                    Pl.: a szegmentális elemzés lehetővé teszi szakemberek számára, hogy kiszűrje az
+izomegyensúly-hiányát a felső és alsó test, vagy akár a test bal és jobb oldala között. Ha
+azt észleljük, hogy egy kliensnek gyengébbek az izmai az egyik lábában vagy karjában,
+akkor ezeket a területeket gyakorlatokkal tudja megcélozni az egyensúlyhiány kezelése
+érdekében. Hasonlóképpen, a zsigeri zsír nyomon követése segít abban, hogy szemmel
+tartsuk az egészségügyi kockázatokat, a szakember módosítsa a kliens étrendjét vagy
+edzéstervét a belső szervek körüli zsír csökkentése érdekében.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az INBODY 970S BMR-mérést arra is használjuk, hogy személyre szabhassuk
-                    az ügyfél táplálkozási irányelveit. Azzal, hogy tudjuk, mennyi kalóriát éget el
-                    egy ügyfél teste nyugalmim állapotban, jobban meg tudjuk becsülni a kalória
-                    szükségletét a zsírégetéshez vagy az izomtömeg növeléshez. Azzal, hogy ezeket
-                    a számokat idővel nyomon tudjuk követni, biztosítjuk, hogy ügyfeleink a céljaik
-                    felé haladjanak, és folyamatosan fejlődjenek.
+                    Az INBODY 970S BMR-mérést arra is használjuk, hogy személyre szabhassuk az ügyfél
+táplálkozási irányelveit. Azzal, hogy tudjuk, mennyi kalóriát éget el egy ügyfél teste
+nyugalmi állapotban, jobban meg tudjuk becsülni a kalória szükségletét a zsírégetéshez
+vagy az izomtömeg növeléshez. Azzal, hogy ezeket a számokat idővel nyomon tudjuk
+követni, biztosítjuk, hogy ügyfeleink a céljaik felé haladjanak, és folyamatosan fejlődjenek.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az INBODY 970S egy másik értékes aspektusa a fázisszög mérésének
-                    képessége. Ez a mérőszám a sejtmembránok egészségét és az általános
-                    sejtműködést jelzi, és korai figyelmeztető jeleket adhat a gyulladásról vagy
-                    egészségügyi problémákról. Ha idővel csökken a fázisszög, a szakemberek
-                    döntéseket hozhatnak az ügyfél edzésével vagy táplálkozásával kapcsolatban.
+                    Az INBODY 970S egy másik értékes aspektusa a fázisszög mérésének képessége. Ez a
+mérőszám a sejtmembránok egészségét és az általános sejtműködést jelzi, és korai
+figyelmeztető jeleket adhat a gyulladásról vagy egészségügyi problémákról. Ha idővel
+csökken a fázisszög, a szakemberek döntéseket hozhatnak az ügyfél edzésével vagy
+táplálkozásával kapcsolatban.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az INBODY 970S beépítése a munkafolyamatokba azt jelenti, hogy az ügyfél
-                    és vagy a szember nem csak sokkal részletesebben tudja nyomon követni a
-                    haladást, hanem a lehetséges egészségügyi problémákat is megelőzheti. Ez
-                    lehetővé teszi számukra, hogy finom hangolják az irányelveket minden egyes
-                    ügyfél számára, biztosítva, hogy ne csak az izom – és zsírtömegük javuljon,
-                    hanem az általános egészségi állapotuk is optimalizálódjon.
+                    Az INBODY 970S beépítése a munkafolyamatokba azt jelenti, hogy az ügyfél és vagy a
+szakember nem csak sokkal részletesebben tudja nyomon követni a haladást, hanem a
+lehetséges egészségügyi problémákat is megelőzheti. Ez lehetővé teszi számukra, hogy
+finomhangolják az irányelveket minden egyes ügyfél számára, biztosítva, hogy ne csak az
+izom- és zsírtömegük javuljon, hanem az általános egészségi állapotuk is optimalizálódjon.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az INBODY 970S kiváló értéket képvisel a Kópis és Társa Kft. részére, és
-                    kiegészíti szolgáltatásunkat. Gyors, pontos és hatékony, olyan elemzéseket
-                    nyújtunk, amelyekkel más testzsír-mérő eszközök egyszerűen nem tudnak
-                    versenyezni. Az izomtömeg, a zsíreloszlás, a csont ásványianyag, a zsigeri zsír,
-                    a BMR és a fázisszög mérésére való képességgel az INBODY 970S nagyszerű
-                    eszköz a személyre szabott, hatékony tervek létrehozásához.
+                    Az INBODY 970S kiváló értéket képvisel a Kópis és Társa Kft. részére, és kiegészíti
+szolgáltatásunkat. Gyors, pontos és hatékony, olyan elemzéseket nyújtunk, amelyekkel
+más testzsír-mérő eszközök egyszerűen nem tudnak versenyezni. Az izomtömeg, a
+zsíreloszlás, a csontásványianyag-tartalom, a zsigeri zsír, a BMR és a fázisszög mérésére
+való képességgel. Az INBODY 970S nagyszerű eszköz a személyre szabott, hatékony tervek
+létrehozásához.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az INBODY 970S-t nem csak a sebessége és a könnyű használhatósága teszi
-                    különlegessé, hanem a pontossága is. Segít abban, hogy lássuk mennyire
-                    teljesítünk jól és felismerjük a potenciális problémákat – pl.: az egyensúly
-                    hiányt, a gyulladást vagy a túlzott zsigeri zsírt –, mielőtt azok nagyobb
-                    problémává válnának. Várjuk, hogy segítsünk ügyfeleinknek elérni céljaikat, és
-                    hosszú távon megőrizni egészségüket.
+                    Az INBODY 970S-t nem csak a sebessége és a könnyű használhatósága teszi különlegessé,
+hanem a pontossága is. Segít abban, hogy lássuk mennyire teljesítünk jól és felismerjük a
+potenciális problémákat – pl.: az egyensúly hiányt, a gyulladást vagy a túlzott zsigeri zsírt,
+mielőtt azok nagyobb problémává válnának. Várjuk, hogy segítsünk ügyfeleinknek elérni
+céljaikat, és hosszú távon megőrizni egészségüket.
                 </strong>
             </p>
         </div>

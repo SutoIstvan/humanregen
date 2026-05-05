@@ -85,29 +85,26 @@
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;" >
                 <strong>
-                    A Kópis és Társa Kft. üzembe helyezettegy orvosi minőségű testösszetétel
-                    elemző eszközt. Ebben a feljegyzésben bemutatjuk, hogy miért jó ez a Kópis és
-                    Társa Kft ügyfeleinek.
+                    A Kópis és Társa Kft. üzembe helyezett egy orvosi minőségű testösszetétel-elemző eszközt.
+Ebben a feljegyzésben bemutatjuk, hogy miért jó ez a Kópis és Társa Kft ügyfeleinek.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    Az INBODY 970S nem csupán egy újabb eszköz, hanem egy nagyon modern,
-                    klinikákon is használt fejlett kutatási eszköz. Pontos, átfogó és hasznos
-                    adatokat biztosít számunkra időtakarékos módon. Ez nem csak egy mérleg,
-                    hanem segít nyomon követni a számos nagyon fontos mutatatót, az egészségügy
-                    és a regenerálódást területén.
+                    Az INBODY 970S nem csupán egy újabb eszköz, hanem egy nagyon modern, klinikákon is
+használt fejlett kutatási eszköz. Pontos, átfogó és hasznos adatokat biztosít számunkra
+időtakarékos módon. Ez nem csak egy mérleg, hanem segít nyomon követni a számos
+nagyon fontos mutatót, az egészségügy és a regenerálódás területén.
                 </strong>
             </p>
 
             <p class="lead mb-5" style="text-indent: 15px; text-align: justify;">
                 <strong>
-                    A Kópis és Társa Kft.- nél mindig keressük a módját, hogy a lehető
-                    legmagasabb szintű szolgáltatást nyújtsunk. Az INBODY 970S-sel személyre
-                    szabottabb, egészség javító, prevenciós lehetőségeket, jobb fejlődéskövetési
-                    adatokat tudunk biztosítani minden egyes személy számára, aki igénybe veszi
-                    szolgáltatásunkat.
+                    A Kópis és Társa Kft.- nél mindig keressük a módját, hogy a lehető legmagasabb szintű
+szolgáltatást nyújtsunk. Az INBODY 970S-sel személyre szabottabb, egészségjavító,
+prevenciós lehetőségeket, jobb fejlődéskövetési adatokat tudunk biztosítani minden egyes
+személy számára, aki igénybe veszi szolgáltatásunkat.
                 </strong>
             </p>
 
