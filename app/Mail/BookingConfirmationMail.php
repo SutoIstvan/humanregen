@@ -28,8 +28,13 @@ class BookingConfirmationMail extends Mailable
      */
     public function envelope(): Envelope
     {
+        $chairId = $this->bookingDetails['chair_id'] ?? 1;
+        $subject = $chairId == 2
+            ? 'InBody 970s - Foglalás megerősítése'
+            : 'Humán Regenerátor Sports - Foglalás megerősítése';
+
         return new Envelope(
-            subject: 'Foglalás megerősítése',
+            subject: $subject,
         );
     }
 

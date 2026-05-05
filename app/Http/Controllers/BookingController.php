@@ -152,6 +152,7 @@ class BookingController extends Controller
             'date' => $validatedData['date'],
             'time' => $validatedData['time_slot'],
             'service' => $validatedData['duration'],
+            'chair_id' => $validatedData['chair_id'],
             'client_email' => $validatedData['client_email'],
             'client_phone' => $validatedData['client_phone'],
         ];
@@ -225,6 +226,7 @@ class BookingController extends Controller
             'date' => $booking['date'],
             'time' => $booking['time_slot'],
             'service' => $booking['duration'],
+            'chair_id' => $booking['chair_id'],
         ];
 
         Mail::to($booking['client_email'])->send(new BookingConfirmationMail($bookingDetails));
@@ -302,6 +304,7 @@ class BookingController extends Controller
                     'date' => $booking['date'],
                     'time' => $booking['time_slot'],
                     'service' => $booking['duration'],
+                    'chair_id' => $booking['chair_id'],
                 ];
 
                 Mail::to($validated['client_email'])->send(new BookingConfirmationMail($bookingDetails));
